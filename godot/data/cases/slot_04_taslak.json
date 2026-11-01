@@ -1,0 +1,108 @@
+{
+  "_doc": "slot_04 taslağı. Bitince data/episode_04.json olarak kaydet, cases.json içinde slot_04 satırına path yaz ve status değerini open yap. Test: godot --headless --path . res://tests/episodes_test.tscn",
+  "fileNo": "04",
+  "title": "Taslak: Dosya 04",
+  "set": "pavyon",
+  "place": "Yer adı",
+  "caseNo": "2026/06-415",
+  "pin": "0000",
+  "pinHint": "Şifre ipucu, ilgili kanıt bulununca.",
+  "pinLocked": "4 hane.",
+  "pinHintClue": "clue_scene_note",
+  "phoneClueId": "clue_phone",
+  "contradiction": "clue_a|clue_b",
+  "briefing": "Behzat'in ilk cümlesi. Saat, yer, ilk bulgu, savcının baskısı.",
+  "report": "Kapanış tutanağı: kim, nasıl, neden, hangi kanıt.",
+  "arrival": {
+    "speaker": "Akbaba",
+    "line": "Olay yerindeki ilk cümle."
+  },
+  "call": {
+    "from": "Başkomiser Behzat",
+    "text": "Ofise gel."
+  },
+  "victim": {
+    "name": "Maktul Adı",
+    "role": "Mesleği"
+  },
+  "arrestClueIds": [
+    "clue_key_a",
+    "clue_key_b"
+  ],
+  "characters": {},
+  "hotspots": [
+    {
+      "id": "hotspot_phone",
+      "title": "Maktulün telefonu",
+      "text": "Olay yeri anlatımı."
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_phone",
+      "title": "Maktulün telefonu",
+      "summary": "Kilitli telefon.",
+      "source": "scene",
+      "icon": "TEL"
+    }
+  ],
+  "pairs": [],
+  "chat": [],
+  "esorgu": [],
+  "esorguHints": [
+    {
+      "text": "Örnek İsim",
+      "field": "İsim"
+    }
+  ],
+  "importantClues": [],
+  "replies": {
+    "Behzat": [],
+    "Akbaba": [],
+    "Hayalet": []
+  },
+  "phoneItems": [],
+  "suspects": [
+    {
+      "id": "supheli_1",
+      "calm": "CONFIDENT",
+      "stressHit": 35,
+      "acceptedClueIds": [],
+      "lines": {
+        "idle": "",
+        "hit": "",
+        "miss": "",
+        "confess": "",
+        "repeat": "Bunu gördüm. Yenisini koy."
+      },
+      "character": {
+        "name": "Şüpheli Adı",
+        "primary": "#3a4250",
+        "secondary": "#1c1814",
+        "accessory": "NONE",
+        "model": "ASSISTANT"
+      },
+      "dialogue": {
+        "start": {
+          "text": "İlk savunma.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "confessed": {
+          "text": "İtiraf.",
+          "options": [
+            {
+              "text": "Tutanağa geçiyoruz.",
+              "next": "confessed"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "_tanik_notu": "Yan tanıklar için esorgu kaydı + clue (icon TANIK) + suspects[*].acceptedClueIds + dialogue 'requires'. Kapıcı, komşu, güvenlik tipik üçlüdür."
+}

@@ -1,0 +1,242 @@
+{
+  "xfade": 0.25,
+  "aliases": {
+    "DrinkingTea": "DrinkTea",
+    "Photographing": "PhotographEvidence",
+    "Inspecting": "InspectEvidence",
+    "TableSlam": "Slam_Table",
+    "WritingReport": "ReviewDocuments"
+  },
+  "states": {
+    "Idle": {
+      "group": "general", "clip": "breathe", "seated_clip": "sit", "pose": "", "loop": true,
+      "duration": 2.5, "xfade": 0.3, "expression": "tired", "sweat": false,
+      "start": "Ayakta, kollar yanda, nefes alıyor.",
+      "end": "Aynı nefes döngüsüne döner.",
+      "trigger": "Varsayılan. Stres 15'in altında ve Tarık değilse. Oturuyorsa Sitting."
+    },
+    "Walking": {
+      "group": "general", "clip": "walk", "pose": "", "loop": true,
+      "duration": 1.33, "xfade": 0.2, "expression": "neutral", "sweat": false,
+      "start": "İlk adım, topuk yerde.",
+      "end": "Adım döngüsü kapanır.",
+      "trigger": "Sahne içi yürüyüş. Oyuncu hotspot'a giderken."
+    },
+    "Running": {
+      "group": "general", "clip": "run", "pose": "", "loop": true,
+      "duration": 0.67, "xfade": 0.16, "expression": "focused", "sweat": false,
+      "start": "Koşu adımı, gövde öne.",
+      "end": "Adım döngüsü. Durunca Idle'a 0.16s.",
+      "trigger": "Hızlı yer değiştirme. act(\"Running\")."
+    },
+    "Sitting": {
+      "group": "general", "clip": "sit", "pose": "", "loop": true,
+      "duration": 1.67, "xfade": 0.35, "expression": "tired", "sweat": false,
+      "start": "Oturuşa giriş kütüphanede Sitting_Enter 1.29s. Döngü Sitting_Idle.",
+      "end": "Kalkış Sitting_Exit 1.00s, sonra Standing.",
+      "trigger": "Sandalyeye oturunca. Sorgu şüphelisi ve komiser."
+    },
+    "Standing": {
+      "group": "general", "clip": "breathe", "pose": "upright", "loop": true,
+      "duration": 2.5, "xfade": 0.3, "expression": "neutral", "sweat": false,
+      "start": "Dizler kilitli, omuzlar düşük değil.",
+      "end": "Idle ile aynı döngü, daha dik omurga.",
+      "trigger": "Ayakta bekleme. Behzat şantiyede, Hayalet ofiste."
+    },
+    "Talking": {
+      "group": "general", "clip": "talk", "seated_clip": "sit_talk", "pose": "", "loop": true,
+      "duration": 2.92, "xfade": 0.22, "expression": "neutral", "sweat": false,
+      "start": "Ağız açılır, kaş nötr.",
+      "end": "Cümle bitince Idle veya stres pozu.",
+      "trigger": "Konuşan kişi sahnedeki speaker ile aynıysa."
+    },
+    "LookingAround": {
+      "group": "general", "clip": "breathe", "pose": "", "loop": true,
+      "duration": 2.5, "xfade": 0.3, "expression": "focused", "sweat": false,
+      "sway": {"Head": [[0, 38, 0], 0.9], "Chest": [[0, 10, 0], 0.9]},
+      "start": "Baş karşıya.",
+      "end": "Baş sağa-sola tarar, ortaya döner.",
+      "trigger": "Hayalet boşta. act(\"LookingAround\")."
+    },
+    "Thinking": {
+      "group": "general", "clip": "breathe", "seated_clip": "sit", "pose": "chin", "loop": true,
+      "duration": 2.5, "xfade": 0.28, "expression": "focused", "sweat": false,
+      "extra": {"Head": [8, -12, 6]},
+      "start": "El çeneye gider.",
+      "end": "El iner, Idle.",
+      "trigger": "Dosya düşünülürken. Behzat, savcı."
+    },
+    "Angry": {
+      "group": "general", "clip": "talk", "seated_clip": "sit_talk", "pose": "", "loop": true,
+      "duration": 2.92, "xfade": 0.18, "expression": "angry", "sweat": false,
+      "extra": {"Spine": [12, 0, 0], "Head": [-8, 0, 0], "LeftShoulder": [0, 0, 8], "RightShoulder": [0, 0, -8]},
+      "start": "Çene kilitli, omuzlar kalkık.",
+      "end": "Stres düşünce Nervous veya Idle.",
+      "trigger": "Sorgu stresi 70–99."
+    },
+    "Nervous": {
+      "group": "general", "clip": "talk", "seated_clip": "sit_talk", "pose": "", "loop": true,
+      "duration": 2.92, "xfade": 0.25, "expression": "nervous", "sweat": false,
+      "extra": {"Head": [10, 0, 0], "Spine": [5, 0, 0]},
+      "sway": {"Head": [[0, 6, 3], 7.0], "Chest": [[0, 0, 1.5], 9.0]},
+      "start": "Bakış kaçar, omuz iner.",
+      "end": "Titreme sürer. Stres artınca NervousHands.",
+      "trigger": "Elle. Stres bandı LookAway ve NervousHands'e ayrılır."
+    },
+    "Confident": {
+      "group": "general", "clip": "breathe", "seated_clip": "sit", "pose": "crossed", "loop": true,
+      "duration": 2.5, "xfade": 0.28, "expression": "smug", "sweat": false,
+      "extra": {"Spine": [-6, 0, 0], "Head": [-5, 0, 0]},
+      "start": "Kollar kavuşur, çene yukarı.",
+      "end": "Kollar iner.",
+      "trigger": "Polis boşta. Behzat sorgu odasında kenarda."
+    },
+    "Sit_Arrogant": {
+      "group": "suspect", "clip": "sit", "pose": "crossed", "loop": true,
+      "duration": 1.67, "xfade": 0.28, "expression": "smug", "sweat": false,
+      "extra": {"Spine": [-10, 0, 0], "Head": [-12, 0, -6]},
+      "start": "Oturur, arkaya yaslanır, kollar kavuşuk.",
+      "end": "Stres 15'i geçince LookAway.",
+      "trigger": "Tarık, stres 15'in altında, sandalyede."
+    },
+    "LookAway": {
+      "group": "suspect", "clip": "sit", "pose": "", "loop": true,
+      "duration": 1.67, "xfade": 0.25, "expression": "nervous", "sweat": false,
+      "extra": {"Head": [8, 36, 4], "Spine": [4, 6, 0]},
+      "sway": {"Head": [[0, 8, 0], 1.2]},
+      "start": "Gözler komiserden kaçar.",
+      "end": "Baş yavaşça yana döner.",
+      "trigger": "Şüpheli stres 15–34."
+    },
+    "NervousHands": {
+      "group": "suspect", "clip": "sit", "pose": "table", "loop": true,
+      "duration": 1.67, "xfade": 0.25, "expression": "nervous", "sweat": false,
+      "extra": {"Head": [6, 24, 0], "Spine": [4, 0, 0]},
+      "sway": {"LeftHand": [[16, 0, 12], 6.3], "RightHand": [[14, 0, -10], 7.1], "Head": [[0, 10, 0], 1.1]},
+      "start": "Eller masada, parmaklar oynar.",
+      "end": "Stres 50'de Sweat.",
+      "trigger": "Şüpheli stres 35–49."
+    },
+    "Sweat": {
+      "group": "suspect", "clip": "sit", "pose": "table", "loop": true,
+      "duration": 1.67, "xfade": 0.22, "expression": "nervous", "sweat": true,
+      "extra": {"Head": [10, 20, 0], "Spine": [6, 0, 0]},
+      "sway": {"LeftHand": [[16, 0, 12], 6.3], "RightHand": [[14, 0, -10], 7.1], "Head": [[0, 8, 2], 5.0]},
+      "start": "Alın damlası belirir.",
+      "end": "Stres 70'te Angry, 100'de Breakdown.",
+      "trigger": "Şüpheli stres 50–69. Oyun durumu NERVOUS_SWEAT."
+    },
+    "Laugh_Mocking": {
+      "group": "suspect", "clip": "sit_talk", "pose": "", "loop": true,
+      "duration": 2.92, "xfade": 0.2, "expression": "smug", "sweat": false,
+      "extra": {"Head": [-14, -8, 8], "Spine": [-6, 0, 0], "Chest": [-4, 0, 0]},
+      "sway": {"Head": [[2, 0, 4], 6.0], "Chest": [[1, 0, 0], 6.0]},
+      "start": "Tek kaş, yarım gülüş.",
+      "end": "Gülüş solar, Sit_Arrogant.",
+      "trigger": "Tarık alaycı replik. act(\"Laugh_Mocking\"). Stres 20'nin altı."
+    },
+    "Slam_Table": {
+      "group": "suspect", "clip": "sit_talk", "pose": "table", "loop": false,
+      "duration": 0.76, "xfade": 0.12, "expression": "angry", "sweat": false,
+      "extra": {"Spine": [14, 0, 0], "Head": [-6, 0, 0]},
+      "start": "Kollar 0.22s kalkar.",
+      "end": "0.09s masaya iner, 0.45s oturuşa döner.",
+      "trigger": "Doğru kanıt masaya inince ANGRY_SLAM. slam_table()."
+    },
+    "Breakdown": {
+      "group": "suspect", "clip": "sit", "pose": "", "loop": true,
+      "duration": 1.67, "xfade": 0.4, "expression": "broken", "sweat": true,
+      "extra": {"Spine": [18, 0, 0], "Chest": [8, 0, 0], "Head": [34, 0, 0], "LeftShoulder": [0, 0, 12], "RightShoulder": [0, 0, -12]},
+      "sway": {"Chest": [[1.5, 0, 0], 2.2]},
+      "start": "Baş düşer, omuzlar çöker.",
+      "end": "İtiraf pozu Confession'a bırakır.",
+      "trigger": "Stres 100 veya itiraf. Oyun durumu BROKEN_CONFESS."
+    },
+    "Confession": {
+      "group": "suspect", "clip": "sit_talk", "pose": "", "loop": true,
+      "duration": 2.92, "xfade": 0.35, "expression": "broken", "sweat": true,
+      "extra": {"Spine": [16, 0, 0], "Chest": [8, 0, 0], "Head": [30, 0, 0], "LeftShoulder": [0, 0, 12], "RightShoulder": [0, 0, -12]},
+      "start": "Baş eğik, ağız açık, ses kısık.",
+      "end": "Cümle bitince Breakdown'da kalır.",
+      "trigger": "İtiraf cümlesi. act(\"Confession\"). Stres 100."
+    },
+    "InspectEvidence": {
+      "group": "police", "clip": "inspect", "pose": "", "loop": true,
+      "duration": 2.92, "xfade": 0.25, "expression": "focused", "sweat": false,
+      "start": "Diz çöker, bakış yere.",
+      "end": "Ayağa kalkınca Standing.",
+      "trigger": "Akbaba delile bakarken. Olay yeri ve ofis."
+    },
+    "PhotographEvidence": {
+      "group": "police", "clip": "inspect", "pose": "camera", "loop": false,
+      "oneshot": "interact", "duration": 2.0, "xfade": 0.2, "expression": "focused", "sweat": false,
+      "extra": {"Head": [6, 0, 0]},
+      "start": "Kamera göğüsten yüze gelir.",
+      "end": "Deklanşör Interact 2.00s, sonra çömelik bakış.",
+      "trigger": "Kolon hotspot'u. play(\"PHOTO\")."
+    },
+    "DrinkTea": {
+      "group": "police", "clip": "breathe", "pose": "tea", "loop": true,
+      "duration": 2.5, "xfade": 0.28, "expression": "tired", "sweat": false,
+      "extra": {"Head": [-6, 0, 0]},
+      "start": "Fincan ağza yaklaşır.",
+      "end": "Fincan iner, Idle.",
+      "trigger": "Behzat ofiste, konuşmuyorsa."
+    },
+    "ReviewDocuments": {
+      "group": "police", "clip": "breathe", "seated_clip": "sit", "pose": "hold", "loop": true,
+      "duration": 2.5, "xfade": 0.28, "expression": "focused", "sweat": false,
+      "extra": {"Head": [18, 0, 0]},
+      "start": "Evrak göğüs hizasında açılır.",
+      "end": "Sayfa iner.",
+      "trigger": "Savcı Nilgün ve Ayşe dosya okurken."
+    },
+    "UseRadio": {
+      "group": "police", "clip": "breathe", "pose": "radio", "loop": true,
+      "duration": 2.5, "xfade": 0.22, "expression": "focused", "sweat": false,
+      "start": "El kulağa gider.",
+      "end": "El iner, LookingAround.",
+      "trigger": "Hayalet telsiz. act(\"UseRadio\")."
+    },
+    "PointAtEvidence": {
+      "group": "police", "clip": "talk", "seated_clip": "sit_talk", "pose": "point", "loop": true,
+      "duration": 2.92, "xfade": 0.18, "expression": "focused", "sweat": false,
+      "start": "Sağ kol delile uzanır.",
+      "end": "Kol iner, TalkToSuspect.",
+      "trigger": "Komiser kanıtı gösterirken. act(\"PointAtEvidence\")."
+    },
+    "TalkToSuspect": {
+      "group": "police", "clip": "talk", "pose": "", "loop": true,
+      "duration": 2.92, "xfade": 0.22, "expression": "focused", "sweat": false,
+      "extra": {"Spine": [4, 0, 0], "Head": [2, 0, 0]},
+      "start": "Komiser şüpheliye döner.",
+      "end": "Soru bitince Confident.",
+      "trigger": "Sorgu odasında Behzat konuşunca."
+    },
+    "Arrogant": {
+      "group": "suspect", "clip": "talk", "pose": "", "loop": true,
+      "duration": 2.92, "xfade": 0.25, "expression": "smug", "sweat": false,
+      "extra": {"Spine": [-8, 0, 0], "Head": [-12, 0, -6], "LeftShoulder": [0, 0, -6], "RightShoulder": [0, 0, 6]},
+      "start": "Çene yukarı, omuz gevşek.",
+      "end": "Oturuyorsa Sit_Arrogant.",
+      "trigger": "Tarık ayakta. Oyun durumu ARROGANT ve seated değil."
+    },
+    "Defensive": {
+      "group": "suspect", "clip": "breathe", "seated_clip": "sit", "pose": "crossed", "loop": true,
+      "duration": 2.5, "xfade": 0.22, "expression": "angry", "sweat": false,
+      "extra": {"Spine": [-10, 0, 0], "Head": [-4, 18, 0]},
+      "start": "Kollar kapanır, baş yana.",
+      "end": "1.8s sonra stres pozu.",
+      "trigger": "Yanlış kanıt. Oyun durumu DEFENSIVE."
+    },
+    "SweatHands": {
+      "group": "suspect", "clip": "sit", "pose": "table", "loop": true,
+      "duration": 1.67, "xfade": 0.22, "expression": "nervous", "sweat": true,
+      "extra": {"Head": [10, 20, 0], "Spine": [6, 0, 0]},
+      "sway": {"LeftHand": [[16, 0, 12], 6.3], "RightHand": [[14, 0, -10], 7.1], "Head": [[0, 8, 2], 5.0]},
+      "start": "Eller masada, damla düşer.",
+      "end": "Sweat ile aynı. Stres düşünce NervousHands.",
+      "trigger": "Oyun durumu NERVOUS_SWEAT, şüpheli oturuyor."
+    }
+  }
+}

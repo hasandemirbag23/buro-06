@@ -1,0 +1,242 @@
+{
+  "_doc": "Merkezi karakter profilleri. Kimlik, rol, özellikler ve kişilik (0..1). Soyadı bilinmeyen karakterlerde last_name boş: senaryoda tanımlı değil. Yeni karakter: buraya bir kayıt ekle + characters/base/character_base.tscn'den miras alan sahne oluştur.",
+  "player": {
+    "first_name": "Komiser",
+    "last_name": "",
+    "role": "detective",
+    "traits": [
+      "sakin",
+      "dikkatli"
+    ],
+    "personality": {
+      "confidence": 0.7,
+      "patience": 0.7,
+      "aggression": 0.25,
+      "curiosity": 0.9,
+      "sociability": 0.5,
+      "stress_resistance": 0.75
+    },
+    "voice": {
+      "pitch": 0.95
+    }
+  },
+  "behzat": {
+    "first_name": "Behzat",
+    "last_name": "",
+    "role": "chief_detective",
+    "traits": [
+      "yorgun",
+      "sert",
+      "tecrübeli"
+    ],
+    "personality": {
+      "confidence": 0.85,
+      "patience": 0.4,
+      "aggression": 0.55,
+      "curiosity": 0.5,
+      "sociability": 0.45,
+      "stress_resistance": 0.7
+    },
+    "voice": {
+      "pitch": 0.8
+    }
+  },
+  "akbaba": {
+    "first_name": "Akbaba",
+    "last_name": "",
+    "role": "forensic_expert",
+    "traits": [
+      "soğukkanlı",
+      "titiz"
+    ],
+    "personality": {
+      "confidence": 0.75,
+      "patience": 0.85,
+      "aggression": 0.1,
+      "curiosity": 0.8,
+      "sociability": 0.4,
+      "stress_resistance": 0.85
+    },
+    "voice": {
+      "pitch": 0.85
+    }
+  },
+  "hayalet": {
+    "first_name": "Hayalet",
+    "last_name": "",
+    "role": "intelligence_officer",
+    "traits": [
+      "rahat",
+      "tarayıcı"
+    ],
+    "personality": {
+      "confidence": 0.6,
+      "patience": 0.55,
+      "aggression": 0.2,
+      "curiosity": 0.95,
+      "sociability": 0.7,
+      "stress_resistance": 0.6
+    },
+    "voice": {
+      "pitch": 0.9
+    }
+  },
+  "savci": {
+    "first_name": "Nilgün",
+    "last_name": "Erdem",
+    "role": "prosecutor",
+    "traits": [
+      "resmi",
+      "kontrollü"
+    ],
+    "personality": {
+      "confidence": 0.9,
+      "patience": 0.5,
+      "aggression": 0.35,
+      "curiosity": 0.45,
+      "sociability": 0.3,
+      "stress_resistance": 0.9
+    },
+    "voice": {
+      "pitch": 1.15
+    }
+  },
+  "arsiv": {
+    "first_name": "Ayşe",
+    "last_name": "",
+    "role": "archivist",
+    "traits": [
+      "sabırlı",
+      "gözlüklü"
+    ],
+    "personality": {
+      "confidence": 0.5,
+      "patience": 0.95,
+      "aggression": 0.05,
+      "curiosity": 0.4,
+      "sociability": 0.35,
+      "stress_resistance": 0.55
+    },
+    "voice": {
+      "pitch": 1.2
+    }
+  },
+  "zafer": {
+    "first_name": "Zafer",
+    "last_name": "Yılmaz",
+    "role": "site_chief",
+    "traits": [
+      "gergin",
+      "terli"
+    ],
+    "personality": {
+      "confidence": 0.35,
+      "patience": 0.3,
+      "aggression": 0.5,
+      "curiosity": 0.3,
+      "sociability": 0.4,
+      "stress_resistance": 0.25
+    },
+    "voice": {
+      "pitch": 0.85
+    }
+  },
+  "tarik": {
+    "first_name": "Tarık",
+    "last_name": "Soylu",
+    "role": "suspect_contractor",
+    "traits": [
+      "kendinden emin",
+      "kibirli"
+    ],
+    "personality": {
+      "confidence": 0.95,
+      "patience": 0.6,
+      "aggression": 0.45,
+      "curiosity": 0.35,
+      "sociability": 0.55,
+      "stress_resistance": 0.8
+    },
+    "voice": {
+      "pitch": 0.85
+    }
+  },
+  "mert": {
+    "first_name": "Mert",
+    "last_name": "Aksoy",
+    "role": "suspect_assistant",
+    "traits": [
+      "ürkek"
+    ],
+    "personality": {
+      "confidence": 0.3,
+      "patience": 0.5,
+      "aggression": 0.15,
+      "curiosity": 0.4,
+      "sociability": 0.4,
+      "stress_resistance": 0.3
+    },
+    "voice": {
+      "pitch": 1.0
+    }
+  },
+  "nevzat": {
+    "first_name": "Nevzat",
+    "last_name": "Şahin",
+    "role": "suspect_accountant",
+    "traits": [
+      "tedirgin"
+    ],
+    "personality": {
+      "confidence": 0.4,
+      "patience": 0.5,
+      "aggression": 0.1,
+      "curiosity": 0.3,
+      "sociability": 0.3,
+      "stress_resistance": 0.35
+    },
+    "voice": {
+      "pitch": 0.95
+    }
+  },
+  "idris": {
+    "first_name": "İdris",
+    "last_name": "",
+    "role": "suspect_owner",
+    "traits": [
+      "hesaplı"
+    ],
+    "personality": {
+      "confidence": 0.8,
+      "patience": 0.55,
+      "aggression": 0.5,
+      "curiosity": 0.4,
+      "sociability": 0.6,
+      "stress_resistance": 0.7
+    },
+    "voice": {
+      "pitch": 0.8
+    }
+  },
+  "haldun": {
+    "first_name": "Haldun",
+    "last_name": "Erk",
+    "role": "suspect_professor",
+    "traits": [
+      "soğuk",
+      "ölçülü",
+      "kibirli"
+    ],
+    "personality": {
+      "confidence": 0.9,
+      "patience": 0.7,
+      "aggression": 0.4,
+      "curiosity": 0.35,
+      "sociability": 0.4,
+      "stress_resistance": 0.8
+    },
+    "voice": {
+      "pitch": 0.85
+    }
+  }
+}

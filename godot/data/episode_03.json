@@ -1,0 +1,921 @@
+{
+  "fileNo": "03",
+  "title": "Pavyonda Hesap Gecesi",
+  "place": "Maltepe",
+  "set": "pavyon",
+  "caseNo": "2026/06-414",
+  "pin": "0671",
+  "pinHint": "Kulis aynası, rujla: 06-71",
+  "pinLocked": "4 hane. Çantadaki kulis fotoğrafına bak.",
+  "pinHintClue": "clue_vip_card",
+  "phoneClueId": "clue_hidden_phone",
+  "contradiction": "clue_vip_card|clue_idris_threat",
+  "arrival": {
+    "speaker": "Akbaba",
+    "line": "Gonca Demir, sahnede Sevda. 31 yaş. Şakağından tek el, 9mm, uzaktan. Küpe kulağında, nakit çantada. Gasp değil. Torpido altında ikinci bir telefon, şifreli. Sağ arka tekerde boş kovan ve kopmuş mor bir takma tırnak. Tırnak onda durmuyormuş gibi duruyor. Aynada rujla dört hane var, ters yazılmış gibi duruyor. Vestiyerde tek fiş, iki askı izi. Fişi al, aynayı silme."
+  },
+  "briefing": "Saat 02:45. Maltepe, pavyonlar sokağı, Geceler Gazinosu'nun arka otoparkı. Alman plakalı sedan, sol kapı açık, direksiyonda Sevda. Akbaba gasp dedi, ben inanmadım: para duruyor, pırlanta küpe duruyor. Biri çantada defter aramış. İdris 'benim mekânımda kan akmaz' diye havlıyor ama kız elinde muhasebe defteriyle geziyormuş, devlete kafa tutan adamların ipliğini pazara çıkaracakmış. Gizli telefonu al. Şifre kulis aynasında. Bu işin altından kasa ve rüşvet çıkmazsa ben de şaşarım. Çay bende, sokak sende. Kulisteki aynaya ve vestiyer askısına bak. Rujla yazılan numara şifre olabilir ama ayna yalan da söyler; yazının yönüne bak, ayna ters yazar. Vestiyer fişi iki palto diyorsa biri sahneden çıkmamış, arabada kalmıştır.",
+  "victim": {
+    "name": "Gonca Demir",
+    "age": 31,
+    "role": "Geceler Gazinosu başsolisti, sahnede Sevda"
+  },
+  "arrestClueIds": [
+    "clue_idris_threat",
+    "clue_nevzat_record",
+    "clue_kuyumcu_receipt"
+  ],
+  "call": {
+    "from": "Başkomiser Behzat",
+    "text": "Maltepe'ye in. Pavyonun arkasında solist vurulmuş. Gasp diyorlar, küpe duruyor. Gizli telefonu ve çantayı boş geçme. İdris kapıda havlıyor, sen içeri bak. Ayna ve vestiyer fişi. İkisi de saati tutmazsa İdris'in 'ben erkenden çıktım'ı düşer."
+  },
+  "characters": {
+    "player": {
+      "name": "Komiser",
+      "primary": "#1c1c1c",
+      "secondary": "#4a4038",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "behzat": {
+      "name": "Başkomiser Behzat",
+      "primary": "#6e2430",
+      "secondary": "#2a2420",
+      "accessory": "TEA_GLASS",
+      "model": "POLICE"
+    },
+    "akbaba": {
+      "name": "Akbaba",
+      "primary": "#c4552a",
+      "secondary": "#242424",
+      "accessory": "CAMERA",
+      "model": "FORENSIC"
+    },
+    "hayalet": {
+      "name": "Hayalet",
+      "primary": "#243044",
+      "secondary": "#8a939c",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "arsiv": {
+      "name": "Ayşe",
+      "primary": "#3d3428",
+      "secondary": "#6b4428",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "savci": {
+      "name": "Savcı Nilgün Erdem",
+      "primary": "#101114",
+      "secondary": "#e8e4dc",
+      "accessory": "NONE",
+      "model": "POLICE"
+    }
+  },
+  "hotspots": [
+    {
+      "id": "hotspot_phone",
+      "title": "Torpido altı, gizli telefon",
+      "unlocksClueId": "clue_hidden_phone",
+      "speaker": "Akbaba",
+      "text": "Torpido gözünün altında ikinci bir panel. Vida gevşek, parmak izi silinmeye çalışılmış, ortası kalmış. Arkada tuşlu akıllı telefon, ekran kilitli, batarya sıcak. Bu gece açılmış. Asıl telefon çantada değil. Bunu poşete koy. Şifre dört hane. Çantadaki kulis fotoğrafına bakmadan deneme. Işık kırmızı diye acele etme. Kırmızı ışık kanı siyaha çeker, yarayı olduğundan derin gösterir."
+    },
+    {
+      "id": "hotspot_column",
+      "title": "Kovan ve mor tırnak",
+      "unlocksClueId": "clue_bullet_and_nail",
+      "speaker": "Akbaba",
+      "text": "Sağ arka tekerin dibi, çamur. 9mm boş kovan, atış araçtan değil, araçtan bir adım geriden. Yanında mor akrilik takma tırnak, kökünden kopmuş. İç yüzde deri kalıntısı var. Maktulün ellerindeki tırnaklar duruyor, bu eksik değil, başkasından kopmuş. İkisi de torbaya. Işık kırmızı diye acele etme. Kırmızı ışık kanı siyaha çeker, yarayı olduğundan derin gösterir."
+    },
+    {
+      "id": "hotspot_desk",
+      "title": "Arka koltuk, çanta",
+      "unlocksClueId": "clue_vip_card",
+      "speaker": "Başkomiser Behzat",
+      "text": "Lüks çanta, pudra ve ruj dökülmüş, fermuar yarı zorlanmış. İçinde 12.400 TL nakit, sayılmış, eksilmemiş. Pırlanta küpe kulakta. Gasp bu tabloyu bozardı. VIP kart: Geceler Gazinosu, kulis anahtarı aynı halkada. Kartın arasında kulis aynasının fotoğrafı. Aynanın köşesinde rujla 06-71 yazıyor. Ankara ve Kırıkkale. Bunu şifre diye yaz. Işık kırmızı diye acele etme. Kırmızı ışık kanı siyaha çeker, yarayı olduğundan derin gösterir."
+    },
+    {
+      "id": "hotspot_mirror",
+      "title": "Kulis aynası",
+      "unlocksClueId": "clue_mirror_note",
+      "speaker": "Akbaba",
+      "text": "Kulis aynasının sol altı. Ruj, koyu kırmızı, Sevda'nın ruju değil; onunki mat, bu yağlı. Yazı aynadan bakınca 06-71, camın üstünden bakınca 17-90. Yani yazan kişi aynaya bakarak yazmış, seyirciye değil. Harfler titriyor, son rakam tekrar basılmış. Aynanın çerçevesinde tek bir takma tırnak izi, mor oje, sahnedeki tırnakla aynı lot. Camı silme. Ruju kazı, çerçevesi tozunu al. Bu numara telefon şifresi olabilir, kulüp kasasının değil."
+    },
+    {
+      "id": "hotspot_ticket",
+      "title": "Vestiyer fişi",
+      "unlocksClueId": "clue_cloak_ticket",
+      "speaker": "Komiser",
+      "text": "Askıda kalan siyah palto ve yere düşmüş fiş: 23:10, vestiyer 14, iki palto. Askıda bir palto var. İkincisinin askı izi duruyor, omuz tozu silinmiş, yani palto bu gece alındı, dün değil. Fişin arkasında kurşun kalemle 'İ. bekliyor, kasa'. İ harfi büyük, nokta var, imza gibi. Palto cebinde yarım paket ve bir kulüp kibriti, kibritin başı yanık değil, yani içeride yakılmamış, dışarıda bekletilmiş. Fişi ve paltoyu al. İkinci palto araçta ya da İdris'in kolundadır."
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_hidden_phone",
+      "title": "Gizli telefon",
+      "summary": "Torpido panelinin ardındaki ikinci telefon. Şifre kulis aynasındaki 06-71.",
+      "source": "scene",
+      "icon": "TEL"
+    },
+    {
+      "id": "clue_bullet_and_nail",
+      "title": "Kovan ve tırnak",
+      "summary": "9mm kovan ve kopmuş mor akrilik tırnak. Tırnak maktulün elinden değil. İçinde deri kalıntısı.",
+      "source": "scene",
+      "icon": "KOVAN"
+    },
+    {
+      "id": "clue_vip_card",
+      "title": "VIP kart ve kulis",
+      "summary": "Çantada 12.400 TL duruyor. Gasp değil. Kulis fotoğrafında rujla 06-71.",
+      "source": "scene",
+      "icon": "KART"
+    },
+    {
+      "id": "clue_abi_call",
+      "title": "Abi (Kasa)",
+      "summary": "Ölümden beş dakika önce arayan numara 0533 606 00 11. Rehberde Abi (Kasa).",
+      "source": "phone",
+      "icon": "ARA"
+    },
+    {
+      "id": "clue_blackmail_ledger",
+      "title": "Kara defter",
+      "summary": "İdris'in mekânında aklanan para, Müdür Kemal'e aylık 150 bin, Arif'in sahte faturaları, örtülen bir adam.",
+      "source": "phone",
+      "icon": "DEFTER"
+    },
+    {
+      "id": "clue_idris_threat",
+      "title": "İdris'in tehdidi",
+      "summary": "Defteri bu gece masaya bırak, yoksa sesin bir daha çıkmaz. Sevda defteri emniyete götüreceğini yazmış.",
+      "source": "phone",
+      "icon": "SMS"
+    },
+    {
+      "id": "clue_nevzat_record",
+      "title": "Nevzat Şahin",
+      "summary": "48 yaş. Geceler Gazinosu muhasebecisi. Hat 0533 606 00 11. Maltepe, Güneş Sokak.",
+      "source": "esorgu",
+      "icon": "GBT"
+    },
+    {
+      "id": "clue_kuyumcu_receipt",
+      "title": "İnci kolye faturası",
+      "summary": "Cinayetten sonra 03:30. Nevzat, Sevda'nın inci kolyesini kuyumcuda 85.000 TL'ye satmış.",
+      "source": "esorgu",
+      "icon": "ALTIN"
+    },
+    {
+      "id": "clue_dna_match",
+      "title": "Tırnak DNA",
+      "summary": "Mor tırnağın içindeki deri Ceren'e ait. Pavyonun solist yardımcısı, Sevda'nın rakibi. Arbede var.",
+      "source": "esorgu",
+      "icon": "DNA"
+    },
+    {
+      "id": "clue_wit_kapi",
+      "title": "Kapı görevlisi",
+      "summary": "Yusuf Demir: 01:58'de Ceren ağlayarak çıktı, saçı dağınık. 02:44'te Nevzat arka kapıdan otoparka indi, 02:52'de yüzü bembeyaz koştu.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_wit_kuyumcu",
+      "title": "Kuyumcu ifadesi",
+      "summary": "Mehmet Usta: 03:30'da Nevzat dükkânı uyandırdı. Ellerinde titreme, zincirde kurumuş kan lekesi. \"Kimseye söyleme\" dedi.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_wit_barmen",
+      "title": "Barmen ifadesi",
+      "summary": "Selim Aktaş: 02:10'da İdris masa telefonundan Nevzat'ı aradı. \"Çantayı al, defteri getir, kızla konuşma.\" Selim duydu.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_mirror_note",
+      "title": "Ayna notu",
+      "summary": "Rujla yazılmış 06-71, aynadan bakılınca okunuyor. Yağlı ruj Sevda'nın değil. Çerçevede mor tırnak izi.",
+      "source": "scene",
+      "icon": "AYNA"
+    },
+    {
+      "id": "clue_cloak_ticket",
+      "title": "Vestiyer fişi",
+      "summary": "23:10'da iki palto bırakılmış, biri alınmış. Fişin arkası: 'İ. bekliyor, kasa'.",
+      "source": "scene",
+      "icon": "FİŞ"
+    }
+  ],
+  "pairs": [
+    [
+      "clue_abi_call",
+      "clue_nevzat_record"
+    ],
+    [
+      "clue_nevzat_record",
+      "clue_kuyumcu_receipt"
+    ],
+    [
+      "clue_idris_threat",
+      "clue_blackmail_ledger"
+    ],
+    [
+      "clue_bullet_and_nail",
+      "clue_dna_match"
+    ],
+    [
+      "clue_vip_card",
+      "clue_hidden_phone"
+    ]
+  ],
+  "chat": [
+    {
+      "id": "p-behzat-1",
+      "sender": "Behzat",
+      "at": "02:50",
+      "text": "Maltepe, Geceler'in arkası. Sevda direksiyonda. Para duruyor, küpe duruyor. Gasp cümlesini yutma. Telefonu ve çantayı aç."
+    },
+    {
+      "id": "p-akbaba-1",
+      "sender": "Akbaba",
+      "at": "03:05",
+      "requiresClueId": "clue_bullet_and_nail",
+      "text": "Kovan 9mm, atış geriden. Mor tırnak kopmuş, maktulün elleri tam. İçinde deri var. E-Sorgu'ya dna yaz, kiminle kapışmış bakalım."
+    },
+    {
+      "id": "p-hayalet-1",
+      "sender": "Hayalet",
+      "at": "03:20",
+      "requiresClueId": "clue_abi_call",
+      "text": "0533 606 00 11. Rehberde Abi Kasa. Bunu olduğu gibi E-Sorgu'ya yaz. Pavyon kasası gece yarısı isim kullanmaz."
+    },
+    {
+      "id": "p-akbaba-2",
+      "sender": "Akbaba",
+      "at": "03:40",
+      "requiresClueId": "clue_dna_match",
+      "text": "DNA bitti. Tırnak Ceren'in. Solist yardımcısı, Sevda'nın baş rakibi. Arbede yaşamışlar. Tırnak onda kopmuş, kovan başkasının. İkisini aynı adama bağlama, ama aynı geceye bağla."
+    },
+    {
+      "id": "p-behzat-2",
+      "sender": "Behzat",
+      "at": "03:55",
+      "requiresClueId": "clue_idris_threat",
+      "text": "İdris defteri bu gece istiyor, sesin çıkmaz diyor. Kız da defteri emniyete götüreceğini yazmış. Bu bir sahne kavgası değil. Kasayı odaya al."
+    },
+    {
+      "id": "p-hayalet-2",
+      "sender": "Hayalet",
+      "at": "04:10",
+      "requiresClueId": "clue_kuyumcu_receipt",
+      "text": "Kolye Sevda'nın. 03:30'da, yani kurşundan sonra, Nevzat satmış. Ölüden hızla çıkan adam defteri arıyordur, altını cebe atandır."
+    },
+    {
+      "id": "p-behzat-3",
+      "sender": "Behzat",
+      "at": "04:25",
+      "requiresClueId": "clue_blackmail_ledger",
+      "text": "Defterde Müdür Kemal, müteahhit Arif, örtülen bir adam. Savcı bu sayfayı görünce kaza diye kapatamaz. İdris'i de Nevzat'ı da sandalyeye oturt."
+    },
+    {
+      "id": "c3-hayalet-tanik",
+      "sender": "Hayalet",
+      "at": "04:30",
+      "requiresClueId": "clue_hidden_phone",
+      "text": "Kapıda Yusuf Demir, barda Selim Aktaş, kuyumcuda Mehmet Usta. Üçü de bir şey görmüş. E-Sorgu'ya isimleri yaz."
+    }
+  ],
+  "esorgu": [
+    {
+      "keys": [
+        "05336060011",
+        "abikasa",
+        "kasa"
+      ],
+      "title": "HAT — 0533 606 00 11",
+      "body": "Abone: Nevzat Şahin\nYaş: 48\nTC: 22819034765\nUnvan: Geceler Gazinosu muhasebecisi ve finans sorumlusu\nTabela adı: kasa\nAdres: Maltepe Mah. Güneş Sok. No:5 D:2\n\nHat pavyonun kasasına kayıtlı ikinci hat değil. Şahsın kendi hattı. Rehberdeki 'Abi (Kasa)' bu kişi.\nSon baz, cinayet gecesi 02:40–03:10 Maltepe pavyon sokağı. Ev bazı suskun.",
+      "unlocksClueId": "clue_nevzat_record"
+    },
+    {
+      "keys": [
+        "nevzatsahin",
+        "nevzat"
+      ],
+      "title": "HESAP — Nevzat Şahin",
+      "body": "Banka ve kuyumcu.\n\n03:30  Maltepe, Saat Kuyumculuk\nİşlem: altın inci kolye bozdurma\nTutar: 85.000 TL nakit\nKolye künyesi: Gonca Demir adına kesilmiş sigorta poliçesiyle uyuşuyor.\nSatan: Nevzat Şahin, kimlik fotokopisi kasada.\n\nAynı gece 02:51  pavyon kasasından Nevzat'ın hattına 14 saniyelik çağrı. Karşı uç İdris Bey'in masa telefonu.\n03:05  Nevzat hattı kuyumcu sokağının bazına geçmiş.\n\nDefter bu fişte yok. Kolye var.",
+      "unlocksClueId": "clue_kuyumcu_receipt"
+    },
+    {
+      "keys": [
+        "dna",
+        "ceren",
+        "tirnak"
+      ],
+      "title": "DNA — mor tırnak",
+      "body": "Delil: sağ arka teker dibindeki mor akrilik tırnak.\nİç yüzde deri ve kan.\n\nProfil, maktul Gonca Demir ile uyuşmuyor.\nUyuşma: Ceren Akgül, 27.\nKayıt: Geceler Gazinosu solist yardımcısı.\nSevda'nın yedeği. Aynı sahneyi paylaşmıyorlar, aynı gece paylaşıyorlar.\n\nCeren'in ifadesi: 'Saçını çekti, tırnağım kaldı, ben kaçtım, silah görmedim.'\nSaat: 01:55 civarı, otopark. Kurşun bundan sonra.",
+      "unlocksClueId": "clue_dna_match"
+    },
+    {
+      "keys": [
+        "yusufdemir",
+        "yusuf",
+        "kapigorevlisi"
+      ],
+      "title": "TANIK — Yusuf Demir",
+      "body": "TANIK İFADESİ — YUSUF DEMİR, 29\nGörev: Geceler Gazinosu kapı görevlisi.\n\n01:58  Ceren ağlayarak arka kapıdan çıktı, saçı dağınıktı, tırnağı kırıktı. 'Sevda abla saçımı çekti' dedi.\n02:44  Nevzat Bey arka kapıdan otoparka indi. 'Abi gönderdi' dedi.\n02:52  Aynı adam koşarak içeri girdi. Yüzü bembeyazdı. 'Kimse görmedi' dedi.\n\nİfade: 'Silah sesi duymadım. Müzik yüksekti. Ama o yüzü unutmam.'",
+      "unlocksClueId": "clue_wit_kapi"
+    },
+    {
+      "keys": [
+        "mehmetusta",
+        "mehmetsaat",
+        "saatkuyumculuk"
+      ],
+      "title": "TANIK — Mehmet Usta",
+      "body": "TANIK İFADESİ — MEHMET SAAT, 52\nGörev: Saat Kuyumculuk sahibi.\n\n03:30  Nevzat Şahin dükkânın kapısını yumrukladı. Elleri titriyordu. 'Bir kolye bozdur, kimseye söyleme.'\nKolye zincirinde kurumuş kırmızı bir leke vardı. Sildirmedim, poşete koydum.\n\nİfade: 'Ben altın bozarım, ölü ceplerini aramam. Ama kan kokusunu bilirim.'",
+      "unlocksClueId": "clue_wit_kuyumcu"
+    },
+    {
+      "keys": [
+        "selimaktas",
+        "selim",
+        "barmen"
+      ],
+      "title": "TANIK — Selim Aktaş",
+      "body": "TANIK İFADESİ — SELİM AKTAŞ, 34\nGörev: Geceler Gazinosu barmeni.\n\n02:10  İdris Bey masa telefonundan Nevzat'ı aradı. Ben bardaktaydım, duydum: 'Çantayı al, defteri getir, kızla konuşma.'\n02:50  İdris Bey sahnede alkış tuttu, saatine baktı, bardağını bitirmeden masadan kalktı.\n\nİfade: 'Ben içki dökerim, ihbar etmem. Ama kız ölmüş. Susmayacağım.'",
+      "unlocksClueId": "clue_wit_barmen"
+    }
+  ],
+  "phoneItems": [
+    {
+      "id": "calls",
+      "title": "Son aramalar",
+      "body": "GİZLİ HAT  ·  Sevda\n\n02:40  gelen  ·  Abi (Kasa)  ·  0533 606 00 11  ·  18 sn  ·  açılmış\nSevda: Defter sende değil. Bende de kalmayacak.\nKarşı uç: İdris bey beş dakika diyor. Arabadan inme.\n\n02:44  giden  ·  aynı numara  ·  açılmamış\n02:46  gelen  ·  Abi (Kasa)  ·  6 sn\nKarşı uç: Kapı açık kalmasın.\n\nBu son konuşma. Kurşun bundan yaklaşık beş dakika sonra.\nNumarayı E-Sorgu'ya olduğu gibi yaz.",
+      "unlocksClueId": "clue_abi_call"
+    },
+    {
+      "id": "notes",
+      "title": "Kara defter",
+      "body": "Bunu emniyete vereceğim. Kopyası bu telefonda.\n\nİdris'in mekânında aklanan para, haftalık.\nCuma kasası: sahte tüketim fişi, gerçek nakit.\n\nEmniyet'ten Müdür Kemal'e her ay elden 150.000 TL. Zarfta, kulis kapısından.\nMüteahhit Arif'in sahte fatura komisyonu: beton kesilmiyor, fatura kesiliyor. Yüzde on İdris'te kalıyor.\n\nGeçen sene vurulan adam. Adı defterde 'Rıza'. Üstü savcılıkta kapanmış. Kapanması için ödenen rüşvet, İdris'in kendi el yazısıyla: 'iş bitti, 400'.\n\nBu defterin kopyasını emniyete verip bu bataklıktan kurtulacağım. Artık korkmuyorum.\nGonca değilim. Sevda'yım. İkisi de bu gece susmayacak.",
+      "unlocksClueId": "clue_blackmail_ledger"
+    },
+    {
+      "id": "sms_idris",
+      "title": "İdris",
+      "body": "Bu gece\n\n01:12  İdris: Sevda, o defteri bu gece getirip masama bırakacaksın. Yoksa o sesin bir daha o sahnede çıkmaz. Seni bu Ankara'da barındırmam.\n01:18  Sevda: O defter artık emniyetin kasasına gidiyor İdris Bey. Sizi de, o arkasındaki müdürleri de tek tek yakacağım.\n01:21  İdris: Nevzat'ı gönderiyorum. Arabada kal. Kapıyı açma.\n01:24  Sevda: Göndermeyin. Ben zaten çıkıyorum.\n02:05  İdris: Ceren'i de karıştırma. O kız bir şey bilmiyor. Sen biliyorsun. O yeter.\n02:11  Sevda: Ceren tırnağını bende bıraktı. Siz kurşunu bırakacaksınız. Yazıyorum ki kalsın.",
+      "unlocksClueId": "clue_idris_threat"
+    }
+  ],
+  "suspects": [
+    {
+      "id": "nevzat",
+      "stressHit": 100,
+      "acceptedClueIds": [
+        "clue_kuyumcu_receipt",
+        "clue_wit_kapi",
+        "clue_wit_kuyumcu"
+      ],
+      "lines": {
+        "idle": "Komiserim ben sadece rakam alt alta toplarım. Cinayetle ne ilgim olur? Patron ister, ben sayarım. Gece evdeydim. Kasa kapandı, ben çıktım.",
+        "hit": "Kolye... evet, bende kaldı. Defter yoktu. Çantayı karıştırdım, defter yoktu, kolye vardı. Sattım. Öldüren ben değilim.",
+        "miss": "Bu kâğıt beni otoparka koymaz. Ben muhasebeciyim. Silah tutmam.",
+        "confess": "Tamam. Sevda'yı vuran ben değilim. İdris 'çantayı ve defteri bul, bana getir' dedi. Arabaya indim, kız ölmüştü. Defteri bulamadım. Kolyeyi cebime attım, kuyumcuya verdim. Emri o verdi. Ben sadece kasayı taşıdım.",
+        "repeat": "Bunu gördünüz. Başka bir şey koyun."
+      },
+      "character": {
+        "name": "Nevzat Şahin",
+        "primary": "#3d3428",
+        "secondary": "#c4a36a",
+        "accessory": "NONE",
+        "model": "ACCOUNTANT"
+      },
+      "dialogue": {
+        "start": {
+          "text": "Ellerim titriyor, görüyorsunuz, ama titremek suç değil. Ben rakam toplarım. Geceler'in kasası bendedir, kanı değil. O gece sayımı bitirdim, evime gittim. Sevda'yı sahneden tanırım. Arabasına binmem. İdris bey ne derse onu sayarım, onu da fazla saymam.",
+          "options": [
+            {
+              "text": "02:40'ta onu sen aradın.",
+              "next": "call",
+              "stress": 5
+            },
+            {
+              "text": "Kasa bu gece ne saydı?",
+              "next": "book",
+              "stress": 5
+            },
+            {
+              "text": "Kuyumcu zincirde kan lekesi gördü.",
+              "next": "jeweler",
+              "requires": "clue_wit_kuyumcu",
+              "stress": 15,
+              "anim": "DEFENSIVE",
+              "behzat": "Yüzü kireç gibi."
+            },
+            {
+              "text": "Kapı görevlisi seni 02:44'te otoparka inerken gördü.",
+              "next": "doorman",
+              "requires": "clue_wit_kapi",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Elleri titredi."
+            },
+            {
+              "text": "Fiş iki palto diyor. İkincisi sende.",
+              "next": "cloak",
+              "requires": "clue_cloak_ticket",
+              "stress": 12,
+              "anim": "DEFENSIVE",
+              "behzat": "Durdu."
+            }
+          ]
+        },
+        "call": {
+          "text": "Aradım, evet, patron istedi. 'Kız arabada kalsın, defteri alsın' dedi. Ben de söyledim. Karşıdaki Sevda'ydı, canlıydı. Sonra kapattım. Bir daha gitmedim. Gittiysem de görmedim.",
+          "lie": true,
+          "options": [
+            {
+              "text": "03:30'ta kolyeyi sen bozdurmuşsun.",
+              "next": "gold",
+              "requires": "clue_kuyumcu_receipt",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Rengi gitti."
+            },
+            {
+              "text": "Peki. Evine dönelim.",
+              "next": "start"
+            }
+          ]
+        },
+        "book": {
+          "text": "Kasa temizdir. Tüketim fişi, komisyon, hepsi defterdedir. Defter İdris beyin kasasındadır, bende kopyası yoktur. Sevda'nın telefonundaki yazı onun hayalidir. Muhasebeci hayal saymaz.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Onun telefonunda adın 'Abi (Kasa)' diye kayıtlı.",
+              "next": "call",
+              "requires": "clue_blackmail_ledger",
+              "stress": 10
+            },
+            {
+              "text": "Ellerin neden titriyor?",
+              "next": "hands",
+              "stress": 5
+            },
+            {
+              "text": "Geri.",
+              "next": "start"
+            }
+          ]
+        },
+        "gold": {
+          "text": "Kolye... kız ölmüştü zaten. Ben almasam başkası alacaktı. Defteri aradım, yoktu. Çanta dağınıktı. Kolye koltuğun arasında kaldı. Cebime attım. Kuyumcu tanıdıktır. 85 bin. İdris bey 'defteri getir' dedi, defter yoktu, ben de altını götürdüm ki boş gitmeyeyim. Vuran ben değilim. Vuran gitmişti. Ben sonra indim.",
+          "options": [
+            {
+              "text": "Emri kim verdi, bir daha söyle.",
+              "next": "order",
+              "stress": 10,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Kanıt masada.",
+              "next": "pressure"
+            }
+          ]
+        },
+        "order": {
+          "text": "İdris. Masa telefonundan. 'Çantayı al, defteri getir, kızla konuşma.' Konuşamadım zaten. Konuşacak hali yoktu. Kurşun ondandı, benden değil. Ben kasayı taşıdım. Hep taşıdım. Bu gece de taşıdım.",
+          "options": [
+            {
+              "text": "Tutanağa geçiyor. Kolye fişi duruyor.",
+              "next": "pressure",
+              "behzat": "Bir vuruş yeter. Fişi masaya indir."
+            },
+            {
+              "text": "Baştan.",
+              "next": "start"
+            }
+          ]
+        },
+        "pressure": {
+          "text": "Başka bir şey bilmiyorum. Defter bende değil. Kurşun bende değil. Kolye vardı, sattım, söyledim. İdris beyi siz alın. Ben rakamım.",
+          "options": [
+            {
+              "text": "Fiş duruyor.",
+              "next": "pressure"
+            },
+            {
+              "text": "En başa.",
+              "next": "start"
+            }
+          ]
+        },
+        "confessed": {
+          "text": "Sevda'yı ben vurmadım. İdris çantayı ve defteri istedi. Arabaya indim, kız ölmüştü. Defter yoktu. Kolyeyi aldım, sattım. Emri o verdi.",
+          "options": [
+            {
+              "text": "İdris sırada.",
+              "next": "confessed"
+            }
+          ]
+        },
+        "doorman": {
+          "text": "Kapı görevlisi her geceye bin yüz görür. Ben sigara içmeye indim, o kadar. Kimseyi görmedim, kimse beni görmedi. Yüzüm bembeyazsa soğuktandır.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Abi gönderdi dedin. Kim abi?",
+              "next": "order",
+              "stress": 5
+            },
+            {
+              "text": "Geri.",
+              "next": "start"
+            }
+          ]
+        },
+        "jeweler": {
+          "text": "Kuyumcu yaşlıdır, kafası karışır. Zincirde bir leke varsa ben değil, ölen kızın çantasından gelmiştir. Ben sadece taşıyıcıyım.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Lekeyi sen sildirmedin. O poşete girdi.",
+              "next": "pressure",
+              "stress": 5
+            },
+            {
+              "text": "Geri.",
+              "next": "start"
+            }
+          ]
+        },
+        "hands": {
+          "text": "Ellerim kasada rakam sayarken titrer, yirmi yıldır. Bu gece biraz fazla titriyor, o kadar. Doktor kalp çarpıntısı dedi.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Bu gece kimin kanı bulaştı?",
+              "next": "pressure",
+              "stress": 10,
+              "behzat": "Gözünü kaçırdı."
+            },
+            {
+              "text": "Geri.",
+              "next": "start"
+            }
+          ]
+        },
+        "cloak": {
+          "text": "Vestiyer benim işim değil komiser. Ben kapıdayım, palto tutmam. Fişteki İ harfi bana çıkmaz, benim adım Nevzat. İdris'e sorun, o her gece iki paltoyla girer.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Sen kapıdasın. 23:10'u sen gördün.",
+              "next": "cloak2",
+              "stress": 18,
+              "anim": "ANGRY",
+              "behzat": "Sesi kısıldı."
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "cloak2": {
+          "text": "Bunu şimdi konuşmam. Avukatım gelsin. Ama o kâğıt masadaysa, ben de o gece oradaydım demektir. Gerisini tutanağa yazın, ben imza atarım, itiraf değil, düzeltme.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "idris",
+      "calm": "ARROGANT",
+      "acceptedClueIds": [
+        "clue_idris_threat",
+        "clue_blackmail_ledger",
+        "clue_dna_match",
+        "clue_wit_barmen"
+      ],
+      "lines": {
+        "idle": "La komiserim, Ankara'nın pavyon kralına bu muamele yakışmıyor. Sevda başımızın tacıydı. Kim öldürdüyse bulun. Mekânımın adını bu pisliğe bulaştırmayın.",
+        "hit": "Mesaj her telefondan atılır. Defter de dedikodu. Kanıtınız varsa koyun. Yoksa çayınızı için.",
+        "miss": "Bu kâğıt beni otoparka koymaz. Ben sahnedeydim. Alkış vardı.",
+        "confess": "O kadın bütün tezgâhı yıkacaktı. Devletle olan işi, kasayı, Kemal'i, hepsini. Evet, vurdurdum. Seyir mi edecektim? Alın götürün.",
+        "repeat": "Aynı kâğıdı ikinci kez okutma."
+      },
+      "character": {
+        "name": "İdris",
+        "primary": "#1a120c",
+        "secondary": "#e6c27a",
+        "accessory": "GOLD_WATCH",
+        "model": "OWNER"
+      },
+      "dialogue": {
+        "start": {
+          "text": "Bu oda bana yakışmıyor, haklısınız, ama yakışmayan asıl bu soru. Sevda benim sahamın sesiydi. Küpesini ben aldırmıştım. Onu vuran, benim cebimi de vurmuştur. Mekânım aile gazinosudur. Kapıda kan görmem. Görmüşsem de içeri almam.",
+          "options": [
+            {
+              "text": "Defteri bu gece masana istedin.",
+              "next": "letter",
+              "stress": 5
+            },
+            {
+              "text": "Otoparkta kim vardı?",
+              "next": "yard",
+              "stress": 5
+            },
+            {
+              "text": "Nevzat'ı sen gönderdin.",
+              "next": "nevzat",
+              "requires": "clue_kuyumcu_receipt",
+              "stress": 10
+            },
+            {
+              "text": "Barmen masa telefonundan söylediğin cümleyi duymuş.",
+              "next": "barman",
+              "requires": "clue_wit_barmen",
+              "stress": 15,
+              "anim": "DEFENSIVE",
+              "behzat": "Sırıtış gitti."
+            },
+            {
+              "text": "Aynadaki numara senin şifren.",
+              "next": "mirror",
+              "requires": "clue_mirror_note",
+              "stress": 12,
+              "anim": "DEFENSIVE",
+              "behzat": "Durdu."
+            }
+          ]
+        },
+        "letter": {
+          "text": "Mesaj herkesin telefonundan atılır. Benim dilim o kadar kaba değildir. 'Sesin çıkmaz' diye yazan adam, sahnesini kendisi kapatır. Ben kapatmam. Defter dediğiniz şey de kızın kuruntusu. Muhasebe Nevzat'tadır. Nevzat temiz sayar.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Yazışma sende. 'Barındırmam' diyorsun.",
+              "next": "book",
+              "requires": "clue_idris_threat",
+              "stress": 15,
+              "anim": "DEFENSIVE",
+              "behzat": "Sırıtış durdu."
+            },
+            {
+              "text": "Kız seni emniyete verecekti. Neden korktun?",
+              "next": "fear",
+              "stress": 5
+            },
+            {
+              "text": "Geri.",
+              "next": "start"
+            }
+          ]
+        },
+        "book": {
+          "text": "Defter hayal. Müdür Kemal hayal. Arif hayal. Kız sahnede çok dinledi, çok yazdı. Yazmak suç değildir, beni bağlamaz. O sayfaları mahkeme de okumaz, çünkü imza yoktur.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Sayfada senin el yazın var. Rıza, 400.",
+              "next": "yard",
+              "requires": "clue_blackmail_ledger",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Baştan.",
+              "next": "start"
+            }
+          ]
+        },
+        "yard": {
+          "text": "Otoparkta müşteri iner, biner. Ben kapıdayım, içerideyim. Ceren kızgınlıktan saç çekmiş olabilir, kadınlar çeker. Kurşun o çekişten çıkmaz. Kovan yerdeyse şehirde kovan çoktur.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Tırnak Ceren'in. Kurşun senin emrin.",
+              "next": "nail",
+              "requires": "clue_dna_match",
+              "stress": 15,
+              "anim": "ANGRY_SLAM"
+            },
+            {
+              "text": "Alkış tuttun, sonra neden masadan kalktın?",
+              "next": "applause",
+              "stress": 5
+            },
+            {
+              "text": "Geri.",
+              "next": "start"
+            }
+          ]
+        },
+        "nail": {
+          "text": "Ceren'i bu işe katmayın. Kız yedek solisttir, kıskanır, tırnak bırakır, silah bırakmaz. DNA bir arbedeyi gösterir, bir emri göstermez. Emri arıyorsanız yanlış masadasınız.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Nevzat, çantayı senin istediğini söyledi.",
+              "next": "nevzat",
+              "requires": "clue_kuyumcu_receipt",
+              "stress": 10,
+              "behzat": "İkisi bir arada dursun."
+            },
+            {
+              "text": "Kanıt kalsın.",
+              "next": "pressure"
+            }
+          ]
+        },
+        "nevzat": {
+          "text": "Nevzat korkmuştur. Korkan adam patronunu satar, kolyeyi de satar. 85 bin onun açgözlülüğü. Benim emrim değildir. Defter bende olsaydı bu odada olmazdık. Defter yok. Sizin elinizde bir telefon var, bir korkak var. İkisi de kral yıkmaz.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Telefon senin tehdidini, defter kasayı, tırnak arbedeyi tutuyor.",
+              "next": "pressure",
+              "stress": 10,
+              "anim": "DEFENSIVE"
+            },
+            {
+              "text": "Baştan.",
+              "next": "start"
+            }
+          ]
+        },
+        "pressure": {
+          "text": "Avukatım gelir. O gelene kadar bu masa bir sahne. Alkışlamayın. Ben de konuşmam. Konuşursam da şarkı söylerim, ifade vermem.",
+          "options": [
+            {
+              "text": "Şarkı bitti. Kanıt sırayla.",
+              "next": "pressure",
+              "behzat": "Tehdit, defter, tırnak. Üçü de masada."
+            },
+            {
+              "text": "En başa.",
+              "next": "start"
+            }
+          ]
+        },
+        "confessed": {
+          "text": "O suratsız kadın bütün tezgâhı yıkacaktı. Kemal'i, Arif'i, Rıza'nın üstünü, hepsini. Evet, vurdurdum. Seyir mi edecektim? Ceren sadece saç çekti. Kurşun benim sözümdü. Alın götürün.",
+          "options": [
+            {
+              "text": "Tutanak kapanıyor.",
+              "next": "confessed"
+            }
+          ]
+        },
+        "barman": {
+          "text": "Barmen içki dökerken hayal görür. Masa telefonu herkesin kullandığı bir telefondur. 'Defter' dememiş olabilirim, 'defter kapat' demişimdir, hesap defteri kastettim.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Çantayı al dedin. Hesap defteri çantada mıydı?",
+              "next": "pressure",
+              "stress": 10,
+              "behzat": "Kendini ele verdi."
+            },
+            {
+              "text": "Geri.",
+              "next": "start"
+            }
+          ]
+        },
+        "applause": {
+          "text": "Alkış mekânın duasıdır. Saatime baktım, bir müşteri bekleyen vardı. Her gece kalkarım, ilk defa değil.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Saat 02:50. Kurşun 02:51.",
+              "next": "pressure",
+              "stress": 5
+            },
+            {
+              "text": "Geri.",
+              "next": "start"
+            }
+          ]
+        },
+        "fear": {
+          "text": "Korkmak mı? Ben bu şehirde otuz yıldır kimseden korkmam. Defter bir kâğıt parçasıdır, kâğıt parçası beni yıkmaz.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Rıza, 400. Kendi el yazın.",
+              "next": "pressure",
+              "stress": 10,
+              "anim": "DEFENSIVE"
+            },
+            {
+              "text": "Geri.",
+              "next": "start"
+            }
+          ]
+        },
+        "mirror": {
+          "text": "Ayna mı? Kulis benim mekanım değil. Ruj da benim işim değil. 06 plaka kodu, her Ankara'lı yazar. Bunu bana bağlayacak bir kameranız varsa gösterin, yoksa çayınızı için, ben kalkayım.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Numara ters yazılmış. Yazan aynaya bakıyormuş. Senin cepheden fotoğrafın var.",
+              "next": "mirror2",
+              "stress": 18,
+              "anim": "ANGRY",
+              "behzat": "Sesi kısıldı."
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "mirror2": {
+          "text": "Bunu şimdi konuşmam. Avukatım gelsin. Ama o kâğıt masadaysa, ben de o gece oradaydım demektir. Gerisini tutanağa yazın, ben imza atarım, itiraf değil, düzeltme.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "report": "T.C. ANKARA EMNİYET MÜDÜRLÜĞÜ\nDOSYA KAPANDI  ·  2026/06-414  ·  Pavyonda Hesap Gecesi\n\nMaktul Gonca Demir, sahnede Sevda, 31, Geceler Gazinosu başsolisti. Maltepe arka otoparkta, aracının içinde, şakağından 9mm ile vurulmuştur. Çantada 12.400 TL durmaktadır. Gasp değildir.\n\nMuhasebeci Nevzat Şahin, ölümden sonra çantayı karıştırmış, Sevda'nın inci kolyesini 03:30'da 85.000 TL'ye bozdurmuştur. Emrin İdris'ten geldiğini söylemiştir.\n\nPavyon sahibi İdris, kara defter emniyete gitmesin diye kurşun emrini vermiştir. Defterde Müdür Kemal'e aylık rüşvet, müteahhit Arif'in sahte faturaları ve örtülen bir adam vardır. Mor tırnak, solist yardımcısı Ceren'in arbedesine aittir. Kurşun o arbededen sonra gelmiştir.\n\nUnvan notu: Ankara gecelerinin korkulu rüyası.\nİdris ve Nevzat tutukludur. Kasa dağılmıştır.",
+  "replies": {
+    "Behzat": [
+      {
+        "text": "Maltepe'ye iniyorum.",
+        "reply": "Para duruyor, küpe duruyor. Gasp lafına kanma."
+      },
+      {
+        "text": "Ekip yolda mı?",
+        "reply": "Akbaba arabada. Hayalet 'Abi (Kasa)' hattında."
+      }
+    ],
+    "Akbaba": [
+      {
+        "text": "Kovan ne diyor?",
+        "reply": "9mm, araç dışından atış. Tırnak mor, DNA'ya gidiyor."
+      },
+      {
+        "text": "Gizli telefon?",
+        "reply": "Torpido altı panel. PIN kulisteki aynada: 06-71."
+      }
+    ],
+    "Hayalet": [
+      {
+        "text": "0533 606 00 11?",
+        "reply": "Nevzat Şahin. Pavyonun kasası, 'Abi' o."
+      },
+      {
+        "text": "Kuyumcu ne dedi?",
+        "reply": "03:30'da 85.000 TL inci kolye. Faturayı sorguda yakala."
+      }
+    ]
+  },
+  "esorguHints": [
+    {
+      "text": "0533 606 00 11",
+      "field": "Telefon"
+    },
+    {
+      "text": "Nevzat Şahin",
+      "field": "İsim"
+    },
+    {
+      "text": "Ceren DNA",
+      "field": "İsim"
+    },
+    {
+      "text": "Yusuf Demir",
+      "field": "Tanık"
+    },
+    {
+      "text": "Mehmet Usta",
+      "field": "Tanık"
+    },
+    {
+      "text": "Selim Aktaş",
+      "field": "Tanık"
+    }
+  ],
+  "importantClues": [
+    "clue_nevzat_record",
+    "clue_kuyumcu_receipt",
+    "clue_idris_threat",
+    "clue_dna_match",
+    "clue_blackmail_ledger"
+  ]
+}

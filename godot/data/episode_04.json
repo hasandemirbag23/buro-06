@@ -1,0 +1,645 @@
+{
+  "fileNo": "04",
+  "title": "Nöbetin Sonu",
+  "set": "eczane",
+  "place": "Bahçelievler, 4. Cadde",
+  "caseNo": "2026/06-416",
+  "pin": "0417",
+  "pinHint": "Ruhsat: 17 Nisan 2004",
+  "pinLocked": "4 hane. Tezgâhın arkasındaki ruhsata bak.",
+  "pinHintClue": "clue_e4_letter",
+  "phoneClueId": "clue_e4_phone",
+  "contradiction": "clue_e4_drawer|clue_e4_sms_riza",
+  "arrival": {
+    "speaker": "Akbaba",
+    "line": "Nermin Koç, 41, bu eczanenin sahibi. Nöbet 02:00'de bitmiş, kepenk yarıda kalmış. Kasa dolu, soygun değil. Ense kökü künt. Telefon tezgâhta, ruhsattaki 17 Nisan dört hane. Dolabı, çöpü ve arka kapıyı boş geçme."
+  },
+  "briefing": "Saat 03:05. Bahçelievler, 4. Cadde, Nermin Eczanesi. Gece nöbeti kapanmamış. Kepenk bel hizasında, içeride ışık yanıyor, kasa çekmecesi açık ve para duruyor. Akbaba ense kökündeki darbeyi gösterdi: soyguncu para bırakmaz. Nermin sabah İlaç ve Tıbbi Cihaz Kurumu'na sahte onkoloji serumu götürecekmiş. Tezgâhtaki telefonu al. Şifre duvardaki ruhsatta, 17 Nisan. Buzdolabının saatine, çöpteki kutu koduna ve arka kapıdaki nota ayrı bak. Bu iş depodan çıktıysa mümessilin adı dosyada vardır. Ben savcıyı kapıda tutarım, sen rafın arkasına geç.",
+  "victim": {
+    "name": "Nermin Koç",
+    "age": 41,
+    "role": "Eczacı, Nermin Eczanesi sahibi"
+  },
+  "arrestClueIds": [
+    "clue_e4_sms_riza",
+    "clue_e4_pts",
+    "clue_e4_bank"
+  ],
+  "call": {
+    "from": "Başkomiser Behzat",
+    "text": "Bahçelievler, 4. Cadde. Nermin Eczanesi kapanmamış. Kasa dolu, kadın yerde. Soygun lafına kanma. Telefonu, dolabı ve arka kapıyı gör. Ruhsattaki tarihe bak, dört hane orada."
+  },
+  "characters": {
+    "player": {
+      "name": "Komiser",
+      "primary": "#1c1c1c",
+      "secondary": "#4a4038",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "behzat": {
+      "name": "Başkomiser Behzat",
+      "primary": "#6e2430",
+      "secondary": "#2a2420",
+      "accessory": "TEA_GLASS",
+      "model": "POLICE"
+    },
+    "akbaba": {
+      "name": "Akbaba",
+      "primary": "#c4552a",
+      "secondary": "#242424",
+      "accessory": "CAMERA",
+      "model": "FORENSIC"
+    },
+    "hayalet": {
+      "name": "Hayalet",
+      "primary": "#243044",
+      "secondary": "#8a939c",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "arsiv": {
+      "name": "Ayşe",
+      "primary": "#3d3428",
+      "secondary": "#6b4428",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "savci": {
+      "name": "Savcı Nilgün Erdem",
+      "primary": "#101114",
+      "secondary": "#e8e4dc",
+      "accessory": "NONE",
+      "model": "POLICE"
+    }
+  },
+  "hotspots": [
+    {
+      "id": "hotspot_counter",
+      "title": "Tezgâhtaki telefon",
+      "unlocksClueId": "clue_e4_phone",
+      "speaker": "Akbaba",
+      "text": "Telefon tezgâhın camında, ekranı kırık değil, kilitli. Arkasındaki çerçevede ruhsat: Nermin Koç, 17 Nisan 2004. Dört hane 0417. Kadın nöbeti kapatırken bunu elinden bırakmamış. Çekmece açık, para duruyor. Bunu soygun diye yazma. Telefonu poşete koy, ruhsatın fotoğrafını da al."
+    },
+    {
+      "id": "hotspot_script",
+      "title": "Yırtık kurum dilekçesi",
+      "unlocksClueId": "clue_e4_letter",
+      "speaker": "Komiser",
+      "text": "Arka masada yırtılmış dilekçe, tamamı yok. Başlık: İlaç ve Tıbbi Cihaz Kurumu. Konu: ONKO-B 200 serumu, seri 19-441, etken madde yok, şekerli su. Muhatap depo: Baran Ecza. Nermin sabah bunu kendi eliyle götürecekmiş. Yırtan acele etmiş, tarih satırını bırakmış: 17 Nisan. Parçaları birleştir, aslını çantada ara."
+    },
+    {
+      "id": "hotspot_fridge",
+      "title": "Nöbet dolabı",
+      "unlocksClueId": "clue_e4_fridge",
+      "speaker": "Akbaba",
+      "text": "Aşı dolabının kapağı aralık, derece 11. Olması gereken 4. İç kayıt 02:12'de kapak açılmış, 02:19'da kapanmış. O yedi dakikada bir kutu eksilmiş: ONKO-B, seri 19-441. Nermin'in parmak izi kapakta var, kutunun yerinde yok. Dolabı yerinden oynatma. Saati ve boş rafı fotoğrafla."
+    },
+    {
+      "id": "hotspot_bin",
+      "title": "Çöpteki serum kutusu",
+      "unlocksClueId": "clue_e4_bin",
+      "speaker": "Başkomiser Behzat",
+      "text": "Tezgâh altındaki çöp. Boş kutu, ONKO-B 200, seri 19-441, son kullanma tarihi baskısı kaymış. Kutu bu gece açılmış, ağızda tükürük yok, yani hasta içmemiş. Birisi delili çöpe atmış, poşeti bağlamadan çıkmış. Kutuyu kriminal poşete al. Seri numarası deponun defterine bağlanacak."
+    },
+    {
+      "id": "hotspot_backdoor",
+      "title": "Arka kapı notu",
+      "unlocksClueId": "clue_e4_note",
+      "speaker": "Komiser",
+      "text": "Arka kapının eşiğinde katlanmış kâğıt, yağmur almamış. Kurşun kalem, sağ el: '02:05'te kamyonet yanaştı, şoför indi, kapıyı anahtarla açtı.' Altına ikinci el, daha sert: 'görmedim'. Kilit zorlanmamış. Anahtar içeriden de dönüyor, dışarıdan da. Notu naylona koy. Bu kapıyı açan kişi aileden ya da depodan."
+    },
+    {
+      "id": "hotspot_drawer",
+      "title": "Açık kasa",
+      "unlocksClueId": "clue_e4_drawer",
+      "speaker": "Akbaba",
+      "text": "Çekmece sonuna kadar açık. 4.850 lira, bozuk para, nöbet fişleri. Eksik yok. Parmak izi silinmiş tek yer çekmece dudağı. Parayı alan yok, izi silen var. Bu sahne soygun diye kapanmaz. Parayı say, çekmeceyi mühürle, fişlerin saatine bak: son satış 01:46, ağrı kesici."
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_e4_phone",
+      "title": "Nermin'in telefonu",
+      "summary": "Tezgâhta kilitli. Ruhsat tarihi 17 Nisan, şifre 0417.",
+      "source": "scene",
+      "icon": "TEL"
+    },
+    {
+      "id": "clue_e4_letter",
+      "title": "Kurum dilekçesi",
+      "summary": "ONKO-B 200, seri 19-441 sahte. Muhatap Baran Ecza. Sabah kuruma gidecekmiş.",
+      "source": "scene",
+      "icon": "KÂĞIT"
+    },
+    {
+      "id": "clue_e4_fridge",
+      "title": "Dolap kaydı",
+      "summary": "02:12'de kapak açılmış. Seri 19-441 raftan eksik.",
+      "source": "scene",
+      "icon": "DOLAP"
+    },
+    {
+      "id": "clue_e4_bin",
+      "title": "Çöpteki kutu",
+      "summary": "Boş ONKO-B kutusu, basımı kaymış. Bu gece açılmış.",
+      "source": "scene",
+      "icon": "KUTU"
+    },
+    {
+      "id": "clue_e4_note",
+      "title": "Arka kapı notu",
+      "summary": "02:05'te kamyonet ve anahtarlı şoför. Altına 'görmedim' eklenmiş.",
+      "source": "scene",
+      "icon": "NOT"
+    },
+    {
+      "id": "clue_e4_drawer",
+      "title": "Dolu kasa",
+      "summary": "4.850 lira duruyor. Soygun değil. Çekmece dudağındaki iz silinmiş.",
+      "source": "scene",
+      "icon": "KASA"
+    },
+    {
+      "id": "clue_e4_photo",
+      "title": "Depo fotoğrafları",
+      "summary": "Nermin'in gizli klasörü. Seri 19-441 kolisi ve Selim'in imzası.",
+      "source": "phone",
+      "icon": "FOTO"
+    },
+    {
+      "id": "clue_e4_audio",
+      "title": "Selim'in tehdidi",
+      "summary": "Ses kaydı. Selim, dilekçeyi yırtmazsan nöbetin kapanmaz diyor.",
+      "source": "phone",
+      "icon": "SES"
+    },
+    {
+      "id": "clue_e4_sms_sister",
+      "title": "Kız kardeş mesajı",
+      "summary": "Nermin sabah kuruma gideceğini yazmış. Rıza'nın anahtarı olduğunu da.",
+      "source": "phone",
+      "icon": "MESAJ"
+    },
+    {
+      "id": "clue_e4_sms_riza",
+      "title": "Rıza'nın mesajı",
+      "summary": "01:58: 'Kapıdayım, beş dakika, Selim bekliyor.'",
+      "source": "phone",
+      "icon": "MESAJ"
+    },
+    {
+      "id": "clue_e4_pts",
+      "title": "06 ECZ 17 geçişi",
+      "summary": "Kamyonet 01:52'de 4. Cadde'ye girmiş, 02:24'te çıkmış.",
+      "source": "esorgu",
+      "icon": "PTS"
+    },
+    {
+      "id": "clue_e4_bank",
+      "title": "250 bin havale",
+      "summary": "Baran Ecza, cinayetten bir gün önce Rıza'nın hesabına 250.000 TL yatırmış.",
+      "source": "esorgu",
+      "icon": "BANKA"
+    },
+    {
+      "id": "clue_e4_otopsi",
+      "title": "Otopsi",
+      "summary": "Ölüm 02:10-02:25. Ense künt. Zehir yok. Gaz yok.",
+      "source": "esorgu",
+      "icon": "OTOPSİ"
+    },
+    {
+      "id": "clue_e4_wit_kapi",
+      "title": "Kapıcı ifadesi",
+      "summary": "Kapıcı Hasan, 02:05'te Rıza'yı arka kapıda anahtarla görmüş.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_e4_wit_komsu",
+      "title": "Komşu ifadesi",
+      "summary": "Üst kat, 02:11'de tek bağırış duymuş, sonra kepenk inmemiş.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_e4_wit_depo",
+      "title": "Depo güvenliği",
+      "summary": "Gece bekçisi, Selim'in 00:40'ta seriyi kendi eliyle kolilediğini görmüş.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    }
+  ],
+  "pairs": [
+    [
+      "clue_e4_bin",
+      "clue_e4_fridge"
+    ],
+    [
+      "clue_e4_sms_riza",
+      "clue_e4_pts"
+    ],
+    [
+      "clue_e4_audio",
+      "clue_e4_letter"
+    ],
+    [
+      "clue_e4_bank",
+      "clue_e4_wit_depo"
+    ],
+    [
+      "clue_e4_drawer",
+      "clue_e4_sms_riza"
+    ]
+  ],
+  "chat": [
+    {
+      "id": "e4-b1",
+      "sender": "Behzat",
+      "at": "03:06",
+      "text": "4. Cadde. Eczane kapanmamış. Kasa doluysa soygun yoktur. Telefonu ve arka kapıyı boş geçme."
+    },
+    {
+      "id": "e4-a1",
+      "sender": "Akbaba",
+      "at": "03:20",
+      "requiresClueId": "clue_e4_fridge",
+      "text": "Dolap 02:12'de açılmış. Seri 19-441 yok. Kadının izi kapakta, kutuda değil."
+    },
+    {
+      "id": "e4-h1",
+      "sender": "Hayalet",
+      "at": "03:34",
+      "requiresClueId": "clue_e4_letter",
+      "text": "Dilekçedeki depo Baran Ecza. Müdür Selim Baran. E-Sorgu'ya adını yaz, parayı da."
+    },
+    {
+      "id": "e4-h2",
+      "sender": "Hayalet",
+      "at": "03:48",
+      "requiresClueId": "clue_e4_pts",
+      "text": "06 ECZ 17, 01:52'de sokağa girmiş. Araç Rıza Koç üstüne. Enişte. Anahtarı ondadır."
+    },
+    {
+      "id": "e4-b2",
+      "sender": "Behzat",
+      "at": "04:02",
+      "requiresClueId": "clue_e4_sms_riza",
+      "text": "Rıza 'kapıdayım' demiş. Saat 01:58. Ölüm penceresinin on iki dakika öncesi. Onu sandalyeye oturt."
+    }
+  ],
+  "esorgu": [
+    {
+      "keys": [
+        "06ecz17",
+        "riza",
+        "rizakoc",
+        "kamyonet"
+      ],
+      "title": "PTS — 06 ECZ 17",
+      "unlocksClueId": "clue_e4_pts",
+      "body": "ARAÇ 06 ECZ 17\nTescil: Rıza Koç\nCins: panelvan\n\n01:52  Bahçelievler 4. Cadde girişi\n02:06  eczane arka sokağı, hız 8 km\n02:24  aynı kavşaktan çıkış, tek kişi\n\nSürücü kamerada iniyor. Mont lacivert, anahtar sağ elde."
+    },
+    {
+      "keys": [
+        "selimbaran",
+        "baran",
+        "baranecza"
+      ],
+      "title": "Banka — Baran Ecza",
+      "unlocksClueId": "clue_e4_bank",
+      "body": "BARAN ECZA DEPO LTD.\nMüdür: Selim Baran\n\nDün 16:40  Rıza Koç hesabına 250.000 TL\nAçıklama: 'nakliye farkı'\nAynı gün 17:10  Selim kendi hesabından depo kasasına 250.000 TL çekmiş.\n\nNakliye faturası yok. Fark, bir gecelik sus payı."
+    },
+    {
+      "keys": [
+        "otopsi",
+        "nerminkoc",
+        "nermin"
+      ],
+      "title": "Otopsi — Nermin Koç",
+      "unlocksClueId": "clue_e4_otopsi",
+      "body": "OTOPSİ\nNermin Koç, 41.\nÖlüm aralığı 02:10–02:25.\nEnse kökü künt, tek darbe, metal köşe.\nZehir yok. Kanda alkol yok. Gaz yok.\nTırnak arasında lacivert kumaş tiftiği. Mont değil, iş önlüğü."
+    },
+    {
+      "keys": [
+        "hasan",
+        "kapici"
+      ],
+      "title": "TANIK — Kapıcı Hasan",
+      "unlocksClueId": "clue_e4_wit_kapi",
+      "body": "TANIK — HASAN USTA, 59\n4. Cadde 12 kapıcısı.\n\n02:05  Beyaz kamyonet arka sokağa girdi. Şoförü tanıdım, Rıza, Nermin'in eniştesi. Anahtarla girdi, zile basmadı.\n02:20  Tek başına çıktı. Sağ eli cebindeydi.\n\nİfade: 'Nermin bana gece çay bırakırdı. Bu gece bırakmadı.'"
+    },
+    {
+      "keys": [
+        "komsu",
+        "ayse"
+      ],
+      "title": "TANIK — Üst kat",
+      "unlocksClueId": "clue_e4_wit_komsu",
+      "body": "TANIK — AYŞE KILIÇ, 64\nEczanenin üstü, daire 2.\n\n02:11  Aşağıdan bir bağırış. Kadın sesi, tek kelime: 'Rıza'.\n02:13  Kepenk inmeye başladı, yarım kaldı.\n02:30  Işık sönmedi. Ben kapıya indim, içerisi kilitliydi.\n\nİfade: 'Soyguncu olsaydı bağırmadan önce para alırdı.'"
+    },
+    {
+      "keys": [
+        "depo",
+        "bekci",
+        "guvenlik"
+      ],
+      "title": "TANIK — Depo bekçisi",
+      "unlocksClueId": "clue_e4_wit_depo",
+      "body": "TANIK — CEMİL ER, 47\nBaran Ecza gece bekçisi.\n\n00:40  Selim Bey soğuk odaya kendi kartıyla girdi. Seri 19-441 kolisini eliyle bantladı.\n00:55  'Bunu Rıza alacak, deftere yazma' dedi.\n01:20  Koli kapıdan çıktı. İrsaliye kesilmedi.\n\nİfade: 'Kart geçişi sistemde duruyor. Ben silmem.'"
+    }
+  ],
+  "esorguHints": [
+    {
+      "text": "Rıza Koç",
+      "field": "İsim"
+    },
+    {
+      "text": "06 ECZ 17",
+      "field": "Plaka"
+    },
+    {
+      "text": "Selim Baran",
+      "field": "İsim"
+    },
+    {
+      "text": "Kapıcı",
+      "field": "Tanık"
+    },
+    {
+      "text": "Komşu",
+      "field": "Tanık"
+    },
+    {
+      "text": "Depo",
+      "field": "Tanık"
+    }
+  ],
+  "importantClues": [
+    "clue_e4_fridge",
+    "clue_e4_sms_riza",
+    "clue_e4_bank"
+  ],
+  "replies": {
+    "Behzat": [
+      {
+        "text": "Kasa dolu mu?",
+        "reply": "Dolu. Soygun değil. Arka kapıya bak."
+      },
+      {
+        "text": "Ekip?",
+        "reply": "Akbaba dolapta. Hayalet plakada."
+      }
+    ],
+    "Akbaba": [
+      {
+        "text": "Yara?",
+        "reply": "Ense, tek darbe. Gaz yok, zehir yok."
+      }
+    ],
+    "Hayalet": [
+      {
+        "text": "Depo kim?",
+        "reply": "Baran Ecza. Selim Baran. Parayı Rıza'ya atmış."
+      }
+    ]
+  },
+  "phoneItems": [
+    {
+      "id": "photo",
+      "title": "Depo klasörü",
+      "unlocksClueId": "clue_e4_photo",
+      "body": "GİZLİ KLASÖR  ·  9 kare\n\nKare 1. Soğuk oda kapısı, kartlı geçiş, saat 00:41.\nKare 2. Koli. El yazısı: ONKO-B 200 / 19-441.\nKare 3. Selim Baran kolinin üstüne imza atıyor. Yüz net.\nKare 4. Aynı kolinin içi. Şişelerin etiketi kayık, parti no tek kalıptan değil.\nKare 5. Nermin'in notu kadrajda: 'yarın kuruma'.\n\nKlasör şifresi telefonla aynı."
+    },
+    {
+      "id": "audio",
+      "title": "Ses — Selim",
+      "unlocksClueId": "clue_e4_audio",
+      "body": "SES  ·  3 dk 40 sn  ·  dün 18:12\nSelim Baran, alçak, acele etmiyor.\n\nSelim: Nermin Hanım, seri 19-441 bir hatadır. Hatayı kuruma götürmek eczaneyi kapatır.\nNermin: Şişede ilaç yok. Bunu çocuklara yazdınız.\nSelim: Yarın o dilekçe masamda olmazsa nöbetin kapanmaz. Rıza anahtarı bilir.\nNermin: Kaydediyorum.\nSelim: Kaydet. Bu şehirde kayıt da bir şişedir, kırılır.\n\nTelefon cebine inene kadar Selim'in nefesi duruyor."
+    },
+    {
+      "id": "sms_sister",
+      "title": "Kardeş",
+      "unlocksClueId": "clue_e4_sms_sister",
+      "body": "Kız kardeş Sevil\n\nDün 21:10  Nermin: Sabah kuruma gidiyorum. Serum sahte. Selim tehdit etti.\nDün 21:14  Sevil: Rıza'ya söyle, o da depoda çalışıyor.\nDün 21:18  Nermin: Rıza'nın anahtarı var. Bu gece ona güvenmiyorum. Kepengi yarım bırakırsam polis anlar.\nDün 21:22  Sevil: Kapıyı kilitle.\nBu son mesaj. Sevil'in dönüşü sabah."
+    },
+    {
+      "id": "sms_riza",
+      "title": "Rıza",
+      "unlocksClueId": "clue_e4_sms_riza",
+      "body": "Kayıtlı ad: Enişte Rıza\n\n01:40  Rıza: Nermin kapıdayım deme, Selim beş dakika istiyor.\n01:51  Nermin: Gelme. Dilekçe çantada.\n01:58  Rıza: Kapıdayım. Anahtar bende. Beş dakika, sonra giderim.\n02:04  Nermin yazmamış.\n02:27  Rıza: Tamam, gittim. Kimseye bir şey söyleme.\n\nGitmemiş. PTS 02:24'te çıkmış."
+    }
+  ],
+  "suspects": [
+    {
+      "id": "riza",
+      "calm": "NERVOUS",
+      "acceptedClueIds": [
+        "clue_e4_pts",
+        "clue_e4_note",
+        "clue_e4_wit_kapi"
+      ],
+      "lines": {
+        "idle": "Eniştesiyim. Nermin'i ben bulamadım, siz buldunuz. O saatte evdeydim.",
+        "hit": "Evet, sokağa girdim. Kapıyı çaldım, açmadı. İçeri girmedim.",
+        "miss": "Bu kâğıt beni o kapıya koymaz. Depoda şoförüm, eczacı değilim.",
+        "confess": "Yeter. Selim, 'bu kız yarın hepimizi bitirir' dedi. Anahtarla girdim. Arkadan rafa çarptı, ben de dolabın köşesini tuttum. Vurmadım sandım. Vurmuşum. Kutuyu çöpe attım. Paraya dokunmadım. Emri Selim verdi, parayı da o attı.",
+        "repeat": "Bunu gördüm. Yenisini koyun."
+      },
+      "character": {
+        "name": "Rıza Koç",
+        "primary": "#3a4250",
+        "secondary": "#1c1814",
+        "accessory": "NONE",
+        "model": "SITE_CHIEF"
+      },
+      "dialogue": {
+        "start": {
+          "text": "Nermin'in eniştesiyim. Bu gece evdeydim, çay içtim, yattım. Eczaneye ayda bir mal bırakırım, nöbetine karışmam. Kasa doluysa soygun başkadır.",
+          "options": [
+            {
+              "text": "02:00'de neredeydin?",
+              "next": "alibi",
+              "stress": 5
+            },
+            {
+              "text": "'Kapıdayım' mesajını sen yazdın.",
+              "next": "yazi",
+              "stress": 12,
+              "requires": "clue_e4_sms_riza",
+              "anim": "NERVOUS",
+              "behzat": "Gözü telefona kaçtı."
+            },
+            {
+              "text": "Kapıcı seni anahtarla gördü.",
+              "next": "kapi",
+              "stress": 15,
+              "requires": "clue_e4_wit_kapi",
+              "anim": "DEFENSIVE",
+              "behzat": "Yutkundu."
+            },
+            {
+              "text": "Not, 02:05'te kamyoneti yazıyor.",
+              "next": "not",
+              "stress": 15,
+              "requires": "clue_e4_note",
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Alnı ıslandı."
+            }
+          ]
+        },
+        "confessed": {
+          "text": "Yeter. Selim, 'bu kız yarın hepimizi bitirir' dedi. Anahtarla girdim. Arkadan rafa çarptı, ben de dolabın köşesini tuttum. Vurmadım sandım. Vurmuşum. Kutuyu çöpe attım. Paraya dokunmadım. Emri Selim verdi, parayı da o attı.",
+          "options": [
+            {
+              "text": "Tutanağa geçiyoruz.",
+              "next": "confessed"
+            }
+          ]
+        },
+        "alibi": {
+          "text": "Evdeydim. Karım şahit. Eczanenin anahtarı bende yok, Nermin alırdı. Kamyonet dün akşam depoda kaldı.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "yazi": {
+          "text": "O mesajı ben atmadım. Telefonum depoda kalır. Selim benim hattımdan yazar bazen, yakışır mı, yakışmaz.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "kapi": {
+          "text": "Kapıcı beni karıştırır. O saatte sokakta üç kamyonet vardır. Anahtarım yok dedim.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "not": {
+          "text": "Arka kapıya not bırakan varsa komşudur. Ben o sokaktan geçmem. 'Görmedim' yazan da ben değilim.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "selim",
+      "calm": "ARROGANT",
+      "acceptedClueIds": [
+        "clue_e4_audio",
+        "clue_e4_bank",
+        "clue_e4_wit_depo"
+      ],
+      "lines": {
+        "idle": "Ben depo müdürüyüm. Bir eczacının nöbeti beni ilgilendirmez.",
+        "hit": "Evet, seri sorunluydu. Toplatacaktık. Bu, adam öldürmek değildir.",
+        "miss": "Bu evrak beni o sokağa koymaz. Depo defteri açıktır, buyurun.",
+        "confess": "Rıza'ya 'konuş, yırt, çık' dedim. Vur demedim. Ama anahtarı verdim, parayı attım, seriyi onun kamyonetine ben koydum. Kadın ölünce ben de sustum. Tutanak buysa yazın.",
+        "repeat": "Bunu gördüm. Yenisini koyun."
+      },
+      "character": {
+        "name": "Selim Baran",
+        "primary": "#1c2430",
+        "secondary": "#1c1814",
+        "accessory": "NONE",
+        "model": "CRIMINAL_BOSS"
+      },
+      "dialogue": {
+        "start": {
+          "text": "Baran Ecza on iki yıldır bu şehre mal verir. Bir hatalı seri bütün depoyu batırmaz. Nermin Hanım telaşlıydı. Ben onu tehdit etmedim, uyardım. Bu gece depodaydım, kartım orada.",
+          "options": [
+            {
+              "text": "Seri 19-441 neden hastaneye çıktı?",
+              "next": "seri",
+              "stress": 5
+            },
+            {
+              "text": "Kayıtta 'nöbetin kapanmaz' diyorsun.",
+              "next": "ses",
+              "stress": 14,
+              "requires": "clue_e4_audio",
+              "anim": "ANGRY",
+              "behzat": "Gülümsemesi düştü."
+            },
+            {
+              "text": "250 bin, Rıza'nın hesabına nakliye değil.",
+              "next": "para",
+              "stress": 16,
+              "requires": "clue_e4_bank",
+              "anim": "DEFENSIVE",
+              "behzat": "Kravatını düzeltti."
+            },
+            {
+              "text": "Bekçi koliyi senin bantladığını gördü.",
+              "next": "depo",
+              "stress": 16,
+              "requires": "clue_e4_wit_depo",
+              "anim": "ANGRY",
+              "behzat": "Sesi inceldi."
+            }
+          ]
+        },
+        "confessed": {
+          "text": "Rıza'ya 'konuş, yırt, çık' dedim. Vur demedim. Ama anahtarı verdim, parayı attım, seriyi onun kamyonetine ben koydum. Kadın ölünce ben de sustum. Tutanak buysa yazın.",
+          "options": [
+            {
+              "text": "Tutanağa geçiyoruz.",
+              "next": "confessed"
+            }
+          ]
+        },
+        "seri": {
+          "text": "Seri bir yazım hatasıdır. Etiket kaymış, içinde ilaç vardır. Laboratuvar raporu yoldadır.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "ses": {
+          "text": "O cümle ticari dildir. Kimse kimseyi kapıda beklemez. Kayıt montajdır.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "para": {
+          "text": "Nakliye farkı her ay yatar. Bu ay tesadüf. Rıza şoförüm, muhasebe onu bilir.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "depo": {
+          "text": "Bekçi gece görür, sabah unutur. Kart geçişi bakımda olabilir. Ben koliyi bantlamam, müdürüm.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "report": "T.C. ANKARA EMNİYET MÜDÜRLÜĞÜ\nDOSYA KAPANDI  ·  2026/06-416  ·  Nöbetin Sonu\n\nMaktul Nermin Koç, 41, Nermin Eczanesi. Bahçelievler 4. Cadde. 02:10–02:25. Ense köküne dolap köşesiyle vurulmuş. Kasa dolu. Soygun değil.\n\nEnişte Rıza Koç itiraf etti. 06 ECZ 17 plakalı kamyonetle 01:52'de sokağa girdi, arka kapıyı kendi anahtarıyla açtı, darbeyi o vurdu, ONKO-B kutusunu çöpe attı.\n\nSelim Baran, Baran Ecza müdürü, sahte seri 19-441'i kuruma gitmeden susturmak için 250.000 TL yatırmış, ses kaydında nöbetin kapanmayacağını söylemiş, koliyi bekçinin önünde bantlamıştır. 'Vur demedim' cümlesi tutanakta duruyor. Emri o kurdu.\n\nİki isim nezarettedir. Serumun kalanı depoda mühürlüdür."
+}

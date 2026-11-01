@@ -1,0 +1,1143 @@
+{
+  "fileNo": "01",
+  "title": "Kuledeki Sır",
+  "set": "tower",
+  "place": "Vadi Kule",
+  "caseNo": "2026/06-412",
+  "pin": "1903",
+  "pinHint": "Takvimdeki işaret: 19.03",
+  "pinLocked": "4 hane. Şantiye ofisindeki takvime bak.",
+  "pinHintClue": "clue_desk_photo",
+  "phoneClueId": "clue_victim_phone",
+  "contradiction": "clue_no_suicide|doc_suicide",
+  "arrival": {
+    "speaker": "Akbaba",
+    "line": "Emre Karaca, 27 yaşında, inşaat ve harita mühendisi, bu şantiyenin sorumlusu. Brandayı kaldırdım. Kafanın arkası künt cisim, düşmenin ezilmesi değil. Mont ıslak ama sırtı kuru; yağmur cesedin üstüne yağmış, ceset yağmurun altında yürümemiş. Taban lastiğinde 14. katın beyaz harcı yok, o katın tozu her çizmeye yapışır. Buraya ölüsü taşınmış. Telefon iç cepte, ekran örümcek, kasa sağlam. Şifreyi ben kırmam. Konteynerde bir tarih daire içine alınmış, ona bak. Demir yığınının kesikleri spiral testere. Nöbet defterinin bir satırı kazınmış, kâğıt incelmiş. Onları da al, ben fotoğrafı basacağım."
+  },
+  "briefing": "Saat 02:40. Dikmen sırtı, Vadi Kule şantiyesi. Yağmur çiselemeye yeni başladı, çamur çizmeden çıkmıyor. Savcı Nilgün Erdem kapıda bekliyor ve dosyayı intihar diye kapatmak istiyor. Gerekçesi hazır: müteahhit Tarık Soylu hayırsever, belediye protokolünde adı var, gece yarısı bir mühendisin düşmesi manşet olmasın. Akbaba brandayı açtı, kafanın arkasındaki darbe düşmeyle uyuşmuyor. Ayakkabının tabanında 14. katın ince harcı yok. Çocuk burada ölmüş gibi bırakılmış. Cebinde kilitli bir telefon var, ekranı kırık, batarya sağlam. Al onu. Şifreyi konteynerde bir yerde bulursun. Sabah laboratuvar kasası, şirket kaydı ve baz dökümü masanda olsun. Ben savcıyı çayla oyalayacağım. Elini çabuk tut. Konteynerin yanındaki demir yığınına ve nöbet defterine de bak. Korkuluk bu gece kesilmişse, çocuk kendi ayağıyla o kata çıkmadı. Defterde silinen satır, kapıdaki kameradan daha çok konuşur. Numuneyi, lastiği ve defteri aynı poşet zincirine yaz. Sabah savcı 'intihar' diye tutanak tutmadan önce elinde üç ayrı yalan olsun.",
+  "victim": {
+    "name": "Emre Karaca",
+    "age": 27,
+    "role": "İnşaat ve harita mühendisi, Vadi Kule şantiye sorumlusu"
+  },
+  "arrestClueIds": [
+    "clue_zafer_sms",
+    "clue_company_record",
+    "clue_pts_06kzy44"
+  ],
+  "call": {
+    "from": "Başkomiser Behzat",
+    "text": "Dikmen'e çık, la bebe. Vadi Kule'de mühendis düşmüş diye yazmışlar. Savcı Nilgün daha savcılık koridorundayken dosyayı intihar diye mühürlemek istiyor, Tarık Bey'in adını haberde görmek istemiyormuş. Masana oturmadan şantiyeyi gör. Telefonu, kolonu, lastiği boş geçme. Çay bende, savcı da kapıda. Korkuluğa ve bekçi defterine ayrı bak. Kesik taze ise bu gece biri o katı sahne diye kurmuş."
+  },
+  "characters": {
+    "player": {
+      "name": "Komiser",
+      "primary": "#1c1c1c",
+      "secondary": "#4a4038",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "behzat": {
+      "name": "Başkomiser Behzat",
+      "primary": "#6e2430",
+      "secondary": "#2a2420",
+      "accessory": "TEA_GLASS",
+      "model": "POLICE"
+    },
+    "akbaba": {
+      "name": "Akbaba",
+      "primary": "#c4552a",
+      "secondary": "#242424",
+      "accessory": "CAMERA",
+      "model": "FORENSIC"
+    },
+    "hayalet": {
+      "name": "Hayalet",
+      "primary": "#243044",
+      "secondary": "#8a939c",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "arsiv": {
+      "name": "Ayşe",
+      "primary": "#3d3428",
+      "secondary": "#6b4428",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "savci": {
+      "name": "Savcı Nilgün Erdem",
+      "primary": "#101114",
+      "secondary": "#e8e4dc",
+      "accessory": "NONE",
+      "model": "POLICE"
+    }
+  },
+  "hotspots": [
+    {
+      "id": "hotspot_phone",
+      "title": "Ceset ve telefon",
+      "unlocksClueId": "clue_victim_phone",
+      "speaker": "Akbaba",
+      "text": "Montun iç cebi. Telefon soğuk ama batarya yüzde kırk. Ekran çatlak, parmak izi camın kenarında silinmiş, ortası değil; birisi kapatmayı denemiş, açamamış. Kafadaki yara ense hizasından sola kayıyor, demir borunun köşesi gibi. Ayakkabının taban oluğunda çamur var, 14. katın beyaz çimento tozu yok. Bu çocuk o kattan yürümedi. Telefonu poşete koy. Şifre dört hane. Konteynerdeki takvime bakmadan deneme. İkinci kez bak: izler birbirini tutmuyorsa tutanağa 'taşınmış ceset' yaz, 'düşme' yazma."
+    },
+    {
+      "id": "hotspot_desk",
+      "title": "Şantiye masası",
+      "unlocksClueId": "clue_desk_photo",
+      "speaker": "Komiser",
+      "text": "Masa dağınık ama dağınıklık yeni. Beşiktaş kupasının içindeki kahve soğuk, üzerinde yağ tabakası var, yani saatlerdir duruyor. Duvardaki takvimde 19 Mart kırmızı kalemle daire içine alınmış, yanına 'Asla taviz yok' yazılmış. Aynı kalemle alt satırda bakanlık kısaltması karalanmış. Kupayı oynatma. Tarihi yaz: 19.03. Telefonun kilidi bu gecenin tarihiyle açılırsa, çocuk sabahı planlamış demektir. İkinci kez bak: izler birbirini tutmuyorsa tutanağa 'taşınmış ceset' yaz, 'düşme' yazma."
+    },
+    {
+      "id": "hotspot_column",
+      "title": "Çatlak kolon",
+      "unlocksClueId": "clue_cracked_column",
+      "speaker": "Akbaba",
+      "text": "Taşıyıcı kolon. Elle ovunca kum gibi dökülüyor, C35 böyle dağılmaz. Etiket C35 diyor, karışım sulandırılmış C16 gibi. Demir aralığı projeden geniş, pas yeni değil, dökümden beri ıslak. Çatlağın içi yağmurla yıkanmamış, yani çatlak bu gece açılmadı, örtülmüş. Numuneyi iki yerden aldım: kabuk ve çekirdek. Laboratuvar yalan söylerse çekirdek söylemez. Poşeti mühürle. İkinci kez bak: izler birbirini tutmuyorsa tutanağa 'taşınmış ceset' yaz, 'düşme' yazma."
+    },
+    {
+      "id": "hotspot_suv",
+      "title": "SUV lastik izi",
+      "unlocksClueId": "clue_suv_photo",
+      "speaker": "Başkomiser Behzat",
+      "text": "Arka toprak yol. Lastik izi binek kamyon değil, geniş tabanlı lüks bir araç. İz içeri 01 civarı girmiş, çıkışta patinaj var, acele. Yerde siyah tampon plastiği, boya kodu metalik siyah, kırık taze. Kamera direği ıslak ama lensi silinmiş. Plaka okunuyor: 06 KZY 44. Parçayı ve izi çek. E-Sorgu'ya plakayı, sonra hattı yaz. Araç girmişse içinde bir telefon da girmiştir. İkinci kez bak: izler birbirini tutmuyorsa tutanağa 'taşınmış ceset' yaz, 'düşme' yazma."
+    },
+    {
+      "id": "hotspot_rebar",
+      "title": "Kesik korkuluk",
+      "unlocksClueId": "clue_cut_rail",
+      "speaker": "Akbaba",
+      "text": "Kolonun dibindeki demir yığını korkuluk parçası. Kesik ağız spiral testere, el testeresi değil: diş aralığı sık, çapak hâlâ parlak, yağmur onu matlaştırmamış. Kesik bu gece, en fazla iki saat. Boya kodu kulenin 14. kat korkuluğuyla aynı sarı. Parçada kumaş tiftiği var, lacivert mont, maktulün montu kahverengi. Yani kesen kişi başka bir mont giyiyormuş. Demiri poşete koy, kesik ağzı üste gelsin, çapak dökülmesin. Bu parça 'kendi atladı' cümlesini tutanakta tutmaz."
+    },
+    {
+      "id": "hotspot_log",
+      "title": "Nöbet defteri",
+      "unlocksClueId": "clue_guard_log",
+      "speaker": "Komiser",
+      "text": "Konteyner basamağındaki karton kapaklı defter. Son sayfa: 00:40 'şef Zafer beton numunesi için içeride'. 01:05 satırı kazınmış, kâğıt incelmiş, alttan kurşun kalem çıkıyor: 'siyah cip, plaka okunmadı, müteahhit bey'. Kazıyan kişi acele etmiş, tarih sütununu silmemiş. Bir alt satır 02:10 'yağmur başladı, kapı açık kaldı'. Bekçi defteri yalan söylerse kalemin izi söylemez. Sayfayı söktürüp mühürle, defterin kendisini de al. Bekçi ifadesi bu satıra bağlanacak."
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_victim_phone",
+      "title": "Delil #01 Maktulün Telefonu",
+      "summary": "Cesedin yanındaki kırık ekranlı telefon delil poşetine girdi. Tablet uygulaması açıldı.",
+      "source": "scene",
+      "icon": "TEL"
+    },
+    {
+      "id": "clue_desk_photo",
+      "title": "Masa fotoğrafı",
+      "summary": "Şantiye ofisinde Beşiktaş kupası ve takvimde 19.03 işareti.",
+      "source": "scene",
+      "icon": "MASA"
+    },
+    {
+      "id": "clue_cracked_column",
+      "title": "Çatlak kolon",
+      "summary": "Demiri eksik, çatlağı taze beton kolon. Akbaba numune aldı.",
+      "source": "scene",
+      "icon": "KOLON"
+    },
+    {
+      "id": "clue_suv_photo",
+      "title": "SUV izi ve plaka",
+      "summary": "Çamurda lüks lastik, tampon plastiği ve şantiye girişinde 06 KZY 44 plakalı siyah SUV.",
+      "source": "scene",
+      "icon": "SUV"
+    },
+    {
+      "id": "clue_bank_500k",
+      "title": "500.000 TL sus payı",
+      "summary": "Ölümden 48 saat önce Kuzey Hafriyat'tan 500.000 TL. Açıklama danışmanlık. Gönderilmemiş taslak: parayı iade ediyorum, ruhsatı satmıyorum.",
+      "source": "phone",
+      "icon": "BANKA"
+    },
+    {
+      "id": "clue_concrete_report",
+      "title": "Gizli lab notu",
+      "summary": "C35 numuneleri sahte, dökülen C16. Zafer Yılmaz, Tarık duyarsa ikimizi de yaşatmaz demiş. Emre raporu bakanlığa götürecekti.",
+      "source": "phone",
+      "icon": "NOT"
+    },
+    {
+      "id": "clue_zafer_sms",
+      "title": "Zafer SMS",
+      "summary": "Zafer Yılmaz, Emre'yi cinayet gecesi 01:00'de konteynere çağırmış. Tarık da orada olacak. Kimseye söyleme.",
+      "source": "phone",
+      "icon": "SMS"
+    },
+    {
+      "id": "clue_no_suicide",
+      "title": "Zeynep mesajı",
+      "summary": "Kız arkadaşı Zeynep ile ertesi akşam tiyatro. Emre, üstümden yük kalkacak, kutlarız diyor. İntihar tutanağı tutmuyor.",
+      "source": "phone",
+      "icon": "TIYATRO"
+    },
+    {
+      "id": "clue_autopsy_report",
+      "title": "Ön otopsi",
+      "summary": "Midede ölüm saatinden hemen önce içilen kahvede Diazem. Uyutulup taşınmış. Kafadaki darbe demir boruyla uyumlu.",
+      "source": "esorgu",
+      "icon": "OTOPSİ"
+    },
+    {
+      "id": "clue_zafer_gbt",
+      "title": "Zafer Yılmaz GBT",
+      "summary": "45 yaş. Güveni kötüye kullanma ve mühür bozma kayıtları. Cezalar Tarık Soylu'nun avukatlarıyla ertelenmiş.",
+      "source": "esorgu",
+      "icon": "GBT"
+    },
+    {
+      "id": "clue_company_record",
+      "title": "Şirket kaydı",
+      "summary": "Kuzey Hafriyat Ltd. Şti. yetkilisi Tarık Soylu. Vadi Kule alt yüklenicisi.",
+      "source": "esorgu",
+      "icon": "GBT"
+    },
+    {
+      "id": "clue_pts_06kzy44",
+      "title": "PTS 06 KZY 44",
+      "summary": "Siyah SUV Tarık Soylu adına. Cinayet gecesi 01:12'de şantiyeye girmiş, 01:55'te çıkmış.",
+      "source": "esorgu",
+      "icon": "PTS"
+    },
+    {
+      "id": "clue_hts_tarik",
+      "title": "HTS Tarık Soylu",
+      "summary": "Hattı 01:11–01:55 arası Vadi Kule baz istasyonunda. Ev adresi sinyal dışı.",
+      "source": "esorgu",
+      "icon": "HTS"
+    },
+    {
+      "id": "clue_wit_guard",
+      "title": "Nöbetçi ifadesi",
+      "summary": "Nöbetçi Cemal Çelik: 01:12'de SUV'a kapıyı Zafer açtı. 01:50'de Zafer 14. kat merdiveninden indi, mendili kanlı, paltosu çamurlu.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_wit_driver",
+      "title": "Şoför ifadesi",
+      "summary": "Şoför Murat Kaya düğünde, Diyarbakır'da. 17 Mart 23:50'de Tarık Bey aramış: \"Araba bende, bu gece gelme.\"",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_cut_rail",
+      "title": "Kesik korkuluk",
+      "summary": "14. kat korkuluğu spiral testereyle bu gece kesilmiş. Kesikte lacivert kumaş tiftiği var, maktulün montu değil.",
+      "source": "scene",
+      "icon": "DEMİR"
+    },
+    {
+      "id": "clue_guard_log",
+      "title": "Nöbet defteri",
+      "summary": "01:05 satırı kazınmış: siyah cip ve müteahhit. 00:40'ta Zafer içerideymiş.",
+      "source": "scene",
+      "icon": "DEFTER"
+    }
+  ],
+  "chat": [
+    {
+      "id": "behzat-1",
+      "sender": "Behzat",
+      "at": "00:40",
+      "text": "Vadi Kule. Mühendis gece düşmüş. İntihar tutanağına inanmıyorum. Şantiyeyi sen gör."
+    },
+    {
+      "id": "akbaba-1",
+      "sender": "Akbaba",
+      "at": "01:20",
+      "requiresClueId": "clue_cracked_column",
+      "text": "Kolon numunesi bende. Bu beton döküm günü çatlamaz. Karışım çürük."
+    },
+    {
+      "id": "akbaba-2",
+      "sender": "Akbaba",
+      "at": "01:22",
+      "type": "photo",
+      "requiresClueId": "clue_cracked_column",
+      "text": "Kolon çatlağı, yakın plan. Sarı işaret 3."
+    },
+    {
+      "id": "hayalet-1",
+      "sender": "Hayalet",
+      "at": "01:28",
+      "requiresClueId": "clue_suv_photo",
+      "text": "Plaka 06 KZY 44. E-Sorgu'da PTS'ye yaz. Kule kamerası geceyi tutmuş."
+    },
+    {
+      "id": "hayalet-3",
+      "sender": "Hayalet",
+      "at": "01:31",
+      "type": "voice",
+      "requiresClueId": "clue_suv_photo",
+      "text": "Ses kaydı: plaka okunuyor, 06 KZY 44. 12 sn."
+    },
+    {
+      "id": "hayalet-2",
+      "sender": "Hayalet",
+      "at": "01:36",
+      "requiresClueId": "clue_bank_500k",
+      "text": "Dekont Kuzey Hafriyat. Şirketi GBT'den geçir, yetkili kim bak."
+    },
+    {
+      "id": "behzat-2",
+      "sender": "Behzat",
+      "at": "01:44",
+      "requiresClueId": "clue_zafer_sms",
+      "text": "Zafer 01:00'de yukarı çağırmış. Şefi sorguya al, la bebe."
+    },
+    {
+      "id": "behzat-3",
+      "sender": "Behzat",
+      "at": "01:55",
+      "requiresClueId": "clue_hts_tarik",
+      "text": "Tarık'ın hattı şantiyede. İkisi de odada. Dosyayı kapat."
+    },
+    {
+      "id": "akbaba-3",
+      "sender": "Akbaba",
+      "at": "02:10",
+      "requiresClueId": "clue_victim_phone",
+      "text": "Ön otopsi: midede Diazem. Kahveye katılmış. Çocuk uykudan düşmemiş, uyutulup 14. kata taşınmış. E-Sorgu'ya otopsi yaz."
+    },
+    {
+      "id": "behzat-4",
+      "sender": "Behzat",
+      "at": "02:20",
+      "requiresClueId": "clue_bank_500k",
+      "text": "Savcı Nilgün hâlâ kapatmak için arıyor. Tarık Bey hayırsever, deliliniz varsa masaya koyun, yoksa açığa alırım diyor. Elini çabuk tut."
+    },
+    {
+      "id": "arsiv-1",
+      "sender": "Ayşe",
+      "at": "02:28",
+      "requiresClueId": "clue_company_record",
+      "text": "Kuzey Hafriyat'ın icrası ruhsata bağlı. Bina durursa Tarık batıyor. Beş yüz bin, bir ruhsatın yanında kâğıt para."
+    },
+    {
+      "id": "hayalet-4",
+      "sender": "Hayalet",
+      "at": "02:36",
+      "requiresClueId": "clue_pts_06kzy44",
+      "text": "K-03 kamerası 01:12 giriş, 01:55 çıkış. Arada 43 dakika şantiye içi. O sürede bir insan 14. kata çıkar, iner."
+    },
+    {
+      "id": "akbaba-4",
+      "sender": "Akbaba",
+      "at": "02:44",
+      "requiresClueId": "clue_autopsy_report",
+      "text": "Diazem ezilmiş tablet. Kahveye katılmış, yutulmuş. Uyku ilacı düşüren birinin ilacı değildir. Bunu E-Sorgu'da otopsi diye aç, tutanağa işle."
+    },
+    {
+      "id": "behzat-5",
+      "sender": "Behzat",
+      "at": "02:55",
+      "requiresClueId": "clue_zafer_gbt",
+      "text": "Zafer'in sicili mühür bozma. Cezayı Tarık'ın avukatı erteletmiş. Bu gece ilk pisliği değil. İkisini de odaya alın."
+    },
+    {
+      "id": "behzat-6",
+      "sender": "Behzat",
+      "at": "03:10",
+      "requiresClueId": "clue_no_suicide",
+      "text": "Zeynep'le tiyatro mesajını savcıya okudum. İntihar cümlesi kuran adam sabah arşivine 'seni seviyorum' yazmaz. Dosya kapanmayacak. Kanıtı masaya vur."
+    },
+    {
+      "id": "c1-hayalet-tanik",
+      "sender": "Hayalet",
+      "at": "05:40",
+      "requiresClueId": "clue_pts_06kzy44",
+      "text": "Kapı kulübesinde nöbetçi var: Cemal Çelik. Tarık'ın şoförü Murat Kaya da izindeymiş. İkisini de E-Sorgu'ya yaz, la bebe."
+    }
+  ],
+  "esorgu": [
+    {
+      "keys": [
+        "kuzeyhafriyat",
+        "kuzey"
+      ],
+      "title": "GBT — Kuzey Hafriyat",
+      "body": "GBT — ŞİRKET KÜTÜĞÜ\nUnvan: Kuzey Hafriyat İnşaat ve Tic. Ltd. Şti.\nVergi: 882 114 2096\nKuruluş: 2014, Çankaya\nSahibi ve yönetim kurulu başkanı: Tarık Soylu  TC 10928374650\nFaaliyet: Ankara geneli hafriyat, rezidans, toplu konut.\nVadi Kule alt yüklenici sözleşmesi: 2025/11, beton ve hafriyat kalemi Tarık Soylu imzalı.\nÜzerine kayıtlı araçlar:\n  06 KZY 01  damperli kamyon\n  06 KZY 02  damperli kamyon\n  06 KZY 07  damperli kamyon\n  06 TS 1903  siyah Mercedes S\n  06 KZY 44  siyah SUV, Jeep, Tarık Soylu kullanımında\nSon ortak değişikliği: yok. Son sermaye artışı: Vadi Kule sözleşmesinden 40 gün önce.\nHakkında açık icra: 2 dosya, toplam 18,4 milyon TL. Banka teminatı Vadi Kule ruhsatına bağlı.",
+      "unlocksClueId": "clue_company_record"
+    },
+    {
+      "keys": [
+        "06kzy44"
+      ],
+      "title": "PTS — 06 KZY 44",
+      "body": "PTS / EDS — 06 KZY 44\nAraç: siyah SUV  Tescil: Tarık Soylu  Kuzey Hafriyat\n\n18 Mart gece, Dikmen Vadi Kule arka sokak kamerası K-03:\n00:41  Çankaya Oran çıkışı, hız 54, yön Dikmen\n01:06  Dikmen bulvar, hız 61\n01:12:08  Vadi Kule arka toprak yol GİRİŞ. Plaka net. Farlar kısa.\n01:12 ile 01:54 arası çıkış yok. Araç şantiye içinde.\n01:55:17  aynı kapıdan ÇIKIŞ. Hız kapı eşiğinde 47, patinaj izi ile uyumlu.\n02:04  Oran girişi, hız düşmüş, ev sokağı.\n\nAynı dakika aralığında HTS, Tarık Soylu hattı 0532 190 30 06, aracın bazıyla birlikte yürümüş. Şoför senaryosu hattı evde bırakmayı gerektirirdi. Hat araçla girmiş, araçla çıkmış.",
+      "unlocksClueId": "clue_pts_06kzy44"
+    },
+    {
+      "keys": [
+        "tariksoylu",
+        "tarik",
+        "05321903006"
+      ],
+      "title": "HTS — Tarık Soylu",
+      "body": "HTS — 0532 190 30 06\nAbone: Tarık Soylu  TC 10928374650\nAdres: Oran, Çankaya\n\n18 Mart\n00:11  Oran ev hücresi 1402  sinyal ev, sabit\n00:36  hücre 1402'den 1518'e geçiş, araç hızı\n00:58  Dikmen sırt 2088\n01:11  Vadi Kule şantiye hücresi 2211  — PTS girişinden 1 dakika önce\n01:12–01:54  hücre 2211 ve 2214 arasında 9 kayıt, hepsi şantiye çiti içi\n01:19  giden arama yok, gelen 1 çağrı 4 sn, karşı hat Zafer Yılmaz, kapanmış\n01:33  veri oturumu, konum hâlâ 2211\n01:55  hücre 2214'ten 2088'e sıçrama, PTS çıkışı ile aynı dakika\n02:09  Oran 1402, ev\n\nEv adresi 01:12–01:55 arasında sıfır sinyal. 'Telefonu ofiste unuttum' cümlesi, ofis bazının araçla birlikte Oran'a dönmesini açıklamaz.",
+      "unlocksClueId": "clue_hts_tarik"
+    },
+    {
+      "keys": [
+        "zaferyilmaz",
+        "zafer"
+      ],
+      "title": "GBT — Zafer Yılmaz",
+      "body": "GBT — ZAFER YILMAZ\n45 yaş. TC 22841765901. Adres: Keçiören.\nMeslek kaydı: şantiye şefi, Vadi Kule.\nHat: 0533 441 19 03\n\nAdli sicil:\n2016  Güveni kötüye kullanma. Cezası ertelenmiş. Avukat: Tarık Soylu vekili.\n2019  Mühür bozma. Şantiye mühürü gece açılmış, tutanak yırtılmış. Cezası ertelenmiş. Aynı vekil.\n2024  Şikâyet: bir taşeron 'beton sulandırılıyor' diye başvurmuş, şikâyet geri çekilmiş.\n\n18 Mart 00:51  kendi hattından Emre Karaca'ya son SMS: 'Konteyner ışığı açık. Tek gel.'\n01:02–01:40  Zafer'in hattı da Vadi Kule hücresi 2211. Evde değil.\n01:19  Tarık Soylu hattıyla 4 saniyelik temas.",
+      "unlocksClueId": "clue_zafer_gbt"
+    },
+    {
+      "keys": [
+        "otopsi",
+        "diazem",
+        "emrekaraca"
+      ],
+      "title": "Ön otopsi — Emre Karaca",
+      "body": "ÖN OTOPSİ — EMRE KARACA, 27\nÖlüm saati penceresi: 18 Mart 01:20 – 02:05\n\nDış: ense solunda 6 cm künt yara, kenarları temiz, demir boru köşesi ile uyumlu. 14. kattan serbest düşmenin çoklu kırıkları yok. Taşınma sürüklemesi: topuklarda çamur, dizde değil.\nAyakkabı tabanı: şantiye çamuru var, 14. kat beyaz harcı yok.\nMide: ölümden kısa süre önce içilmiş sütlü kahve. İçinde diazepam, tedavi dozunun üzerinde, tabletin ezilmiş hali. Kahve konteyner makinesinin posasıyla aynı marka. Çocuk uyutulmuş, sonra vurulmuş, sonra yukarı taşınıp bırakılmış.\nSavunma izi yok. Tırnak altı temiz. Bu bir boğuşma değil, hazırlanmış bir sus payı gecesi.",
+      "unlocksClueId": "clue_autopsy_report"
+    },
+    {
+      "keys": [
+        "cemalcelik",
+        "cemal",
+        "nobetci",
+        "guvenlik"
+      ],
+      "title": "TANIK — Cemal Çelik",
+      "body": "TANIK İFADESİ — CEMAL ÇELİK, 58\nGörev: Vadi Kule gece nöbetçisi, arka kapı kulübesi.\n\n01:12  Siyah SUV geldi, farlar kısa. Kapıyı Zafer Bey açtı, cebinden anahtar çıkardı.\n01:50  Zafer Bey 14. kat merdiveninden indi. Mendili kırmızıydı, paltosu çamurluydu. 'Boru düştü, elim kesildi' dedi.\n01:55  SUV çıktı. Kapıyı kendim kapattım.\n\nİfade: 'Kimseye söyleme dediler, ben de sustum. Emre çocuğu iyi çocuktu.'",
+      "unlocksClueId": "clue_wit_guard"
+    },
+    {
+      "keys": [
+        "muratkaya",
+        "murat",
+        "sofor"
+      ],
+      "title": "TANIK — Murat Kaya",
+      "body": "TANIK İFADESİ — MURAT KAYA, 36\nGörev: Tarık Soylu'nun şoförü. 16–19 Mart izinli, Diyarbakır, kız kardeşinin düğünü.\n\n17 Mart 23:50  Tarık Bey aradı: 'Araba bende, bu gece gelme, düğününü yap.'\n\nİfade: 'Aracı o gece kendi sürdü. Gece direksiyona geçtiğini hiç görmedim.'",
+      "unlocksClueId": "clue_wit_driver"
+    }
+  ],
+  "phoneItems": [
+    {
+      "id": "bank",
+      "title": "CepBank",
+      "body": "CEPBANK — EMRE KARACA\nHesap: **** 4419\nBakiye: 514.250,00 TL\n\n12 Mart 09:14  Maaş — Vadi Kule şantiye  +42.800,00\n14 Mart 18:02  Market  -640,00\n15 Mart 11:20  Kira  -18.000,00\n17 Mart 16:44  GİRİŞ  KUZEY HAFRİYAT İNŞAAT LTD. ŞTİ.  +500.000,00\nAçıklama: Danışmanlık ve Proje Payı\nGönderen hesap: TR** **** **** 7710  Tarık Soylu imza yetkisi\n17 Mart 16:51  Emre hesabı dondurma talebi: İPTAL (kendisi vazgeçmiş)\n17 Mart 21:06  TASLAK, GÖNDERİLMEDİ\nAlıcı: Kuzey Hafriyat İnşaat Ltd. Şti.\nTutar: 500.000,00 TL\nAçıklama: Sus payınızı iade ediyorum, ruhsatı satmıyorum.\n18 Mart 00:12  Son başarılı giriş. Cihaz: bu telefon.\n18 Mart sabahı planlanan havale saati 08:30. İşlem hiç oluşmamış.",
+      "unlocksClueId": "clue_bank_500k"
+    },
+    {
+      "id": "notes",
+      "title": "Notlar",
+      "body": "GİZLİ — kimseye gösterme\n\n3 Mart. Karot numunesi laboratuvardan döndü. Kâğıtta C35 yazıyor, kırılma değeri C16. Denetçi firma aynı gün 'uygun' mührü basmış. Mühürdeki ıslak imza, firmanın asıl mühendisine ait değil. Fotokopi.\n\n8 Mart. Kolon 14'ün demir aralığını ölçtüm. Proje 15 cm, dökülen yer yer 28. Bir daire bu kolona yaslanacak.\n\n11 Mart. Zafer Yılmaz'a gösterdim. Yüzü sarardı. Dedi ki: Tarık Bey duyarsa ikimizi de yaşatmaz, parayı al otur aşağı. Kasada bir zarf varmış, 'danışmanlık'. Ben almadım.\n\n15 Mart. Denetçiyle koridorda karşılaştım. 'Raporu ben yazmadım, bana imzalattılar' dedi ve sustu.\n\n17 Mart. Hesaba beş yüz bin yattı. Açıklama danışmanlık. Ben böyle bir sözleşme imzalamadım.\n\n18 Mart, sabah götüreceğim. Orijinal laboratuvar çıktısı, ıslak imzalı analiz, kolon fotoğrafları. Çevre ve Şehircilik Bakanlığı Teftiş Kurulu. Hayatım pahasına da olsa bu binaya insan giremez. Zeynep'e akşam her şeyi anlatacağım. Yarın yük kalkacak.",
+      "unlocksClueId": "clue_concrete_report"
+    },
+    {
+      "id": "sms_zafer",
+      "title": "SMS — Zafer",
+      "body": "14 Mart 22:11  Zafer: Emre rapor elinde dolaşmasın. Tarık Bey sinirli.\n14 Mart 22:18  Emre: Rapor doğru. Bina yanlış.\n16 Mart 19:02  Zafer: Parayı yatıracaklar. Al, sus, herkes kazanır.\n16 Mart 19:09  Emre: Sus payı istemiyorum.\n17 Mart 23:41  Zafer: Emre bu gece saat 01:00'de şantiye konteynerine gel. Tarık Bey de burada olacak, projeyi son kez uzlaşarak masaya yatıracağız. Kimseye bir şey söyleme.\n17 Mart 23:44  Emre: Geliyorum. Ama raporu yakmam.\n17 Mart 23:46  Zafer: Yakmak yok. Konuşmak var. Kahve benden.\n18 Mart 00:12  Emre: Yoldayım.\n18 Mart 00:51  Zafer: Konteyner ışığı açık. Tek gel.",
+      "unlocksClueId": "clue_zafer_sms"
+    },
+    {
+      "id": "sms_concert",
+      "title": "SMS — Zeynep",
+      "body": "16 Mart 21:05  Zeynep: Hayatım yarın akşamki tiyatro biletleri hazır mı?\n16 Mart 21:12  Emre: Hazır güzelim. Yarın akşam üstümden devasa bir yük kalkacak, her şeyi anlatacağım sana, kutlarız.\n17 Mart 13:40  Zeynep: Sesin kötüydü. Bir şey mi oldu?\n17 Mart 13:48  Emre: İşim. Kötü bir şey değil, doğru bir şey. Sabah bitiyor.\n17 Mart 20:02  Zeynep: Gece şantiyeye çıkma. Yorgunsun.\n17 Mart 20:11  Emre: Son kez. Sonra o binanın kapısına kimseyi sokmam. Söz.\n17 Mart 23:58  Zeynep: Uyudun mu?\n18 Mart 00:07  Emre: Daha değil. Sabah ararım. Seni seviyorum.",
+      "unlocksClueId": "clue_no_suicide"
+    },
+    {
+      "id": "mail",
+      "title": "Taslak — Bakanlık",
+      "body": "TASLAK  ·  GÖNDERİLMEDİ\nKime: teftis@csb.gov.tr\nKonu: Vadi Kule Rezidans, Dikmen — sahte beton uygunluk raporu\n\nSayın Teftiş Kurulu,\n\nVadi Kule projesinin 14. kat taşıyıcı kolonlarından aldığım karot numuneleri, projede yazılı C35 sınıfını karşılamıyor. Kırılma değerleri sulandırılmış C16 ile uyumlu. Denetçi firmanın uygunluk mührü, firmanın yetkili mühendisinin ıslak imzası değil. Şantiye şefi Zafer Yılmaz durumu bildiğimde susmam için para teklif etti. Kuzey Hafriyat İnşaat, sahibi Tarık Soylu, hesabıma 17 Mart'ta 500.000 TL yatırdı. Ben bu parayı iade edeceğim. Orijinal analizler ve fotoğraflar yarın sabah 09:30'da kurulunuza elden teslim edilecektir.\n\nEmre Karaca\nŞantiye sorumlusu\nEk: lab_c16.pdf, kolon_14.jpg, dekont.pdf\n\nGönderim saati seçilmiş: 18 Mart 08:10. Telefon o saatte açılmamış.",
+      "unlocksClueId": "clue_concrete_report"
+    }
+  ],
+  "suspects": [
+    {
+      "id": "zafer",
+      "acceptedClueIds": [
+        "clue_zafer_sms",
+        "clue_concrete_report",
+        "clue_cracked_column",
+        "clue_wit_guard"
+      ],
+      "lines": {
+        "idle": "Ben şantiye şefiyim komiserim. Akşam yedide evime gittim, karım şahit, çay koydu, uyudum. Emre'yi tanırım. İyi çocuktu ama son haftalarda içine kapanmıştı, depresyondaydı. Gece şantiyede ne işim olur?",
+        "hit": "Şey... Evet, mesajı ben attım. Projeyi konuşacaktık, o kadar. Sonra midem bulandı, çıktım. Yukarıda Tarık Bey'le kalmışlar. Ben kapıdan döndüm. Kahveye karışmam.",
+        "miss": "Bu kâğıt beni şantiyeye koymaz. Baretim masada duruyor, ben değil. Depresyon raporu da dosyada.",
+        "confess": "Tamam. Kahveye ilacı ben kattım. Diazem, Tarık Bey'in verdiği şişeden. Emre uyuyunca yukarı çıkardık. 14. katta Tarık Bey kafasına demir boruyla vurdu. Ben tuttum, o vurdu. C16'yı da ben örttüm, mührü de ben bozdum. Beni harcatmayın, asıl o.",
+        "repeat": "Bunu zaten gördüm. Yeni bir şey koy masaya."
+      },
+      "character": {
+        "name": "Zafer Yılmaz",
+        "primary": "#e0b000",
+        "secondary": "#3d4a22",
+        "accessory": "HARD_HAT",
+        "model": "SITE_CHIEF"
+      },
+      "dialogue": {
+        "start": {
+          "text": "Ben şantiye şefiyim komiserim. Akşam yedide evime gittim, karım şahit, çay koydu, uyudum. Emre'yi tanırım. İyi çocuktu ama son haftalarda içine kapanmıştı, depresyondaydı. Gece şantiyede ne işim olur?",
+          "options": [
+            {
+              "text": "Mühendis neden gece 01:00'de 14. kattaydı?",
+              "next": "night",
+              "stress": 5
+            },
+            {
+              "text": "C16 beton döküldüğünü biliyor muydun?",
+              "next": "concrete",
+              "stress": 5
+            },
+            {
+              "text": "Kolon çatlağını kim örttü?",
+              "next": "column",
+              "requires": "clue_cracked_column",
+              "stress": 10
+            },
+            {
+              "text": "İskeleden hangi boru eksik?",
+              "next": "scaffold",
+              "stress": 5
+            },
+            {
+              "text": "Karına sorsak ne der?",
+              "next": "wife",
+              "stress": 5
+            },
+            {
+              "text": "Nöbetçi seni 01:12'de kapıda gördü.",
+              "next": "guard",
+              "requires": "clue_wit_guard",
+              "stress": 15,
+              "anim": "DEFENSIVE",
+              "behzat": "Gözü kaydı."
+            },
+            {
+              "text": "Defter 00:40'ta seni içeride yazıyor.",
+              "next": "log",
+              "requires": "clue_guard_log",
+              "stress": 12,
+              "anim": "DEFENSIVE",
+              "behzat": "Durdu."
+            }
+          ]
+        },
+        "night": {
+          "text": "Mühendisler gece kalır komiserim. Beton priz tutsun diye nöbet tutulur. Ben o saatte uyuyordum. Evdeydim. Karım uyandırsın isterseniz, numarasını veririm. Emre'yi ben çağırmadım, kendi gelmiştir.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Telefonun sen uyurken SMS mi attı?",
+              "next": "sms",
+              "requires": "clue_zafer_sms",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Bak nasıl yutkundu."
+            },
+            {
+              "text": "Peki. Çayına dönelim.",
+              "next": "start"
+            }
+          ]
+        },
+        "concrete": {
+          "text": "Laboratuvar raporu temizdi. C35. Kâğıdın üstünde mühür var, ıslak imza var. Siz bir mühendisin gizli notuyla bir şantiyeyi mi yıkacaksınız? Numune karışmıştır. Şantiyede her şey karışır.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Gizli lab notu C16 diyor. Raporu kim sakladı?",
+              "next": "lab",
+              "requires": "clue_concrete_report",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Raporu masaya koy, bakalım.",
+              "next": "start"
+            }
+          ]
+        },
+        "column": {
+          "text": "Şantiyede her kolon çalışır, her kolon terler. Çatlak sıvayla kapanır, geçer. Demir aralığını gece ölçen olmaz. Emre ölçtüyse kendi ölçmüştür, bana sormadan.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Demiri eksik kolona sıva mı?",
+              "next": "lab",
+              "stress": 10,
+              "anim": "DEFENSIVE"
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "sms": {
+          "text": "Mesajı ben attım, kabul. 'Kimseye söyleme' yazdım çünkü Tarık Bey dedikoduyu sevmez, sendika duyarsa iş durur. Konuşacaktık. Kahve koydum, o içti, ben içmedim. Sonra işim çıktı, ayrıldım. Yukarıda ikisi kaldı. Ben merdiveni görmedim.",
+          "options": [
+            {
+              "text": "Kim konuşmanı istedi? Tarık mı?",
+              "next": "pressure",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Sıkıştır."
+            },
+            {
+              "text": "Sakin ol. Devam et.",
+              "next": "pressure",
+              "stress": 5
+            }
+          ]
+        },
+        "lab": {
+          "text": "Rapor elime geçince Tarık Bey 'kimse görmesin, kasaya kilitle' dedi. Kilitledim. Emre kasayı açmış. Bunu duyunca çağırdım, evet. Ama öldürmek için değil. Konuşsun, parayı alsın, sussun diye.",
+          "options": [
+            {
+              "text": "Ve mühendis görmüştü. Bu yüzden çağırdın.",
+              "next": "pressure",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Kasa anahtarı kimde?",
+              "next": "pressure",
+              "stress": 5
+            }
+          ]
+        },
+        "pressure": {
+          "text": "Ben kimseyi itmedim komiserim. Ben sadece oradaydım. Işık açıktı, kahve vardı, sonra her şey karıştı. Boruyu ben tutmadım. Tutmadım. Siz istiyorsunuz ki tutmuş olayım.",
+          "options": [
+            {
+              "text": "Kahveyi kim koydu? Şişe kimindi?",
+              "next": "drug",
+              "stress": 10,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Oradaydın. Kanıtı masaya koyuyorum.",
+              "next": "pressure",
+              "behzat": "Kanıt Göster'e bas, konuşsun."
+            },
+            {
+              "text": "Baştan alalım.",
+              "next": "start"
+            }
+          ]
+        },
+        "confessed": {
+          "text": "Tamam. Kahveye ilacı ben kattım. Diazem, Tarık Bey'in verdiği şişeden. Emre uyuyunca yukarı çıkardık. 14. katta Tarık Bey kafasına demir boruyla vurdu. Ben tuttum, o vurdu. C16'yı da ben örttüm, mührü de ben bozdum. Beni harcatmayın, asıl o.",
+          "options": [
+            {
+              "text": "Tutanağa geçiyoruz.",
+              "next": "confessed"
+            }
+          ]
+        },
+        "drug": {
+          "text": "Kahveyi ben koydum. Şişeyi Tarık Bey montunun içinden çıkardı, 'yarım tablet, konuşsun' dedi. Ben ezdim, süte kattım. Emre içti, gözü kaydı. O anda anladım ki yarım tablet değilmiş. Kalkamadı. Tarık Bey 'yukarı' dedi. Ben karşı çıkmadım. Çıkmadım çünkü daha önce de mühürü bozmuştum, dosyam onda.",
+          "options": [
+            {
+              "text": "Yukarıda boruyu kim tuttu?",
+              "next": "pipe",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "İşte şimdi konuşuyor."
+            },
+            {
+              "text": "Kanıt masaya.",
+              "next": "pressure"
+            }
+          ]
+        },
+        "pipe": {
+          "text": "Boruyu Tarık Bey tuttu. İskeleden sökülmüş, ucu boyalı, 14. katın kalıp artıklarından. Emre'yi kolondan yana yatırdık. Ben ayaklarından tuttum. O, bir kere vurdu. Sonra korkuluktan aşağı bıraktık, düşsün diye değil, düşmüş görünsün diye. Ayakkabısını silmedik. Unuttuk. Harç yapışsaydı siz de inanırdınız.",
+          "options": [
+            {
+              "text": "Bunu tutanağa geçir.",
+              "next": "pressure",
+              "behzat": "SMS, rapor, kolon. Üçü de masada olsun."
+            },
+            {
+              "text": "Baştan alalım.",
+              "next": "start"
+            }
+          ]
+        },
+        "guard": {
+          "text": "Cemal Usta yaşlı adam, gözü bulanık, geceleri her şeyi karıştırır. Kapı zaten açıktı. Elimdeki mendil çay koyarken kesildiğim yerdendir. Ben o saatte evdeydim, bunu söyledim.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Kırmızı mendil 14. kat merdiveninde. Çay mı?",
+              "next": "pressure",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "wife": {
+          "text": "Karım erken uyur, sabah çay koyar. Saat tutmaz kadındır. Siz benim ailemi karıştırmayın komiserim.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Peki. Boruya dönelim.",
+              "next": "scaffold"
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "scaffold": {
+          "text": "Boru mu? Şantiyede yüz boru eksik, bin boru fazla. Depo defteri Tarık Bey'in muhasebesindedir. Ben boru saymam, ben beton izlerim.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Boruyu kim sökerdi?",
+              "next": "pressure",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "log": {
+          "text": "Deftere bak komiser. Beton dökümü vardı, ben numune aldım, çıktım. O satırı kim kazıdı bilmem. Cip görmedim. Ben kapıyı açık bırakmam, yağmur betonu bozar.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Şantiyedeydin. Kapıyı sen açtın.",
+              "next": "log2",
+              "stress": 18,
+              "anim": "ANGRY",
+              "behzat": "Sesi kısıldı."
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "log2": {
+          "text": "Bunu şimdi konuşmam. Avukatım gelsin. Ama o kâğıt masadaysa, ben de o gece oradaydım demektir. Gerisini tutanağa yazın, ben imza atarım, itiraf değil, düzeltme.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "tarik",
+      "calm": "ARROGANT",
+      "acceptedClueIds": [
+        "clue_bank_500k",
+        "clue_pts_06kzy44",
+        "clue_hts_tarik",
+        "clue_company_record",
+        "clue_wit_driver"
+      ],
+      "lines": {
+        "idle": "Bakın komiser bey, bu gece sabaha karşı nezarethaneden çıkmış olacağım. Avukatım şu an adliyede, savcı hanımı da tanır. Bana yönelttiğiniz bu saçma suçlamalar için devlete tazminat açacağım. Oturun, çayınızı için, beni serbest bırakın.",
+        "hit": "Ticarette borç alıp vermek suç mu? Mühendise danışmanlık ücreti ödedim, dekont ortada. Çürük beton iddiası iftira. İmzamı taklit etmişler. Bir hayırseverin gecesini çalıyorsunuz.",
+        "miss": "Aracım şirket aracıdır, her şantiyeme gece gündüz girer. O saatte oradaydım diye adam mı öldürmüş oluyorum? Parmak izi gösterin, kan gösterin. Kâğıtla adam asılmaz.",
+        "confess": "O salak Zafer ötüverdi mi hemen. Evet, o binayı o hâliyle teslim etseydim batardım. Bütün ömrüm o projede. O velet bir imzayla her şeyi yıkacaktı. Beş yüz bin sus payıydı, almadı. Şantiyedeydim. Boru bendeydi. Kelepçeyi tak.",
+        "repeat": "Bunu zaten gördüm. Yeni bir şey koy masaya."
+      },
+      "character": {
+        "name": "Tarık Soylu",
+        "primary": "#1a2744",
+        "secondary": "#c6a15b",
+        "accessory": "GOLD_WATCH",
+        "model": "CRIMINAL_BOSS"
+      },
+      "dialogue": {
+        "start": {
+          "text": "Bakın komiser bey, bu gece sabaha karşı nezarethaneden çıkmış olacağım. Avukatım şu an adliyede, savcı hanımı da tanır. Bana yönelttiğiniz bu saçma suçlamalar için devlete tazminat açacağım. Oturun, çayınızı için, beni serbest bırakın.",
+          "options": [
+            {
+              "text": "500.000 TL kimin parası?",
+              "next": "money",
+              "stress": 5
+            },
+            {
+              "text": "18 Mart gecesi neredeydin?",
+              "next": "night",
+              "stress": 5
+            },
+            {
+              "text": "Kuzey Hafriyat'ın yetkilisi sensin.",
+              "next": "company",
+              "requires": "clue_company_record",
+              "stress": 10,
+              "anim": "DEFENSIVE"
+            },
+            {
+              "text": "Şoförün Murat izinliymiş. Aracı sen sürdün.",
+              "next": "driver_call",
+              "requires": "clue_wit_driver",
+              "stress": 15,
+              "anim": "DEFENSIVE",
+              "behzat": "Çenesi gerildi."
+            },
+            {
+              "text": "Korkuluğu bu gece kim kesti?",
+              "next": "rail",
+              "requires": "clue_cut_rail",
+              "stress": 12,
+              "anim": "DEFENSIVE",
+              "behzat": "Durdu."
+            }
+          ]
+        },
+        "money": {
+          "text": "Ticarette borç almak suç mu komiser? Maktule danışmanlık ücreti ödedim, açıklaması da yazıyor: proje payı. Çürük beton masalı tamamen iftira. Laboratuvar kâğıdındaki imza benim değil, taklit. Bir müteahhit her taşerona para gönderir. Siz bunu cinayet sanıyorsunuz çünkü başka hiçbir şeyiniz yok.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Dekont bende. Bir gün sonra adam öldü.",
+              "next": "money2",
+              "requires": "clue_bank_500k",
+              "stress": 15,
+              "anim": "DEFENSIVE",
+              "behzat": "Yüzüne bak."
+            },
+            {
+              "text": "Danışmanlık mı? Mühendise?",
+              "next": "money2",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "money2": {
+          "text": "Tesadüf. Ankara'da her gün biri ölüyor, her gün bir havale gidiyor. Çocuk parayı iade etmek istemişse kendi meselesi. Taslak, gönderilmemiş bir cümledir. Mahkeme taslakla adam tutuklamaz. Avukatım da böyle diyecek.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Susturma parasıydı. Konuşmasın diye.",
+              "next": "pressure",
+              "stress": 10,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Baştan alalım.",
+              "next": "start"
+            }
+          ]
+        },
+        "night": {
+          "text": "Evdeydim. Karım şahit, hizmetçi şahit, site kamerası şahit. Saat tutmuyorum çünkü tutmama gerek yok. Benim gecem ajandayla geçmez. Başka sorunuz varsa sorun, yoksa çayınız soğuyor.",
+          "lie": true,
+          "options": [
+            {
+              "text": "PTS aracını 01:12'de şantiye kapısında görmüş.",
+              "next": "pts",
+              "requires": "clue_pts_06kzy44",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Hattın 01:11'de Vadi Kule bazındaydı.",
+              "next": "hts",
+              "requires": "clue_hts_tarik",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Karın saat kaçta uyudu?",
+              "next": "night2",
+              "stress": 5
+            },
+            {
+              "text": "Avukatın neden adliyede? Seni kim aradı?",
+              "next": "lawyer",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "night2": {
+          "text": "Karım erken yattı. Ben de. Saat kaçtı, bilmem. Evde saat sorgulanmaz komiser. Siz bir hayırseverin yatağını PTS ile mi ölçeceksiniz?",
+          "options": [
+            {
+              "text": "Biz tutuyoruz.",
+              "next": "start",
+              "behzat": "PTS ve HTS'yi masaya koy."
+            }
+          ]
+        },
+        "pts": {
+          "text": "Aracı şoförüm kullanır. Ben o saatte direksiyona geçmem, geçersem de her şantiyeme girerim, suç değil. 01:12'de kapıdan geçmek, 14. katta adam öldürmek değildir. Kameranız yüzümü göstermiyor. Plaka şirketindir.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Şoförün 01:19'da senin telefonunla mı konuştu?",
+              "next": "pressure",
+              "requires": "clue_hts_tarik",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "İşte bu."
+            },
+            {
+              "text": "Şoförün adı?",
+              "next": "driver",
+              "stress": 5
+            }
+          ]
+        },
+        "hts": {
+          "text": "Telefonumu şantiye ofisinde unutmuş olabilirim. Ofisim orada, baz orayı görür, ben evde olurum. Bir hattın yürümesi, bir adamın yürümesi demek değildir. Bunu savcı hanıma da anlatırsınız.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Ofiste unuttun, araç kendi kendine mi geldi?",
+              "next": "pressure",
+              "requires": "clue_pts_06kzy44",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Gece 01:00'de ofis mi?",
+              "next": "pressure",
+              "stress": 5
+            }
+          ]
+        },
+        "company": {
+          "text": "Şirketim çok. Hepsini ben mi yöneteyim? Kuzey Hafriyat bir kalemdir, Vadi Kule bir kalemdir. İmza yetkim vardır, her dekontu ben yazmam. Muhasebe yazar. Siz muhasebeyi cinayet masasına oturtmuşsunuz.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Bu şirket maktule 500 bin gönderdi.",
+              "next": "money2",
+              "requires": "clue_bank_500k",
+              "stress": 10,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "14. kat kolonlarının altında senin imzan var.",
+              "next": "foundation",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "pressure": {
+          "text": "Avukatım gelmeden tek kelime daha etmem. Bu masa bir tiyatro. Zafer korkmuştur, korkan adam herkesi satar. Onun cümlesi benim cümlem değildir.",
+          "options": [
+            {
+              "text": "Etme. Kanıt konuşur.",
+              "next": "pressure",
+              "behzat": "Kanıt Göster. Hepsini sırayla."
+            },
+            {
+              "text": "Baştan alalım.",
+              "next": "start"
+            }
+          ]
+        },
+        "confessed": {
+          "text": "O salak Zafer ötüverdi mi hemen. Evet, o binayı o hâliyle teslim etseydim batardım. Bütün ömrüm o projede. O velet bir imzayla her şeyi yıkacaktı. Beş yüz bin sus payıydı, almadı. Şantiyedeydim. Boru bendeydi. Kelepçeyi tak.",
+          "options": [
+            {
+              "text": "Tutanağa geçiyoruz.",
+              "next": "confessed"
+            }
+          ]
+        },
+        "driver": {
+          "text": "Şoförün adı Murat. O gece izindeydi, düğünü vardı, Diyarbakır'da. Bunu da sorarsınız. Aracı ben almadım diyemem artık, çünkü soruyorsunuz. Aldım, şantiyeye uğradım, çıktım. İçeride kim vardı bilmem. Zafer vardı belki. Ben kolon görmedim, boru görmedim, kahve içmedim.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Hattın da seninle girmiş. Ofiste unutmadın.",
+              "next": "pressure",
+              "requires": "clue_hts_tarik",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Baştan alalım.",
+              "next": "start"
+            }
+          ]
+        },
+        "driver_call": {
+          "text": "Şoförümü düğüne yolladım, iyilik yaptım. Aracı sürmek istediysem sürerim, ehliyetim cebimde. Gece gezmeyi sever bir adamım, o kadar.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Gece gezerken şantiyenin içinde 43 dakika durdun.",
+              "next": "pressure",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "foundation": {
+          "text": "Kolonun altında mühendis imzası olur, proje sahibi imzası olmaz. Ben daire satarım, kolon hesaplamam. Yarın anahtar teslimi vardı, bu iş iftiradır.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Mühendis o raporu bakanlığa götürecekti.",
+              "next": "money2",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "lawyer": {
+          "text": "Avukatım benim yerime konuşur, benim yerime uyur, benim yerime karar verir. Siz onun adını anmadan bile bu odadan çıkamazsınız.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Avukat da bu odada değil. Sensin.",
+              "next": "pressure",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "rail": {
+          "text": "Korkuluk mu? Şantiyede demir kesilir komiser, her gece kesilir. Tiftik de işçinin montundan düşer. Benim montum kaşmir, lacivert değil, antrasit. Avukatıma sorun, kumaş ekspertizi yaptırın.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Kesik taze. Montun da antrasit değil, lacivert.",
+              "next": "rail2",
+              "stress": 18,
+              "anim": "ANGRY",
+              "behzat": "Sesi kısıldı."
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "rail2": {
+          "text": "Bunu şimdi konuşmam. Avukatım gelsin. Ama o kâğıt masadaysa, ben de o gece oradaydım demektir. Gerisini tutanağa yazın, ben imza atarım, itiraf değil, düzeltme.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "report": "T.C. ANKARA EMNİYET MÜDÜRLÜĞÜ\nDOSYA KAPANDI  ·  2026/06-412  ·  Kuledeki Sır\n\nMaktul Emre Karaca, 27, Vadi Kule şantiye sorumlusu. 18 Mart gecesi konteynerde kahvesine diazepam katılarak uyutulmuş, 14. kata taşınmış, kafasına demir boruyla vurulmuş ve düşmüş gibi bırakılmıştır. Ayakkabı tabanında 14. kat harcı yoktur.\n\nŞantiye şefi Zafer Yılmaz çağrı mesajını atmış, kahveye ilacı katmış, mühür bozma geçmişini Tarık Soylu'nun avukatları örtmüştür. Tarık Soylu, Kuzey Hafriyat üzerinden 500.000 TL sus payı göndermiş, maktul parayı iade taslağı yazmış ve bakanlığa götüreceği sahte C35 raporunu teslim edememiştir. 06 KZY 44 plakalı araç ve 0532 190 30 06 hattı 01:12–01:55 arasında şantiye hücresindedir.\n\nMotif: sulandırılmış betonun ortaya çıkması, ruhsatın ve icranın Tarık Soylu'nun üstüne yıkılması. Savcı Nilgün Erdem tutanağı imzaya almıştır. İki şüpheli nezarettedir.",
+  "replies": {
+    "Behzat": [
+      {
+        "text": "Şantiyeye çıkıyorum.",
+        "reply": "Acele et. İntihar tutanağına imza atma."
+      },
+      {
+        "text": "Ekip yolda mı?",
+        "reply": "Akbaba numunede. Hayalet plakada."
+      }
+    ],
+    "Akbaba": [
+      {
+        "text": "Numune sonucu ne?",
+        "reply": "C35 değil. Not telefonda, notlara bak."
+      },
+      {
+        "text": "Fotoğraf net mi?",
+        "reply": "Çatlak taze. Sarı işaret 3, dosyada."
+      }
+    ],
+    "Hayalet": [
+      {
+        "text": "Plakayı sorguladım.",
+        "reply": "PTS geceyi tutuyor. Şirketi de geçir."
+      },
+      {
+        "text": "Ses kaydını aldım.",
+        "reply": "12 saniye yetti. 06 KZY 44."
+      }
+    ]
+  },
+  "esorguHints": [
+    {
+      "text": "Tarık Soylu",
+      "field": "İsim"
+    },
+    {
+      "text": "06 KZY 44",
+      "field": "Plaka"
+    },
+    {
+      "text": "Kuzey Hafriyat",
+      "field": "Şirket"
+    },
+    {
+      "text": "0532 190 30 06",
+      "field": "Telefon"
+    },
+    {
+      "text": "Zafer Yılmaz",
+      "field": "İsim"
+    },
+    {
+      "text": "Emre Karaca otopsi",
+      "field": "Rapor"
+    },
+    {
+      "text": "Cemal Çelik",
+      "field": "Tanık"
+    },
+    {
+      "text": "Murat Kaya",
+      "field": "Tanık"
+    }
+  ],
+  "importantClues": [
+    "clue_bank_500k",
+    "clue_concrete_report",
+    "clue_zafer_sms",
+    "clue_no_suicide",
+    "clue_company_record",
+    "clue_pts_06kzy44",
+    "clue_hts_tarik"
+  ],
+  "autopsy": {
+    "title": "Ön otopsi notu",
+    "body": "Düşme yüksekliği 14. kat ile uyumlu. Savunma yarası yok. Ertesi akşam için planı olan kişi intihar tutanağına uymaz.",
+    "clue": "clue_victim_phone"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "beats": {
+    "travel_office": {
+      "trigger": "Ofise dön",
+      "start": "Kararma",
+      "end": "Büronun geniş kadrajı",
+      "duration": 0.7,
+      "fade": true,
+      "shake": 0.0,
+      "mood": "keep",
+      "caption": "Cinayet Büro"
+    },
+    "travel_site": {
+      "trigger": "Olay yerine çıkış",
+      "start": "Kararma",
+      "end": "Şantiye, takip kamerası",
+      "duration": 0.75,
+      "fade": true,
+      "shake": 0.012,
+      "mood": "keep",
+      "caption": "Vadi Kule"
+    },
+    "arrest": {
+      "trigger": "Şüpheli sorgu odasına kelepçeli girer",
+      "start": "Kapı kadrajı",
+      "end": "Şüpheli sandalyeye oturur",
+      "duration": 2.6,
+      "fade": false,
+      "shake": 0.0,
+      "mood": "authority",
+      "caption": "Gözaltı  ·  kelepçe takıldı"
+    },
+    "travel_interrogation": {
+      "trigger": "Sorgu odasına geçiş",
+      "start": "Kararma",
+      "end": "Geniş sorgu kadrajı",
+      "duration": 0.7,
+      "fade": true,
+      "shake": 0.02,
+      "mood": "keep",
+      "caption": "Sorgu"
+    },
+    "call_amir": {
+      "trigger": "Başkomiser araması",
+      "start": "Masa kadrajı, amber atmosfer",
+      "end": "Aç veya kapat",
+      "duration": 0,
+      "fade": false,
+      "shake": 0.012,
+      "mood": "call",
+      "caption": "Başkomiser Behzat"
+    },
+    "call_savci": {
+      "trigger": "Gözaltı delili ilk kez oluşunca",
+      "start": "Soğuk mavi perde, savcı kartı",
+      "end": "Kart kapanır, atmosfer kalır",
+      "duration": 5.0,
+      "fade": false,
+      "shake": 0.02,
+      "mood": "authority",
+      "caption": "Savcı Nilgün Erdem",
+      "line": "Gözaltı gerekçesi oluştu. Tutanağı sağlam tut, komiser. Acele imza istemiyorum."
+    },
+    "evidence": {
+      "trigger": "Yeni kanıt",
+      "start": "Kısa sarsıntı, kanıt kartı",
+      "end": "Oyuncu dosyaya işler",
+      "duration": 0.55,
+      "fade": false,
+      "shake": 0.012,
+      "mood": "keep",
+      "caption": ""
+    },
+    "evidence_major": {
+      "trigger": "Kritik kanıt envantere girer",
+      "start": "Yakın plan ve gerilim müziği",
+      "end": "Müzik gerilimde kalır",
+      "duration": 0.85,
+      "fade": false,
+      "shake": 0.04,
+      "mood": "evidence",
+      "caption": "Kritik kanıt"
+    },
+    "lie": {
+      "trigger": "Şüpheli yalan düğümüne düşer",
+      "start": "Yakın plan, yüz ifadesi nervous",
+      "end": "Dürüst düğümde yüz normale döner",
+      "duration": 0.6,
+      "fade": false,
+      "shake": 0.02,
+      "mood": "lie",
+      "caption": ""
+    },
+    "confession": {
+      "trigger": "İtiraf",
+      "start": "Sarsıntı ve itiraf müziği",
+      "end": "İtiraf satırı ekranda",
+      "duration": 3.2,
+      "fade": false,
+      "shake": 0.06,
+      "mood": "confession",
+      "caption": "İtiraf"
+    },
+    "radio": {
+      "trigger": "Sesli mesaj veya telsiz",
+      "start": "Parazit ve telsiz pozu",
+      "end": "Önceki müzik geri gelir",
+      "duration": 2.2,
+      "fade": false,
+      "shake": 0.01,
+      "mood": "radio",
+      "caption": "Telsiz"
+    }
+  }
+}

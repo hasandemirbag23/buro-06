@@ -1,0 +1,608 @@
+{
+  "fileNo": "05",
+  "title": "Mühür Geç Geldi",
+  "set": "garaj",
+  "place": "Ulus Zabıta Otoparkı",
+  "caseNo": "2026/06-417",
+  "pin": "0671",
+  "pinHint": "Mühür sapı: 0671",
+  "pinLocked": "4 hane. Yerdeki mühürün sapına bak.",
+  "pinHintClue": "clue_e5_seal",
+  "phoneClueId": "clue_e5_phone",
+  "contradiction": "clue_e5_log|clue_e5_sms_yavuz",
+  "arrival": {
+    "speaker": "Akbaba",
+    "line": "Kemal Sönmez, 52, zabıta amiri. Kendi otoparkında, vanın yanında. Göğüs, tek el ateşi. Mühür yerde, sapında 0671. Telefon koltukta. Kulüp dosyası vanın içinde. Nöbet defterini ve kapı fişini de al."
+  },
+  "briefing": "Saat 01:40. Ulus, zabıta otoparkı. Ambulans içeri girememiş, bariyer yarıda. Kemal Sönmez bu gece Geceler Gazinosu'nun ruhsatını mühürleyecekti. Mühür yerde, dosya vanın paspasında, para yok, silah yok. Bu bir soygun değil, bir erteleme. Telefonu al. Şifre mühürün sapında, 0671. Nöbet defterindeki silinen satıra ve kapı fişine bak. Kulüp bu sefer sahne değil. Ölüm kendi garajlarında.",
+  "victim": {
+    "name": "Kemal Sönmez",
+    "age": 52,
+    "role": "Zabıta amiri"
+  },
+  "arrestClueIds": [
+    "clue_e5_sms_yavuz",
+    "clue_e5_pts",
+    "clue_e5_bank"
+  ],
+  "call": {
+    "from": "Başkomiser Behzat",
+    "text": "Ulus zabıta otoparkı. Amir kendi garajında vurulmuş. Mühür yerde. Kulübe gitme, önce vanın içine bak. Şifre mühürde. Defteri atlama."
+  },
+  "characters": {
+    "player": {
+      "name": "Komiser",
+      "primary": "#1c1c1c",
+      "secondary": "#4a4038",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "behzat": {
+      "name": "Başkomiser Behzat",
+      "primary": "#6e2430",
+      "secondary": "#2a2420",
+      "accessory": "TEA_GLASS",
+      "model": "POLICE"
+    },
+    "akbaba": {
+      "name": "Akbaba",
+      "primary": "#c4552a",
+      "secondary": "#242424",
+      "accessory": "CAMERA",
+      "model": "FORENSIC"
+    },
+    "hayalet": {
+      "name": "Hayalet",
+      "primary": "#243044",
+      "secondary": "#8a939c",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "arsiv": {
+      "name": "Ayşe",
+      "primary": "#3d3428",
+      "secondary": "#6b4428",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "savci": {
+      "name": "Savcı Nilgün Erdem",
+      "primary": "#101114",
+      "secondary": "#e8e4dc",
+      "accessory": "NONE",
+      "model": "POLICE"
+    }
+  },
+  "hotspots": [
+    {
+      "id": "hotspot_van",
+      "title": "Vandaki telefon",
+      "unlocksClueId": "clue_e5_phone",
+      "speaker": "Akbaba",
+      "text": "Beyaz van, kapı açık, telefon yolcu koltuğunda. Kilit duruyor. Kemal'in rozeti paspasta, kan yok. Mühür yerde, sapında 0671 kazılı. Dört hane bu. Telefonu poşete al, vanın içini elleme, kan izi kapı pervazında."
+    },
+    {
+      "id": "hotspot_seal",
+      "title": "Düşmüş mühür",
+      "unlocksClueId": "clue_e5_seal",
+      "speaker": "Komiser",
+      "text": "Pirinç mühür, sapı kırık, gövde temiz. Kazıma 0671. Balmumu bu gece yanmamış, yani mühür vurulmadan düşmüş. Yanında bir çizme izi, taban zabıta botu değil, şehir ayakkabısı, 43 numara. Mührü olduğu yerde fotoğrafla, sapı poşete koy."
+    },
+    {
+      "id": "hotspot_file",
+      "title": "Kulüp dosyası",
+      "unlocksClueId": "clue_e5_file",
+      "speaker": "Başkomiser Behzat",
+      "text": "Vanın paspasında kırmızı dosya. Geceler Gazinosu ruhsatı. Üstüne kırmızı kalem: 'bu gece mühür'. Altında ikinci el, kurşun kalem: '15 gün ertele, Adil tamam'. Adil bu belediyenin ruhsat şefi. Dosyayı olduğu gibi al. Kalem izi silinmesin."
+    },
+    {
+      "id": "hotspot_log",
+      "title": "Nöbet defteri",
+      "unlocksClueId": "clue_e5_log",
+      "speaker": "Akbaba",
+      "text": "Kulübe masasında nöbet defteri. 00:50 satırı kazınmış. Alttan kurşun çıkıyor: 'Yavuz Erten girdi, vanın yanına gitti, Kemal amir içeride değildi.' Bir alt satır 01:20 'ambulans'. Kazıyan acele etmiş, saat sütununu bırakmış. Sayfayı söktürme. Defterin kendisini al."
+    },
+    {
+      "id": "hotspot_ticket",
+      "title": "Kapı fişi",
+      "unlocksClueId": "clue_e5_ticket",
+      "speaker": "Komiser",
+      "text": "Bariyerdeki fiş, iki nüsha. 00:40 'Y. Erten, misafir, mühür odası'. Çıkış saati boş. İkinci fiş 00:44 'A. Korkmaz, belediye, aynı oda'. İkisi de çıkışı işletmemiş. Fişi naylona koy. Bu garaja misafir böyle girer, böyle kaybolur."
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_e5_phone",
+      "title": "Kemal'in telefonu",
+      "summary": "Vanda kilitli. Mühür sapı 0671.",
+      "source": "scene",
+      "icon": "TEL"
+    },
+    {
+      "id": "clue_e5_seal",
+      "title": "Kırık mühür",
+      "summary": "Sapında 0671. Bu gece basılmamış. Yanında 43 numara şehir ayakkabısı.",
+      "source": "scene",
+      "icon": "MÜHÜR"
+    },
+    {
+      "id": "clue_e5_file",
+      "title": "Ruhsat dosyası",
+      "summary": "Geceler ruhsatı. '15 gün ertele, Adil tamam.'",
+      "source": "scene",
+      "icon": "DOSYA"
+    },
+    {
+      "id": "clue_e5_log",
+      "title": "Nöbet defteri",
+      "summary": "00:50 satırı kazınmış. Yavuz vanın yanına girmiş.",
+      "source": "scene",
+      "icon": "DEFTER"
+    },
+    {
+      "id": "clue_e5_ticket",
+      "title": "Kapı fişi",
+      "summary": "00:40 Yavuz, 00:44 Adil. Çıkış ikisinde de boş.",
+      "source": "scene",
+      "icon": "FİŞ"
+    },
+    {
+      "id": "clue_e5_photo",
+      "title": "Mühür emri",
+      "summary": "Kemal'in telefonunda bu geceki mühür yazısı ve Adil'in düzeltmesi.",
+      "source": "phone",
+      "icon": "FOTO"
+    },
+    {
+      "id": "clue_e5_sms_yavuz",
+      "title": "Yavuz'un mesajı",
+      "summary": "00:36: 'Garajdayım. Dosyayı vanada bırak, mühürü basma.'",
+      "source": "phone",
+      "icon": "MESAJ"
+    },
+    {
+      "id": "clue_e5_audio",
+      "title": "Adil'in kaydı",
+      "summary": "Adil, 15 gün karşılığı 180 bini bu gece garajda teslim edecekmiş.",
+      "source": "phone",
+      "icon": "SES"
+    },
+    {
+      "id": "clue_e5_pts",
+      "title": "06 ZBT 09",
+      "summary": "Van 00:20'den beri garajda. Yanına 00:41'de ikinci araç yanaşmış: 06 RK 190.",
+      "source": "esorgu",
+      "icon": "PTS"
+    },
+    {
+      "id": "clue_e5_bank",
+      "title": "180 bin",
+      "summary": "Adil Korkmaz, dün Yavuz'un hesabına 180.000 TL yatırmış. Açıklama: danışmanlık.",
+      "source": "esorgu",
+      "icon": "BANKA"
+    },
+    {
+      "id": "clue_e5_kasa",
+      "title": "Kulüp kasası",
+      "summary": "Geceler'in kasası bu gece kapanmamış. Mühür gecikirse kasa bir hafta daha döner.",
+      "source": "esorgu",
+      "icon": "KASA"
+    },
+    {
+      "id": "clue_e5_otopsi",
+      "title": "Otopsi",
+      "summary": "Tek atış, göğüs, 01:05–01:20. Yakın mesafe. Barut vanın kapısında.",
+      "source": "esorgu",
+      "icon": "OTOPSİ"
+    },
+    {
+      "id": "clue_e5_wit_bekci",
+      "title": "Garaj bekçisi",
+      "summary": "Bekçi İlyas, Yavuz'u 00:48'de vanın açık kapısında görmüş.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_e5_wit_sofor",
+      "title": "Zabıta şoförü",
+      "summary": "Şoför Kemal'i 00:15'te garaja bırakmış. 'Adil gelecek, sen girme' demiş.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    }
+  ],
+  "pairs": [
+    [
+      "clue_e5_ticket",
+      "clue_e5_log"
+    ],
+    [
+      "clue_e5_sms_yavuz",
+      "clue_e5_pts"
+    ],
+    [
+      "clue_e5_audio",
+      "clue_e5_bank"
+    ],
+    [
+      "clue_e5_file",
+      "clue_e5_kasa"
+    ]
+  ],
+  "chat": [
+    {
+      "id": "e5-b1",
+      "sender": "Behzat",
+      "at": "01:42",
+      "text": "Ulus garajı. Amir kendi yerinde. Kulübe koşma. Önce mühür, dosya, defter."
+    },
+    {
+      "id": "e5-a1",
+      "sender": "Akbaba",
+      "at": "01:55",
+      "requiresClueId": "clue_e5_seal",
+      "text": "Mühür bu gece basılmamış. Sap kırık. 0671. Ayakkabı zabıta botu değil."
+    },
+    {
+      "id": "e5-h1",
+      "sender": "Hayalet",
+      "at": "02:08",
+      "requiresClueId": "clue_e5_file",
+      "text": "Dosyadaki ikinci el Adil Korkmaz. Ruhsat şefi. 15 gün istiyor. E-Sorgu'ya adını yaz."
+    },
+    {
+      "id": "e5-h2",
+      "sender": "Hayalet",
+      "at": "02:20",
+      "requiresClueId": "clue_e5_pts",
+      "text": "06 RK 190, 00:41'de vanın yanına yanaşmış. Araç Yavuz Erten. Gece müdürü. Çıkışı yok."
+    },
+    {
+      "id": "e5-b2",
+      "sender": "Behzat",
+      "at": "02:33",
+      "requiresClueId": "clue_e5_sms_yavuz",
+      "text": "Yavuz 'mührü basma' demiş. Saat 00:36. Ölümden yarım saat önce. Onu garajdan al."
+    }
+  ],
+  "esorgu": [
+    {
+      "keys": [
+        "06zbt09",
+        "06rk190",
+        "yavuz",
+        "yavuzerten"
+      ],
+      "title": "PTS — garaj",
+      "unlocksClueId": "clue_e5_pts",
+      "body": "06 ZBT 09  zabıta vanı, 00:20'den beri otoparkta.\n06 RK 190  tescil Yavuz Erten.\n00:41  vanın soluna yanaşmış.\n01:28  çıkış. Tek kişi. Far yanmıyor.\n\nKamera kapı fişiyle aynı dakikayı gösteriyor."
+    },
+    {
+      "keys": [
+        "adilkorkmaz",
+        "adil"
+      ],
+      "title": "Banka — Adil Korkmaz",
+      "unlocksClueId": "clue_e5_bank",
+      "body": "ADİL KORKMAZ\nBelediye ruhsat şefi.\n\nDün 19:10  Yavuz Erten hesabına 180.000 TL\nAçıklama: 'danışmanlık'\nSözleşme yok. Fatura yok.\n\nAynı saat Adil'in ikinci telefonundan Kemal Sönmez'e üç çağrı, açılmamış."
+    },
+    {
+      "keys": [
+        "kasa",
+        "geceler"
+      ],
+      "title": "Kulüp kasası",
+      "unlocksClueId": "clue_e5_kasa",
+      "body": "GECELER GAZİNOSU KASA ÖZETİ\nBu gece kasa kapanmamış.\nMühür gecikirse ruhsat 15 gün daha döner.\n15 günde kasa tahmini 2.4 milyon.\n\nErteleme notunun altındaki rakam bu özete uyuyor."
+    },
+    {
+      "keys": [
+        "otopsi",
+        "kemalsonmez",
+        "kemal"
+      ],
+      "title": "Otopsi — Kemal Sönmez",
+      "unlocksClueId": "clue_e5_otopsi",
+      "body": "OTOPSİ\nKemal Sönmez, 52.\nÖlüm 01:05–01:20.\nGöğüs, tek atış, yakın mesafe.\nBarut vanın kapı pervazında.\nSavunma yarası yok. Silah bulunamadı."
+    },
+    {
+      "keys": [
+        "ilyas",
+        "bekci"
+      ],
+      "title": "TANIK — Bekçi İlyas",
+      "unlocksClueId": "clue_e5_wit_bekci",
+      "body": "TANIK — İLYAS DEMİR, 44\nGaraj bekçisi.\n\n00:48  Yavuz vanın açık kapısındaydı. Kemal içeride dosyayı arıyordu.\n00:55  Adil de geldi. Üçü kulübeye girmedi, vanın yanında kaldı.\n01:10  Bir ses duydum, egzoz sandım.\n\nİfade: 'Defterdeki satırı ben yazdım. Kazıyan ben değilim.'"
+    },
+    {
+      "keys": [
+        "sofor",
+        "serif"
+      ],
+      "title": "TANIK — Şoför Şerif",
+      "unlocksClueId": "clue_e5_wit_sofor",
+      "body": "TANIK — ŞERİF AKIN, 38\nZabıta şoförü.\n\n00:15  Kemal amiri garaja bıraktım.\nİnerken dedi: 'Adil gelecek. Sen içeri girme, bu konuşma senin rütbeni yer.'\n01:25  Beni aradılar. Döndüğümde vanın kapısı açıktı.\n\nİfade: 'Amir korkmuyordu. Yorgundu.'"
+    }
+  ],
+  "esorguHints": [
+    {
+      "text": "Yavuz Erten",
+      "field": "İsim"
+    },
+    {
+      "text": "Adil Korkmaz",
+      "field": "İsim"
+    },
+    {
+      "text": "Bekçi",
+      "field": "Tanık"
+    },
+    {
+      "text": "06 RK 190",
+      "field": "Plaka"
+    },
+    {
+      "text": "Şoför",
+      "field": "Tanık"
+    }
+  ],
+  "importantClues": [
+    "clue_e5_seal",
+    "clue_e5_sms_yavuz",
+    "clue_e5_bank"
+  ],
+  "replies": {
+    "Behzat": [
+      {
+        "text": "Kulübe gideyim mi?",
+        "reply": "Hayır. Ölüm burada. Dosya vanın içinde."
+      },
+      {
+        "text": "Ekip?",
+        "reply": "Akbaba mühürde. Hayalet ikinci plakada."
+      }
+    ],
+    "Akbaba": [
+      {
+        "text": "Atış?",
+        "reply": "Tek, yakın, göğüs. Barut kapıda."
+      }
+    ],
+    "Hayalet": [
+      {
+        "text": "Adil kim?",
+        "reply": "Ruhsat şefi. 15 gün yazmış. Parayı Yavuz'a atmış."
+      }
+    ]
+  },
+  "phoneItems": [
+    {
+      "id": "photo",
+      "title": "Mühür emri",
+      "unlocksClueId": "clue_e5_photo",
+      "body": "FOTOĞRAFLAR  ·  bu gece\n\nKare 1. Belediye yazısı: Geceler Gazinosu, bu gece mühür.\nKare 2. Aynı kâğıdın altı. Kurşun kalem: 'Adil aradı, 15 gün'.\nKare 3. Kemal'in kendi eli, kırmızı: 'erteleme yok'.\nKare 4. Mühür masada, sap sağlam. Saat 23:50.\n\nSon kareden sonra mühür yerde bulunacak."
+    },
+    {
+      "id": "sms_yavuz",
+      "title": "Yavuz",
+      "unlocksClueId": "clue_e5_sms_yavuz",
+      "body": "Kayıtlı ad: Yavuz — gece\n\n00:22  Yavuz: Amir, garaja geliyorum. Dosyayı konuşalım.\n00:28  Kemal: Mühür bu gece basılır. Konuşma bitmiştir.\n00:36  Yavuz: Garajdayım. Dosyayı vanada bırak, mühürü basma. Adil yolda.\n00:39  Kemal yazmamış.\n01:30  Yavuz: Ben gittim. Kimseye bir şey söyleme.\n\nGitmeden önce bir ses olmuş."
+    },
+    {
+      "id": "audio",
+      "title": "Ses — Adil",
+      "unlocksClueId": "clue_e5_audio",
+      "body": "SES  ·  2 dk 05 sn  ·  dün 19:40\nAdil Korkmaz, resmi, yavaş.\n\nAdil: Kemal, 15 gün bir mühür değildir. Bir nefestir. 180 bin bu gece Yavuz'da. Sen garajda teslim al, yazıyı yırt.\nKemal: Ben mühür basarım. Para senin cebinde kalsın.\nAdil: O zaman Yavuz basar. Sen sadece orada bulunmazsın.\nKemal: Kaydediyorum.\nAdil: Kaydet. Garajda kamera bakımda.\n\nKamera bakımda değil. Defter duruyor."
+    }
+  ],
+  "suspects": [
+    {
+      "id": "yavuz",
+      "calm": "DEFENSIVE",
+      "acceptedClueIds": [
+        "clue_e5_pts",
+        "clue_e5_ticket",
+        "clue_e5_wit_bekci"
+      ],
+      "lines": {
+        "idle": "Ben kulübün gecesini tutarım. Garaj zabıtadır, benim saham değil.",
+        "hit": "Evet, garaja girdim. Dosyayı konuşacaktık. Silahım yok.",
+        "miss": "Bu fiş beni vanın kapısına koymaz. Sahnede ışık vardı, sorun.",
+        "confess": "Adil 'sen hallet, 180 bin sende kalsın' dedi. Kemal mühürü bıraktı, ben dayanamadım. Varın içinden, kapı aralığından. Mührü yere düşürdüm, sapı kırıldı. Çıkışı yazdırmadım. Silah hâlâ 06 RK 190'ın stepnesinde.",
+        "repeat": "Bunu gördüm. Yenisini koyun."
+      },
+      "character": {
+        "name": "Yavuz Erten",
+        "primary": "#243044",
+        "secondary": "#1c1814",
+        "accessory": "NONE",
+        "model": "POLICE"
+      },
+      "dialogue": {
+        "start": {
+          "text": "Gece müdürüyüm. O saatte sahnedeydim, ışık beni görür. Zabıta garajına misafir olarak bile girmem. Kemal amiri tanırım, sert adamdı. Bizim kapımızda kavga çıkmadı.",
+          "options": [
+            {
+              "text": "00:40'ta neredeydin?",
+              "next": "alibi",
+              "stress": 5
+            },
+            {
+              "text": "'Mührü basma' mesajı sende.",
+              "next": "yazi",
+              "stress": 12,
+              "requires": "clue_e5_sms_yavuz",
+              "anim": "NERVOUS",
+              "behzat": "Dizini tuttu."
+            },
+            {
+              "text": "Kapı fişinde adın var, çıkış yok.",
+              "next": "fis",
+              "stress": 15,
+              "requires": "clue_e5_ticket",
+              "anim": "DEFENSIVE",
+              "behzat": "Fişe bakmadı."
+            },
+            {
+              "text": "Bekçi seni vanın kapısında gördü.",
+              "next": "defter",
+              "stress": 16,
+              "requires": "clue_e5_wit_bekci",
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Boğazı kurudu."
+            }
+          ]
+        },
+        "confessed": {
+          "text": "Adil 'sen hallet, 180 bin sende kalsın' dedi. Kemal mühürü bıraktı, ben dayanamadım. Varın içinden, kapı aralığından. Mührü yere düşürdüm, sapı kırıldı. Çıkışı yazdırmadım. Silah hâlâ 06 RK 190'ın stepnesinde.",
+          "options": [
+            {
+              "text": "Tutanağa geçiyoruz.",
+              "next": "confessed"
+            }
+          ]
+        },
+        "alibi": {
+          "text": "Sahnedeydim. Garaja misafir girmem. Fiş başkasının el yazısı.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "yazi": {
+          "text": "O mesaj şakadır. Mühür benim işim değil, belediyenin işi.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "fis": {
+          "text": "00:40'ta kapıdan geçmiş olabilirim. Çıkışı güvenlik unutur. Vanın yanına gitmedim.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "defter": {
+          "text": "Defteri bekçi yazar, bekçi kazır. Ben o kulübeye ayda bir uğrarım.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "adil",
+      "calm": "ARROGANT",
+      "acceptedClueIds": [
+        "clue_e5_audio",
+        "clue_e5_bank",
+        "clue_e5_file"
+      ],
+      "lines": {
+        "idle": "Ruhsat şefiyim. Erteleme yazmak suç değildir.",
+        "hit": "Evet, 15 gün istedim. Para danışmanlıktır. Silah taşımam.",
+        "miss": "Bu kâğıt beni o garaja koymaz. O saatte evdeydim.",
+        "confess": "Yavuz'a 'hallet' dedim. Nasıl halledeceğini söylemedim. 180 bini yatırdım, dosyaya ertelemeyi yazdım, garaja da girdim. Silahı o çekti. Ben kapıdaydım. Tutanak buysa imzalarım, tetik değilim.",
+        "repeat": "Bunu gördüm. Yenisini koyun."
+      },
+      "character": {
+        "name": "Adil Korkmaz",
+        "primary": "#2a241c",
+        "secondary": "#1c1814",
+        "accessory": "NONE",
+        "model": "CRIMINAL_BOSS"
+      },
+      "dialogue": {
+        "start": {
+          "text": "Belediye ruhsatı bir gecede mühürlenmez. 15 gün, evrak eksikliği içindir. Kemal aceleciydi. Ben onu uyarmadım, prosedürü hatırlattım. Bu gece makamdaydım, nöbetim vardır.",
+          "options": [
+            {
+              "text": "15 gün kimin işine yarar?",
+              "next": "ruhsat",
+              "stress": 5
+            },
+            {
+              "text": "Kayıtta 'orada bulunmazsın' diyorsun.",
+              "next": "ses",
+              "stress": 14,
+              "requires": "clue_e5_audio",
+              "anim": "ANGRY",
+              "behzat": "Ceketini ilikledi."
+            },
+            {
+              "text": "180 bin Yavuz'un hesabında.",
+              "next": "para",
+              "stress": 16,
+              "requires": "clue_e5_bank",
+              "anim": "DEFENSIVE",
+              "behzat": "Saatine baktı."
+            },
+            {
+              "text": "Dosyada 'Adil tamam' yazıyor.",
+              "next": "dosya",
+              "stress": 16,
+              "requires": "clue_e5_file",
+              "anim": "ANGRY",
+              "behzat": "Kalemini cebine attı."
+            }
+          ]
+        },
+        "confessed": {
+          "text": "Yavuz'a 'hallet' dedim. Nasıl halledeceğini söylemedim. 180 bini yatırdım, dosyaya ertelemeyi yazdım, garaja da girdim. Silahı o çekti. Ben kapıdaydım. Tutanak buysa imzalarım, tetik değilim.",
+          "options": [
+            {
+              "text": "Tutanağa geçiyoruz.",
+              "next": "confessed"
+            }
+          ]
+        },
+        "ruhsat": {
+          "text": "Erteleme idari bir haktır. 15 gün kanunda vardır. Cinayet değildir.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "ses": {
+          "text": "O kayıt bir pazarlıktır, tehdit değil. 'Orada bulunmazsın' bir deyimdir.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "para": {
+          "text": "Danışmanlık her ay yatar. Yavuz kulübün gecesini bilir, belediye de bilir.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "dosya": {
+          "text": "O cümleyi ben yazmadım. Kalem herkesin cebindedir. Adil yaygın bir addır.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "report": "T.C. ANKARA EMNİYET MÜDÜRLÜĞÜ\nDOSYA KAPANDI  ·  2026/06-417  ·  Mühür Geç Geldi\n\nMaktul Kemal Sönmez, 52, zabıta amiri. Ulus zabıta otoparkı, kendi vanının yanında. 01:05–01:20. Göğüs, tek atış, yakın mesafe. Mühür basılmadan düşmüş.\n\nYavuz Erten itiraf etti. 06 RK 190 ile 00:41'de vanın yanına yanaştı, Kapı fişinde çıkış yok. Silah stepnede. Mührün sapını o kırdı.\n\nAdil Korkmaz, ruhsat şefi, 15 günlük erteleme karşılığı 180.000 TL yatırmış, ses kaydında Kemal'in orada bulunmamasını istemiş, dosyaya 'Adil tamam' satırını bırakmıştır. Tetiği çekmediğini söylüyor. Emri o yazdı.\n\nİki isim nezarettedir. Geceler Gazinosu'nun ruhsatı bu tutanakla birlikte mühürlenmiştir."
+}

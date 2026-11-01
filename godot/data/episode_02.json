@@ -1,0 +1,1076 @@
+{
+  "fileNo": "02",
+  "title": "Cebeci'de Son Sınav",
+  "set": "flat",
+  "place": "Öveç Sokak",
+  "caseNo": "2026/06-413",
+  "pin": "2406",
+  "pinHint": "Mezuniyet afişi: 24 Haziran",
+  "pinLocked": "4 hane. Duvardaki balo afişine bak.",
+  "pinHintClue": "clue_torn_petition",
+  "phoneClueId": "clue_victim_phone",
+  "contradiction": "clue_market_receipt|clue_burcu_sms",
+  "arrival": {
+    "speaker": "Akbaba",
+    "line": "Selin Aydın, 22, hukuk dördüncü sınıf, burslu. Ölüm gaz değil. Ense kökünde sivri, sert bir cisim. Bayıltılmış, sonra hortum kesilip ocak açılmış. Fail profesyonel değil. Dosyalar didik didik. Telefon yastığın altında, ekranı aramadan yanıp sönüyor. Vana sonuna kadar açık, hortum bıçakla düz kesilmiş, yırtık değil. Kapının altında katlanmış bir not var, almadan fotoğrafını çek."
+  },
+  "briefing": "Saat 03:20. Cebeci, Öveç Sokak 14, kat 3, daire 8. İtfaiye kapıyı kırmasa apartman uçacakmış. İlk cümle hazırdı: kız tüpü açık unuttu, sızdı kaldı. Akbaba cesedi çevirince ense kökündeki yara çıktı. Gaz vanası kaza değil, hortum bıçakla kesilmiş. Ev arkadaşı Burcu kütüphanede diyor, alibi şimdilik tutuyor ama evde biri evrak aramış. Yatağın ucundaki telefonu al. Şifre duvardaki afişte. Bu işi hoca mı yaptırdı, asistan mı, telefon söyler. Ben savcıyı kapıda tutarım. İçeri maskeyle gir, gaz hâlâ duruyor. Mutfaktaki vanaya ve sokak kapısının altındaki nota ayrı bak. Hortum kendiliğinden yarılmaz, düz bıçak izi bırakır. Kapı altındaki kâğıt komşunun eli olabilir; saati yaz, silme. Ocak vanası tam açıksa bu bir kaza değil, sahne.",
+  "victim": {
+    "name": "Selin Aydın",
+    "age": 22,
+    "role": "Ankara Üniversitesi Hukuk Fakültesi, 4. sınıf, burslu"
+  },
+  "arrestClueIds": [
+    "clue_mert_sms",
+    "clue_pts_asistan",
+    "clue_haldun_record"
+  ],
+  "call": {
+    "from": "Başkomiser Behzat",
+    "text": "Cebeci, Öveç Sokak. Öğrenci evinde gaz. İtfaiye kapıyı kırmış. Kaza diyorlar, Akbaba inanmıyor. Maskeni tak, içeri gir. Telefonu ve çöpü boş geçme. Vanayı ve kapı notunu atlama. Saat tutmuyorsa çocuk o saatte evde değildi."
+  },
+  "characters": {
+    "player": {
+      "name": "Komiser",
+      "primary": "#1c1c1c",
+      "secondary": "#4a4038",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "behzat": {
+      "name": "Başkomiser Behzat",
+      "primary": "#6e2430",
+      "secondary": "#2a2420",
+      "accessory": "TEA_GLASS",
+      "model": "POLICE"
+    },
+    "akbaba": {
+      "name": "Akbaba",
+      "primary": "#c4552a",
+      "secondary": "#242424",
+      "accessory": "CAMERA",
+      "model": "FORENSIC"
+    },
+    "hayalet": {
+      "name": "Hayalet",
+      "primary": "#243044",
+      "secondary": "#8a939c",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "arsiv": {
+      "name": "Ayşe",
+      "primary": "#3d3428",
+      "secondary": "#6b4428",
+      "accessory": "BADGE",
+      "model": "POLICE"
+    },
+    "savci": {
+      "name": "Savcı Nilgün Erdem",
+      "primary": "#101114",
+      "secondary": "#e8e4dc",
+      "accessory": "NONE",
+      "model": "POLICE"
+    }
+  },
+  "hotspots": [
+    {
+      "id": "hotspot_phone",
+      "title": "Yastığın altındaki telefon",
+      "unlocksClueId": "clue_victim_phone",
+      "speaker": "Akbaba",
+      "text": "Yastığın altında, gizlenmiş gibi. Ekran gelen aramayla yanıp sönüyor, kilit duruyor. Duvarda mezuniyet afişi: 24 Haziran, hukuk 2026. Dört hane orada. Telefonu poşete koy, afişi not et. Bu kız sabahı planlamış. Kokuyu raporla ama sebebi kokuya bağlama. Sebep ensedeki darbe."
+    },
+    {
+      "id": "hotspot_desk",
+      "title": "Yırtık dilekçe",
+      "unlocksClueId": "clue_torn_petition",
+      "speaker": "Komiser",
+      "text": "Masa dağınık, dağınıklık arama. Ceza hukuku kitapları yerde, sırayla değil, çekmece ters çevrilmiş. Çöpte yırtılmış dilekçe, tamamı yok edilmemiş. Parçaları birleştir: Ankara Üniversitesi Rektörlüğü Disiplin Soruşturma Bürosu. Muhatap Prof. Dr. Haldun Erk. Konu: sınav sorularının satılması ve cinsel taciz. Biri bu kâğıdı bulmak için evi dağıtmış, çöpü unutmuş. Kokuyu raporla ama sebebi kokuya bağlama. Sebep ensedeki darbe."
+    },
+    {
+      "id": "hotspot_column",
+      "title": "Kesik doğalgaz hortumu",
+      "unlocksClueId": "clue_cut_hose",
+      "speaker": "Akbaba",
+      "text": "Ocağın arkasındaki esnek hortum. Kazaen çıkmamış. Kesik düz, enine, mutfak bıçağı. Uçta çapak yok, bir hareket. Vana sonuna kadar açık. Bu kız sızıp unutmadı. Hortum kesildi, oda doldu, kapı kilitlendi. Hortumu kriminal poşete al. Kesik raporun kendisi. Kokuyu raporla ama sebebi kokuya bağlama. Sebep ensedeki darbe."
+    },
+    {
+      "id": "hotspot_suv",
+      "title": "Market fişi ve viski",
+      "unlocksClueId": "clue_market_receipt",
+      "speaker": "Başkomiser Behzat",
+      "text": "Mutfak çöpünün dibi. Buruşmuş tekel fişi, bu gece 23:30. İki şişe lüks malt viski, bir cips. Burcu ifadesinde Selin'in ağzına içki koymadığını, alkol alerjisi olduğunu söyledi. Şişeler tezgâhta, yeni açılmış, bardak yok. Fişi torbaya koy. Bunu içen kim, alan kim, fiş söyler. Kokuyu raporla ama sebebi kokuya bağlama. Sebep ensedeki darbe."
+    },
+    {
+      "id": "hotspot_stove",
+      "title": "Ocak vanası",
+      "unlocksClueId": "clue_stove_valve",
+      "speaker": "Akbaba",
+      "text": "Ocak vanası sonuna kadar açık, plastik tapa yerinde değil, çekilmiş. Hortumun kesik ağzı düz, fiber dağılmamış: makas ya da maket bıçağı, patlama değil. Kesik ağızda parmak izi silinmiş, hortumun gövdesinde Selin'in izi duruyor. Yani hortumu o takmış, kesen başkası. Vanayı çeviren el sağ el, çünkü tırtıkların yağlı izi saat yönünün tersine tek harekette bitiyor. Vanayı poşete alma, yerinde fotoğrafla, hortumun kesik ucunu al. Bu sahne 'unuttu, gaz kaçtı' diye kapanmaz."
+    },
+    {
+      "id": "hotspot_note",
+      "title": "Kapı altı notu",
+      "unlocksClueId": "clue_door_note",
+      "speaker": "Komiser",
+      "text": "Sokak kapısının eşiğinde ikiye katlanmış kâğıt, yağmur almamış, yani kapı aralıktan sonra bırakılmış. Kurşun kalem, solak yazı, harfler sağa yatık: '23:40'te bir adam çıktı, elinde dosya, arabası yoktu, yokuş aşağı yürüdü.' İmza yok. Altına kurşun kalemle ikinci bir el eklemiş: 'görmedim'. İkinci el sağ el, daha sert basmış. Notu naylona koy, eşiğin tozunu da süpür, ayakkabı izi varsa o da delil. Komşu ifadesi bu kâğıda kilitlenecek."
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_victim_phone",
+      "title": "Selin'in telefonu",
+      "summary": "Yastığın altında kilitli telefon. Afişteki 24 Haziran, şifre 2406.",
+      "source": "scene",
+      "icon": "TEL"
+    },
+    {
+      "id": "clue_torn_petition",
+      "title": "Yırtık disiplin dilekçesi",
+      "summary": "Rektörlük disiplin bürosuna. Prof. Dr. Haldun Erk hakkında soru satışı ve cinsel taciz. Yırtılmış, çöpten toplandı.",
+      "source": "scene",
+      "icon": "KÂĞIT"
+    },
+    {
+      "id": "clue_cut_hose",
+      "title": "Kesik hortum",
+      "summary": "Doğalgaz hortumu bıçakla enine kesilmiş, vana açık. Kaza değil.",
+      "source": "scene",
+      "icon": "HORTUM"
+    },
+    {
+      "id": "clue_market_receipt",
+      "title": "23:30 market fişi",
+      "summary": "İki malt viski ve cips. Selin alkol kullanmıyor. Şişede Burcu'nun izi var, Burcu alkol almadığını söylüyor.",
+      "source": "scene",
+      "icon": "FİŞ"
+    },
+    {
+      "id": "clue_haldun_office_photo",
+      "title": "Makam selfie'si",
+      "summary": "Haldun Erk'in odasında gizli selfie. Selin'in yüzü rahatsız, hoca gülümsüyor.",
+      "source": "phone",
+      "icon": "FOTO"
+    },
+    {
+      "id": "clue_exam_leak_audio",
+      "title": "Ofis ses kaydı",
+      "summary": "14 dakika. Haldun: sınav sorusunun bedeli bu imzadır, yoksa okulu bitiremezsin.",
+      "source": "phone",
+      "icon": "SES"
+    },
+    {
+      "id": "clue_burcu_sms",
+      "title": "Burcu yazışması",
+      "summary": "Selin flaş belleği yarın rektörlüğe götüreceğini yazmış. Burcu vazgeç demiş. Selin korkmuyorum demiş.",
+      "source": "phone",
+      "icon": "SMS"
+    },
+    {
+      "id": "clue_mert_sms",
+      "title": "Asistan Mert",
+      "summary": "Ölümden 22 dakika önce Mert kapıda. Hoca barışmak istiyor, aşağı in, demiş.",
+      "source": "phone",
+      "icon": "ARA"
+    },
+    {
+      "id": "clue_haldun_record",
+      "title": "Haldun Erk kaydı",
+      "summary": "Dekan vekili, ceza hukuku anabilim dalı başkanı. Siyah Audi A6, plaka 06 HL 880.",
+      "source": "esorgu",
+      "icon": "GBT"
+    },
+    {
+      "id": "clue_pts_asistan",
+      "title": "PTS 06 HL 880",
+      "summary": "Araç 23:15–00:05 Selin'in sokağında. İnen kişi asistan Mert Aksoy.",
+      "source": "esorgu",
+      "icon": "PTS"
+    },
+    {
+      "id": "clue_mert_gbt",
+      "title": "Mert Aksoy GBT",
+      "summary": "26 yaş, araştırma görevlisi. Hattı 23:30–00:10 evin bazında. Polise evde ders çalıştım demiş.",
+      "source": "esorgu",
+      "icon": "HTS"
+    },
+    {
+      "id": "clue_merti_money",
+      "title": "Fon ve villa",
+      "summary": "Haldun'un oğlu adına Kıbrıs'ta 1,5 milyon dolarlık villa. Mert'in hesabına geçen ay 400 bin TL özel araştırma fonu.",
+      "source": "esorgu",
+      "icon": "BANKA"
+    },
+    {
+      "id": "clue_wit_kapici",
+      "title": "Kapıcı ifadesi",
+      "summary": "Kapıcı Şükrü Doğan: 23:20'de ilikli ceketli genç, \"Selin'in asistanıyım\" diye girdi. 00:03'te aceleyle çıktı, cebi ağırdı.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_wit_komsu",
+      "title": "Komşu ifadesi",
+      "summary": "Komşu Ayten Hanım: 23:55'te kapıda erkek sesi, \"aç şu kapıyı Selin\". 00:02'de gaz kokusu, kapıcıyı uyarmış.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_wit_sekreter",
+      "title": "Dekanlık sekreteri",
+      "summary": "Gülay Hanım: Hoca 22:30'da Mert'i odasına çağırdı. \"İş gece biter\" dedi. Sabah çıkış kaydı sildirildi.",
+      "source": "esorgu",
+      "icon": "TANIK"
+    },
+    {
+      "id": "clue_stove_valve",
+      "title": "Açık vana",
+      "summary": "Hortum bıçakla düz kesilmiş, vana tek harekette sonuna kadar açılmış. Selin'in izi gövdede, kesikte yok.",
+      "source": "scene",
+      "icon": "VANA"
+    },
+    {
+      "id": "clue_door_note",
+      "title": "Kapı altı notu",
+      "summary": "23:40'te dosyalı bir adam yürüyerek çıkmış. Notun altına başka bir el 'görmedim' yazmış.",
+      "source": "scene",
+      "icon": "NOT"
+    }
+  ],
+  "pairs": [
+    [
+      "clue_market_receipt",
+      "clue_burcu_sms"
+    ],
+    [
+      "clue_pts_asistan",
+      "clue_mert_gbt"
+    ],
+    [
+      "clue_haldun_record",
+      "clue_pts_asistan"
+    ],
+    [
+      "clue_exam_leak_audio",
+      "clue_torn_petition"
+    ],
+    [
+      "clue_mert_sms",
+      "clue_cut_hose"
+    ],
+    [
+      "clue_merti_money",
+      "clue_haldun_record"
+    ]
+  ],
+  "chat": [
+    {
+      "id": "c2-behzat-1",
+      "sender": "Behzat",
+      "at": "03:25",
+      "text": "Öveç Sokak 14. Gaz kokusu sokakta bile duruyor. İtfaiye kırmasa apartman giderdi. Kaza lafına kanma. Hortuma, çöpe, telefona bak."
+    },
+    {
+      "id": "c2-akbaba-1",
+      "sender": "Akbaba",
+      "at": "03:40",
+      "requiresClueId": "clue_cut_hose",
+      "text": "Kesik düz. Mutfak bıçağı, tek hareket. Vana sonuna kadar. Bu unutulan bir ocak değil. Hortum raporu dosyada."
+    },
+    {
+      "id": "c2-akbaba-2",
+      "sender": "Akbaba",
+      "at": "03:55",
+      "requiresClueId": "clue_market_receipt",
+      "text": "Viski şişelerinde sadece Burcu'nun parmak izi var. Burcu alkol almadığını söylüyor, Selin'in alerjisi var. Şişeler tezgâhta, bardak yok. Çelişki masaya konacak cinsten."
+    },
+    {
+      "id": "c2-hayalet-1",
+      "sender": "Hayalet",
+      "at": "04:10",
+      "requiresClueId": "clue_torn_petition",
+      "text": "Dilekçedeki isim Prof. Dr. Haldun Erk. Dekan vekili. E-Sorgu'ya adını yaz. Aracı varsa plakası peşinden gelir."
+    },
+    {
+      "id": "c2-hayalet-2",
+      "sender": "Hayalet",
+      "at": "04:28",
+      "requiresClueId": "clue_haldun_record",
+      "text": "Araştırdım. Haldun geçen hafta oğlu için Kuzey Kıbrıs'ta 1,5 milyon dolarlık villa kapatmış. Para temkinli. Asistanı Mert'in hesabına geçen ay özel araştırma fonu diye 400 bin yatmış. E-Sorgu'ya villa yaz."
+    },
+    {
+      "id": "c2-behzat-2",
+      "sender": "Behzat",
+      "at": "04:40",
+      "requiresClueId": "clue_mert_sms",
+      "text": "Mert ölümden 22 dakika önce kapıdayım demiş. Hoca barışmak istiyormuş. Bu bir barış ziyareti değil. Asistanı odaya al."
+    },
+    {
+      "id": "c2-hayalet-3",
+      "sender": "Hayalet",
+      "at": "04:52",
+      "requiresClueId": "clue_pts_asistan",
+      "text": "06 HL 880, 23:15'ten 00:05'e kadar sokağın köşesinde. Kamerada inen kişi Mert. Hoca direksiyonda görünmüyor. Görünmemesi, emri vermediği anlamına gelmez."
+    },
+    {
+      "id": "c2-akbaba-3",
+      "sender": "Akbaba",
+      "at": "05:05",
+      "requiresClueId": "clue_victim_phone",
+      "text": "Ense kökü. Sivri, sert, demir çubuk hizası. Gaz ciğerde var ama ölüm darbeyle. Önce bayıltmış, sonra odayı doldurmuş."
+    },
+    {
+      "id": "c2-behzat-3",
+      "sender": "Behzat",
+      "at": "05:20",
+      "requiresClueId": "clue_burcu_sms",
+      "text": "Burcu'ya yarın rektörlüğe veriyorum demiş. Adalet okuyorsak bunun için demiş. Bu cümleyi kuran kız gazı açık unutmaz. Savcı kaza diye kapatamasın diye bunu da okusun."
+    },
+    {
+      "id": "c2-hayalet-tanik",
+      "sender": "Hayalet",
+      "at": "05:10",
+      "requiresClueId": "clue_pts_asistan",
+      "text": "Apartmanda kapıcı Şükrü Doğan, altındaki komşu Ayten Hanım, fakültede dekanlık sekreteri Gülay Hanım var. Üçünü E-Sorgu'ya yaz."
+    }
+  ],
+  "esorgu": [
+    {
+      "keys": [
+        "haldunerk",
+        "haldun",
+        "profdrhaldunerk"
+      ],
+      "title": "GBT — Haldun Erk",
+      "body": "Unvan: Prof. Dr.\nGörev: Ankara Üniversitesi Hukuk Fakültesi dekan vekili.\nAnabilim dalı: Ceza Hukuku, başkan.\nTC: 10492837651\nAdres: Çankaya, profesör lojmanı.\n\nÜzerine kayıtlı araç:\nSiyah Audi A6\nPlaka: 06 HL 880\nKullanım notu: asistan Mert Aksoy da yetkili sürücü olarak sigortada.\n\nDisiplin kaydı: yok. Şikâyet: 2024, bir öğrenci soruşturması 'vazgeçildi' diye kapanmış. Dosya rektörlükte mühürlü.\nSon yurt dışı çıkış: geçen hafta, Ercan, Kuzey Kıbrıs. Dönüş aynı gün.",
+      "unlocksClueId": "clue_haldun_record"
+    },
+    {
+      "keys": [
+        "06hl880"
+      ],
+      "title": "PTS — 06 HL 880",
+      "body": "Araç: siyah Audi A6\nTescil: Haldun Erk\nSigorta sürücüsü: Mert Aksoy\n\nCinayet gecesi, Cebeci Öveç Sokak köşesi, kamera K-7:\n23:06  Hukuk Fakültesi otopark çıkışı. Direksiyon: genç erkek, hoca değil.\n23:15:40  Öveç Sokak köşesi. Park. Far söner.\n23:18  Sağ ön koltuktan inen kişi: Mert Aksoy. Yaya, Selin'in apartmanına doğru.\n23:15–00:04  araç yerinde. Hoca kamerada yok.\n00:05:12  Mert döner, biner, çıkar. Acele yok, elinde poşet yok, ceket ilikli.\n\nKent kamerası yüzü tutuyor. 'Uğrayıp vazgeçtim' cümlesi, 47 dakikayı açıklamaz.",
+      "unlocksClueId": "clue_pts_asistan"
+    },
+    {
+      "keys": [
+        "mertaksoy",
+        "mert",
+        "05332406110"
+      ],
+      "title": "GBT / HTS — Mert Aksoy",
+      "body": "26 yaş. Araştırma görevlisi, ceza hukuku.\nHat: 0532 240 61 10\nPolis ifadesi: o gece sabaha kadar fakültede makale yazıyordum.\n\nHTS, aynı gece:\n22:40  fakülte hücresi\n23:11  araç hızında Cebeci'ye geçiş\n23:18–00:04  Selin Aydın'ın evinin bazı, Öveç Sokak hücresi 19 kayıt\n23:41  Selin'in hattına giden çağrı, 38 sn, açılmış\n00:05  araçla birlikte fakülteye dönüş\n00:40  Mert'in ev hücresi\n\nFakülte odası 23:18–00:04 arasında sessiz. İfade yalan.",
+      "unlocksClueId": "clue_mert_gbt"
+    },
+    {
+      "keys": [
+        "villa",
+        "fon",
+        "kibris"
+      ],
+      "title": "MALİ — villa ve fon",
+      "body": "Haldun Erk, oğlu Kerem Erk adına.\nKuzey Kıbrıs, Girne, villa tapusu.\nBedel: 1.500.000 ABD doları.\nÖdeme: üç parça, yurt dışı hesap, son parça geçen hafta.\nKaynak: üniversite maaşıyla uyuşmuyor.\n\nMert Aksoy hesabı:\nGeçen ay, Haldun Erk'in proje kaleminden\n+400.000 TL\nAçıklama: özel araştırma fonu\nProje kodu rektörlükte yok. Kalem uydurma.\n\nHayalet notu: para temiz görünüyor ama Mert'in hesabından geçiyor, hocanın izi silinmiş.",
+      "unlocksClueId": "clue_merti_money"
+    },
+    {
+      "keys": [
+        "sukrudogan",
+        "sukru",
+        "kapici"
+      ],
+      "title": "TANIK — Şükrü Doğan",
+      "body": "TANIK İFADESİ — ŞÜKRÜ DOĞAN, 63\nGörev: Öveç Sokak 14 kapıcısı.\n\n23:20  Ilikli ceketli genç bir adam girdi. 'Selin'in asistanıyım, hocadan haber getirdim' dedi. Yukarı çıktı.\n00:03  Aynı adam iki kat merdiveni sekerek indi. Sağ cebi ağırdı, elinde bir şey tutuyordu.\n00:10  Daire 8'den gaz kokusu geldi. İtfaiyeyi ben aradım.\n\nİfade: 'Selin kızım dünyalar tatlısıydı. Genç adamı dergide görsem tanırım.'",
+      "unlocksClueId": "clue_wit_kapici"
+    },
+    {
+      "keys": [
+        "aytenhanim",
+        "ayten",
+        "komsu"
+      ],
+      "title": "TANIK — Ayten Hanım",
+      "body": "TANIK İFADESİ — AYTEN YILDIZ, 58\nAdres: Öveç Sokak 14, kat 2, daire 5 (Selin'in altı).\n\n23:55  Kapıda erkek sesi: 'Aç şu kapıyı Selin, beş dakika.' Kız cevap vermedi.\n00:02  Tavandan metal sesi. Sonra düşen bir şey.\n00:04  Mutfağa gaz kokusu sızdı. Kapıcıya haber verdim.\n\nİfade: 'Bu apartmanda bir daha kimse rahat uyumaz.'",
+      "unlocksClueId": "clue_wit_komsu"
+    },
+    {
+      "keys": [
+        "gulayhanim",
+        "gulay",
+        "sekreter"
+      ],
+      "title": "TANIK — Gülay Hanım",
+      "body": "TANIK İFADESİ — GÜLAY ÖZKAN, 41\nGörev: Hukuk Fakültesi dekanlık sekreteri.\n\n22:30  Hoca Mert'i odasına çağırdı, kapıyı kapattı. Çıkarken Mert'in yüzü kireç gibiydi. 'İş gece biter' cümlesini ben duydum.\n23:05  Hoca otoparktan arabayı Mert'e verdi.\nSabah  Hoca bana 'çıkış kayıtlarını temizle' dedi. Temizlemedim, kopyasını aldım.\n\nİfade: 'Ben memurum, ama bu kadarını imzalamam.'",
+      "unlocksClueId": "clue_wit_sekreter"
+    }
+  ],
+  "phoneItems": [
+    {
+      "id": "photo",
+      "title": "Gizli klasör",
+      "body": "GİZLİ ALBÜM  ·  14 kare  ·  son ekleme bu hafta\n\nKare 1. Hukuk Fakültesi dekanlık katı, koridor boş. Saat damgası 21:14.\nKare 2. Prof. Dr. Haldun Erk'in makam odası. Masa, bayrak, ceza kanunu.\nKare 3. Selfie. Hoca kadraja girmiş, gülümsüyor. Selin'in yüzü kadrajın kenarında, gülmüyor, omzu çekilmiş.\nKare 4. Aynı oda, kapı aralığı. Hoca'nın eli Selin'in kolunda. Selin'in diğer eli telefonda, deklanşör kendi kendine.\nKare 5–8. Evrak. Sınav zarfı, mühür açık, tarih daha gelmemiş.\nKare 9. Flaş bellek, hocanın çekmecesinde, Selin'in parmağı yanında.\n\nBu kareler galeride değil. Klasör şifresi telefon kilidiyle aynı.",
+      "unlocksClueId": "clue_haldun_office_photo"
+    },
+    {
+      "id": "audio",
+      "title": "Ses kaydı — ofis",
+      "body": "SES  ·  14 dk 12 sn  ·  makam odası\nHaldun Erk, soğuk, alçak, acele etmiyor.\n\nHaldun: Selin kızım, bu hayat kurallarla döner. Sınav sorularını erken alıp ofisime gelmenin bedeli ya bu imzadır ya da okulu bitirememendir. Zorlaştırma.\nSelin: Bu imza nedir?\nHaldun: Bir şey değil. Bir akşam. Bir susuş. Birinci sınıflar da öğrendi. Sen zekisin, geç öğrenme.\nSelin: Soru satıyorsunuz.\nHaldun: Soru bir emanettir. Emaneti taşıyan susar. Flaş bellek sende kalsın, yarın getirirsin. Getirmezsen disiplin kurulunda ben otururum, sen ayakta kalırsın.\nSelin: Kaydediyorum.\nHaldun: (güler) Kaydet. Bu odadan çıkınca kimse duymaz.\n\nKayıt burada bitmiyor. Son dört dakika Selin'in nefesi, kapı, koridor. Hoca peşinden gelmemiş.",
+      "unlocksClueId": "clue_exam_leak_audio"
+    },
+    {
+      "id": "sms_burcu",
+      "title": "WhatsApp — Burcu",
+      "body": "Ev arkadaşı Burcu\n\nDün 18:02  Selin: Burcu, Haldun'un bütün tezgâhını çöktüm. Sadece soru satmak değil. Zavallı birinci sınıf kızlarına neler yapmış. Yarın rektörlüğe bizzat veriyorum bu flaş belleği.\nDün 18:09  Burcu: Selin yalvarırım vazgeç. Adamın arkasında eski bakanlar, YÖK üyeleri var. Seni dağa kaldırsalar ruhumuz duymaz.\nDün 18:14  Selin: Korkmuyorum Burcu. Adalet okuyorsak bunun için okuyoruz.\nDün 19:40  Burcu: Ben kütüphanedeyim. Gece dönmem. Kapıyı kilitle.\nDün 19:44  Selin: Kilitliyorum. Çöpü de atacağım, dilekçenin yırtığını. Aslı çantada.\nDün 23:46  Burcu: İyi misin?\nDün 23:52  Selin: Biri kapıda. Mert yazmış. Açmam.\nBu son mesaj. Burcu'nun dönüşü itfaiyeden sonra.",
+      "unlocksClueId": "clue_burcu_sms"
+    },
+    {
+      "id": "sms_mert",
+      "title": "Son aramalar — Mert",
+      "body": "Kayıtlı ad: Asistan Mert\nNumara: 0532 240 61 10\n\nÖlüm penceresinden 22 dakika önce.\n23:38  gelen arama, 12 sn, açılmamış\n23:41  gelen arama, 38 sn, açılmış, Selin tek cümle: aşağı inmem\n23:44  mesaj: Selin kapıdayım. Hoca seninle son kez barışmak ve konuyu tatlıya bağlamak istiyor. Lütfen aşağı in, konuşalım.\n23:47  mesaj: Anahtarın bende değil, kapıyı sen aç. Beş dakika. Sonra giderim.\n23:51  mesaj: Açmazsan hoca yarın kurulda seni bitirir. Ben aradayım, kötülük için değil.\n23:55  Selin yazmamış.\n00:02  Mert: tamam, gidiyorum.\nGitmemiş. PTS 00:05'te binmiş.",
+      "unlocksClueId": "clue_mert_sms"
+    }
+  ],
+  "suspects": [
+    {
+      "id": "mert",
+      "calm": "ARROGANT",
+      "acceptedClueIds": [
+        "clue_pts_asistan",
+        "clue_exam_leak_audio",
+        "clue_cut_hose",
+        "clue_market_receipt",
+        "clue_wit_kapici",
+        "clue_wit_komsu"
+      ],
+      "lines": {
+        "idle": "Komiserim ben akademisyenim. Bu muamele hukuk fakültesine hakarettir. O gece sabaha kadar fakültede makale yazıyordum. Selin'i tanırım, dağınıktı, ocağı açık unutmuş olabilir.",
+        "hit": "Evet, hocanın aracıyla sokağından geçtim. Not bırakacaktım, vazgeçtim. Bu, cinayet işlediğim anlamına gelmez.",
+        "miss": "Bu kâğıt beni o eve koymaz. Makalemin taslağı fakültedeki bilgisayarda. Gidin bakın.",
+        "confess": "Yeter. Hoca, bu kız işimizi bitirecek, bütün kariyer çöpe gidecek, dedi. Kapıyı ben açtırdım. Arkadan başına demir çubukla vurdum. Hortumu kestim, gazı açtım, viskiyi tezgâha bıraktım, sızmış görünsün diye. Ben sadece asistanım. Emri o verdi.",
+        "repeat": "Bunu gördüm. Yenisini koyun."
+      },
+      "character": {
+        "name": "Mert Aksoy",
+        "primary": "#243044",
+        "secondary": "#c6a15b",
+        "accessory": "NONE",
+        "model": "ASSISTANT"
+      },
+      "dialogue": {
+        "start": {
+          "text": "Komiserim ben akademisyenim. Bu muamele hukuk fakültesine hakarettir. Ceketimin düğmesi ilikliyse saygıdandır, korkudan değil. O gece sabaha kadar fakültede makale yazıyordum. Selin dağınıktı. Ocak açık kalır. Gaz dolar. Bu bir trajedidir, dosya değildir.",
+          "options": [
+            {
+              "text": "23:15'te nerede olduğunu bir daha söyle.",
+              "next": "alibi",
+              "stress": 5
+            },
+            {
+              "text": "Haldun Erk'le aranız nasıl?",
+              "next": "hoca",
+              "stress": 5
+            },
+            {
+              "text": "Selin'in kapısına neden yazdın?",
+              "next": "door",
+              "requires": "clue_mert_sms",
+              "stress": 10
+            },
+            {
+              "text": "Komşu 'aç şu kapıyı Selin' sesini duymuş.",
+              "next": "komsu",
+              "requires": "clue_wit_komsu",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Yutkundu."
+            },
+            {
+              "text": "Kapıcı seni 23:20'de içeri girerken gördü.",
+              "next": "kapici",
+              "requires": "clue_wit_kapici",
+              "stress": 15,
+              "anim": "DEFENSIVE",
+              "behzat": "Gözü kapıya kaydı."
+            },
+            {
+              "text": "Not 23:40'ta dosyayla çıktığını yazıyor.",
+              "next": "note",
+              "requires": "clue_door_note",
+              "stress": 12,
+              "anim": "DEFENSIVE",
+              "behzat": "Durdu."
+            }
+          ]
+        },
+        "alibi": {
+          "text": "Fakültedeydim. Odamın ışığı açıktı. Çay içtim, kaynak taradım, uyumadım. Hoca da evindeydi, beni aramadı. Selin'in sokağı benim yolumun üstünde değildir. Oradan geçmem için sebep yok.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Audi 23:15'te köşede. İnen sensin.",
+              "next": "street",
+              "requires": "clue_pts_asistan",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Yutkundu. Bacak bacak üstüne attı."
+            },
+            {
+              "text": "Peki. Makalene dönelim.",
+              "next": "start"
+            }
+          ]
+        },
+        "street": {
+          "text": "Şey. Evet. Hocanın aracıyla fakülteden dönerken Selin'in sokağından geçtim. Uğrayıp not bırakacaktım, vazgeçtim, bindim, gittim. Kapıya çıkmadım. Zili çalmadım. Kırk dakika park etmek düşünmektir, suç değildir. Kameranız içeri giren birini göstermiyor.",
+          "options": [
+            {
+              "text": "Hattın da o evin bazında. Odanda değil.",
+              "next": "hts",
+              "requires": "clue_mert_gbt",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT"
+            },
+            {
+              "text": "Not neydi?",
+              "next": "note",
+              "stress": 5
+            },
+            {
+              "text": "Ceketin cebinde ne vardı?",
+              "next": "coat",
+              "stress": 5
+            }
+          ]
+        },
+        "note": {
+          "text": "Ben o saatte kütüphanedeydim. Notu kim yazmış? Komşu mu? Komşu beni tanımaz. Dosya da götürmedim, dosyalar masasında duruyordu.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Kütüphane kapandı 22:00'de. Not seni yürürken görmüş.",
+              "next": "note2",
+              "stress": 18,
+              "anim": "ANGRY",
+              "behzat": "Sesi kısıldı."
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "hts": {
+          "text": "Baz yalan söyler. Sokak dardır, hücre büyüktür. Arabada oturdum, telefonum cebimdeydi, evin bazını gördü. Ben merdiveni görmedim. Selin'i görmedim. Gazı duymadım.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Kırk yedi dakika arabada not mu düşündün?",
+              "next": "door",
+              "stress": 10,
+              "anim": "DEFENSIVE"
+            },
+            {
+              "text": "Baştan.",
+              "next": "start"
+            }
+          ]
+        },
+        "door": {
+          "text": "Mesajı attım, evet. Hoca 'git, konuş, tatlıya bağla' dedi. Ben de yazdım. Selin inmedi. Ben de gitmedim. Kapı açılmadı. Bunu siz uyduruyorsunuz çünkü başka kimse yok elde.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Ses kaydını açıyorum.",
+              "next": "tape",
+              "requires": "clue_exam_leak_audio",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Yüzü gitti."
+            },
+            {
+              "text": "Hortum kendi kendine kesilmedi.",
+              "next": "hose",
+              "requires": "clue_cut_hose",
+              "stress": 10
+            }
+          ]
+        },
+        "tape": {
+          "text": "O ses kaydı montaj. Hoca böyle konuşmaz. Hoca sadece öğrenciye disiplin cezası verecekti, ben de arada yumuşatmaya çalıştım. Kayıtta geçen imza, bir evrak imzasıdır. Siz onu başka yere çekiyorsunuz. On dört dakika içinden bir cümle kesip adam asılmaz.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Dilekçe de aynı şeyi söylüyor. Soru ve taciz.",
+              "next": "hose",
+              "requires": "clue_torn_petition",
+              "stress": 10,
+              "anim": "DEFENSIVE"
+            },
+            {
+              "text": "Kanıt masada kalsın.",
+              "next": "pressure"
+            }
+          ]
+        },
+        "hose": {
+          "text": "Hortumu ben kesmedim. Evde bıçak çoktur. Selin kendi kesmiş olabilir, pişman olmuş olabilir, bilemem. Gaz bir intihar yöntemidir, bunu hukuk da yazar. Siz cinayet istiyorsunuz çünkü dosya öyle kapanıyor.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Viski. Selin içmez. Şişeyi kim bıraktı?",
+              "next": "whisky",
+              "requires": "clue_market_receipt",
+              "stress": 15,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "İşte tuzak bu."
+            },
+            {
+              "text": "Geri.",
+              "next": "pressure"
+            }
+          ]
+        },
+        "whisky": {
+          "text": "Viski evin içkisidir. Burcu içer, Selin içmez, bunu herkes bilir. Şişedeki iz Burcu'nunsa Burcu koymuştur. Ben marketten viski almam. Fiş kimin, bilmem. 23:30'da ben fakültedeydim. Hâlâ oradayım, sizin kâğıdınızda.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Fiş 23:30. Sen 23:18'de sokağa inmişsin. Şişeyi sahne için bıraktın.",
+              "next": "pressure",
+              "stress": 15,
+              "anim": "ANGRY_SLAM",
+              "behzat": "Masaya vur. Fiş, hortum, kayıt."
+            },
+            {
+              "text": "Baştan alalım.",
+              "next": "start"
+            }
+          ]
+        },
+        "hoca": {
+          "text": "Hocamdır. Makalemi o okur, kapısını ben açarım, aracını bazen ben kullanırım. Bu bir çete değildir, bir kürsüdür. Para aldıysam fondur, araştırma fonu. Villa hikâyesini ben bilmem, oğlu bilir. Ben asistanım. Emir almam, rica alırım.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Dört yüz bin, proje kodu yok.",
+              "next": "money",
+              "requires": "clue_merti_money",
+              "stress": 10,
+              "anim": "DEFENSIVE"
+            },
+            {
+              "text": "Geri.",
+              "next": "start"
+            }
+          ]
+        },
+        "money": {
+          "text": "Fon gerçek. Hoca kıymetli bir iş verdi, ben taradım, para yattı. Kıbrıs'taki villa beni bağlamaz. Bir asistanın hesabındaki para, bir profesörün evladının tapusuyla birleşince size roman gibi gelir. Romanla adam tutuklanmaz.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Roman değil. Selin o fonun kaynağını rektörlüğe götürecekti.",
+              "next": "pressure",
+              "stress": 10,
+              "behzat": "Kayıt ve dilekçe yanında dursun."
+            },
+            {
+              "text": "Baştan.",
+              "next": "start"
+            }
+          ]
+        },
+        "pressure": {
+          "text": "Avukat gelmeden susarım. Hoca da susar. Siz bir asistanı korkutarak bir profesörü yıkamazsınız. Sesim titriyorsa gaz kokusundandır, suçtan değil.",
+          "options": [
+            {
+              "text": "Kanıt konuşur. Sıra sende değil.",
+              "next": "pressure",
+              "behzat": "PTS, kayıt, hortum, fiş. Üçü yeter, dördü kilit."
+            },
+            {
+              "text": "En başa.",
+              "next": "start"
+            }
+          ]
+        },
+        "confessed": {
+          "text": "Yeter. Tamam, yeter. Hoca dedi ki bu kız işimizi bitirecek, bütün kariyerimiz çöpe gidecek. Beni kullandı. Kapıyı açtırdım, arkadan başına demir çubukla vurdum, hortumu kestim, gazı açtım. Viskiyi de tezgâha bıraktım, sızmış sansınlar diye. Ben sadece bir asistanım. Emri o verdi.",
+          "options": [
+            {
+              "text": "Haldun Erk de masada. Tutanağa geçiyoruz.",
+              "next": "confessed"
+            }
+          ]
+        },
+        "kapici": {
+          "text": "Kapıcılar yüz kişiye 'merhaba' der, yüzünü hatırlamaz. Binaya girmedim. Girdiysem de bir kitap bırakacaktım. Bunu kimse suç sayamaz.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Cebin ağırdı, kapıcı öyle dedi.",
+              "next": "coat",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön.",
+              "next": "start"
+            }
+          ]
+        },
+        "komsu": {
+          "text": "Yaşlı bir komşu, gece yarısı, tavan sesi, erkek sesi. Siz bunu mahkemeye mi götüreceksiniz? Her apartmanda erkek sesi vardır, her daireden ses gelir.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Ses 'Selin' diyordu. Senin sesin.",
+              "next": "pressure",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön.",
+              "next": "start"
+            }
+          ]
+        },
+        "coat": {
+          "text": "Cebimde cüzdan, anahtar, bir not kâğıdı vardı. Ağır olan eşyalarımdır. Bir akademisyenin cebi kitapla doludur, bıçakla değil.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Bıçak mı dedim? Sen söyledin.",
+              "next": "pressure",
+              "stress": 10,
+              "behzat": "Kendini ele verdi."
+            },
+            {
+              "text": "Geri dön.",
+              "next": "start"
+            }
+          ]
+        },
+        "note2": {
+          "text": "Bunu şimdi konuşmam. Avukatım gelsin. Ama o kâğıt masadaysa, ben de o gece oradaydım demektir. Gerisini tutanağa yazın, ben imza atarım, itiraf değil, düzeltme.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "haldun",
+      "calm": "CONFIDENT",
+      "stressHit": 30,
+      "acceptedClueIds": [
+        "clue_exam_leak_audio",
+        "clue_torn_petition",
+        "clue_haldun_office_photo",
+        "clue_merti_money",
+        "clue_wit_sekreter"
+      ],
+      "lines": {
+        "idle": "Komiserim, ben dekan vekiliyim. Odama randevusuz giren, bu binanın düzeniyle oynar. Avukatım gelmeden konuşmam.",
+        "hit": "Bu, bağlamından koparılmış bir parça. Yine de devam edin, dinliyorum.",
+        "miss": "Bu kâğıt beni o eve koymaz. Mert'e sorun, bana değil.",
+        "confess": "Tamam. Ben ona vur demedim, susturun dedim. Mert fazla sadıktı, ben de durdurmadım. Soru satışı da taciz de benim.",
+        "repeat": "Bunu gördüm. Yenisini koyun."
+      },
+      "character": {
+        "name": "Haldun Erk",
+        "primary": "#5b4a38",
+        "secondary": "#8a8782",
+        "accessory": "NONE",
+        "model": "PROFESSOR"
+      },
+      "dialogue": {
+        "start": {
+          "text": "Komiserim, ben dekan vekiliyim. Odama randevusuz giren, bu binanın düzeniyle oynar. Selin Aydın çalışkan, burslu bir öğrenciydi, üzüldüm. Asistanım Mert'le akademik bir iş bölümümüz var, ötesi yok. Başka soru varsa avukatım gelsin.",
+          "options": [
+            {
+              "text": "Selin'le en son ne zaman konuştun?",
+              "next": "selin",
+              "stress": 5
+            },
+            {
+              "text": "Mert Aksoy gece Selin'in kapısındaydı.",
+              "next": "mert",
+              "stress": 5
+            },
+            {
+              "text": "Sekreterin senin 'iş gece biter' dediğini duymuş.",
+              "next": "secretary",
+              "requires": "clue_wit_sekreter",
+              "stress": 15,
+              "anim": "DEFENSIVE",
+              "behzat": "Gülümsemesi kaydı."
+            },
+            {
+              "text": "Hortumu senin maket bıçağın keser.",
+              "next": "valve",
+              "requires": "clue_stove_valve",
+              "stress": 12,
+              "anim": "DEFENSIVE",
+              "behzat": "Durdu."
+            }
+          ]
+        },
+        "selin": {
+          "text": "Dersimdeydi. Burs ve disiplin üzerine iki üç görüşme yaptık, kapı açık, odamda. Genç insan duygusaldır, yanlış anlar, yanlış anlatır.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Ofis kaydını açıyorum.",
+              "next": "tape",
+              "requires": "clue_exam_leak_audio",
+              "stress": 10,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Sesi alçaldı. Kayıt vurdu."
+            },
+            {
+              "text": "Disiplin kurulu neden Selin'in dosyasını açmadı?",
+              "next": "board",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön.",
+              "next": "start"
+            }
+          ]
+        },
+        "tape": {
+          "text": "On dört dakikalık bir kaydı bağlamından koparıp tek cümleye indiriyorsunuz. Akademide buna kürsü tartışması denir. Ben bir öğrenciye sınav ahlakını anlatıyordum. Ses kesik, montaj olabilir.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Yırtık dilekçe aynı konuyu yazıyor. Soru satışı ve taciz.",
+              "next": "petition",
+              "requires": "clue_torn_petition",
+              "stress": 10,
+              "anim": "DEFENSIVE"
+            },
+            {
+              "text": "Geri dön.",
+              "next": "start"
+            }
+          ]
+        },
+        "petition": {
+          "text": "Yırtık kâğıt, kimin yırttığı belli olmayan kâğıttır. Rektörlüğe giden dilekçe değil, çöpe giden dilekçedir. İsmim geçiyor diye suçlu olmam. Dekan vekiliyim, ismim her dosyada geçer.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Telefonunda gizli albüm var. Makam odan, Selin'in kolunu tutan elin.",
+              "next": "photo",
+              "requires": "clue_haldun_office_photo",
+              "stress": 10,
+              "anim": "NERVOUS_SWEAT",
+              "behzat": "Gülümsemesi gitti."
+            },
+            {
+              "text": "Geri dön.",
+              "next": "start"
+            }
+          ]
+        },
+        "photo": {
+          "text": "Bir fotoğraf neyi kanıtlar? Hocayla öğrencinin aynı karede durması cinayet değildir. Selin poz vermeyi severdi. Ben acıyıp yanında durmuşumdur.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Kıbrıs'ta oğlun adına villa. Mert'in hesabında dört yüz bin lira, proje kodu yok.",
+              "next": "money",
+              "requires": "clue_merti_money",
+              "stress": 15,
+              "anim": "DEFENSIVE"
+            },
+            {
+              "text": "Geri dön.",
+              "next": "start"
+            }
+          ]
+        },
+        "money": {
+          "text": "Villa ailemin birikimidir. Fon, bilimsel bir kalemdir, Mert'e verilmiştir. Aklı karışık biri parayla cinayeti birleştirir. Ben bilim insanıyım, kaçak ekonomist değil.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Selin bunu rektörlüğe götürecekti. Sen biliyordun.",
+              "next": "pressure",
+              "stress": 10,
+              "behzat": "Kayıt, dilekçe, albüm, fon. Dördü bir arada."
+            }
+          ]
+        },
+        "mert": {
+          "text": "Mert işini bilen bir çocuktur. Selin'e not bırakmışsa bu onun yorumudur, benim talimatım değil. Bazı insanlar hocasını memnun etmek için fazla ileri gider. Dersimin dışında ne yaptığı onun bileceği iştir.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Araç senin adına. Mert yetkili sürücü.",
+              "next": "pressure",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön.",
+              "next": "start"
+            }
+          ]
+        },
+        "pressure": {
+          "text": "Avukatım gelmeden tek kelime etmem. Bir profesörü, bir asistanın ağzından mahkûm edemezsiniz. Soğukkanlıyım, çünkü masumum.",
+          "options": [
+            {
+              "text": "Kanıt konuşur. Sıra sende değil.",
+              "next": "pressure",
+              "behzat": "Kayıt, dilekçe, albüm, fon. Dördü kilit."
+            },
+            {
+              "text": "En başa.",
+              "next": "start"
+            }
+          ]
+        },
+        "confessed": {
+          "text": "Tamam. Yeter. Ben ona vur demedim, susturun dedim. Selin'in o belleği rektörlüğe gitseydi bütün kürsü, bütün isimler yıkılacaktı. Mert fazla sadıktı, ben de durdurmadım. Soru satışı da taciz de benim. Ölümü de benim saymak gerekiyorsa sayın.",
+          "options": [
+            {
+              "text": "Haldun Erk tutuklandı. Tutanağa geçiyoruz.",
+              "next": "confessed"
+            }
+          ]
+        },
+        "secretary": {
+          "text": "Sekreter hanım yorgundur, kırk yıldır bu odada kahve taşır. 'İş gece biter' derken makale bitiriyorduk. Memur cümleleri yanlış duyar, doğru yazmaz.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Kopyasını almış. Kayıt temizlenmedi.",
+              "next": "pressure",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön.",
+              "next": "start"
+            }
+          ]
+        },
+        "board": {
+          "text": "Disiplin kurulu benim değil, rektörlüğün kurumudur. Selin'in dosyası evrak eksikliğinden askıdadır. Evrak tamam olsa ben ilk imzalayanım.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Evrak sende kaldı. Soru satışı çıkacaktı.",
+              "next": "pressure",
+              "stress": 5
+            },
+            {
+              "text": "Geri dön.",
+              "next": "start"
+            }
+          ]
+        },
+        "valve": {
+          "text": "Benim bıçağım maket bıçağı değil, neşter. Neşter eğri keser, düz kesmez. Hem ben o eve bu hafta girmedim. Öğrencimin evine gece girmek bana yakışmaz.",
+          "lie": true,
+          "options": [
+            {
+              "text": "Kesik düz. Ve sen o gece sokağa park etmişsin.",
+              "next": "valve2",
+              "stress": 18,
+              "anim": "ANGRY",
+              "behzat": "Sesi kısıldı."
+            },
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        },
+        "valve2": {
+          "text": "Bunu şimdi konuşmam. Avukatım gelsin. Ama o kâğıt masadaysa, ben de o gece oradaydım demektir. Gerisini tutanağa yazın, ben imza atarım, itiraf değil, düzeltme.",
+          "options": [
+            {
+              "text": "Geri dön",
+              "next": "start"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "report": "T.C. ANKARA EMNİYET MÜDÜRLÜĞÜ\nDOSYA KAPANDI  ·  2026/06-413  ·  Cebeci'de Son Sınav\n\nMaktul Selin Aydın, 22, hukuk dördüncü sınıf. Öveç Sokak 14, daire 8. Ense köküne demir çubukla vurulmuş, doğalgaz hortumu kesilerek oda doldurulmuş, viski şişeleri sızma süsü için tezgâha bırakılmıştır.\n\nAsistan Mert Aksoy itiraf etti. Çağrıyı o yazdı, kapıdan o girdi, hortumu o kesti. Araç 06 HL 880 ve hattı 23:15–00:05 arasında sokağın bazındadır. Polisteki fakülte alibisi yalandır.\n\nProf. Dr. Haldun Erk, dekanlık odasında gözaltına alındı ve ifadesinde \"Ben vur demedim, susturun dedim\" dedi. Ses kaydı, yırtık disiplin dilekçesi, Kıbrıs villası ve Mert'in hesabındaki 400 bin liralık uydurma fon, soru satışı ve taciz zincirini gösteriyor. Selin flaş belleği rektörlüğe götüremedi.\n\nUnvan notu: akademik çetelerin kabusu.\nİki isim nezarettedir. Dosya kapanmıştır.",
+  "replies": {
+    "Behzat": [
+      {
+        "text": "Hortum kesik mi?",
+        "reply": "Kesik, enine. Kaza değil. Çöpü de boş geçme."
+      },
+      {
+        "text": "Ekip yolda mı?",
+        "reply": "Akbaba hortumda. Hayalet Audi'nin plakasında."
+      }
+    ],
+    "Akbaba": [
+      {
+        "text": "Hortumdan ne çıktı?",
+        "reply": "Düz kesik, kaza lafı çöker. Dilekçe masada, yırtık."
+      },
+      {
+        "text": "Telefon sağlam mı?",
+        "reply": "Yastığın altındaydı. Ekran sönmeden mesajlara bak."
+      }
+    ],
+    "Hayalet": [
+      {
+        "text": "Plakayı sorguladım.",
+        "reply": "06 HL 880 hocanın Audi'si. Yetkili sürücü asistan Mert."
+      },
+      {
+        "text": "Ses kaydını aldım.",
+        "reply": "Ofis kaydı, sınav pazarlığı. Dinle, sonra Mert'e geç."
+      }
+    ]
+  },
+  "esorguHints": [
+    {
+      "text": "Haldun Erk",
+      "field": "İsim"
+    },
+    {
+      "text": "06 HL 880",
+      "field": "Plaka"
+    },
+    {
+      "text": "Mert Aksoy",
+      "field": "İsim"
+    },
+    {
+      "text": "Villa",
+      "field": "Şirket"
+    },
+    {
+      "text": "Şükrü Doğan",
+      "field": "Tanık"
+    },
+    {
+      "text": "Ayten Hanım",
+      "field": "Tanık"
+    },
+    {
+      "text": "Gülay Hanım",
+      "field": "Tanık"
+    }
+  ],
+  "importantClues": [
+    "clue_cut_hose",
+    "clue_exam_leak_audio",
+    "clue_haldun_record",
+    "clue_pts_asistan",
+    "clue_mert_gbt",
+    "clue_merti_money"
+  ]
+}

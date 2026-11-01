@@ -1,0 +1,16 @@
+{
+  "_doc": "status open olan satır oynanır. Boş yuvaya senaryo yazınca path doldur ve status değerini open yap.",
+  "cases": [
+    {"id": "episode_01", "fileNo": "01", "title": "Kuledeki Sır", "status": "open", "path": "res://data/episode_01.json", "logline": "Mühendis uyutulup kuleden atılmış gibi bırakılmış.", "city": "Ankara", "victim": "Emre Karaca", "date": "19 Mart"},
+    {"id": "episode_02", "fileNo": "02", "title": "Cebeci'de Son Sınav", "status": "open", "path": "res://data/episode_02.json", "logline": "Hukuk öğrencisi gazlı evde kaza süsüyle öldürülmüş.", "city": "Ankara", "victim": "Selin Aydın", "date": "Öveç Sokak"},
+    {"id": "episode_03", "fileNo": "03", "title": "Pavyonda Hesap Gecesi", "status": "open", "path": "res://data/episode_03.json", "logline": "Başsolist arkasındaki defter için vurulmuş.", "city": "Ankara", "victim": "Gonca Demir", "date": "Maltepe"},
+    {"id": "episode_04", "fileNo": "04", "title": "Nöbetin Sonu", "status": "open", "path": "res://data/episode_04.json", "logline": "Eczacı, sahte serumu bildirecekken gaz süsüyle öldürülmüş.", "city": "Ankara", "victim": "Nermin Koç", "date": "Bahçelievler"},
+    {"id": "episode_05", "fileNo": "05", "title": "Mühür Geç Geldi", "status": "open", "path": "res://data/episode_05.json", "logline": "Zabıta amiri, kulüp dosyasını mühürlemeye giderken kendi otoparkında vurulmuş.", "city": "Ankara", "victim": "Kemal Sönmez", "date": "Ulus"},
+    {"id": "slot_06", "fileNo": "06", "title": "Boş", "status": "empty", "path": "", "logline": "Senaryo bekleniyor.", "city": "—", "victim": "—", "date": "—"},
+    {"id": "slot_07", "fileNo": "07", "title": "Boş", "status": "empty", "path": "", "logline": "Senaryo bekleniyor.", "city": "—", "victim": "—", "date": "—"},
+    {"id": "slot_08", "fileNo": "08", "title": "Boş", "status": "empty", "path": "", "logline": "Senaryo bekleniyor.", "city": "—", "victim": "—", "date": "—"},
+    {"id": "slot_09", "fileNo": "09", "title": "Boş", "status": "empty", "path": "", "logline": "Senaryo bekleniyor.", "city": "—", "victim": "—", "date": "—"},
+    {"id": "slot_10", "fileNo": "10", "title": "Boş", "status": "empty", "path": "", "logline": "Senaryo bekleniyor.", "city": "—", "victim": "—", "date": "—"},
+    {"id": "slot_11", "fileNo": "11", "title": "Boş", "status": "empty", "path": "", "logline": "Senaryo bekleniyor.", "city": "—", "victim": "—", "date": "—"}
+  ]
+}

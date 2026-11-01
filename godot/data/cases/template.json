@@ -1,0 +1,50 @@
+{
+  "_doc": "Kopyala, adını değiştir, data/cases.json içine path yaz ve status değerini open yap. Şüpheliler suspects dizisinde. Sakin yüz animi calm alanındadır (örnek ARROGANT). Boşsa IDLE. Kanıt panosu kendisi dizilir. Güçlü ipler pairs, çelişki contradiction (a|b).",
+  "fileNo": "00",
+  "title": "Dosya adı",
+  "pin": "0000",
+  "pinHint": "Şifre ipucu, ilgili kanıt bulununca.",
+  "pinLocked": "4 hane.",
+  "pinHintClue": "clue_desk_photo",
+  "phoneClueId": "clue_phone",
+  "briefing": "Behzat'in ilk cümlesi.",
+  "report": "Kapanış tutanağı.",
+  "contradiction": "",
+  "arrival": {
+    "speaker": "Akbaba",
+    "line": "Olay yerindeki ilk cümle."
+  },
+  "call": {
+    "from": "Başkomiser Behzat",
+    "text": "Ofise gel."
+  },
+  "victim": {
+    "name": "",
+    "role": ""
+  },
+  "arrestClueIds": [],
+  "characters": {},
+  "hotspots": [],
+  "clues": [],
+  "chat": [],
+  "esorgu": [],
+  "phoneItems": [],
+  "pairs": [],
+  "suspects": [],
+  "set": "flat",
+  "place": "Adres veya mekân",
+  "caseNo": "2026/06-000",
+  "esorguHints": [
+    {
+      "text": "Örnek İsim",
+      "field": "İsim"
+    }
+  ],
+  "importantClues": [],
+  "replies": {
+    "Behzat": [],
+    "Akbaba": [],
+    "Hayalet": []
+  },
+  "_witness_doc": "Tanıklar esorgu kaydıdır: keys normalize edilmiş (ASCII küçük harf, yalnız a-z0-9), unlocksClueId bir clue'ya bağlanır. Kanıtı şüpheli kabul ediyorsa suspects[*].acceptedClueIds içine ekle; dialogue seçeneğinde requires ile dal aç."
+}
