@@ -42,15 +42,36 @@ static func build_head(id: String) -> Node3D:
 	var meta: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(HEAD_DIR + id + "_head.json"))
 	var root := Node3D.new()
 	root.name = "HeadRoot"
-	_add_glb(root, HEAD_DIR + id + "_skin.glb", _skin_material(tpl))
+	var mats: Array[ShaderMaterial] = []
+	var skin_mat := _skin_material(tpl)
+	mats.append(skin_mat)
+	_add_glb(root, HEAD_DIR + id + "_skin.glb", skin_mat)
 	if ResourceLoader.exists(HEAD_DIR + id + "_hair.glb"):
 		var hair: Dictionary = tpl.get("hair", {})
-		_add_glb(root, HEAD_DIR + id + "_hair.glb", _hair_material(float(hair.get("dress", 0.0))))
+		var hair_mat := _hair_material(float(hair.get("dress", 0.0)))
+		mats.append(hair_mat)
+		_add_glb(root, HEAD_DIR + id + "_hair.glb", hair_mat)
 	_eyes(root, meta, tpl)
 	_glasses(root, meta, str(tpl.get("glasses", "none")))
 	_face_props(root, meta, tpl)
+	_face_uniforms(mats, meta, tpl)
 	root.set_meta("head_meta", meta)
+	root.set_meta("face_mats", mats)
 	return root
+
+
+## Yüz deformasyonunun anatomi sabitleri: göz küreleri, ağız. Heykelle aynı
+## kaynaktan (head.json) geldiği için kapak tam kürenin üstünde çalışır.
+static func _face_uniforms(mats: Array[ShaderMaterial], meta: Dictionary, tpl: Dictionary) -> void:
+	var el: Array = meta["eye_l"]
+	var er: Array = meta["eye_r"]
+	var mc: Array = meta.get("mouth", [0.0, -0.061, 0.072])
+	for m in mats:
+		m.set_shader_parameter("eye_a", Vector3(el[0], el[1], el[2]))
+		m.set_shader_parameter("eye_b", Vector3(er[0], er[1], er[2]))
+		m.set_shader_parameter("eye_rad", float(meta.get("eye_radius", 0.0118)))
+		m.set_shader_parameter("mouth_c", Vector3(mc[0], mc[1], mc[2]))
+		m.set_shader_parameter("mouth_half", 0.016 * float(tpl.get("mouth_w", 1.0)))
 
 
 ## rig: character_rig.gd düğümü (skeleton, head_mesh dolu olmalı).
@@ -102,6 +123,109 @@ static func _noise(freq: float, seed_value: int, size: int, strength: float, fra
 	return tex
 
 
+## Yüz deformasyonu: deri ve saç gölgelendiricisine birlikte enjekte edilir.
+## Kaş/bıyık/sakal saç mesh'inde olduğu için ikisi aynı fonksiyonu kullanmazsa
+## kaş yerinde durup alın oynar. Ölçüler kafa yerel koordinatında, metre.
+const FACE_GLSL := """
+uniform vec3 eye_a = vec3(0.032, 0.010, 0.056);
+uniform vec3 eye_b = vec3(-0.032, 0.010, 0.056);
+uniform float eye_rad = 0.0118;
+uniform vec3 mouth_c = vec3(0.0, -0.061, 0.072);
+uniform float mouth_half = 0.016;
+uniform float f_blink = 0.0;
+uniform float f_jaw = 0.0;
+uniform float f_brow = 0.0;
+uniform float f_brow_in = 0.0;
+uniform float f_squint = 0.0;
+uniform float f_smile = 0.0;
+uniform float f_sneer = 0.0;
+
+vec3 rot_x(vec3 q, float a) {
+	float c = cos(a);
+	float s = sin(a);
+	return vec3(q.x, q.y * c - q.z * s, q.y * s + q.z * c);
+}
+
+// Göz kapağı küreyi saran kabuktur; kırpma onu kürenin yanal ekseni etrafında
+// döndürür — gerçek kapak da böyle hareket eder.
+vec3 lid_offset(vec3 p, vec3 c) {
+	vec3 q = p - c;
+	float d = length(q);
+	float shell = 1.0 - smoothstep(eye_rad + 0.0015, eye_rad + 0.0115, d);
+	float front = smoothstep(-0.0070, 0.0020, q.z);
+	vec3 off = vec3(0.0);
+	float upper = smoothstep(-0.0012, 0.0062, q.y);
+	float w = shell * front * upper;
+	if (w > 0.001) {
+		off += (rot_x(q, f_blink * 0.80) - q) * w;
+	}
+	float lower = smoothstep(-0.0012, -0.0062, q.y);
+	off.y += f_squint * 0.0038 * shell * front * lower;
+	return off;
+}
+
+vec3 brow_offset(vec3 p) {
+	float ey = (eye_a.y + eye_b.y) * 0.5;
+	float h = p.y - ey;
+	float band = smoothstep(0.007, 0.019, h) * (1.0 - smoothstep(0.029, 0.052, h));
+	float front = smoothstep(-0.012, 0.018, p.z);
+	float inner = 1.0 - smoothstep(0.004, 0.032, abs(p.x));
+	float w = band * front;
+	return vec3(0.0, (f_brow * 0.0062 + f_brow_in * 0.0058 * inner) * w, 0.0);
+}
+
+// Çene, kulak hizasındaki bir eksen etrafında döner: ağız açılırken çene aşağı
+// ve hafif geriye gider.
+vec3 jaw_offset(vec3 p) {
+	// Geçiş dudak hizasında keskin olmalı: yumuşak bir geçişte alt ve üst dudak
+	// birlikte iniyor, ağız açılmak yerine bütün alt yüz kayıyor.
+	float w = smoothstep(mouth_c.y + 0.005, mouth_c.y - 0.009, p.y);
+	if (w < 0.001) {
+		return vec3(0.0);
+	}
+	vec3 pivot = vec3(0.0, mouth_c.y + 0.054, mouth_c.z - 0.092);
+	vec3 q = p - pivot;
+	vec3 d = (rot_x(q, f_jaw * 0.17) - q) * w;
+	// alt dudak ortada biraz daha açılsın, ağız bademleşsin
+	float lip = (1.0 - smoothstep(0.004, mouth_half * 1.6, abs(p.x - mouth_c.x)))
+		* (1.0 - smoothstep(0.002, 0.014, abs(p.y - mouth_c.y)))
+		* smoothstep(mouth_c.z - 0.030, mouth_c.z - 0.004, p.z);
+	d.y -= f_jaw * 0.0040 * lip * w;
+	return d;
+}
+
+vec3 mouth_offset(vec3 p) {
+	vec3 q = p - mouth_c;
+	float near = 1.0 - smoothstep(0.010, 0.036, length(vec3(q.x * 0.8, q.y, q.z * 0.6)));
+	float corner = smoothstep(0.004, mouth_half, abs(q.x));
+	float upper = smoothstep(-0.0012, 0.0060, q.y);
+	vec3 d = vec3(0.0);
+	d.y += f_smile * 0.0058 * near * corner;
+	d.x += sign(q.x) * f_smile * 0.0032 * near * corner;
+	d.y += f_sneer * 0.0036 * near * upper;
+	return d;
+}
+
+vec3 face_offset(vec3 p) {
+	return lid_offset(p, eye_a) + lid_offset(p, eye_b) + brow_offset(p) + jaw_offset(p) + mouth_offset(p);
+}
+
+// Deformasyon normali de çevirir; komşu iki noktadan sonlu farkla yeniden kur.
+void face_apply(inout vec3 vert, inout vec3 nrm, vec3 tang, vec3 bitang) {
+	vec3 d0 = face_offset(vert);
+	vec3 pt = vert + tang * 0.0015;
+	vec3 pb = vert + bitang * 0.0015;
+	vec3 et = (pt + face_offset(pt)) - (vert + d0);
+	vec3 eb = (pb + face_offset(pb)) - (vert + d0);
+	vec3 n2 = cross(et, eb);
+	if (length(n2) > 1e-9) {
+		n2 = normalize(n2);
+		nrm = dot(n2, nrm) < 0.0 ? -n2 : n2;
+	}
+	vert += d0;
+}
+"""
+
 const SKIN_SHADER := """
 shader_type spatial;
 render_mode diffuse_burley, specular_schlick_ggx;
@@ -127,7 +251,11 @@ float vn(vec3 x) {
 float bump(vec3 p) {
 	return vn(p * 900.0) * 0.55 + vn(p * 380.0) * 0.45;
 }
-void vertex() { lp = VERTEX; }
+//FACE//
+void vertex() {
+	lp = VERTEX;
+	face_apply(VERTEX, NORMAL, TANGENT, BINORMAL);
+}
 void fragment() {
 	float e = 0.0006;
 	float b0 = bump(lp);
@@ -166,7 +294,7 @@ static var _skin_shader: Shader
 static func _skin_material(tpl: Dictionary) -> ShaderMaterial:
 	if _skin_shader == null:
 		_skin_shader = Shader.new()
-		_skin_shader.code = SKIN_SHADER
+		_skin_shader.code = SKIN_SHADER.replace("//FACE//", FACE_GLSL)
 	var m := ShaderMaterial.new()
 	m.shader = _skin_shader
 	m.set_shader_parameter("pores", float(tpl.get("pores", 0.5)))
@@ -197,7 +325,11 @@ float vn(vec3 x) {
 float strands(vec3 p) {
 	return vn(vec3(p.x * 650.0, p.y * 55.0, p.z * 650.0)) * 0.6 + vn(vec3(p.x * 1500.0, p.y * 120.0, p.z * 1500.0)) * 0.4;
 }
-void vertex() { lp = VERTEX; }
+//FACE//
+void vertex() {
+	lp = VERTEX;
+	face_apply(VERTEX, NORMAL, TANGENT, BINORMAL);
+}
 void fragment() {
 	float e = 0.0008;
 	float s0 = strands(lp);
@@ -215,22 +347,19 @@ void fragment() {
 }
 """
 static var _hair_shader: Shader
-static var _hair_mat: ShaderMaterial
 
 
+## Her kafa kendi materyalini alır: yüz üniformları (kırpma, çene, kaş) materyal
+## üstünde tutuluyor, paylaşılan tek materyalde bütün karakterler aynı anda kırpardı.
 static func _hair_material(dress: float = 0.0) -> ShaderMaterial:
 	if _hair_shader == null:
 		_hair_shader = Shader.new()
-		_hair_shader.code = HAIR_SHADER
-	if dress <= 0.0:
-		if _hair_mat == null:
-			_hair_mat = ShaderMaterial.new()
-			_hair_mat.shader = _hair_shader
-		return _hair_mat
-	var dressed := ShaderMaterial.new()
-	dressed.shader = _hair_shader
-	dressed.set_shader_parameter("dress", dress)
-	return dressed
+		_hair_shader.code = HAIR_SHADER.replace("//FACE//", FACE_GLSL)
+	var m := ShaderMaterial.new()
+	m.shader = _hair_shader
+	if dress > 0.0:
+		m.set_shader_parameter("dress", dress)
+	return m
 
 
 const FABRICS := {
