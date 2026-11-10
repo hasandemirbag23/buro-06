@@ -532,8 +532,11 @@ func _build() -> void:
 	if skeleton:
 		skeleton.add_child(overlay)
 	_accessory(spec)
-	Styler.apply(self, who)
-	_bind_face(str(spec.get("name", "")))
+	# Tripo karakterleri kendi yüzü ve kıyafetiyle tek parça gelir; prosedürel
+	# kafa ve kumaş katmanı yalnız eski (Quaternius) gövdelere uygulanır.
+	if not bool(design.get("tripo", false)):
+		Styler.apply(self, who)
+		_bind_face(str(spec.get("name", "")))
 	_push_overlay({})
 	var title: String = design.get("title", spec["name"])
 	var tag := MeshFactory.label(body, title, Vector3(0, 2.05, 0), Color("e7e1d6"), 0.55)

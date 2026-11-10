@@ -25,18 +25,20 @@
   "behzat": {
     "title": "Başkomiser Behzat",
     "age": "45-50",
-    "model": "res://assets/characters/man_Casual2.glb",
+    "model": "res://assets/generated/characters/behzat/behzat.glb",
     "look": "Yorgun, sert yüz; kırlaşmış dağınık saç ve kirli sakal; koyu gömlek üstüne yıpranmış kahverengi deri ceket; hafif kambur.",
-    "tint": {
-      "Body/LightBrown": "#3a2a21",
-      "Body/Skin": "#b38a66",
-      "Legs/LightBlue": "#1f2229",
-      "Feet/White": "#1a1612",
-      "Feet/Red_Dark": "#0f0d0b",
-      "Head/Hair": "#4a4542",
-      "Head/Skin_Darker": "#5a4a40"
+    "tint": {},
+    "overlay": {},
+    "animations": {
+      "Idle": "Idle",
+      "Talking": "Talking",
+      "Angry": "Angry",
+      "DrinkingTea": "DrinkingTea",
+      "Thinking": "Thinking"
     },
-    "overlay": {
+    "legacy_model": "res://assets/characters/man_Casual2.glb",
+    "tripo": true,
+    "legacy_overlay": {
       "Spine": [
         9,
         0,
@@ -62,13 +64,6 @@
         0,
         -6
       ]
-    },
-    "animations": {
-      "Idle": "Idle",
-      "Talking": "Talking",
-      "Angry": "Angry",
-      "DrinkingTea": "DrinkingTea",
-      "Thinking": "Thinking"
     }
   },
   "akbaba": {

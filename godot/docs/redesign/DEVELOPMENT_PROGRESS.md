@@ -1,0 +1,37 @@
+# Gelişim Durumu
+
+Son güncelleme: 10 Kasım 2026
+
+| Aşama | Durum | Çıktı |
+|---|---|---|
+| 1 — Proje analizi | ✅ | `PROJECT_ANALYSIS.md`, `*_INVENTORY.md` |
+| 2 — Sanat yönü | ✅ (referans fotoğraf seti kullanıcıyla netleşecek) | `ART_DIRECTION.md`, `ANKARA_WORLD_DESIGN.md` |
+| 3 — Karakter tasarımları | ✅ belge | `CHARACTER_DESIGN*.md` |
+| 4 — Çevre tasarımı | ✅ belge | `ENVIRONMENT_DESIGN.md`, `BUILDING_DESIGN.md`, `INTERIOR_DESIGN.md`, `STREET_AND_ROAD_DESIGN.md`, `MATERIAL_LIBRARY.md`, `SCENARIO_ASSETS.md` |
+| 5 — Kredi planı | ✅ (gerçek v3.1 fiyatlarıyla) | `TRIPO_CREDIT_TRACKER.md` |
+| 6 — Test üretimi | ⛔ **engelli: API bakiyesi 0** | hazır: `tools/tripo/test_uretim.sh` (kuru çalıştırma doğrulandı) |
+| 7 — Kullanıcı onayı | ⏳ bekliyor | aşağıdaki kararlar |
+| 8–10 | başlamadı | |
+
+## Kullanıcıdan beklenen kararlar
+
+1. **Kredi:** API bakiyesi 0. 950 kredi web stüdyodaysa API platformuna (developers.tripo3d.ai → Billing) aktarılması/yüklenmesi gerekiyor. Satın alma işlemini ben yapamam.
+2. **Akbaba'nın cinsiyeti:** Oyunda kadın; tasarım promptu erkek diyor. Varsayılan: oyundaki gibi kadın.
+3. **Cevdet:** Oyunda yok. Model üretilsin mi, yoksa kredi başka ana karaktere/çevreye mi aktarılsın? Üretilirse senaryoya eklenmesi ayrı iş.
+4. **Bütçe sapması:** "Diğer karakterler" %5 → %0, çevreye aktarıldı (gerekçe kredi takibinde).
+5. **Behzat testinden sonra:** A (tam Tripo, kırpmasız) mı B (Tripo gövde + prosedürel animasyonlu kafa) mı — test görselleriyle karar.
+
+## Test sonrası yapılacaklar (onay geldiğinde, sırayla)
+
+1. `tools/tripo/test_uretim.sh` (~75 kr) → Godot'a içe aktar → `bonemap_tripo.tres` → sorgu yakın çekimi render → A/B kararı.
+2. Kredi takibine gerçek rig maliyeti yazılır, plan güncellenir.
+3. Öncelik 1 ortak varlıklar (büro, sorgu, delil) → entegrasyon → testler.
+4. Kalan ana karakterler.
+5. Sokak modülleri + `set_base` apartman/sokak yardımcıları (0 kredi, şimdi de başlanabilir).
+6. Bölüm kahraman varlıkları.
+
+## Kredi gerektirmeyen, onay beklemeden yapılabilecek işler
+
+- `set_base.gd`: modüler apartman, kaldırım/bordür, Türkçe tabela yardımcıları (Kenney City Kit'in yerine).
+- `material_library.gd`: paylaşılan PBR malzemeler.
+- Eksik dört şüpheli (Rıza, Selim, Yavuz, Adil) için kafa şablonları.
