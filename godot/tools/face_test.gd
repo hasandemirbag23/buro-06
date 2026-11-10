@@ -44,6 +44,11 @@ func _ready() -> void:
 	cam.current = true
 
 	var args := Array(OS.get_cmdline_user_args())
+	if args.has("neck"):
+		args.erase("neck")
+		await _neck(str(args[0]) if not args.is_empty() else "behzat", cam)
+		get_tree().quit()
+		return
 	if args.has("live"):
 		args.erase("live")
 		await _live(str(args[0]) if not args.is_empty() else "behzat", cam)
@@ -100,3 +105,32 @@ func _live(id: String, cam: Camera3D) -> void:
 		await RenderingServer.frame_post_draw
 		get_viewport().get_texture().get_image().save_png("/tmp/live_%s_%02d.png" % [id, i])
 	print("canlı kareler: /tmp/live_%s_*.png" % id)
+
+
+## Boyun harmanlaması: baş yana dönükken aynı pozu yeni (harmanlı) ve eski
+## (rijit) hâliyle kaydeder. /tmp/neck_<id>_<yeni|eski>_<on|arka>.png
+func _neck(id: String, cam: Camera3D) -> void:
+	var rig: Node3D = preload("res://scenes/character_rig.tscn").instantiate()
+	add_child(rig)
+	rig.setup(id)
+	rig.act("Idle")
+	rig.look_at_target(Vector3(1.8, 1.25, 0.7), 8.0)
+	for i in 50:
+		await get_tree().process_frame
+	var head_root: Node3D = rig.get_meta("head_root", null)
+	var at := head_root.global_position + Vector3(0.0, -0.17, 0.0)
+	cam.fov = 30
+	for mode in ["yeni", "eski"]:
+		if mode == "eski":
+			rig.skeleton.skeleton_updated.disconnect(rig._update_neck)
+			for m in rig.face.mats:
+				m.set_shader_parameter("neck_xf", Transform3D.IDENTITY)
+		for view in [["on", Vector3(0.15, 0.05, 1.0)], ["arka", Vector3(-0.55, 0.12, -0.85)]]:
+			cam.position = at + (view[1] as Vector3)
+			cam.look_at(at)
+			for i in 4:
+				await get_tree().process_frame
+			await RenderingServer.frame_post_draw
+			var path := "/tmp/neck_%s_%s_%s.png" % [id, mode, view[0]]
+			get_viewport().get_texture().get_image().save_png(path)
+			print("kaydedildi: ", path)

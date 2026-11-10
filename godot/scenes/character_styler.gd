@@ -139,6 +139,12 @@ uniform float f_brow_in = 0.0;
 uniform float f_squint = 0.0;
 uniform float f_smile = 0.0;
 uniform float f_sneer = 0.0;
+// Boyun: kafa mesh'i Head kemiğine bağlı ama boynun tabanı yakada durmalı.
+// neck_xf, bir köşeyi "göğse bağlıymış gibi" taşır; çene altından tabana doğru
+// ağırlık 0'dan 1'e çıkar (iki kemikli doğrusal harmanlama).
+uniform mat4 neck_xf = mat4(1.0);
+uniform float neck_top = -0.112;
+uniform float neck_base = -0.245;
 
 vec3 rot_x(vec3 q, float a) {
 	float c = cos(a);
@@ -210,6 +216,22 @@ vec3 face_offset(vec3 p) {
 	return lid_offset(p, eye_a) + lid_offset(p, eye_b) + brow_offset(p) + jaw_offset(p) + mouth_offset(p);
 }
 
+void neck_apply(inout vec3 vert, inout vec3 nrm, float rest_y) {
+	float w = 1.0 - smoothstep(neck_base, neck_top, rest_y);
+	if (w <= 0.0) {
+		return;
+	}
+	// Heykelin boynu tabanda omuza doğru genişliyor; gövde modelinin kendi omzu
+	// olduğu için bu genişleme sırttan dışarı taşıyordu. Yakanın altında kalan
+	// kısım eksenine doğru daraltılır (gövdenin içinde, görünmez).
+	float taper = 1.0 - smoothstep(-0.295, -0.205, rest_y);
+	vert.xz = mix(vert.xz, vec2(0.0, -0.034), taper * 0.74);
+	vec3 moved = (neck_xf * vec4(vert, 1.0)).xyz;
+	vec3 n2 = mat3(neck_xf) * nrm;
+	vert = mix(vert, moved, w);
+	nrm = normalize(mix(nrm, n2, w));
+}
+
 // Deformasyon normali de çevirir; komşu iki noktadan sonlu farkla yeniden kur.
 void face_apply(inout vec3 vert, inout vec3 nrm, vec3 tang, vec3 bitang) {
 	vec3 d0 = face_offset(vert);
@@ -255,6 +277,7 @@ float bump(vec3 p) {
 void vertex() {
 	lp = VERTEX;
 	face_apply(VERTEX, NORMAL, TANGENT, BINORMAL);
+	neck_apply(VERTEX, NORMAL, lp.y);
 }
 void fragment() {
 	float e = 0.0006;

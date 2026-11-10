@@ -185,7 +185,12 @@ class Head:
         xm, ey, rm = self.EYES.get(sculpt, (0.029, 0.014, 0.0104))
         ex = xm * p["head_w"]
         r = rm * p["eye_size"]
-        rim = max(self.surface_z(ex, ey + 0.009), self.surface_z(ex, ey - 0.008))
+        # Üst ve alt kenar ayrı ayrı, birkaç yükseklikten ölçülür. Tek noktadan
+        # ölçünce geniş yuvalı heykellerde (Player, Mert) nokta oyuğun içine
+        # düşüyor, küre 8 mm içeri gömülüyordu.
+        up = max(self.surface_z(ex, ey + 0.009), self.surface_z(ex, ey + 0.013))
+        dn = max(self.surface_z(ex, ey - 0.008), self.surface_z(ex, ey - 0.011), self.surface_z(ex, ey - 0.014))
+        rim = 0.5 * (up + dn)
         self._eye = (ex, ey, rim - r + self.EYE_BULGE, r, self.ASYM_K.get(sculpt, 0.0012))
         return self._eye
 
@@ -572,9 +577,10 @@ class Head:
         temple = ell(ax, y, z, (0.048 * w, 0.028, 0.0), (0.01, 0.016, 0.012))
         d = d + (1.0 - np.clip(temple / 0.02, 0, 1)) * 0.0016
         d = smin(d, sph(ax, yy, z, (0.042 * w, -0.006, 0.042), 0.01 * p["cheek"]), 0.016)
-        d = smin(d, sph(ax, y, z, (0.046 * jw * w, -0.05, 0.002), 0.016), 0.016)
+        # çene köşesi: geniş ama kulak altında yumru gibi durmasın diye yumuşak geçiş
+        d = smin(d, sph(ax, y, z, (0.044 * jw * w, -0.052, 0.004), 0.0135), 0.028)
         d = smin(d, cap(ax, y, z, (0.04 * jw, -0.05, 0.008), (0.016, -0.078, 0.032), 0.01), 0.018)
-        d = smin(d, sph(xz, y, z, (0, -0.082, 0.042), 0.02), 0.022)
+        d = smin(d, ell(xz, y, z, (0, -0.083, 0.043), (0.019, 0.0155, 0.0145)), 0.022)
         outer_y = 0.032 + 0.004 * p["brow_tilt"]
         brow = cap(ax, yy, z, (0.008, 0.034, 0.052), (0.044 * w, outer_y, 0.044), 0.004)
         d = smin(d, brow, 0.012)
@@ -587,24 +593,29 @@ class Head:
         bag = ell(ax, yy, z, (0.03 * w, 0.002, sock_c[2] + 0.006), (0.012, 0.0022 * max(p["eye_bag"], 0.1), 0.006))
         d = smin(d, bag, 0.004)
         tip_y = -0.036 - 0.004 * p["nose_hook"]
-        tip_z = 0.07 + 0.006 * (p["nose_len"] - 1.0)
-        bridge = cap(x, y, z, (0, 0.03, 0.052), (0, tip_y + 0.01, tip_z - 0.004), 0.005 * p["nose_bridge"])
-        d = smin(d, bridge, 0.012)
+        # Burun ucu alından yalnız 13 mm öndeydi (Behzat'ta 17, gerçekte ~20+);
+        # önden bakınca burun yokmuş gibi duruyordu.
+        tip_z = 0.077 + 0.006 * (p["nose_len"] - 1.0)
+        bridge = cap(x, y, z, (0, 0.028, 0.056), (0, tip_y + 0.01, tip_z - 0.004), 0.005 * p["nose_bridge"])
+        d = smin(d, bridge, 0.009)
         d = smin(d, sph(x, y, z, (0, 0.008, tip_z - 0.012), 0.004 * p["nose_bridge"]), 0.006)
         d = smin(d, ell(xz, y, z, (0, tip_y, tip_z), (0.008 * p["nose_w"], 0.0064, 0.007)), 0.01)
         d = smin(d, sph(ax, y, z, (0.008 * p["nose_w"], tip_y + 0.001, tip_z - 0.008), 0.0056 * p["nose_w"]), 0.006)
-        nostril = ell(ax, y, z, (0.0046 * p["nose_w"], tip_y - 0.001, tip_z - 0.001), (0.002, 0.0018, 0.0034))
-        d = smax(d, -nostril, 0.0016)
+        nostril = ell(ax, y, z, (0.0048 * p["nose_w"], tip_y - 0.0042, tip_z - 0.006), (0.0024, 0.0021, 0.0044))
+        d = smax(d, -nostril, 0.0015)
         d = smin(d, cap(xz, y, z, (0, tip_y + 0.004, tip_z - 0.002), (0, tip_y - 0.004, tip_z - 0.005), 0.0014), 0.002)
         d = smin(d, cap(xz, y, z, (0, tip_y + 0.002, tip_z - 0.006), (0, -0.05, 0.062), 0.0042), 0.008)
         mw = p["mouth_w"]
         lf = 0.85 + 0.3 * p["lip_full"]
-        upper = ell(ax, y, z, (0, -0.052, 0.06), (0.016 * mw, 0.0034 * lf, 0.004))
-        lower = ell(ax, y, z, (0, -0.061, 0.056), (0.015 * mw, 0.0038 * lf, 0.0042))
-        d = smin(d, upper, 0.012)
-        d = smin(d, lower, 0.016)
-        mline = cap(ax, y, z, (0.0, -0.057, 0.06), (0.015 * mw, -0.058, 0.054), 0.00035)
-        d = smax(d, -mline, 0.0006)
+        # Dudaklar geniş bir yumuşatmayla çevreye eriyordu; daha dar geçiş,
+        # daha derin ağız çizgisi ve dudak altı çukuru hatları okunur kılar.
+        upper = ell(ax, y, z, (0, -0.0525, 0.0615), (0.0165 * mw, 0.0036 * lf, 0.0040))
+        lower = ell(ax, y, z, (0, -0.0610, 0.0585), (0.0150 * mw, 0.0046 * lf, 0.0045))
+        d = smin(d, upper, 0.006)
+        d = smin(d, lower, 0.008)
+        mline = cap(ax, y, z, (0.0, -0.0566, 0.068), (0.0172 * mw, -0.0572, 0.056), 0.0007)
+        d = smax(d, -mline, 0.0012)
+        d = smax(d, -ell(x, y, z, (0, -0.0708, 0.062), (0.012, 0.0027, 0.006)), 0.003)
         phil = cap(xz, y, z, (0, tip_y - 0.002, tip_z - 0.01), (0, -0.05, 0.06), 0.0008)
         d = smax(d, -phil, 0.0006)
         nl = cap(ax, y, z, (0.012, -0.03, 0.06), (0.02 * mw, -0.06, 0.048), 0.0026)
@@ -761,13 +772,19 @@ class Head:
         asym = p["asym"]
         yy = y - 0.0014 * asym * sgn
         xz = x + 0.0014 * asym
-        d = self.skull(x, y, z)
+        # Ortak skull() ön yüzü z=0.078'e taşıyordu; burun ucu 0.081, dudak 0.061
+        # olduğundan alın burunla aynı hizaya geliyor, yüz hatları balonun içine
+        # gömülüyordu. Ön yüz 0.066'ya çekildi; arka ve tepe saç kabuğunun içinde kalır.
+        d = ell(x, y, z, (0, 0.016, -0.016), (0.074 * w, 0.096 * p["head_h"], 0.08 * p["head_d"]))
         d = smin(d, ell(x, y, z, (0, 0.046, 0.01), (0.05 * w, 0.02, 0.032)), 0.02)
-        d = smin(d, sph(ax, yy, z, (0.046 * w, -0.004, 0.04), 0.011), 0.014)
-        d = smin(d, sph(ax, yy, z, (0.04 * w, -0.02, 0.042), 0.016 * p["cheek"]), 0.026)
+        d = smin(d, sph(ax, yy, z, (0.046 * w, -0.004, 0.036), 0.011), 0.014)
+        # dolgun yanak: hacim duruyor ama dudak hizasının gerisinde ve biraz aşağıda
+        d = smin(d, sph(ax, yy, z, (0.041 * w, -0.026, 0.034), 0.016 * p["cheek"]), 0.024)
+        # ağız çevresi hacmi: dudaklar bunun üstüne oturur, çeneden öne çıkar
+        d = smin(d, ell(x, y, z, (0, -0.056, 0.044), (0.024, 0.017, 0.017)), 0.014)
         d = smin(d, cap(ax, y, z, (0.052 * jw * w, -0.018, -0.004), (0.026 * jw, -0.076, 0.022), 0.014), 0.018)
         d = smin(d, sph(ax, y, z, (0.042 * jw * w, -0.06, 0.016), 0.014), 0.02)
-        d = smin(d, sph(xz, y, z, (0, -0.084, 0.042), 0.022), 0.022)
+        d = smin(d, sph(xz, y, z, (0, -0.086, 0.038), 0.021), 0.02)
         d = smin(d, ell(x, y, z, (0, -0.104, 0.012), (0.034, 0.012, 0.02)), 0.016)
         brow = cap(ax, yy, z, (0.008, 0.032, 0.05), (0.044 * w, 0.028, 0.042), 0.0042)
         d = smin(d, brow, 0.01)
@@ -780,22 +797,25 @@ class Head:
         bag = ell(ax, yy, z, (0.03 * w, 0.001, 0.056), (0.014, 0.0045, 0.008))
         d = smin(d, bag, 0.007)
         tip_y = -0.036 - 0.004 * p["nose_hook"]
-        tip_z = 0.074 + 0.006 * (p["nose_len"] - 1.0)
-        bridge = cap(x, y, z, (0, 0.028, 0.05), (0, tip_y + 0.012, tip_z - 0.004), 0.006 * p["nose_bridge"])
-        d = smin(d, bridge, 0.012)
+        tip_z = 0.079 + 0.006 * (p["nose_len"] - 1.0)
+        # kök kaş düzleminde başlar (eskiden kafatasının içinde kayboluyordu)
+        bridge = cap(x, y, z, (0, 0.022, 0.058), (0, tip_y + 0.011, tip_z - 0.004), 0.0056 * p["nose_bridge"])
+        d = smin(d, bridge, 0.009)
         d = smin(d, ell(xz, y, z, (0, tip_y, tip_z), (0.009 * p["nose_w"], 0.0066, 0.007)), 0.01)
-        d = smin(d, sph(ax, y, z, (0.009 * p["nose_w"], tip_y + 0.001, tip_z - 0.007), 0.0062 * p["nose_w"]), 0.006)
-        nostril = ell(ax, y, z, (0.005 * p["nose_w"], tip_y - 0.001, tip_z - 0.001), (0.002, 0.0018, 0.0032))
+        d = smin(d, sph(ax, y, z, (0.0095 * p["nose_w"], tip_y + 0.0005, tip_z - 0.008), 0.0064 * p["nose_w"]), 0.005)
+        nostril = ell(ax, y, z, (0.0052 * p["nose_w"], tip_y - 0.0042, tip_z - 0.006), (0.0026, 0.0022, 0.0046))
         d = smax(d, -nostril, 0.0015)
-        d = smin(d, cap(xz, y, z, (0, tip_y + 0.002, tip_z - 0.006), (0, -0.05, 0.06), 0.004), 0.008)
+        d = smin(d, cap(xz, y, z, (0, tip_y - 0.002, tip_z - 0.008), (0, -0.05, 0.063), 0.0034), 0.006)
         mw = p["mouth_w"]
-        upper = ell(ax, y, z, (0, -0.054, 0.058), (0.015 * mw, 0.0026, 0.0032))
-        lower = ell(ax, y, z, (0, -0.062, 0.054), (0.0145 * mw, 0.0036, 0.004))
-        d = smin(d, upper, 0.01)
-        d = smin(d, lower, 0.014)
-        mline = cap(ax, y, z, (0.0, -0.057, 0.06), (0.015 * mw, -0.055, 0.054), 0.0003)
-        d = smax(d, -mline, 0.0005)
-        d = smin(d, sph(x, y, z, (0.016, -0.053, 0.055), 0.0032), 0.004)
+        lf = p["lip_full"]
+        upper = ell(ax, y, z, (0, -0.0545, 0.0625), (0.0165 * mw, 0.0034 * lf, 0.0040))
+        lower = ell(ax, y, z, (0, -0.0625, 0.0600), (0.0150 * mw, 0.0046 * lf, 0.0046))
+        d = smin(d, upper, 0.006)
+        d = smin(d, lower, 0.008)
+        mline = cap(ax, y, z, (0.0, -0.0582, 0.068), (0.0175 * mw, -0.0572 + 0.002 * p["mouth_down"], 0.058), 0.0007)
+        d = smax(d, -mline, 0.0012)
+        # dudak altı çukuru: alt dudağı çeneden ayırır
+        d = smax(d, -ell(x, y, z, (0, -0.0725, 0.063), (0.012, 0.0028, 0.006)), 0.003)
         fold = cap(ax, y, z, (0.016, -0.03, 0.06), (0.026, -0.064, 0.046), 0.0024)
         d = smin(d, fold, 0.006)
         groove = cap(ax, y, z, (0.012, -0.028, 0.062), (0.022, -0.062, 0.05), 0.0007)
@@ -1203,8 +1223,10 @@ class Head:
             d = np.maximum(d, -(y - crop))
         if p.get("sculpt") == "player":
             d = smin(d, ell(x, y, z, (0, 0.08, 0.006), (0.052, 0.02, 0.05)), 0.014)
-            for ox, oz in ((-0.018, 0.05), (0.01, 0.056), (0.026, 0.046)):
-                d = smin(d, ell(x, y, z, (ox, 0.052, oz), (0.01, 0.007, 0.014)), 0.006)
+            # Perçem tutamları saç çizgisinin (y≈0.065) altında kopuk duruyor, alında
+            # ikinci bir kaş gibi görünüyordu; yukarı uzatılıp saça bağlandı.
+            for ox, oz in ((-0.018, 0.050), (0.01, 0.054), (0.026, 0.048)):
+                d = smin(d, ell(x, y, z, (ox, 0.058, oz), (0.01, 0.012, 0.010)), 0.006)
             side = ss(0.028, 0.048, np.abs(x))
             back = ss(-0.01, -0.05, z)
             crop = 0.05 * side + 0.016 * (1.0 - side) + 0.014 * back
@@ -1215,8 +1237,9 @@ class Head:
             crop = 0.03 * side + 0.025 * back
             d = np.maximum(d, -(y - crop))
             d = smin(d, sph(x, y, z, (0, -0.02, -0.102), 0.034), 0.008)
-            for ox, oz in ((-0.016, 0.046), (0.004, 0.05), (0.018, 0.044)):
-                d = smin(d, ell(x, y, z, (ox, 0.04, oz), (0.007, 0.012, 0.008)), 0.005)
+            # aynı kopukluk: tutamlar saç çizgisine (y≈0.07) uzatıldı
+            for ox, oz in ((-0.016, 0.044), (0.004, 0.047), (0.018, 0.042)):
+                d = smin(d, ell(x, y, z, (ox, 0.056, oz), (0.007, 0.018, 0.008)), 0.005)
         if p.get("sculpt") == "tarik":
             shell = self.skull(x, y, z, grow=0.0035)
             shell = smax(shell, -(y - (self.hairline(x, y, z) - 0.006)), 0.003)

@@ -114,6 +114,9 @@ var _travel_tries := 0
 var _oneshot_token := 0
 var head_mesh: MeshInstance3D
 var face: Node
+var _neck_head: BoneAttachment3D
+var _neck_base: BoneAttachment3D
+var _neck_rest := Transform3D.IDENTITY
 var _breath: Tween
 var _xfade := 0.25
 var _xfades: Dictionary = {}
@@ -376,6 +379,47 @@ func _bind_face(display_name: String) -> void:
 	face.name = "FaceRig"
 	add_child(face)
 	face.bind(head_root, who, display_name)
+	_bind_neck()
+
+
+## Kafa mesh'i 33 cm'lik boynuyla birlikte Head kemiğine bağlı; baş dönünce boyun
+## da rijit dönüp omuza giriyordu. Boynun tabanı göğüs kemiğine devredilir:
+## deri gölgelendiricisi köşeleri baş ile göğüs arasında harmanlar (neck_xf).
+func _bind_neck() -> void:
+	_neck_head = null
+	_neck_base = null
+	if skeleton == null or face == null:
+		return
+	_neck_head = skeleton.get_node_or_null("StyledHead") as BoneAttachment3D
+	var head_idx := skeleton.find_bone("Head")
+	var base_idx := -1
+	var base_name := ""
+	for candidate in ["UpperChest", "Chest", "Neck"]:
+		base_idx = skeleton.find_bone(candidate)
+		if base_idx >= 0:
+			base_name = candidate
+			break
+	if _neck_head == null or head_idx < 0 or base_idx < 0:
+		return
+	_neck_base = BoneAttachment3D.new()
+	_neck_base.name = "NeckBase"
+	_neck_base.bone_name = base_name
+	skeleton.add_child(_neck_base)
+	var offset := Transform3D(Basis(), Styler.HEAD_OFFSET)
+	_neck_rest = skeleton.get_bone_global_rest(base_idx).affine_inverse() * skeleton.get_bone_global_rest(head_idx) * offset
+	if not skeleton.skeleton_updated.is_connected(_update_neck):
+		skeleton.skeleton_updated.connect(_update_neck)
+
+
+## Kemik eklentileri de aynı sinyalle güncellenir ve bizden önce bağlandıkları
+## için burada okunan dönüşümler PoseOverlay sonrası, yani ekrandaki pozdur.
+func _update_neck() -> void:
+	if face == null or not is_instance_valid(_neck_head) or not is_instance_valid(_neck_base):
+		return
+	var head := _neck_head.transform * Transform3D(Basis(), Styler.HEAD_OFFSET)
+	var xf := head.affine_inverse() * _neck_base.transform * _neck_rest
+	for m in face.mats:
+		m.set_shader_parameter("neck_xf", xf)
 
 
 ## Konuşma süresi dışarıdan verilince ağız o kadar oynar (sinematik, seslendirme).
