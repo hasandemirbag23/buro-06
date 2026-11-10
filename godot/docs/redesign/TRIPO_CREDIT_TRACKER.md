@@ -51,6 +51,10 @@ Sapma özeti: diğer karakterlerin %5'i çevreye aktarıldı; rig maliyeti varsa
 | 3 | 10.11.2026 | Behzat retopo | Ana karakter | Quad, 10 000 | 40 | 10 076 yüz, doku korundu | — | 150 | 2850 |
 | 4 | 10.11.2026 | Behzat rig | Ana karakter | insansı, Mixamo | 20 | 65 kemik `mixamorig:*`; Godot'ta GeneralSkeleton'a eşlendi, animasyonlar çalışıyor | — | 170 | 2830 |
 
+| 5 | 10.11.2026 | Hayalet/Savcı/Akbaba/Cevdet (ajan, metinden 3B) | Ana karakter | ajan durduruldu: kullanıcı referans sayfasından birebir üretimi istedi | 305 | yarım kaldı (son görev 41483f45, retopo 9796) | evet — referans görselden | 475 | 2525 |
+
+**Yön değişti (10.11):** Ana karakterler artık kullanıcının verdiği tarzdaki **karakter referans sayfasından** (ön/yan/arka + yüz) görselden/çoklu görünümden 3B ile üretilecek. Stüdyo bakiyesi: 3170.
+
 **Behzat entegre edildi:** `assets/generated/characters/behzat/behzat.glb` (18 947 üçgen, 4K PBR) · `data/characters.json` · hat: `TRIPO_STUDIO_PIPELINE.md`.
 
 Not: ücretsiz görsel kuyruğu 15 dk ilerlemedi; görselden-3B yolu bu yüzden bırakıldı (0 kr harcandı).
