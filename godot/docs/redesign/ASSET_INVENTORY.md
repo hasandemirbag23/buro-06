@@ -7,7 +7,7 @@
 | `characters/` | 9 GLB | Quaternius CC0 | 4'ü kullanılıyor (gövde) | Tripo gövdeleri gelene kadar kalır |
 | `heads/` | 12 × (skin, hair, json) | `tools/headgen` | tüm karakterler | İkincil karakterlerde kalır, iyileştirilir |
 | `anim/` | 1 glTF + 2 bonemap | Universal Animation Library | tüm rigler | **Korunur** — Tripo rigleri buna retarget edilecek |
-| `city/` | 45 GLB | Kenney City Kit CC0 | yollar, ağaç, tabela, şantiye | **Binalar değiştirildi** (11.11): `set_base.city()` Kenney bina çağrılarını Ankara apartmanına çevirir; lamba → S1, dumpster → S3 |
+| `city/` | 45 GLB | Kenney City Kit CC0 | yollar, ağaç, tabela, şantiye | **Binalar değiştirildi** (11.11): `set_base.city()` Kenney bina çağrılarını Ankara apartmanına çevirir; lamba → S1, dumpster → S3. Ana menü silüeti de `set_base.apartment()` ile (Kenney binası kalmadı) |
 | `furniture/` | 21 GLB | Kenney Furniture CC0 | büro + Cebeci dairesi | Kahraman masalar Tripo ile, arka plan kalır |
 | `interior/` | 17 GLB | Quaternius CC0 | büro | Kısmen kalır |
 | `props/` | 13 GLB | Quaternius / Kenney CC0 | olay yeri | Kısmen kalır |

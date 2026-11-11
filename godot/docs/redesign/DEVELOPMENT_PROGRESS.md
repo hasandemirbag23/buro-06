@@ -49,8 +49,13 @@ Son güncelleme: 11 Kasım 2026
   - Kenney binaları yerine Ankara apartmanları (A/B/C/D tipleri; kiremit çatı, kat bantları, M2 pencere, M1 balkon, M3 dükkân, M4 giriş MultiMesh ile).
   - S1 lambalar, S3 konteynerler, S5/S6 park araçları.
   - `crime_scene_3d._reskin` ile Kenney polis aracı ve sedanlar Tripo görünümünde; Kenney düğümü çarpışma ve ışık için gizli kalır.
+- Ana menü (`menu_stage.gd`): Kenney binaları kaldırıldı. Pencereden 1:10 Ankara maketi (zorlanmış perspektif, kamera far 80):
+  - ön planda Cebeci A/B tipi 4–6 katlı apartman sırası (`set_base.apartment()`),
+  - arkada Kızılay iş merkezi kütleleri (C tipi bloklar + ışık bantlı cam levhalar),
+  - en arkada özgün seyir kulesi (sekizgen gövde, ters koni başlık, ışıklı bant, anten; Atakule kopyası değil).
+  0 kredi. Kontrol: `tools/menu_shot.tscn -- skyline`.
 - Oynanış, hotspot, kamera ve çarpışma kutuları değişmedi.
-- Testler: `characters_test` TAMAM, `episodes_test` OK, `scene_test` OK.
+- Testler: `characters_test` TAMAM, `episodes_test` OK, `scene_test` OK, `playthrough` OK.
 - Render araçları: `tools/scene_shot.tscn -- <office|interrogation|episode_0N>`, `tools/prop_sheet.tscn`.
 
 **Çözüldü — Tripo karakterlerinde baş yana/yukarı dönüktü:** Tripo API rig'li GLB'ler +X'e bakıyor (glTF +Z bekler). `fix_silhouette` gövdeyi kollara göre +Z'ye çeviriyor, baş eski yönde kalıyordu. Çözüm: GLB kökü `Armature`'a −90° Y dönüşü (`tools/tripo/face_z.py`); Hayalet, Savcı, Akbaba, Cevdet düzeltildi, `.import` ayarları değişmedi. Yeni Tripo API karakterlerinde içe aktarmadan önce aynı betik çalıştırılmalı.
