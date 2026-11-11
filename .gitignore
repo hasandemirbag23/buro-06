@@ -44,3 +44,7 @@ yarn-error.*
 godot/.godot/
 **/__pycache__/
 *.pyc
+
+# Tripo CLI durum dosyası ve yerel kıyaslama render'ları
+godot/.tripo/
+renders_karsilastirma/
