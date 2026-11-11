@@ -738,11 +738,23 @@ static func smooth_mesh(src: ArrayMesh) -> ArrayMesh:
 			for k in 3:
 				var key := Vector3i((verts[idx[t + k]] * 2000.0).round())
 				sums[key] = sums.get(key, Vector3.ZERO) + fn
+		# Konumla kaynaklanan köşelerin ortalaması; yön, modelin özgün normaliyle
+		# aynı yarı uzaya zorlanır. Sıkışık geometride (parmaklar) farklı yüzeyler
+		# aynı noktada buluşunca ortalama ters dönebiliyordu: ellerde koyu leke.
+		# Keskin kıvrımda (> ~70°) özgün normal korunur.
+		var orig: PackedVector3Array = arrays[Mesh.ARRAY_NORMAL] if arrays[Mesh.ARRAY_NORMAL] != null else PackedVector3Array()
 		var normals := PackedVector3Array()
 		normals.resize(verts.size())
 		for i in verts.size():
 			var key := Vector3i((verts[i] * 2000.0).round())
-			normals[i] = (sums[key] as Vector3).normalized()
+			var n := (sums[key] as Vector3).normalized()
+			if i < orig.size():
+				var o := orig[i].normalized()
+				if n.dot(o) < 0.0:
+					n = -n
+				if n.dot(o) < 0.34 or n == Vector3.ZERO:
+					n = o
+			normals[i] = n
 		arrays[Mesh.ARRAY_NORMAL] = normals
 		arrays[Mesh.ARRAY_TANGENT] = null
 		var flags := src.surface_get_format(surface) & Mesh.ARRAY_FLAG_USE_8_BONE_WEIGHTS
