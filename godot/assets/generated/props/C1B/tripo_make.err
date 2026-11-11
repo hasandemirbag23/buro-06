@@ -1,0 +1,26 @@
+── Plan ──────────────────────────
+input: A dead human body lying flat on its back on the ground, completely covered from head to feet by a worn blue plastic tarpaulin sheet, the tarp clings to the body so the head, shoulders, arms, torso and legs are clearly readable underneath, feet sticking up slightly at one end, low flat horizontal object about 1.8 meters long, tarp edges spread on the ground, crime scene, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=6000 texture_quality="detailed" pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 30 credits (official list price)
+  · texture_quality detailed: higher price tier
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 77cc4115-2095-48ab-91ed-e476ecf95bcb (@c1b)
+text_to_model · queued
+text_to_model · running 5% · 77cc4115
+text_to_model · running 9% · 77cc4115
+text_to_model · running 15% · 77cc4115
+text_to_model · running 23% · 77cc4115
+text_to_model · running 35% · 77cc4115
+text_to_model · running 52% · 77cc4115
+text_to_model · running 75% · 77cc4115
+text_to_model · success 100% · 77cc4115
+✓ text_to_model · 77cc4115-2095-48ab-91ed-e476ecf95bcb · 30 credits
+downloading artifacts…
+downloading rendered_image.webp
+✓ artifacts saved to /Users/hasan/Projeler/Büro-06/godot/assets/generated/props/C1B/tripo-out/c1b-77cc4115

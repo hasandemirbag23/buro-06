@@ -2,6 +2,7 @@ extends Node
 ## Sahne render aracı (görsel kontrol). Kullanım:
 ## godot --path . --resolution 1600x900 res://tools/scene_shot.tscn -- <office|interrogation|episode_0N> [çıktı_öneki]
 ## Oyun kamerasından ve geniş açıdan iki PNG yazar: <önek>_game.png, <önek>_wide.png
+## İsteğe bağlı: -- <sahne> <önek> px py pz lx ly lz → geniş açı kamerası bu konumdan bu noktaya bakar.
 
 func _ready() -> void:
 	var args := OS.get_cmdline_user_args()
@@ -33,6 +34,9 @@ func _ready() -> void:
 	else:
 		cam.position = Vector3(1.6, 1.9, 2.0)
 		cam.look_at(Vector3(0, 0.8, 0))
+	if args.size() >= 8:
+		cam.position = Vector3(float(args[2]), float(args[3]), float(args[4]))
+		cam.look_at(Vector3(float(args[5]), float(args[6]), float(args[7])))
 	cam.current = true
 	for i in 6:
 		await get_tree().process_frame

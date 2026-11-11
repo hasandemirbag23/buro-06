@@ -9,6 +9,7 @@ const PATHS := {
 	"B3": "res://assets/generated/props/B3/tripo-out/b3-f39b560b/model.glb",
 	"B6": "res://assets/generated/props/B6/tripo-out/b6-60364d05/model.glb",
 	"C1": "res://assets/generated/props/C1/tripo-out/c1-85f784ed/model.glb",
+	"C1B": "res://assets/generated/props/C1B/tripo-out/c1b-77cc4115/model.glb",
 	"M1": "res://assets/generated/props/M1/tripo-out/m1-b62b506b/model.glb",
 	"M2": "res://assets/generated/props/M2/tripo-out/m2-98bf59e1/model.glb",
 	"M3": "res://assets/generated/props/M3/tripo-out/m3-bda773ee/model.glb",
@@ -32,7 +33,8 @@ const SPEC := {
 	"B2": [Vector3(0, 1.32, 0), Vector3(0, -90, 0)],
 	"B3": [Vector3(0.75, 0, 0), Vector3.ZERO],
 	"B6": [Vector3(0, 0.30, 0), Vector3.ZERO],
-	"C1": [Vector3(0, 0, 1.8), Vector3.ZERO],  # kalite düşük: kullanılmıyor,
+	"C1": [Vector3(0, 0, 1.8), Vector3.ZERO],  # eski, kalite düşük: yerine C1B kullanılıyor
+	"C1B": [Vector3(2.3, 0.4, 0), Vector3.ZERO],  # branda altında ceset, uzun kenar X
 	"M1": [Vector3(1.2, 1.0, 0), Vector3(0, 90, 0)],
 	"M2": [Vector3(1.2, 1.6, 0), Vector3(0, 90, 0)],
 	"M3": [Vector3(3.6, 0, 0), Vector3(0, -90, 0)],

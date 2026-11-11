@@ -34,6 +34,8 @@ func _yard() -> void:
 func _van() -> void:
 	var v := Vector3(3.6, 0, 3.6)
 	solid_box(v, Vector3(2.1, 1.5, 4.2), Color("e7e4dc"))
+	# Kemal Sönmez vanın yanında, branda altında.
+	body_tarp(Vector3(1.55, 0, 2.7), 90.0)
 	MeshFactory.box(self, Vector3(1.5, 0.7, 0.06), v + Vector3(0, 1.15, 1.9), Color("8aa4c8"), 0.2)
 	MeshFactory.box(self, Vector3(0.7, 0.35, 0.08), v + Vector3(0, 0.7, 2.12), Color("1a3a6a"), 0.4)
 	MeshFactory.label(self, "06 ZBT 09", v + Vector3(0, 1.7, 2.2), Color("1a1408"), 0.22)

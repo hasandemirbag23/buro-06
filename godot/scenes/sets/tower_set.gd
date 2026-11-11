@@ -188,6 +188,8 @@ func _column() -> void:
 func _body() -> void:
 	var b := Vector3(0.2, 0, 3.2)
 	_block(b + Vector3(0, 0, 0.2), Vector2(1.5, 2.6), 0.0, 0.4)
+	# Maktul branda altında, tebeşir izinin üstünde (çarpışma yukarıdaki engelin içinde).
+	body_tarp(b + Vector3(0, 0, 0.3), 90.0, false)
 	var pool := MeshFactory.cylinder(self, 0.9, 0.012, b + Vector3(0, 0.005, 0.1), Color("2a0b0d"))
 	pool.scale = Vector3(1.0, 1.0, 1.4)
 	var pool_mat: StandardMaterial3D = pool.material_override

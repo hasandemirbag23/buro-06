@@ -8,6 +8,7 @@ Tripo çıktısı en uzun kenarı **1,0 birim** olacak şekilde normalize edilir
 | B2 | Metal dosya dolabı | 0,69 · 1,00 · 0,58 | 1,32 | 0,91 × 1,32 × 0,77 | yükseklik 1,32 | yön −90° (çekmeceler +Z) |
 | B3 | Bilgisayar seti | 1,00 · 0,75 · 0,70 | 0,75 | 0,75 × 0,56 × 0,52 | genişlik | masa üstüne |
 | B6 | Çay seti | 0,48 · 0,87 · 1,00 | 0,35 | 0,17 × 0,30 × 0,35 | çaydanlık 0,30 | |
+| C1B | Branda altında ceset (yeniden, 30 kr) | 1,00 · 0,23 · 0,68 | 2,30 | 2,30 × 0,40 × 1,36 | uzunluk 2,30 | yassı, beden okunuyor; `set_base.body_tarp()` ile 01 şantiye, 04 eczane, 05 garaj |
 | C1 | Branda altında ceset | 0,61 · 1,00 · 0,74 | 1,80 | — | boy 1,80 | **kullanılmıyor**: buruşuk dik çarşaf çıktı, ceset okunmuyor |
 | M1 | Balkon korkuluğu | 0,22 · 0,70 · 1,00 | 1,44 | 0,32 × 1,00 × 1,44 | yükseklik 1,00 | uzun kenar Z |
 | M2 | Pencere + panjur | 0,31 · 1,00 · 0,90 | 1,60 | 0,50 × 1,60 × 1,44 | yükseklik 1,60 | cephe X'e bakar |

@@ -1,0 +1,30 @@
+{
+  "task_id": "77cc4115-2095-48ab-91ed-e476ecf95bcb",
+  "type": "text_to_model",
+  "status": "success",
+  "input": {
+    "pbr": false,
+    "prompt": "A dead human body lying flat on its back on the ground, completely covered from head to feet by a worn blue plastic tarpaulin sheet, the tarp clings to the body so the head, shoulders, arms, torso and legs are clearly readable underneath, feet sticking up slightly at one end, low flat horizontal object about 1.8 meters long, tarp edges spread on the ground, crime scene, realistic, single isolated object, no text, no logo",
+    "texture": true,
+    "export_uv": true,
+    "face_limit": 6000,
+    "model_version": "v3.1-20260211",
+    "texture_quality": "detailed",
+    "geometry_quality": "standard",
+    "texture_alignment": "geometry"
+  },
+  "output_fields": [
+    "model_url",
+    "rendered_image_url",
+    "generated_image_url"
+  ],
+  "credits_consumed": 30,
+  "created_at": "2026-11-11T06:56:12.901504Z",
+  "completed_at": "2026-11-11T06:58:08.536223Z",
+  "files": [
+    "model.glb",
+    "rendered_image.webp",
+    "generated_image.jpeg",
+    "preview.png"
+  ]
+}

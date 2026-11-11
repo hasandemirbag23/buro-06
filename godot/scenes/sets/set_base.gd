@@ -386,3 +386,12 @@ func hoarding(at: Vector3, yaw := 0.0, span := 3.04, solid := true) -> Node3D:
 	if solid:
 		_block(Vector3(at.x, 0, at.z), Vector2(0.28, span), yaw, h)
 	return root
+
+
+## Branda altında ceset (Tripo C1B, uzun kenar yerelde X). solid ise kendi izi kadar
+## çarpışma ve navmesh engeli eklenir; mevcut bir engelin içindeyse false ver.
+func body_tarp(center: Vector3, yaw: float, solid := true) -> Node3D:
+	var node := tripo("C1B", center, yaw)
+	if solid:
+		_block(center, Vector2(2.3, 1.36), yaw, 0.45)
+	return node

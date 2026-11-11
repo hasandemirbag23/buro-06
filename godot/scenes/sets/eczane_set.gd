@@ -38,6 +38,8 @@ func _shell() -> void:
 func _counter() -> void:
 	var c := Vector3(-2.3, 0, 2.6)
 	solid_box(c, Vector3(2.6, 1.05, 0.7), Color("f7f4ee"))
+	# Nermin Koç tezgâhın arkasında yerde, branda altında (raf ile tezgâh arası).
+	body_tarp(c + Vector3(0, 0, -1.18), 0.0)
 	MeshFactory.box(self, Vector3(0.16, 0.02, 0.32), c + Vector3(0.7, 1.08, 0.2), Color("111111"), 0.3)
 	MeshFactory.label(self, "17 NİSAN", c + Vector3(-0.8, 1.7, -0.5), Color("1a1408"), 0.22)
 	MeshFactory.label(self, "RUHSAT 2004", c + Vector3(-0.8, 1.45, -0.5), Color("8a1d1d"), 0.16)
