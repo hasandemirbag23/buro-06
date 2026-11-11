@@ -3,16 +3,9 @@
   "player": {
     "title": "Komiser",
     "age": "31",
-    "model": "res://assets/characters/man_Suit.glb",
+    "model": "res://assets/generated/characters/player/player.glb",
     "look": "Koyu füme takım, siyah gömlek, kravatsız; kısa koyu saç; sakin, dikkatli bakış.",
-    "tint": {
-      "Legs/Suit": "#23262c",
-      "Body/Suit": "#23262c",
-      "Body/White": "#15171b",
-      "Body/Tie": "#15171b",
-      "Head/Hair": "#17120e",
-      "Feet/Black": "#0d0d0d"
-    },
+    "tint": {},
     "overlay": {},
     "animations": {
       "Idle": "Idle",
@@ -20,7 +13,18 @@
       "Walking": "Walking",
       "Inspecting": "Inspecting",
       "Thinking": "Thinking"
-    }
+    },
+    "legacy_model": "res://assets/characters/man_Suit.glb",
+    "tripo": true,
+    "legacy_tint": {
+      "Legs/Suit": "#23262c",
+      "Body/Suit": "#23262c",
+      "Body/White": "#15171b",
+      "Body/Tie": "#15171b",
+      "Head/Hair": "#17120e",
+      "Feet/Black": "#0d0d0d"
+    },
+    "legacy_overlay": {}
   },
   "behzat": {
     "title": "Başkomiser Behzat",
@@ -143,20 +147,24 @@
   "arsiv": {
     "title": "Ayşe",
     "age": "58",
-    "model": "res://assets/characters/woman_Casual.glb",
+    "model": "res://assets/generated/characters/arsiv/arsiv.glb",
     "look": "Ayşe, arşiv; bej hırka, kahverengi etek; beyaz topuz, yuvarlak gözlük; sabırlı.",
-    "tint": {
-      "Body/White": "#b9a68a",
-      "Legs/Orange": "#4a3a2c",
-      "Head/Hair_Blond": "#6a625c",
-      "Head/Hair_Brown": "#6a625c"
-    },
+    "tint": {},
     "overlay": {},
     "animations": {
       "Idle": "Idle",
       "Inspecting": "ReviewingDocuments",
       "Talking": "Talking"
-    }
+    },
+    "legacy_model": "res://assets/characters/woman_Casual.glb",
+    "tripo": true,
+    "legacy_tint": {
+      "Body/White": "#b9a68a",
+      "Legs/Orange": "#4a3a2c",
+      "Head/Hair_Blond": "#6a625c",
+      "Head/Hair_Brown": "#6a625c"
+    },
+    "legacy_overlay": {}
   },
   "zafer": {
     "title": "Zafer — Şantiye Şefi",
@@ -179,9 +187,23 @@
   "tarik": {
     "title": "Tarık Soylu",
     "age": "45-50",
-    "model": "res://assets/characters/man_Suit.glb",
+    "model": "res://assets/generated/characters/tarik/tarik.glb",
     "look": "Zengin müteahhit; lacivert pahalı takım, altın kravat ve saat; bakımlı şakakları kırlaşmış saç; kendinden emin ama gözlerinde gerginlik.",
-    "tint": {
+    "tint": {},
+    "overlay": {},
+    "animations": {
+      "Confident": "Confident",
+      "Arrogant": "Arrogant",
+      "Nervous": "Nervous",
+      "Sweat": "Sweat",
+      "Angry": "Angry",
+      "Confession": "Confession",
+      "Idle": "Idle",
+      "Talking": "Talking"
+    },
+    "legacy_model": "res://assets/characters/man_Suit.glb",
+    "tripo": true,
+    "legacy_tint": {
       "Legs/Suit": "#1a2744",
       "Body/Suit": "#1a2744",
       "Body/White": "#e8e4dc",
@@ -189,7 +211,7 @@
       "Head/Hair": "#2b2622",
       "Feet/Black": "#1a120c"
     },
-    "overlay": {
+    "legacy_overlay": {
       "Spine": [
         -3,
         0,
@@ -200,16 +222,6 @@
         0,
         0
       ]
-    },
-    "animations": {
-      "Confident": "Confident",
-      "Arrogant": "Arrogant",
-      "Nervous": "Nervous",
-      "Sweat": "Sweat",
-      "Angry": "Angry",
-      "Confession": "Confession",
-      "Idle": "Idle",
-      "Talking": "Talking"
     }
   },
   "mert": {

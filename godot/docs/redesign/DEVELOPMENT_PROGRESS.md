@@ -60,6 +60,8 @@ Son güncelleme: 11 Kasım 2026
 
 **Çözüldü — Tripo karakterlerinde baş yana/yukarı dönüktü:** Tripo API rig'li GLB'ler +X'e bakıyor (glTF +Z bekler). `fix_silhouette` gövdeyi kollara göre +Z'ye çeviriyor, baş eski yönde kalıyordu. Çözüm: GLB kökü `Armature`'a −90° Y dönüşü (`tools/tripo/face_z.py`); Hayalet, Savcı, Akbaba, Cevdet düzeltildi, `.import` ayarları değişmedi. Yeni Tripo API karakterlerinde içe aktarmadan önce aynı betik çalıştırılmalı.
 
+**11.11.2026 (devam):** El lekeleri `smooth_mesh` normal hatasıydı, düzeltildi. C1B ceseti (30 kr, API 720/950) 01, 04 ve 05 sahnelerinde. Tarık, Komiser ve Ayşe stüdyodan fotogerçekçi Tripo modeline geçti (345 stüdyo kredisi). Prosedürel kafalı ikincil karakter olarak Zafer ve diğer şüpheliler kaldı.
+
 **Sıradaki işler:**
 1. N1/N3/S4 yerleştirme (delil torbası, telefon, durak).
 2. Öncelik 3 nesneler (≈180 kr).

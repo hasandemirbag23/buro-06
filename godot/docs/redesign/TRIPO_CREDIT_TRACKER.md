@@ -28,6 +28,19 @@ Karakter = 55 + 40 + 20 = **115** · çevre nesnesi = 55 + 40 = **95**.
 | Yedek | ~470 | başarısız/iyileştirme |
 **API bakiyesi (10 Kasım 2026, `tripo balance`): 0 kredi.** → Üretim yapılamıyor. Bkz. Engeller.
 
+
+## Stüdyo harcaması — ikincil karakterler (11.11.2026)
+
+Kullanıcı onayıyla stüdyo bütçesinden (bakiye 2940 → 2595, **345 kr**). Hat: `TRIPO_STUDIO_PIPELINE.md` §0–§5 (doğrudan T-pozu prompt'u, Nano Banana 2 ücretsiz, çok açılı 3B 55 + Retopo 40 + Mixamo rig 20).
+
+| Karakter | Görev (rig) | Kredi | Sonuç |
+|---|---|---:|---|
+| tarik (Tarık Soylu) | 0b7d3b6d | 115 | kabul — lacivert takım, altın kravat ve saat, kırlaşmış şakak; 17 986 üçgen |
+| player (Komiser) | 5e98f96a | 115 | kabul — füme takım, siyah gömlek; 17 842 üçgen |
+| arsiv (Ayşe) | 4e631817 | 115 | kabul — topuz gri saç, gözlük, hırka, pileli etek; 19 747 üçgen |
+
+Godot: Behzat'ın `.import` ayarları (bonemap_mixamo, fix_silhouette), `root_scale` = boy (1,78 / 1,80 / 1,62). Mixamo rig'li stüdyo çıktısı +Z'ye bakıyor, `face_z.py` gerekmez. `characters.json`'da eski değerler `legacy_model/legacy_tint/legacy_overlay`. Not: bu ortamda stüdyo "Dışa Aktar" dosyayı ~/Downloads'a indirmiyor; ajan GLB'yi sayfadan yakalayıp yerel geçici sunucuyla aldı.
+
 ## Gerçek fiyatlar (Tripo H3.1 / v3.1, resmi)
 
 Kaynak: [developers.tripo3d.com/en/models/v3-1](https://developers.tripo3d.com/en/models/v3-1) + `tripo make --dry-run` tahmini.
