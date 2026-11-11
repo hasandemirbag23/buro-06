@@ -268,11 +268,33 @@
       "text": "Dolap 02:12'de açılmış. Seri 19-441 yok. Kadının izi kapakta, kutuda değil."
     },
     {
+      "id": "e4-a2",
+      "sender": "Akbaba",
+      "at": "03:28",
+      "requiresClueId": "clue_e4_otopsi",
+      "text": "Otopsi ön notu geldi. Ense kökü, tek vuruş, künt. Vuruş yüksekliği 165-175; Nermin 161. Vuran uzun biri. Ölüm 02:10 ile 02:25 arası."
+    },
+    {
+      "id": "e4-a3",
+      "sender": "Akbaba",
+      "at": "03:31",
+      "type": "photo",
+      "requiresClueId": "clue_e4_drawer",
+      "text": "Çekmece açık, on dört bin üç yüz lira içinde duruyor. Kenarda iz yok, silinmiş. Parayı almayan adam çekmeceyi niye açar? Aramış, bulamamış."
+    },
+    {
       "id": "e4-h1",
       "sender": "Hayalet",
       "at": "03:34",
       "requiresClueId": "clue_e4_letter",
       "text": "Dilekçedeki depo Baran Ecza. Müdür Selim Baran. E-Sorgu'ya adını yaz, parayı da."
+    },
+    {
+      "id": "e4-b3",
+      "sender": "Behzat",
+      "at": "03:40",
+      "requiresClueId": "clue_e4_audio",
+      "text": "Kayıtta Selim 'bu kız yarın hepimizi bitirir' diyor. Saat 18:12. Yarın dediği sabah kadın geceyi görmedi. Bunu kasete söyleyen adam aptaldır, aptal da azılıdır."
     },
     {
       "id": "e4-h2",
@@ -282,11 +304,67 @@
       "text": "06 ECZ 17, 01:52'de sokağa girmiş. Araç Rıza Koç üstüne. Enişte. Anahtarı ondadır."
     },
     {
+      "id": "e4-h3",
+      "sender": "Hayalet",
+      "at": "03:52",
+      "requiresClueId": "clue_e4_bank",
+      "text": "Baran Ecza hesabından Nermin'e üç ay üst üste ödeme var, açıklama 'danışmanlık'. Eczacı deposundan danışmanlık ücreti almaz. Bu susma parası, hem de reddedilmiş bir susma parası."
+    },
+    {
+      "id": "e4-h4",
+      "sender": "Hayalet",
+      "at": "03:55",
+      "requiresClueId": "clue_e4_photo",
+      "text": "Telefondaki gizli klasörde dokuz kare var, hepsi seri 19-441'in depo rafında. Çekim dün 18:04. Kadın kuruma eli boş gitmiyormuş, dosya hazırlamış."
+    },
+    {
       "id": "e4-b2",
       "sender": "Behzat",
       "at": "04:02",
       "requiresClueId": "clue_e4_sms_riza",
       "text": "Rıza 'kapıdayım' demiş. Saat 01:58. Ölüm penceresinin on iki dakika öncesi. Onu sandalyeye oturt."
+    },
+    {
+      "id": "e4-b4",
+      "sender": "Behzat",
+      "at": "04:08",
+      "requiresClueId": "clue_e4_wit_kapi",
+      "text": "Kapıcı Hasan 01:55'te kepengi yarıda görmüş, 02:30'da hâlâ yarıda. Arada biri girip çıktı ve kepengi indirmeye vakti olmadı. Acelesi olan adam iz bırakır."
+    },
+    {
+      "id": "e4-a4",
+      "sender": "Akbaba",
+      "at": "04:14",
+      "requiresClueId": "clue_e4_bin",
+      "text": "Çöpte dilekçenin kalan parçaları ve bir lateks eldiven. Eldivenin içinde ter var, kadına ait değil. Numune laboratuvarda."
+    },
+    {
+      "id": "e4-h5",
+      "sender": "Hayalet",
+      "at": "04:20",
+      "requiresClueId": "clue_e4_sms_sister",
+      "text": "Kardeşi Sevil'e dün 21:10'da yazmış: 'yarın kuruma gidiyorum, korkma'. Yarını olan insan o gece kendi ensesine vurmaz."
+    },
+    {
+      "id": "e4-b5",
+      "sender": "Behzat",
+      "at": "04:26",
+      "requiresClueId": "clue_e4_note",
+      "text": "Tezgâh altındaki not: 'R. 02:00 depo anahtarı'. Kadın enişteyi bekliyormuş. Kapıyı kırmaya gerek kalmamış, kendi açmış."
+    },
+    {
+      "id": "e4-a5",
+      "sender": "Akbaba",
+      "at": "04:33",
+      "requiresClueId": "clue_e4_wit_komsu",
+      "text": "Üst kat Ayşe 02:15'te tek bir gürültü duymuş, bağırış yok. Bağırmayan insan ya tanıyordur ya da nefes alamıyordur. İkisi de bizim işimize gelir."
+    },
+    {
+      "id": "e4-h6",
+      "sender": "Hayalet",
+      "at": "04:41",
+      "requiresClueId": "clue_e4_wit_depo",
+      "text": "Depo bekçisi konuştu: Selim 01:30'da gelip anahtar dolabını açmış, 02:40'ta çıkmış. Depodan eczaneye yürüme sekiz dakika. Hesap tutuyor."
     }
   ],
   "esorgu": [
@@ -374,12 +452,24 @@
     {
       "text": "Depo",
       "field": "Tanık"
+    },
+    {
+      "text": "Otopsi",
+      "field": "Rapor"
+    },
+    {
+      "text": "Baran Ecza",
+      "field": "Şirket"
     }
   ],
   "importantClues": [
     "clue_e4_fridge",
     "clue_e4_sms_riza",
-    "clue_e4_bank"
+    "clue_e4_bank",
+    "clue_e4_letter",
+    "clue_e4_audio",
+    "clue_e4_drawer",
+    "clue_e4_otopsi"
   ],
   "replies": {
     "Behzat": [
@@ -641,5 +731,10 @@
       }
     }
   ],
-  "report": "T.C. ANKARA EMNİYET MÜDÜRLÜĞÜ\nDOSYA KAPANDI  ·  2026/06-416  ·  Nöbetin Sonu\n\nMaktul Nermin Koç, 41, Nermin Eczanesi. Bahçelievler 4. Cadde. 02:10–02:25. Ense köküne dolap köşesiyle vurulmuş. Kasa dolu. Soygun değil.\n\nEnişte Rıza Koç itiraf etti. 06 ECZ 17 plakalı kamyonetle 01:52'de sokağa girdi, arka kapıyı kendi anahtarıyla açtı, darbeyi o vurdu, ONKO-B kutusunu çöpe attı.\n\nSelim Baran, Baran Ecza müdürü, sahte seri 19-441'i kuruma gitmeden susturmak için 250.000 TL yatırmış, ses kaydında nöbetin kapanmayacağını söylemiş, koliyi bekçinin önünde bantlamıştır. 'Vur demedim' cümlesi tutanakta duruyor. Emri o kurdu.\n\nİki isim nezarettedir. Serumun kalanı depoda mühürlüdür."
+  "report": "T.C. ANKARA EMNİYET MÜDÜRLÜĞÜ\nDOSYA KAPANDI  ·  2026/06-416  ·  Nöbetin Sonu\n\nMaktul Nermin Koç, 41, Nermin Eczanesi. Bahçelievler 4. Cadde. 02:10–02:25. Ense köküne dolap köşesiyle vurulmuş. Kasa dolu. Soygun değil.\n\nEnişte Rıza Koç itiraf etti. 06 ECZ 17 plakalı kamyonetle 01:52'de sokağa girdi, arka kapıyı kendi anahtarıyla açtı, darbeyi o vurdu, ONKO-B kutusunu çöpe attı.\n\nSelim Baran, Baran Ecza müdürü, sahte seri 19-441'i kuruma gitmeden susturmak için 250.000 TL yatırmış, ses kaydında nöbetin kapanmayacağını söylemiş, koliyi bekçinin önünde bantlamıştır. 'Vur demedim' cümlesi tutanakta duruyor. Emri o kurdu.\n\nİki isim nezarettedir. Serumun kalanı depoda mühürlüdür.",
+  "autopsy": {
+    "title": "Ön otopsi notu",
+    "body": "Ense kökünde tek künt darbe; savunma yarası yok. Vuruş yüksekliği 165-175 cm, maktul 161 cm: vuran daha uzun ve arkada.\nÖlüm aralığı 02:10-02:25. Kasa dolu, çekmece açık ve silinmiş.\nPara bırakan, çekmeceyi karıştıran biri soyguncu değildir; aradığı şey evraktır.",
+    "clue": "clue_e4_otopsi"
+  }
 }

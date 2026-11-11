@@ -657,6 +657,37 @@ static func _body_props(rig: Node3D, tpl: Dictionary) -> void:
 		chain.position = Vector3(0, 0.1, 0.03)
 		chain.scale = Vector3(1.0, 1.0, 1.0)
 		chest.add_child(chain)
+	if props.has("hardhat") and rig.skeleton:
+		_wear_mesh(rig, "res://assets/generated/props/T2/baret.res", "Head", Vector3(0, 0.25, 0.01), 0.255)
+	if props.has("hivis_vest") and rig.skeleton:
+		_wear_mesh(rig, "res://assets/generated/props/T2/yelek.res", "UpperChest", Vector3(0, -0.14, 0.015), 0.44)
+	if props.has("gold_watch") and rig.skeleton:
+		var wrist := BoneAttachment3D.new()
+		wrist.bone_name = "LeftHand"
+		rig.skeleton.add_child(wrist)
+		var band := MeshInstance3D.new()
+		var ring := TorusMesh.new()
+		ring.inner_radius = 0.027
+		ring.outer_radius = 0.034
+		band.mesh = ring
+		band.material_override = _gold()
+		band.rotation_degrees = Vector3(90, 0, 0)
+		band.position = Vector3(0, -0.055, 0.004)
+		wrist.add_child(band)
+		var face_mat := StandardMaterial3D.new()
+		face_mat.albedo_color = Color("1b1b1d")
+		face_mat.metallic = 0.5
+		face_mat.roughness = 0.18
+		var dial := MeshInstance3D.new()
+		var disc := CylinderMesh.new()
+		disc.top_radius = 0.019
+		disc.bottom_radius = 0.019
+		disc.height = 0.006
+		dial.mesh = disc
+		dial.material_override = face_mat
+		dial.rotation_degrees = Vector3(0, 0, 90)
+		dial.position = Vector3(0.032, -0.055, 0.004)
+		wrist.add_child(dial)
 	if props.has("radio") and rig.skeleton:
 		var sh := BoneAttachment3D.new()
 		sh.bone_name = "UpperChest"
@@ -752,3 +783,27 @@ static func _body(rig: Node3D, tpl: Dictionary) -> void:
 				mi.set_surface_override_material(surface, cloth_material(base, base.albedo_color, f, worn))
 			elif part == "Feet":
 				mi.set_surface_override_material(surface, cloth_material(base, base.albedo_color, "leather", 0.7))
+
+
+## Tripo parçasını kemiğe takar. Parça kendi merkezinde kayıtlı; en büyük
+## kenarı hedef genişliğe ölçeklenir, böylece model boyutundan bağımsız oturur.
+static func _wear_mesh(rig: Node3D, path: String, bone: String, offset: Vector3, target: float) -> void:
+	if not ResourceLoader.exists(path):
+		return
+	var mesh := load(path) as Mesh
+	if mesh == null or rig.skeleton == null:
+		return
+	if rig.skeleton.find_bone(bone) < 0:
+		return
+	var att := BoneAttachment3D.new()
+	att.name = "Wear_" + path.get_file().get_basename()
+	att.bone_name = bone
+	rig.skeleton.add_child(att)
+	var mi := MeshInstance3D.new()
+	mi.mesh = mesh
+	var sz := mesh.get_aabb().size
+	var biggest := maxf(sz.x, maxf(sz.y, sz.z))
+	if biggest > 0.0:
+		mi.scale = Vector3.ONE * (target / biggest)
+	mi.position = offset
+	att.add_child(mi)

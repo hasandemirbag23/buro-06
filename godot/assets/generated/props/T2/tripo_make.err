@@ -1,0 +1,25 @@
+── Plan ──────────────────────────
+input: yellow construction safety helmet and a separate orange high-visibility reflective vest with silver reflective stripes, Turkish construction site worker gear, slightly worn and dusty, two separate objects side by side, isolated on neutral background, realistic game asset
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=2500 negative_prompt="cartoon, anime, chibi, toy, plastic, exaggerated proportions, weapon, text, logo, extra limbs, human figure, mannequin" pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 3c1b2eec-92fe-4e2a-bfd3-3344ca6cf426 (@t2)
+text_to_model · queued
+text_to_model · running 7% · 3c1b2eec
+text_to_model · running 13% · 3c1b2eec
+text_to_model · running 22% · 3c1b2eec
+text_to_model · running 33% · 3c1b2eec
+text_to_model · running 50% · 3c1b2eec
+text_to_model · running 75% · 3c1b2eec
+text_to_model · running 99% · 3c1b2eec
+text_to_model · success 100% · 3c1b2eec
+✓ text_to_model · 3c1b2eec-92fe-4e2a-bfd3-3344ca6cf426 · 20 credits
+downloading artifacts…
+downloading rendered_image.webp
+✓ artifacts saved to /Users/hasan/Projeler/Büro-06/godot/assets/generated/props/T2/tripo-out/t2-3c1b2eec

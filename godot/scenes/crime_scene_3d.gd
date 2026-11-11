@@ -561,7 +561,7 @@ func _ground() -> void:
 	var mud := Color("2a2e33") if _campus() else Color("3a3024")
 	var ground := MeshFactory.block(self, Vector3(70, 0.4, 70), Vector3(0, -0.2, 0), mud, 0.5)
 	if not _campus():
-		_skin(ground, MeshFactory.pbr("brown_mud_leaves_01", Color("d7c4a4"), Vector2(10, 10)))
+		_skin(ground, MeshFactory.pbr("mud_cracked_dry_03", Color("8c8373"), Vector2(14, 14)))
 	ground.set_meta("action", "walk")
 	for p in [[Vector3(-1.5, 0.004, 6.5), Vector2(3.2, 2.1)], [Vector3(6.5, 0.004, 5.2), Vector2(2.2, 1.6)], [Vector3(-6, 0.004, 3), Vector2(4.0, 2.4)], [Vector3(2.5, 0.004, -3.5), Vector2(2.8, 1.5)], [Vector3(11, 0.004, 9), Vector2(3.5, 2.0)]]:
 		var puddle := MeshFactory.cylinder(self, 1.0, 0.008, p[0], Color("16202c"))
@@ -593,14 +593,16 @@ func _police_car(at: Vector3, yaw: float) -> void:
 	var red := OmniLight3D.new()
 	red.position = Vector3(-0.15, 1.4, 0.05)
 	red.light_color = Color("ff2a2a")
-	red.omni_range = 16.0
+	red.omni_range = 6.5
+	red.light_energy = 2.4
 	red.shadow_enabled = false
 	car.add_child(red)
 	reds.append(red)
 	var blue := OmniLight3D.new()
 	blue.position = Vector3(0.15, 1.4, 0.05)
 	blue.light_color = Color("2a6bff")
-	blue.omni_range = 16.0
+	blue.omni_range = 6.5
+	blue.light_energy = 2.4
 	blue.shadow_enabled = false
 	car.add_child(blue)
 	blues.append(blue)
@@ -656,10 +658,16 @@ func _forensics() -> void:
 		leg.rotation_degrees = Vector3(14 * cos(i * 2.09), i * 120.0, 14 * sin(i * 2.09))
 	MeshFactory.box(self, Vector3(0.22, 0.14, 0.14), tri + Vector3(0, 1.55, 0), Color("111111"), 0.4)
 	MeshFactory.cylinder(self, 0.05, 0.1, tri + Vector3(0, 1.55, 0.1), Color("222222")).rotation_degrees.x = 90
+	# Gerçek delil torbası (N1) ve maktulün telefonu (N3) — Tripo modelleri.
 	for i in 3:
-		var bag := MeshFactory.box(self, Vector3(0.22, 0.02, 0.3), Vector3(1.6 + i * 0.28, 0.02, 6.4), Color(0.9, 0.93, 0.97, 0.7))
-		bag.rotation_degrees.y = i * 12
-		MeshFactory.box(self, Vector3(0.2, 0.022, 0.05), bag.position + Vector3(0, 0.002, -0.12), Color("DC2626"))
+		var bag := Props.make("N1")
+		bag.position = Vector3(1.6 + i * 0.28, 0.0, 6.4)
+		bag.rotation_degrees.y = i * 12 - 6
+		add_child(bag)
+	var phone := Props.make("N3")
+	phone.position = Vector3(1.30, 0.0, 6.08)
+	phone.rotation_degrees.y = -24.0
+	add_child(phone)
 
 
 func _yard() -> void:

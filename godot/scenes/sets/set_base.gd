@@ -57,6 +57,8 @@ func _spot(id: String, zone: Area3D, center: Vector3, stand: Vector3, cam: Vecto
 func city(kit: String, model: String, feet: Vector3, yaw := 0.0, scale := 8.0, solid := true) -> Node3D:
 	if kit != "roads" and model.begins_with("building"):
 		return _kenney_to_apartment(kit, model, feet, yaw, scale)
+	if model == "construction-fence":
+		return hoarding(feet, yaw, 3.04, solid)
 	if model == "dumpster":
 		return _swap("S3", kit, model, feet, yaw, scale, solid, Vector3(0, 1.3, 0))
 	return _kenney(kit, model, feet, yaw, scale, solid)
@@ -95,6 +97,9 @@ func road(from_x: float, to_x: float, z: float, tile := 8.0) -> void:
 	_vehicle("S6", Vector3(from_x + span * 0.42, 0.0, lane), 180.0)
 	_vehicle("S5", Vector3(from_x + span * 0.18, 0.0, lane), 0.0)
 	_vehicle("S5", Vector3(from_x + span * 0.7, 0.0, lane), 180.0)
+	# Otobüs durağı (S4) — kaldırım tarafı, sokak mobilyası.
+	var stop := tripo("S4", Vector3(from_x + span * 0.60, 0.0, z + tile * 0.30), 180.0)
+	_block_prop(stop, 0.1)
 
 
 ## Işıklı pencere kutusu (arka plan binalarına canlılık).
@@ -118,7 +123,7 @@ func solid_box(center: Vector3, size: Vector3, color: Color, yaw := 0.0, rough :
 
 ## Sokak lambası: Kenney direği + zayıf ışık (gölgesiz). arm_yaw direğin kolunun baktığı yöndür.
 func street_lamp(at: Vector3, yaw: float, light := true, solid := false) -> void:
-	_swap("S1", "roads", "light-square", at, yaw, 10.0, solid)
+	_ankara_lamp(at, yaw, solid)
 	if light:
 		var spot := SpotLight3D.new()
 		var arm := Basis(Vector3.UP, deg_to_rad(yaw)) * Vector3(0, 0, -1.6)
@@ -221,14 +226,7 @@ func apartment(feet: Vector3, width: float, depth: float, floors: int, kind := "
 	# kat bantları ve çatı
 	for i in floors + 1:
 		MeshFactory.box(root, Vector3(width + 0.12, 0.18, depth + 0.12), Vector3(0, ground + i * FLOOR_H - 0.09, 0), f[1], 0.9)
-	var roof := MeshInstance3D.new()
-	var prism := PrismMesh.new()
-	prism.size = Vector3(width + 0.6, 1.6 + width * 0.06, depth + 0.6)
-	roof.mesh = prism
-	roof.position = Vector3(0, height + prism.size.y * 0.5, 0)
-	roof.rotation_degrees.y = 90.0 if width < depth else 0.0
-	roof.material_override = MeshFactory.material(f[2], 0.85)
-	root.add_child(roof)
+	_flat_roof(root, width, depth, height, f, seed)
 	# cephe ızgarası
 	var bays := maxi(int(width / BAY), 2)
 	var pitch := width / bays
@@ -241,13 +239,14 @@ func apartment(feet: Vector3, width: float, depth: float, floors: int, kind := "
 			windows.append(Transform3D(Basis(), Vector3(x, y, front)))
 			var lit := (seed + fl * 7 + b * 3) % 5
 			if lit < 2:
-				MeshFactory.box(root, Vector3(1.0, 1.25, 0.02), Vector3(x, y + 0.75, front + 0.005), Color("f0cf86"), 0.4, 0.8)
+				MeshFactory.box(root, Vector3(0.86, 1.18, 0.02), Vector3(x, y, front + 0.005), Color("f0cf86") if lit == 0 else Color("cfe0f0"), 0.4, 0.75)
 			if f[3] and b % 3 == 1:
 				MeshFactory.box(root, Vector3(pitch * 2.0, 0.14, 1.1), Vector3(x + pitch * 0.5, y - 0.82, front + 0.55), f[1], 0.9)
 				rails.append(Transform3D(Basis(), Vector3(x, y - 0.75, front + 1.06)))
 				rails.append(Transform3D(Basis(), Vector3(x + pitch, y - 0.75, front + 1.06)))
 	_modules(root, "M2", windows)
 	_modules(root, "M1", rails)
+	_side_windows(root, width, depth, ground, floors, seed)
 	# zemin kat
 	if f[4] == "shop":
 		var shops := maxi(int(width / 3.8), 1)
@@ -280,3 +279,110 @@ func _modules(parent: Node3D, id: String, places: Array) -> void:
 	node.multimesh = mm
 	node.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
 	parent.add_child(node)
+
+
+## Ankara apartmanının düz çatısı: parapet, siyah su deposu, güneş kolektörü,
+## çanak anten ve şönt bacası. Beşik çatı Ankara dokusuna ait değildir.
+func _flat_roof(root: Node3D, width: float, depth: float, height: float, f: Array, seed: int) -> void:
+	var w := width + 0.3
+	var d := depth + 0.3
+	MeshFactory.box(root, Vector3(w, 0.22, d), Vector3(0, height + 0.11, 0), CONCRETE_DARK, 0.92)
+	var top := height + 0.22
+	var par := 0.72 + float(seed % 3) * 0.12
+	var t := 0.16
+	MeshFactory.box(root, Vector3(w, par, t), Vector3(0, top + par * 0.5, d * 0.5), f[1], 0.9)
+	MeshFactory.box(root, Vector3(w, par, t), Vector3(0, top + par * 0.5, -d * 0.5), f[1], 0.9)
+	MeshFactory.box(root, Vector3(t, par, d), Vector3(w * 0.5, top + par * 0.5, 0), f[1], 0.9)
+	MeshFactory.box(root, Vector3(t, par, d), Vector3(-w * 0.5, top + par * 0.5, 0), f[1], 0.9)
+	# su depoları ve kolektörler
+	var tanks := 1 + seed % 3
+	for i in tanks:
+		var tx := -width * 0.28 + float(i) * (width * 0.28)
+		var tz := -depth * 0.18 + float((seed + i) % 3) * 0.55
+		MeshFactory.cylinder(root, 0.40, 0.92, Vector3(tx, top + 0.46, tz), Color("1b1b1d"))
+		if (seed + i) % 2 == 0:
+			var panel := MeshFactory.box(root, Vector3(1.4, 0.07, 0.9), Vector3(tx, top + 0.30, tz + 0.95), Color("16314a"), 0.22)
+			panel.rotation_degrees.x = -24.0
+	# çanak antenler (parapete yakın)
+	for i in 2 + seed % 3:
+		var ax := -width * 0.40 + float((seed * (i + 3)) % 100) / 100.0 * width * 0.80
+		var dish := MeshFactory.sphere(root, 0.24, Vector3(ax, top + 0.52, depth * 0.5 - 0.45), Color("d9d6cd"))
+		dish.scale = Vector3(1.0, 0.42, 1.0)
+	# şönt bacası
+	MeshFactory.box(root, Vector3(0.52, 1.05, 0.52), Vector3(width * 0.30, top + 0.52, -depth * 0.28), f[1], 0.9)
+
+
+## Yan ve arka cepheler: ön yüz dışında kalan duvarlar boş kutu görünmesin.
+## Pencereler kodla, ışıklar sıcak/soğuk karışık (ANKARA_WORLD_DESIGN.md).
+func _side_windows(root: Node3D, width: float, depth: float, ground: float, floors: int, seed: int) -> void:
+	var warm := Color("f0cf86")
+	var cool := Color("cfe0f0")
+	var faces := [
+		{"n": Vector3(0, 0, -1), "span": width, "off": depth * 0.5, "yaw": 180.0},
+		{"n": Vector3(1, 0, 0), "span": depth, "off": width * 0.5, "yaw": 90.0},
+		{"n": Vector3(-1, 0, 0), "span": depth, "off": width * 0.5, "yaw": -90.0},
+	]
+	for fi in faces.size():
+		var face: Dictionary = faces[fi]
+		var span: float = face["span"]
+		var bays := maxi(int(span / BAY), 2)
+		var pitch := span / bays
+		for fl in floors:
+			var y := ground + fl * FLOOR_H + 0.75
+			for b in bays:
+				var u := -span * 0.5 + pitch * (b + 0.5)
+				var pos: Vector3
+				if absf(face["n"].z) > 0.5:
+					pos = Vector3(u, y, -face["off"] - 0.01)
+				else:
+					pos = Vector3(face["n"].x * (face["off"] + 0.01), y, u)
+				var frame := MeshFactory.box(root, Vector3(0.95, 1.30, 0.06), pos, CONCRETE_DARK, 0.85)
+				frame.rotation_degrees.y = face["yaw"]
+				var lit := (seed + fl * 5 + b * 3 + fi * 11) % 10
+				if lit < 3:
+					var glass := MeshFactory.box(root, Vector3(0.86, 1.18, 0.02),
+						pos + face["n"] * 0.04, warm if lit < 2 else cool, 0.4, 0.75)
+					glass.rotation_degrees.y = face["yaw"]
+
+
+## Ankara sokak lambası: galvaniz direk + eğri kol + sodyum başlık.
+## Tripo S1 çıktısı Viktorya tipi bahçe lambası olduğu için kodla üretiliyor.
+func _ankara_lamp(at: Vector3, yaw: float, solid: bool) -> Node3D:
+	var root := Node3D.new()
+	root.name = "SokakLambasi"
+	root.position = at
+	root.rotation_degrees.y = yaw
+	add_child(root)
+	MeshFactory.cylinder(root, 0.24, 0.42, Vector3(0, 0.21, 0), Color("41464c"))
+	MeshFactory.cylinder(root, 0.10, 6.2, Vector3(0, 3.3, 0), Color("97a0a7"))
+	var arm := MeshFactory.cylinder(root, 0.075, 1.75, Vector3(0, 6.46, -0.84), Color("97a0a7"))
+	arm.rotation_degrees.x = 82.0
+	MeshFactory.box(root, Vector3(0.32, 0.17, 0.80), Vector3(0, 6.52, -1.66), Color("5a6066"), 0.6)
+	MeshFactory.box(root, Vector3(0.26, 0.03, 0.66), Vector3(0, 6.42, -1.66), AMBER, 0.3, 1.8)
+	if solid:
+		_block(Vector3(at.x, 0, at.z), Vector2(0.4, 0.4), yaw, 6.4)
+	return root
+
+
+## Şantiye çiti: oluklu saç panel, dikmeli. Kenney'in park korkuluğu
+## Ankara şantiyesine ait değil (BUILDING_DESIGN.md).
+func hoarding(at: Vector3, yaw := 0.0, span := 3.04, solid := true) -> Node3D:
+	var root := Node3D.new()
+	root.name = "SantiyeCiti"
+	root.position = at
+	root.rotation_degrees.y = yaw
+	add_child(root)
+	var h := 2.15
+	var face := Color("2f6ea8")
+	MeshFactory.box(root, Vector3(0.06, h, span), Vector3(0, h * 0.5, 0), face, 0.55)
+	var ribs := maxi(int(span / 0.28), 2)
+	for i in ribs:
+		var z := -span * 0.5 + span / ribs * (i + 0.5)
+		MeshFactory.box(root, Vector3(0.10, h - 0.14, 0.07), Vector3(0.02, h * 0.5, z), Color("2a6396"), 0.5)
+	MeshFactory.box(root, Vector3(0.15, 0.10, span), Vector3(0, h - 0.05, 0), Color("22537e"), 0.5)
+	MeshFactory.box(root, Vector3(0.15, 0.12, span), Vector3(0, 0.06, 0), Color("22537e"), 0.5)
+	for s in [-1.0, 1.0]:
+		MeshFactory.box(root, Vector3(0.17, h + 0.12, 0.17), Vector3(0, (h + 0.12) * 0.5, s * span * 0.5), Color("3a4147"), 0.6)
+	if solid:
+		_block(Vector3(at.x, 0, at.z), Vector2(0.28, span), yaw, h)
+	return root

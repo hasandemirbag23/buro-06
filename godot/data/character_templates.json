@@ -94,7 +94,7 @@
       "head_d": 1.0,
       "jaw_w": 1.12,
       "chin": 0.76,
-        "jowl": 0.32,
+      "jowl": 0.32,
       "cheek": 0.9,
       "cheek_hollow": 0.28,
       "brow": 1.2,
@@ -102,7 +102,7 @@
       "eye_depth": 1.4,
       "eye_bag": 0.82,
       "eye_color": "#2c1c10",
-      "eye_size": 0.92,
+      "eye_size": 1.12,
       "nose_w": 1.16,
       "nose_bridge": 1.24,
       "nose_len": 1.08,
@@ -145,7 +145,6 @@
         "cigarette"
       ],
       "wear": "deri ceket, koyu gömlek",
-      "eye_size": 1.12,
       "cloth": {
         "fabric": "leather",
         "worn": 0.75
@@ -493,7 +492,10 @@
       "cloth": {
         "fabric": "suit",
         "worn": 0.05
-      }
+      },
+      "props": [
+        "gold_watch"
+      ]
     },
     "zafer": {
       "_ref": "Özgün yüz, 42 yaş, erkek. Güneşte yanmış şantiye şefi, geniş çene, kalın boyun, geniş burun, kalın bıyık, kısa saç.",
@@ -556,7 +558,11 @@
       "cloth": {
         "fabric": "canvas",
         "worn": 0.7
-      }
+      },
+      "props": [
+        "hardhat",
+        "hivis_vest"
+      ]
     },
     "mert": {
       "_ref": "Özgün yüz, 27 yaş, erkek. İnce oval, gergin bakış, genç buğday ten, kısa bakımlı saç, hafif sakal gölgesi. Player'dan daha dar çene.",
