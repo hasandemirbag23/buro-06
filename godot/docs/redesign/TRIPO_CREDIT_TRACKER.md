@@ -2,16 +2,18 @@
 
 ## API harcaması (güncel: 11.11.2026)
 
-**670 / 950** (bakiye 1000 → 330). Tek kaynak: `tools/tripo/ledger.csv` (her iş `tools/tripo/uret.sh` ile, sınırı betik uygular).
+**720 / 950** (bakiye 1000 → 280). Tek kaynak: `tools/tripo/ledger.csv` (her iş `tools/tripo/uret.sh` ile, sınırı betik uygular).
 
 | Kalem | Kredi |
 |---|---:|
 | 4 ana karakter (Hayalet, Savcı, Akbaba, Cevdet) × 65 (görselden 3B 40 + rig 25) | 260 |
 | 18 nesne (B1 B2 B3 B6 Q1 Q2 N1 N3 C1 M1 M2 M3 M4 S1 S3 S4 S5 S6) | 410 |
-| **Toplam** | **670** |
-| Kalan sınır (yedek ~80 ayrılırsa üretilebilir) | 280 (≈200) |
+| T2 — sarı baret + reflektörlü yelek (Zafer, öncelik 3) | 20 |
+| C1B — branda altındaki ceset (kullanılamaz C1'in yerine) | 30 |
+| **Toplam** | **720** |
+| Kalan sınır (yedek ~80 ayrılırsa üretilebilir) | 230 (≈150) |
 
-Öncelik 1–2 nesnelerin hepsi üretildi. Öncelik 3 (T1 T2 F1 F2 P1 E1 G1 ≈ 180) kalan sınıra sığar; henüz üretilmedi. S5/S6 dokusundaki logo/yazı yeniden üretim yerine 0 krediyle silindi (`PROP_SCALES.md`).
+Öncelik 1–2 nesnelerin hepsi üretildi. Öncelik 3'ten **T2 üretildi** (11.11); kalan T1 F1 F2 P1 E1 G1 ≈ 160 ve kalan sınıra sığar. C1 (branda altındaki ceset) hangi açıdan bakılsa okunmadığı için **C1B** olarak yeniden üretildi; eski C1 kaydı `props_lib.gd`'de kullanım dışı duruyor. S5/S6 dokusundaki logo/yazı yeniden üretim yerine 0 krediyle silindi (`PROP_SCALES.md`).
 
 
 **Bütçe sınırı: 3000 stüdyo kredisi** (kullanıcı, 10.11.2026: "950 API içindi, 3000'e kadar geçebilirsin"). Stüdyo başlangıç bakiyesi 3645.
@@ -26,7 +28,7 @@ Karakter = 55 + 40 + 20 = **115** · çevre nesnesi = 55 + 40 = **95**.
 | İkincil karakterler | 0 | prosedürel kafa sistemi (gerekçe aşağıda, değişmedi) |
 | Çevre + senaryo nesneleri | ~1 900 | ~20 varlık × 95 |
 | Yedek | ~470 | başarısız/iyileştirme |
-**API bakiyesi (10 Kasım 2026, `tripo balance`): 0 kredi.** → Üretim yapılamıyor. Bkz. Engeller.
+~~**API bakiyesi (10 Kasım 2026, `tripo balance`): 0 kredi.** → Üretim yapılamıyor.~~ **Çözüldü (11.11.2026):** API bakiyesi 280; T2 ve C1B bu hattan `uret.sh` ile üretildi.
 
 
 ## Stüdyo harcaması — ikincil karakterler (11.11.2026)
@@ -94,4 +96,4 @@ Not: ücretsiz görsel kuyruğu 15 dk ilerlemedi; görselden-3B yolu bu yüzden 
 
 ## Engeller
 
-1. **API bakiyesi 0.** 950 kredi web stüdyo aboneliğindeyse API'den kullanılamaz; platform bakiyesine yükleme gerekir. Kredi satın alma yetkim yok; kullanıcı onayı ve işlemi gerekir.
+1. ~~**API bakiyesi 0.**~~ **Çözüldü (11.11.2026):** API hattı çalışıyor, bakiye 280 kredi. T2 (20) ve C1B (30) `tools/tripo/uret.sh` ile üretildi; 950 sınırı betik tarafından uygulanıyor.
