@@ -1,0 +1,23 @@
+── Plan ──────────────────────────
+input: Ankara style double-arm street lamp: tall grey steel pole with two curved arms each holding a lantern, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=3000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created e9956785-79e0-4e5f-a1e5-bfbd2978dd05 (@s1)
+text_to_model · queued
+text_to_model · running 8% · e9956785
+text_to_model · running 13% · e9956785
+text_to_model · running 21% · e9956785
+text_to_model · running 32% · e9956785
+text_to_model · running 48% · e9956785
+text_to_model · running 72% · e9956785
+text_to_model · success 100% · e9956785
+✓ text_to_model · e9956785-79e0-4e5f-a1e5-bfbd2978dd05 · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/S1/tripo-out/s1-e9956785

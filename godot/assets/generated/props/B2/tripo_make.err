@@ -1,0 +1,25 @@
+── Plan ──────────────────────────
+input: Four-drawer grey metal filing cabinet, slightly dented and scuffed, small label holders on each drawer, old government office furniture, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=4000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created e376cfca-0018-4244-95af-8834bca0da21 (@b2)
+text_to_model · queued
+text_to_model · running 6% · e376cfca
+text_to_model · running 10% · e376cfca
+text_to_model · running 17% · e376cfca
+text_to_model · running 26% · e376cfca
+text_to_model · running 40% · e376cfca
+text_to_model · running 62% · e376cfca
+text_to_model · running 88% · e376cfca
+text_to_model · success 100% · e376cfca
+✓ text_to_model · e376cfca-0018-4244-95af-8834bca0da21 · 20 credits
+downloading artifacts…
+downloading generated_image.jpeg
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/B2/tripo-out/b2-e376cfca

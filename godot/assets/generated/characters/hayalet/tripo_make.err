@@ -1,0 +1,36 @@
+── Plan ──────────────────────────
+input: /private/tmp/claude-501/-Users-hasan-Desktop-B-ro-06/7234bc25-7a06-4739-8393-e00675eaaf09/scratchpad/ref/hayalet_ref.png
+model: v3.1-20260211 — explicit --model
+steps:
+  1. image-to-model  POST /v3/generation/image-to-model — generate a 3D model from one image
+     texture_quality="detailed" face_limit=20000 pbr=false model="v3.1-20260211"
+  2. rig  POST /v3/animations/rig — auto-rig a skeleton
+     model="v3.0-20260909"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 40 credits (official list price; chain steps not estimated)
+  · texture_quality detailed: higher price tier
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 88a4515a-375f-4a2a-8a67-f60d5e764f76 (@hayalet)
+image_to_model · queued
+image_to_model · running 3% · 88a4515a
+image_to_model · running 7% · 88a4515a
+image_to_model · running 11% · 88a4515a
+image_to_model · running 17% · 88a4515a
+image_to_model · running 26% · 88a4515a
+image_to_model · running 38% · 88a4515a
+image_to_model · running 55% · 88a4515a
+image_to_model · success 100% · 88a4515a
+✓ image_to_model · 88a4515a-375f-4a2a-8a67-f60d5e764f76 · 40 credits
+task created 5ae21818-2615-471d-a8cf-23c51dbc0b20 (@hayalet-rig)
+animate_rig · queued
+animate_rig · running 7% · 5ae21818
+animate_rig · running 14% · 5ae21818
+animate_rig · running 23% · 5ae21818
+animate_rig · running 37% · 5ae21818
+animate_rig · success 100% · 5ae21818
+✓ animate_rig · 5ae21818-2615-471d-a8cf-23c51dbc0b20 · 25 credits
+downloading artifacts…
+downloading rendered_image.webp
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/characters/hayalet/tripo-out/hayalet-rig-5ae21818

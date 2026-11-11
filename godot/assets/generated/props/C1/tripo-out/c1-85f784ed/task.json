@@ -1,0 +1,29 @@
+{
+  "task_id": "85f784ed-91dd-4c9c-969a-db2966e76c34",
+  "type": "text_to_model",
+  "status": "success",
+  "input": {
+    "pbr": false,
+    "prompt": "Human body shape lying under a blue plastic tarpaulin sheet (tarp), outline of a person covered by a worn blue tarp with creases and rope eyelets, crime scene, realistic, single isolated object, no text, no logo",
+    "texture": true,
+    "export_uv": true,
+    "face_limit": 6000,
+    "model_version": "v3.1-20260211",
+    "geometry_quality": "standard",
+    "texture_alignment": "geometry"
+  },
+  "output_fields": [
+    "model_url",
+    "rendered_image_url",
+    "generated_image_url"
+  ],
+  "credits_consumed": 20,
+  "created_at": "2026-11-10T21:11:16.301946Z",
+  "completed_at": "2026-11-10T21:12:48.014655Z",
+  "files": [
+    "model.glb",
+    "rendered_image.webp",
+    "generated_image.jpeg",
+    "preview.png"
+  ]
+}

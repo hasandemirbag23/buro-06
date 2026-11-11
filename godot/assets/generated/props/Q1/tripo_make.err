@@ -1,0 +1,24 @@
+── Plan ──────────────────────────
+input: Bolted grey steel interrogation table, plain rectangular metal desk with thick legs and visible bolts, scratched surface, police station furniture, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=4000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 5757e79d-50f4-449f-a1c3-87b14f78ea4a (@q1)
+text_to_model · queued
+text_to_model · running 6% · 5757e79d
+text_to_model · running 11% · 5757e79d
+text_to_model · running 17% · 5757e79d
+text_to_model · running 27% · 5757e79d
+text_to_model · running 41% · 5757e79d
+text_to_model · running 62% · 5757e79d
+text_to_model · running 90% · 5757e79d
+text_to_model · success 100% · 5757e79d
+✓ text_to_model · 5757e79d-50f4-449f-a1c3-87b14f78ea4a · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/Q1/tripo-out/q1-5757e79d

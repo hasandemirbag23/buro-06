@@ -1,0 +1,24 @@
+── Plan ──────────────────────────
+input: Municipal wheeled plastic waste container 770 liters, dark green with grey lid, two wheels, scuffed, no logo, realistic, single isolated object, no text
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=3000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 4d8bcaf2-ef5c-496e-9718-32e5190d6630 (@s3)
+text_to_model · queued
+text_to_model · running 6% · 4d8bcaf2
+text_to_model · running 11% · 4d8bcaf2
+text_to_model · running 18% · 4d8bcaf2
+text_to_model · running 27% · 4d8bcaf2
+text_to_model · running 42% · 4d8bcaf2
+text_to_model · running 63% · 4d8bcaf2
+text_to_model · running 90% · 4d8bcaf2
+text_to_model · success 100% · 4d8bcaf2
+✓ text_to_model · 4d8bcaf2-ef5c-496e-9718-32e5190d6630 · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/S3/tripo-out/s3-4d8bcaf2

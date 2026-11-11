@@ -23,13 +23,12 @@ const CEIL := preload("res://assets/interior/Light_Ceiling1.glb")
 const CARPET := preload("res://assets/interior/Carpet_1.glb")
 const BOX := preload("res://assets/furniture/cardboardBoxClosed.glb")
 const BIN := preload("res://assets/furniture/trashcan.glb")
-const BUILD_A := preload("res://assets/city/commercial/building-a.glb")
-const BUILD_B := preload("res://assets/city/commercial/building-b.glb")
-const BUILD_C := preload("res://assets/city/commercial/building-c.glb")
-const BUILD_LO := preload("res://assets/city/commercial/low-detail-building-a.glb")
 const STREET := preload("res://assets/props/Streetlight_Single.glb")
+const SetBase := preload("res://scenes/sets/set_base.gd")
 
 const FEET := 0.17
+## Pencereden görünen Ankara maketi: 1:10 ölçek, zorlanmış perspektif (kamera far = 80).
+const CITY_SCALE := 0.1
 const WALL_Z := -3.2
 const WOOD := Color("4a3224")
 const AMBER := Color("ffb24d")
@@ -223,7 +222,7 @@ func _window() -> void:
 	var cx := -1.55
 	var cy := 1.95
 	# pencerenin dışı: iki katman şehir + sokak lambası
-	var backdrop := MeshFactory.box(self, Vector3(28, 12, 0.2), Vector3(cx, 3.4, WALL_Z - 22.0), Color("070b12"), 1.0)
+	var backdrop := MeshFactory.box(self, Vector3(90, 34, 0.2), Vector3(cx, 9.0, WALL_Z - 67.0), Color("070b12"), 1.0)
 	backdrop.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	_city(cx)
 	# sokak lambası: amber hale
@@ -413,26 +412,95 @@ func _furniture() -> void:
 	_drop(CHAIR, Vector3(2.9, FEET, 1.7), 215.0, 1.9, Vector3(0.165, 0.0, -0.155))
 
 
+## Ana menü silüeti (ANKARA_WORLD_DESIGN.md): ön planda Cebeci apartman sırası,
+## arkada Kızılay iş merkezi kütleleri, en arkada özgün bir seyir kulesi.
+## Apartmanlar set_base.apartment() ile (FACADES + Tripo M1–M4 modülleri, yeni kredi yok).
+## Maket 1:10; yerel ölçüler gerçek metre. Tabanlar pencere pervazının altında kalır.
 func _city(cx: float) -> void:
-	var packs: Array[PackedScene] = [BUILD_A, BUILD_B, BUILD_C, BUILD_LO, BUILD_A, BUILD_B]
-	var spots := [
-		[Vector3(cx - 6.5, -0.2, WALL_Z - 12.0), 18.0, 6.2],
-		[Vector3(cx - 2.4, -0.2, WALL_Z - 10.5), -8.0, 5.4],
-		[Vector3(cx + 1.6, -0.4, WALL_Z - 14.0), 6.0, 7.0],
-		[Vector3(cx + 5.8, -0.2, WALL_Z - 11.0), -14.0, 5.8],
-		[Vector3(cx + 9.2, -0.5, WALL_Z - 15.5), 22.0, 7.4],
-		[Vector3(cx - 10.0, -0.4, WALL_Z - 16.0), 4.0, 6.6],
+	var city := SetBase.new()
+	city.name = "AnkaraSiluet"
+	city.position = Vector3(cx, -0.15, WALL_Z - 2.0)
+	city.scale = Vector3.ONE * CITY_SCALE
+	add_child(city)
+	# 1) Cebeci: 4–6 katlı A tipi apartmanlar, bitişik nizam, hafif kırık sıra
+	var x := -170.0
+	var i := 0
+	while x < 170.0:
+		var w := 10.0 + float((i * 7) % 4)
+		var floors := 4 + (i * 5) % 3
+		var kind := "B" if i % 4 == 2 else "A"
+		city.apartment(Vector3(x + w * 0.5, 0, -77.0 - float(i % 3) * 2.5), w - 0.3, 12.0, floors, kind, float((i % 3) - 1) * 1.5, 31 + i * 17)
+		x += w
+		i += 1
+	# 2) Kızılay: iş merkezi kütleleri (C tipi bant pencereli bloklar + cam/beton levha bloklar)
+	var blocks := [
+		[-150.0, -205.0, 24.0, 12, 0], [-105.0, -215.0, 18.0, 15, 1], [-62.0, -200.0, 28.0, 11, 0],
+		[-20.0, -225.0, 20.0, 18, 1], [24.0, -205.0, 26.0, 13, 0], [70.0, -218.0, 18.0, 16, 1],
+		[112.0, -200.0, 30.0, 10, 0], [158.0, -212.0, 22.0, 14, 1],
 	]
-	for i in spots.size():
-		var spec: Array = spots[i]
-		var b := _drop(packs[i], spec[0], spec[1], spec[2])
-		_cast_off(b)
-	# uzak kırmızı uyarı (kule)
-	MeshFactory.sphere(self, 0.1, Vector3(cx + 3.4, 7.4, WALL_Z - 20.0), Color("ff2a1a"), 3.2)
+	for k in blocks.size():
+		var bl: Array = blocks[k]
+		if int(bl[4]) == 0:
+			city.apartment(Vector3(bl[0], 0, bl[1]), bl[2], 16.0, int(bl[3]), "C", 0.0, 7 + k * 11)
+		else:
+			_office_slab(city, Vector3(bl[0], 0, bl[1]), Vector3(bl[2], int(bl[3]) * 3.4 + 4.0, 15.0), k)
+	# 3) özgün seyir kulesi (Atakule'nin birebir kopyası değil)
+	_tower(city, Vector3(60.0, 0, -600.0))
+	_cast_off(city)
+
+
+## Kızılay tipi iş merkezi levhası: koyu cam cephe, kat kat ışık bantları, çatıda makine katı.
+func _office_slab(parent: Node3D, feet: Vector3, size: Vector3, seed: int) -> void:
+	var glass := Color("1c2633") if seed % 2 == 0 else Color("2a2f36")
+	MeshFactory.box(parent, size, feet + Vector3(0, size.y * 0.5, 0), glass, 0.25)
+	var floors := int((size.y - 4.0) / 3.4)
+	for f in floors:
+		var lit := (f * 3 + seed) % 4 != 0
+		var tint := Color("f2d39a") if (f + seed) % 3 != 0 else Color("cfe3ff")
+		var y := 4.0 + f * 3.4 + 1.5
+		MeshFactory.box(parent, Vector3(size.x * 0.92, 0.9, 0.05), feet + Vector3(0, y, size.z * 0.5 + 0.03), tint if lit else Color("10161e"), 0.4, 0.7 if lit else 0.0)
+		MeshFactory.box(parent, Vector3(size.x + 0.2, 0.35, size.z + 0.2), feet + Vector3(0, y - 1.5, 0), Color("6d7278"), 0.8)
+	MeshFactory.box(parent, Vector3(size.x * 0.5, 3.0, size.z * 0.6), feet + Vector3(0, size.y + 1.5, 0), Color("3a3f46"), 0.8)
+	if seed % 2 == 1:
+		var sign := MeshFactory.label(parent, "İŞ MERKEZİ", feet + Vector3(0, size.y - 1.4, size.z * 0.5 + 0.2), Color("ffb24d"), 12.0)
+		sign.billboard = BaseMaterial3D.BILLBOARD_DISABLED
+
+
+## Seyir kulesi: sekizgen gövde, ters koni seyir başlığı, ışıklı lokanta bandı, anten.
+func _tower(parent: Node3D, base: Vector3) -> void:
+	# Gövde aşağıdan projektörle aydınlatılmış gibi hafif ışır; gece göğünde silüet okunur.
+	var concrete := Color("c9c2b6")
+	_cyl(parent, 18.0, 22.0, 10.0, base + Vector3(0, 5.0, 0), Color("8f8a82"), 0.15, 8)
+	_cyl(parent, 4.0, 6.2, 122.0, base + Vector3(0, 71.0, 0), concrete, 0.22, 8)
+	for f in 4:
+		var ang := f * PI * 0.5 + PI * 0.25
+		var fin := MeshFactory.box(parent, Vector3(1.2, 100.0, 3.2), base + Vector3(cos(ang) * 5.4, 60.0, sin(ang) * 5.4), Color("b3ad a2".replace(" ", "")), 0.8, 0.12)
+		fin.rotation.y = -ang
+	_cyl(parent, 13.5, 5.0, 9.0, base + Vector3(0, 136.5, 0), concrete, 0.3, 16)
+	_cyl(parent, 13.8, 13.8, 3.6, base + Vector3(0, 142.8, 0), Color("ffcf8a"), 2.2, 24)
+	_cyl(parent, 9.5, 13.8, 4.4, base + Vector3(0, 146.8, 0), Color("5a6270"), 0.15, 24)
+	_cyl(parent, 0.5, 0.9, 24.0, base + Vector3(0, 161.0, 0), Color("c8ccd2"), 0.3, 8)
+	MeshFactory.sphere(parent, 1.6, base + Vector3(0, 174.0, 0), Color("ff2a1a"), 3.2)
+	for k in 8:
+		MeshFactory.sphere(parent, 0.8, base + Vector3(0, 18.0 + k * 14.0, 6.3), Color("ff3b2a"), 1.6)
+
+
+func _cyl(parent: Node3D, top_r: float, bottom_r: float, height: float, pos: Vector3, color: Color, emission := 0.0, sides := 16) -> MeshInstance3D:
+	var mi := MeshInstance3D.new()
+	var mesh := CylinderMesh.new()
+	mesh.top_radius = top_r
+	mesh.bottom_radius = bottom_r
+	mesh.height = height
+	mesh.radial_segments = sides
+	mi.mesh = mesh
+	mi.position = pos
+	mi.material_override = MeshFactory.material(color, 0.8, emission)
+	parent.add_child(mi)
+	return mi
 
 
 func _cast_off(node: Node) -> void:
-	if node is MeshInstance3D:
+	if node is GeometryInstance3D:
 		node.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	for child in node.get_children():
 		_cast_off(child)

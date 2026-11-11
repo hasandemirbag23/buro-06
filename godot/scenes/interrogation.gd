@@ -5,8 +5,8 @@ extends Node3D
 ## kanıt düşüşü + ses + CameraShake. Stres GameState'ten okunur.
 
 const MeshFactory := preload("res://scenes/mesh_factory.gd")
+const Props := preload("res://scenes/props_lib.gd")
 const RIG := preload("res://scenes/character_rig.tscn")
-const CHAIR := preload("res://assets/furniture/chair.glb")
 
 const SHOT_NODES := {"wide": "Cam_Wide", "closeup": "Cam_SuspectCloseUp", "detective": "Cam_DetectiveCloseUp", "tabletop": "Cam_TableTop", "arrest": "Cam_Arrest", "wall": "Cam_Wall"}
 
@@ -428,27 +428,30 @@ func _room() -> void:
 
 
 func _table() -> void:
-	var metal := MeshFactory.pbr("rusty_metal_02", Color(0.55, 0.57, 0.58), Vector2(1.5, 1.0), 0.7)
-	metal.metallic = 0.5
-	MeshFactory.textured_box(self, Vector3(1.6, 0.05, 0.9), Vector3(0, 0.75, 0), metal)
-	for corner in [Vector3(-0.72, 0.36, -0.38), Vector3(0.72, 0.36, -0.38), Vector3(-0.72, 0.36, 0.38), Vector3(0.72, 0.36, 0.38)]:
-		MeshFactory.box(self, Vector3(0.05, 0.72, 0.05), corner, Color("4a4d50"), 0.4)
-	MeshFactory.box(self, Vector3(1.5, 0.04, 0.04), Vector3(0, 0.2, -0.38), Color("4a4d50"), 0.4)
-	MeshFactory.box(self, Vector3(1.5, 0.04, 0.04), Vector3(0, 0.2, 0.38), Color("4a4d50"), 0.4)
+	# Q1 vidalı metal sorgu masası (Tripo); eski kutu masayla aynı ölçü: 1,6 × 0,775 × 0,9
+	var table := Props.make("Q1", Vector3(1.6, 0.775, 0.9))
+	add_child(table)
+	_shadows(table)
+	var tea := Props.make("B6", Vector3(0, 0.2, 0))
+	tea.position = Vector3(-0.66, 0.775, 0.3)
+	tea.rotation_degrees.y = 150
+	add_child(tea)
+	_shadows(tea)
 	_chair(Vector3(0.0, 0, -0.95), 0.0)
 	_chair(Vector3(0.0, 0, 0.95), 180.0)
 
 
 func _chair(at: Vector3, yaw: float) -> void:
-	var pivot := Node3D.new()
-	pivot.position = at
-	pivot.rotation_degrees.y = yaw
-	add_child(pivot)
-	var chair := MeshFactory.place(pivot, CHAIR, Vector3(-0.2, 0, 0.2), 0.0, 2.0)
-	for mesh in chair.find_children("*", "MeshInstance3D", true, false):
-		var m := mesh as MeshInstance3D
-		m.material_override = MeshFactory.material(Color("3a3d42"), 0.55)
-		m.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
+	var chair := Props.make("Q2", Vector3(0, 0.88, 0))
+	chair.position = at
+	chair.rotation_degrees.y = yaw
+	add_child(chair)
+	_shadows(chair)
+
+
+func _shadows(node: Node) -> void:
+	for mesh in node.find_children("*", "MeshInstance3D", true, false):
+		(mesh as MeshInstance3D).cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
 
 
 func _props() -> void:

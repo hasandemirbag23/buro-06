@@ -25,18 +25,20 @@
   "behzat": {
     "title": "Başkomiser Behzat",
     "age": "45-50",
-    "model": "res://assets/characters/man_Casual2.glb",
+    "model": "res://assets/generated/characters/behzat/behzat.glb",
     "look": "Yorgun, sert yüz; kırlaşmış dağınık saç ve kirli sakal; koyu gömlek üstüne yıpranmış kahverengi deri ceket; hafif kambur.",
-    "tint": {
-      "Body/LightBrown": "#3a2a21",
-      "Body/Skin": "#b38a66",
-      "Legs/LightBlue": "#1f2229",
-      "Feet/White": "#1a1612",
-      "Feet/Red_Dark": "#0f0d0b",
-      "Head/Hair": "#4a4542",
-      "Head/Skin_Darker": "#5a4a40"
+    "tint": {},
+    "overlay": {},
+    "animations": {
+      "Idle": "Idle",
+      "Talking": "Talking",
+      "Angry": "Angry",
+      "DrinkingTea": "DrinkingTea",
+      "Thinking": "Thinking"
     },
-    "overlay": {
+    "legacy_model": "res://assets/characters/man_Casual2.glb",
+    "tripo": true,
+    "legacy_overlay": {
       "Spine": [
         9,
         0,
@@ -62,30 +64,14 @@
         0,
         -6
       ]
-    },
-    "animations": {
-      "Idle": "Idle",
-      "Talking": "Talking",
-      "Angry": "Angry",
-      "DrinkingTea": "DrinkingTea",
-      "Thinking": "Thinking"
     }
   },
   "akbaba": {
     "title": "Akbaba — Olay Yeri Uzmanı",
     "age": "35-40",
-    "model": "res://assets/characters/man_Worker.glb",
+    "model": "res://assets/generated/characters/akbaba/akbaba.glb",
     "look": "Kısa saç, soğukkanlı bakış; lacivert olay yeri tulumu, beyaz yansıtıcı yelek, mavi nitril eldiven; boynunda kamera.",
-    "tint": {
-      "Body/Worker_Yellow": "#1f2d4a",
-      "Body/Worker_Vest": "#dfe3e6",
-      "Body/LightBrown": "#1f2d4a",
-      "Body/Skin": "#3b78c9",
-      "Legs/Brown2": "#1f2d4a",
-      "Legs/Brown": "#182238",
-      "Feet/Black": "#1a1a1a",
-      "Feet/Grey": "#2a2a2a"
-    },
+    "tint": {},
     "overlay": {},
     "animations": {
       "Idle": "Idle",
@@ -93,47 +79,50 @@
       "Inspecting": "Inspecting",
       "WritingReport": "WritingReport",
       "Talking": "Talking"
-    }
+    },
+    "legacy_model": "res://assets/characters/man_Worker.glb",
+    "tripo": true
   },
   "hayalet": {
     "title": "Hayalet — İstihbarat",
     "age": "30-40",
-    "model": "res://assets/characters/man_Casual.glb",
+    "model": "res://assets/generated/characters/hayalet/hayalet.glb",
     "look": "Sokak kültürüne hakim, rahat; haki kapüşonlu, koyu kot, eski spor ayakkabı; dikkatli, tarayan bakış.",
-    "tint": {
-      "Body/Purple": "#4a4a36",
-      "Feet/Purple": "#2a2a2a",
-      "Feet/White": "#bdb8ad",
-      "Legs/LightBlue": "#1c2130",
-      "Head/Hair": "#120d0a"
-    },
-    "overlay": {
-      "Head": [
-        0,
-        0,
-        0
-      ]
-    },
+    "tint": {},
+    "overlay": {},
     "animations": {
       "Walking": "Walking",
       "Talking": "Talking",
       "LookingAround": "LookingAround",
       "Idle": "Idle"
+    },
+    "legacy_model": "res://assets/characters/man_Casual.glb",
+    "tripo": true,
+    "legacy_overlay": {
+      "Head": [
+        0,
+        0,
+        0
+      ]
     }
   },
   "savci": {
     "title": "Savcı Nilgün Erdem",
     "age": "35-40",
-    "model": "res://assets/characters/woman_Suit.glb",
+    "model": "res://assets/generated/characters/savci/savci.glb",
     "look": "Resmi, kontrollü; siyah klasik takım, beyaz gömlek; toplu koyu saç; dik duruş.",
-    "tint": {
-      "Body/Black": "#101114",
-      "Legs/Black": "#101114",
-      "Feet/Black": "#0a0a0a",
-      "Head/Hair_Blond": "#1d1512",
-      "Head/Hair_Brown": "#1d1512"
+    "tint": {},
+    "overlay": {},
+    "animations": {
+      "Talking": "Talking",
+      "ReviewingDocuments": "ReviewingDocuments",
+      "Angry": "Angry",
+      "Thinking": "Thinking",
+      "Idle": "Idle"
     },
-    "overlay": {
+    "legacy_model": "res://assets/characters/woman_Suit.glb",
+    "tripo": true,
+    "legacy_overlay": {
       "Spine": [
         -4,
         0,
@@ -149,13 +138,6 @@
         0,
         0
       ]
-    },
-    "animations": {
-      "Talking": "Talking",
-      "ReviewingDocuments": "ReviewingDocuments",
-      "Angry": "Angry",
-      "Thinking": "Thinking",
-      "Idle": "Idle"
     }
   },
   "arsiv": {

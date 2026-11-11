@@ -1,11 +1,12 @@
 extends Node
-## Menü sahnesi ekran görüntüsü: godot --path . res://tools/menu_shot.tscn [-- window|desk|board] -> /tmp/menu_<n>.png
+## Menü sahnesi ekran görüntüsü: godot --path . res://tools/menu_shot.tscn [-- window|desk|board|computer|skyline] -> /tmp/menu_<n>.png
 const Stage := preload("res://scenes/menu_stage.gd")
 const VIEWS := {
 	"window": [Vector3(-1.2, 1.7, 0.8), Vector3(-1.55, 1.8, -3.2)],
 	"desk": [Vector3(1.3, 1.5, 0.4), Vector3(1.1, 1.0, -1.8)],
 	"board": [Vector3(2.4, 1.8, 0.2), Vector3(2.5, 1.7, -3.2)],
 	"computer": [Vector3(-1.3, 1.5, 0.2), Vector3(-1.5, 1.1, -1.9)],
+	"skyline": [Vector3(-1.55, 1.85, -3.5), Vector3(-1.55, 2.6, -40.0)],
 }
 
 func _ready() -> void:

@@ -1,0 +1,23 @@
+── Plan ──────────────────────────
+input: Transparent plastic evidence bag, sealed, with a blank white label area and a red seal strip, forensic crime scene evidence bag lying flat, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=2000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 8019984e-8393-4e58-b65c-bbde898e3216 (@n1)
+text_to_model · queued
+text_to_model · running 6% · 8019984e
+text_to_model · running 11% · 8019984e
+text_to_model · running 19% · 8019984e
+text_to_model · running 30% · 8019984e
+text_to_model · running 46% · 8019984e
+text_to_model · running 69% · 8019984e
+text_to_model · success 100% · 8019984e
+✓ text_to_model · 8019984e-8393-4e58-b65c-bbde898e3216 · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/N1/tripo-out/n1-8019984e

@@ -1,0 +1,24 @@
+── Plan ──────────────────────────
+input: Early 2000s beige desktop computer set: boxy CRT monitor, beige mini-tower case, keyboard and mouse, realistic dusty office equipment, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=5000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created f39b560b-f6e5-4c65-af43-f90713e6149f (@b3)
+text_to_model · queued
+text_to_model · running 10% · f39b560b
+text_to_model · running 16% · f39b560b
+text_to_model · running 26% · f39b560b
+text_to_model · running 39% · f39b560b
+text_to_model · running 59% · f39b560b
+text_to_model · running 88% · f39b560b
+text_to_model · running 99% · f39b560b
+text_to_model · success 100% · f39b560b
+✓ text_to_model · f39b560b-f6e5-4c65-af43-f90713e6149f · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/B3/tripo-out/b3-f39b560b

@@ -1,0 +1,24 @@
+── Plan ──────────────────────────
+input: Wrought iron balcony railing module 1.2 meters wide with vertical bars and simple decorative scrolls, painted dark grey with some rust, Turkish apartment building balcony, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=2500 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created b62b506b-603a-44c0-9fe0-1b351592bc12 (@m1)
+text_to_model · queued
+text_to_model · running 5% · b62b506b
+text_to_model · running 10% · b62b506b
+text_to_model · running 16% · b62b506b
+text_to_model · running 25% · b62b506b
+text_to_model · running 38% · b62b506b
+text_to_model · running 58% · b62b506b
+text_to_model · success 100% · b62b506b
+✓ text_to_model · b62b506b-603a-44c0-9fe0-1b351592bc12 · 20 credits
+downloading artifacts…
+downloading generated_image.jpeg
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/M1/tripo-out/m1-b62b506b

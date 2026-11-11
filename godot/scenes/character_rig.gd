@@ -8,6 +8,7 @@ const MeshFactory := preload("res://scenes/mesh_factory.gd")
 const PoseOverlay := preload("res://scenes/pose_overlay.gd")
 const AnimCatalog := preload("res://scenes/anim_catalog.gd")
 const Styler := preload("res://scenes/character_styler.gd")
+const FaceRig := preload("res://scenes/face_rig.gd")
 const ANIM_LIB := preload("res://assets/anim/AnimationLibrary_Godot_Standard.gltf")
 const DESIGN_PATH := "res://data/characters.json"
 
@@ -112,6 +113,10 @@ var _started := false
 var _travel_tries := 0
 var _oneshot_token := 0
 var head_mesh: MeshInstance3D
+var face: Node
+var _neck_head: BoneAttachment3D
+var _neck_base: BoneAttachment3D
+var _neck_rest := Transform3D.IDENTITY
 var _breath: Tween
 var _xfade := 0.25
 var _xfades: Dictionary = {}
@@ -314,6 +319,10 @@ func _process(delta: float) -> void:
 		if absf(yaw) < 100.0:
 			_gaze_goal = Vector3(clampf(-pitch, -22.0, 22.0), clampf(yaw, -70.0, 70.0), 0.0)
 	var next := _gaze.lerp(_gaze_goal, 1.0 - exp(-_gaze_speed * delta))
+	# Göz, başın götürmediği payı alır: baş 0.65, göz ~0.5 — gerçekte göz önce
+	# gider, baş arkasından döner.
+	if face:
+		face.set_gaze(_gaze.x * 0.5, _gaze.y * 0.55)
 	if next.distance_to(_gaze) > 0.02:
 		_gaze = next
 		_push_overlay(overlay.sway if overlay else {})
@@ -350,19 +359,73 @@ func oneshot(clip: String, then: String) -> void:
 	_play_clip(clip, 0.15)
 
 
-## Yüz ifadesi: blend shape varsa uygular, yoksa baş duruşuyla ima eder.
+## Yüz ifadesi: kafa heykelini deforme eden FaceRig'e geçer, baş duruşuyla destekler.
+## (Eski kod 52 ARKit blend shape arıyordu; ne taban modelde ne de üretilen
+## kafalarda hiç blend shape olmadı, ifade yalnız baş açısı olarak kalıyordu.)
 func set_expression(name: String) -> void:
 	var spec: Dictionary = EXPRESSIONS.get(name, EXPRESSIONS["neutral"])
 	_expression = spec["head"]
-	if head_mesh and head_mesh.mesh and head_mesh.mesh.get_blend_shape_count() > 0:
-		for i in head_mesh.mesh.get_blend_shape_count():
-			head_mesh.set_blend_shape_value(i, 0.0)
-		var shapes: Dictionary = spec["shapes"]
-		for shape_name in shapes.keys():
-			var idx := head_mesh.find_blend_shape_by_name(shape_name)
-			if idx >= 0:
-				head_mesh.set_blend_shape_value(idx, shapes[shape_name])
+	if face:
+		face.set_expression(name)
 	_push_overlay(overlay.sway if overlay else {})
+
+
+func _bind_face(display_name: String) -> void:
+	face = null
+	var head_root := get_meta("head_root", null) as Node3D
+	if head_root == null:
+		return
+	face = FaceRig.new()
+	face.name = "FaceRig"
+	add_child(face)
+	face.bind(head_root, who, display_name)
+	_bind_neck()
+
+
+## Kafa mesh'i 33 cm'lik boynuyla birlikte Head kemiğine bağlı; baş dönünce boyun
+## da rijit dönüp omuza giriyordu. Boynun tabanı göğüs kemiğine devredilir:
+## deri gölgelendiricisi köşeleri baş ile göğüs arasında harmanlar (neck_xf).
+func _bind_neck() -> void:
+	_neck_head = null
+	_neck_base = null
+	if skeleton == null or face == null:
+		return
+	_neck_head = skeleton.get_node_or_null("StyledHead") as BoneAttachment3D
+	var head_idx := skeleton.find_bone("Head")
+	var base_idx := -1
+	var base_name := ""
+	for candidate in ["UpperChest", "Chest", "Neck"]:
+		base_idx = skeleton.find_bone(candidate)
+		if base_idx >= 0:
+			base_name = candidate
+			break
+	if _neck_head == null or head_idx < 0 or base_idx < 0:
+		return
+	_neck_base = BoneAttachment3D.new()
+	_neck_base.name = "NeckBase"
+	_neck_base.bone_name = base_name
+	skeleton.add_child(_neck_base)
+	var offset := Transform3D(Basis(), Styler.HEAD_OFFSET)
+	_neck_rest = skeleton.get_bone_global_rest(base_idx).affine_inverse() * skeleton.get_bone_global_rest(head_idx) * offset
+	if not skeleton.skeleton_updated.is_connected(_update_neck):
+		skeleton.skeleton_updated.connect(_update_neck)
+
+
+## Kemik eklentileri de aynı sinyalle güncellenir ve bizden önce bağlandıkları
+## için burada okunan dönüşümler PoseOverlay sonrası, yani ekrandaki pozdur.
+func _update_neck() -> void:
+	if face == null or not is_instance_valid(_neck_head) or not is_instance_valid(_neck_base):
+		return
+	var head := _neck_head.transform * Transform3D(Basis(), Styler.HEAD_OFFSET)
+	var xf := head.affine_inverse() * _neck_base.transform * _neck_rest
+	for m in face.mats:
+		m.set_shader_parameter("neck_xf", xf)
+
+
+## Konuşma süresi dışarıdan verilince ağız o kadar oynar (sinematik, seslendirme).
+func talk_for(seconds: float) -> void:
+	if face:
+		face.talk_for(seconds)
 
 
 func _push_overlay(sway: Dictionary) -> void:
@@ -469,7 +532,11 @@ func _build() -> void:
 	if skeleton:
 		skeleton.add_child(overlay)
 	_accessory(spec)
-	Styler.apply(self, who)
+	# Tripo karakterleri kendi yüzü ve kıyafetiyle tek parça gelir; prosedürel
+	# kafa ve kumaş katmanı yalnız eski (Quaternius) gövdelere uygulanır.
+	if not bool(design.get("tripo", false)):
+		Styler.apply(self, who)
+		_bind_face(str(spec.get("name", "")))
 	_push_overlay({})
 	var title: String = design.get("title", spec["name"])
 	var tag := MeshFactory.label(body, title, Vector3(0, 2.05, 0), Color("e7e1d6"), 0.55)

@@ -262,6 +262,84 @@
       "at": "02:33",
       "requiresClueId": "clue_e5_sms_yavuz",
       "text": "Yavuz 'mührü basma' demiş. Saat 00:36. Ölümden yarım saat önce. Onu garajdan al."
+    },
+    {
+      "id": "e5-a2",
+      "sender": "Akbaba",
+      "at": "02:40",
+      "requiresClueId": "clue_e5_otopsi",
+      "text": "Otopsi: göğüsten tek el, bitişik-yakın mesafe. Gömlekte namlu yanığı var. Savunma yarası yok, adam karşısındakini tanıyormuş. Ölüm 01:05-01:20."
+    },
+    {
+      "id": "e5-h3",
+      "sender": "Hayalet",
+      "at": "02:47",
+      "requiresClueId": "clue_e5_log",
+      "text": "Nöbet defterinde 01:00-02:00 arası hiç satır yok. Sayfa yırtılmamış, o saat hiç yazılmamış. Defteri tutmayan bekçi ya korkmuştur ya tutturulmamıştır."
+    },
+    {
+      "id": "e5-b3",
+      "sender": "Behzat",
+      "at": "02:55",
+      "requiresClueId": "clue_e5_ticket",
+      "text": "Vanın paspasında otopark fişi, giriş 00:38. Yavuz yarın karşımda 'ben gelmedim' diyecek. Fiş diyor ki geldi. Fişle tartışamaz."
+    },
+    {
+      "id": "e5-a3",
+      "sender": "Akbaba",
+      "at": "03:02",
+      "type": "photo",
+      "requiresClueId": "clue_e5_photo",
+      "text": "Telefondaki karelerde mühür emri var, tarih bu gece, altında Kemal'in imzası. Emir hazırdı. Basılmadı çünkü basacak adam öldü."
+    },
+    {
+      "id": "e5-h4",
+      "sender": "Hayalet",
+      "at": "03:10",
+      "requiresClueId": "clue_e5_bank",
+      "text": "Adil Korkmaz'ın hesabına üç gün önce kırk bin nakit girmiş. Ruhsat şefi maaşını nakit almaz, nakit alan şey başka bir şeydir."
+    },
+    {
+      "id": "e5-b4",
+      "sender": "Behzat",
+      "at": "03:18",
+      "requiresClueId": "clue_e5_audio",
+      "text": "Kayıtta Adil 'mühür bu gece basılmayacak' diyor, Kemal 'basılacak' diyor. Kayıt dün 19:40. Tartışmayı kaybeden taraf bu gece kazandı."
+    },
+    {
+      "id": "e5-h5",
+      "sender": "Hayalet",
+      "at": "03:25",
+      "requiresClueId": "clue_e5_kasa",
+      "text": "Geceler'in kasa defterinde Adil'e aylık 'temizlik' kalemi var. Kulübün temizlediği şey zemin değil, ruhsat dosyası."
+    },
+    {
+      "id": "e5-b5",
+      "sender": "Behzat",
+      "at": "03:33",
+      "requiresClueId": "clue_e5_wit_bekci",
+      "text": "Bekçi İlyas bariyeri 00:35'te kaldırmış, gerekçesi 'amir söyledi'. Adam kendi katilini kendi garajına aldırmış. Tanıdık olmasa bariyer kalkmazdı."
+    },
+    {
+      "id": "e5-a4",
+      "sender": "Akbaba",
+      "at": "03:40",
+      "requiresClueId": "clue_e5_wit_sofor",
+      "text": "Şoför Şerif 01:10'da tek patlama duymuş, 'egzoz sandım' diyor. O saatte garajda çalışan araç yok. Egzoz değil, tek el ateş."
+    },
+    {
+      "id": "e5-h6",
+      "sender": "Hayalet",
+      "at": "03:48",
+      "requiresClueId": "clue_e5_phone",
+      "text": "Telefon koltukta, kilitli. Mühür sapındaki 0671 kurum sicil numarası. Adam şifresini elinde taşıyormuş, katil onu almayı akıl etmemiş."
+    },
+    {
+      "id": "e5-b6",
+      "sender": "Behzat",
+      "at": "03:56",
+      "requiresClueId": "clue_e5_file",
+      "text": "Dosya vanın içinde, mühür yerde. Katil dosyayı almaya gelmemiş; mührün basılmasını engellemeye gelmiş. Aradaki fark, cinayetin sebebidir."
     }
   ],
   "esorgu": [
@@ -343,12 +421,28 @@
     {
       "text": "Şoför",
       "field": "Tanık"
+    },
+    {
+      "text": "Otopsi",
+      "field": "Rapor"
+    },
+    {
+      "text": "Kasa",
+      "field": "Defter"
+    },
+    {
+      "text": "06 ZBT 09",
+      "field": "Plaka"
     }
   ],
   "importantClues": [
     "clue_e5_seal",
     "clue_e5_sms_yavuz",
-    "clue_e5_bank"
+    "clue_e5_bank",
+    "clue_e5_log",
+    "clue_e5_audio",
+    "clue_e5_ticket",
+    "clue_e5_otopsi"
   ],
   "replies": {
     "Behzat": [
@@ -604,5 +698,10 @@
       }
     }
   ],
-  "report": "T.C. ANKARA EMNİYET MÜDÜRLÜĞÜ\nDOSYA KAPANDI  ·  2026/06-417  ·  Mühür Geç Geldi\n\nMaktul Kemal Sönmez, 52, zabıta amiri. Ulus zabıta otoparkı, kendi vanının yanında. 01:05–01:20. Göğüs, tek atış, yakın mesafe. Mühür basılmadan düşmüş.\n\nYavuz Erten itiraf etti. 06 RK 190 ile 00:41'de vanın yanına yanaştı, Kapı fişinde çıkış yok. Silah stepnede. Mührün sapını o kırdı.\n\nAdil Korkmaz, ruhsat şefi, 15 günlük erteleme karşılığı 180.000 TL yatırmış, ses kaydında Kemal'in orada bulunmamasını istemiş, dosyaya 'Adil tamam' satırını bırakmıştır. Tetiği çekmediğini söylüyor. Emri o yazdı.\n\nİki isim nezarettedir. Geceler Gazinosu'nun ruhsatı bu tutanakla birlikte mühürlenmiştir."
+  "report": "T.C. ANKARA EMNİYET MÜDÜRLÜĞÜ\nDOSYA KAPANDI  ·  2026/06-417  ·  Mühür Geç Geldi\n\nMaktul Kemal Sönmez, 52, zabıta amiri. Ulus zabıta otoparkı, kendi vanının yanında. 01:05–01:20. Göğüs, tek atış, yakın mesafe. Mühür basılmadan düşmüş.\n\nYavuz Erten itiraf etti. 06 RK 190 ile 00:41'de vanın yanına yanaştı, Kapı fişinde çıkış yok. Silah stepnede. Mührün sapını o kırdı.\n\nAdil Korkmaz, ruhsat şefi, 15 günlük erteleme karşılığı 180.000 TL yatırmış, ses kaydında Kemal'in orada bulunmamasını istemiş, dosyaya 'Adil tamam' satırını bırakmıştır. Tetiği çekmediğini söylüyor. Emri o yazdı.\n\nİki isim nezarettedir. Geceler Gazinosu'nun ruhsatı bu tutanakla birlikte mühürlenmiştir.",
+  "autopsy": {
+    "title": "Ön otopsi notu",
+    "body": "Göğüsten tek el ateş, bitişik-yakın mesafe; gömlekte namlu yanığı.\nSavunma yarası ve boğuşma izi yok: maktul karşısındakini tanıyor ve silahı beklemiyor.\nÖlüm aralığı 01:05-01:20. Silah olay yerinde bulunmadı.",
+    "clue": "clue_e5_otopsi"
+  }
 }

@@ -1,0 +1,22 @@
+── Plan ──────────────────────────
+input: Modern smartphone with a cracked glass screen spiderweb pattern, dark screen, black metal frame, lying flat, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=3000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 892407d8-d540-432a-8976-1e01bf1c7f9d (@n3)
+text_to_model · queued
+text_to_model · running 24% · 892407d8
+text_to_model · running 29% · 892407d8
+text_to_model · running 38% · 892407d8
+text_to_model · running 50% · 892407d8
+text_to_model · running 68% · 892407d8
+text_to_model · success 100% · 892407d8
+✓ text_to_model · 892407d8-d540-432a-8976-1e01bf1c7f9d · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/N3/tripo-out/n3-892407d8

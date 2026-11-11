@@ -1,0 +1,23 @@
+── Plan ──────────────────────────
+input: Plain metal interrogation chair, grey steel tube frame with a hard flat seat and backrest, scuffed, police station furniture, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=3000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created deec4b08-0da8-419e-987e-49bee657864f (@q2)
+text_to_model · queued
+text_to_model · running 7% · deec4b08
+text_to_model · running 10% · deec4b08
+text_to_model · running 16% · deec4b08
+text_to_model · running 25% · deec4b08
+text_to_model · running 36% · deec4b08
+text_to_model · running 54% · deec4b08
+text_to_model · success 100% · deec4b08
+✓ text_to_model · deec4b08-0da8-419e-987e-49bee657864f · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/Q2/tripo-out/q2-deec4b08

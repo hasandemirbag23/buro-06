@@ -1,0 +1,29 @@
+{
+  "task_id": "4d8bcaf2-ef5c-496e-9718-32e5190d6630",
+  "type": "text_to_model",
+  "status": "success",
+  "input": {
+    "pbr": false,
+    "prompt": "Municipal wheeled plastic waste container 770 liters, dark green with grey lid, two wheels, scuffed, no logo, realistic, single isolated object, no text",
+    "texture": true,
+    "export_uv": true,
+    "face_limit": 3000,
+    "model_version": "v3.1-20260211",
+    "geometry_quality": "standard",
+    "texture_alignment": "geometry"
+  },
+  "output_fields": [
+    "model_url",
+    "rendered_image_url",
+    "generated_image_url"
+  ],
+  "credits_consumed": 20,
+  "created_at": "2026-11-10T21:56:05.597062Z",
+  "completed_at": "2026-11-10T21:58:16.817438Z",
+  "files": [
+    "model.glb",
+    "rendered_image.webp",
+    "generated_image.jpeg",
+    "preview.png"
+  ]
+}

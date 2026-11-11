@@ -1,0 +1,25 @@
+── Plan ──────────────────────────
+input: Bus stop shelter with glass panels and a metal frame, bench inside, flat roof, slightly dirty, Turkish city, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=6000 texture_quality="detailed" pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 30 credits (official list price)
+  · texture_quality detailed: higher price tier
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 773de129-2787-401b-9bb7-0322291ca8d0 (@s4)
+text_to_model · queued
+text_to_model · running 5% · 773de129
+text_to_model · running 8% · 773de129
+text_to_model · running 13% · 773de129
+text_to_model · running 20% · 773de129
+text_to_model · running 31% · 773de129
+text_to_model · running 46% · 773de129
+text_to_model · running 66% · 773de129
+text_to_model · success 100% · 773de129
+✓ text_to_model · 773de129-2787-401b-9bb7-0322291ca8d0 · 30 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/S4/tripo-out/s4-773de129

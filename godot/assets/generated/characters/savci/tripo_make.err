@@ -1,0 +1,32 @@
+── Plan ──────────────────────────
+input: /private/tmp/claude-501/-Users-hasan-Desktop-B-ro-06/7234bc25-7a06-4739-8393-e00675eaaf09/scratchpad/ref/savci_ref.png
+model: v3.1-20260211 — explicit --model
+steps:
+  1. image-to-model  POST /v3/generation/image-to-model — generate a 3D model from one image
+     texture_quality="detailed" face_limit=20000 pbr=false model="v3.1-20260211"
+  2. rig  POST /v3/animations/rig — auto-rig a skeleton
+     model="v3.0-20260909"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 40 credits (official list price; chain steps not estimated)
+  · texture_quality detailed: higher price tier
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created a60bbb46-ee9d-44d2-9311-f6e657aea545 (@savci)
+image_to_model · queued
+image_to_model · running 5% · a60bbb46
+image_to_model · running 9% · a60bbb46
+image_to_model · running 14% · a60bbb46
+image_to_model · running 25% · a60bbb46
+image_to_model · running 37% · a60bbb46
+image_to_model · running 54% · a60bbb46
+image_to_model · running 77% · a60bbb46
+image_to_model · success 100% · a60bbb46
+✓ image_to_model · a60bbb46-ee9d-44d2-9311-f6e657aea545 · 40 credits
+task created ae3b7f0d-b964-429c-a59d-78539a6ac3d7 (@savci-rig)
+animate_rig · queued
+animate_rig · running 35% · ae3b7f0d
+animate_rig · success 100% · ae3b7f0d
+✓ animate_rig · ae3b7f0d-b964-429c-a59d-78539a6ac3d7 · 25 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/characters/savci/tripo-out/savci-rig-ae3b7f0d
