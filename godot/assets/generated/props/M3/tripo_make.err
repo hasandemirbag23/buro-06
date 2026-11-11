@@ -1,0 +1,28 @@
+── Plan ──────────────────────────
+input: Closed shopfront of a small Turkish neighborhood shop with a rolled-down corrugated metal shutter, concrete frame, plain blank sign board, shabby, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=6000 texture_quality="detailed" pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 30 credits (official list price)
+  · texture_quality detailed: higher price tier
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created bda773ee-e65f-4b5b-abd8-cc1878be3cec (@m3)
+text_to_model · queued
+text_to_model · running 6% · bda773ee
+text_to_model · running 9% · bda773ee
+text_to_model · running 15% · bda773ee
+text_to_model · running 23% · bda773ee
+text_to_model · running 35% · bda773ee
+text_to_model · running 53% · bda773ee
+text_to_model · running 79% · bda773ee
+text_to_model · running 99% · bda773ee
+text_to_model · running 99% · bda773ee
+text_to_model · running 99% · bda773ee
+text_to_model · success 100% · bda773ee
+✓ text_to_model · bda773ee-e65f-4b5b-abd8-cc1878be3cec · 30 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/M3/tripo-out/m3-bda773ee

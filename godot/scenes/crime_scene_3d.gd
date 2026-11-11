@@ -7,6 +7,7 @@ const SUV := preload("res://assets/vehicles/suv.glb")
 const TRUCK := preload("res://assets/vehicles/truck.glb")
 const SHOVEL := preload("res://assets/vehicles/tractorShovel.glb")
 const SEDAN := preload("res://assets/vehicles/sedan.glb")
+const Props := preload("res://scenes/props_lib.gd")
 const FENCE := preload("res://assets/props/cp_Fence.glb")
 const STREET := preload("res://assets/props/cp_Light_Street_1.glb")
 const KIT := preload("res://assets/props/FirstAidKit.glb")
@@ -613,6 +614,27 @@ func _police_car(at: Vector3, yaw: float) -> void:
 	head.spot_angle = 38.0
 	head.shadow_enabled = false
 	car.add_child(head)
+	_reskin(car, "S6")
+
+
+## Kenney aracının görünümünü Tripo aracıyla değiştirir. Kenney düğümü (çarpışma kutusu,
+## ışıklar) yerinde kalır, yalnız mesh'leri gizlenir. Tripo araçları X ekseninde, önü -X.
+func _reskin(node: Node3D, id: String) -> void:
+	for mi in node.find_children("*", "MeshInstance3D", true, false):
+		(mi as MeshInstance3D).visible = false
+	var wrap := Node3D.new()
+	wrap.scale = Vector3.ONE / node.scale.x
+	wrap.rotation_degrees.y = 90.0
+	node.add_child(wrap)
+	var car := Props.make(id)
+	wrap.add_child(car)
+	_cast(car)
+	if id == "S6":
+		for side in [-1.0, 1.0]:
+			var tag := MeshFactory.label(car, "POLİS", Vector3(0.2, 0.85, side * 1.07), Color("f4f6fa"), 0.5)
+			tag.billboard = BaseMaterial3D.BILLBOARD_DISABLED
+			tag.fixed_size = false
+			tag.rotation_degrees.y = 0.0 if side > 0 else 180.0
 
 
 func _forensics() -> void:
@@ -642,15 +664,15 @@ func _forensics() -> void:
 
 func _yard() -> void:
 	if _campus():
-		_prop(SEDAN, Vector3(12.5, 0.0, 9.5), 150.0, 1.55)
-		_prop(SEDAN, Vector3(-9.5, 0.0, 9.0), 150.0, 1.55)
+		_reskin(_prop(SEDAN, Vector3(12.5, 0.0, 9.5), 150.0, 1.55), "S5")
+		_reskin(_prop(SEDAN, Vector3(-9.5, 0.0, 9.0), 150.0, 1.55), "S5")
 		_prop(STREET, Vector3(8.4, 0.0, 5.4), -40.0, 1.75)
 		_prop(STREET, Vector3(-8.2, 0.0, 11.0), 20.0, 1.75)
 		return
 	_prop(SUV, Vector3(5.2, 0.0, 8.2), 18.0, 1.6)
 	_prop(TRUCK, Vector3(12.5, 0.0, -8.5), -30.0, 1.75)
 	_prop(SHOVEL, Vector3(17.2, 0.0, 1.4), 80.0, 1.7)
-	_prop(SEDAN, Vector3(-9.5, 0.0, 9.0), 150.0, 1.55)
+	_reskin(_prop(SEDAN, Vector3(-9.5, 0.0, 9.0), 150.0, 1.55), "S5")
 	_prop(STREET, Vector3(8.4, 0.0, 5.4), -40.0, 1.75)
 	_prop(STREET, Vector3(-8.2, 0.0, 11.0), 20.0, 1.75)
 	_prop(SCAFFOLD, Vector3(-5.4, 0.0, -2.4), 15.0, 1.15, Vector3(0.55, -1.78, 0.0))

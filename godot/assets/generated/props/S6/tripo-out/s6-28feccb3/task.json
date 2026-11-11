@@ -1,0 +1,30 @@
+{
+  "task_id": "28feccb3-bd64-437b-aa2f-fd11b3d0ac8d",
+  "type": "text_to_model",
+  "status": "success",
+  "input": {
+    "pbr": false,
+    "prompt": "Turkish police patrol car, 2000s four-door sedan painted white with dark navy blue doors and stripes, roof light bar with blue and red lights, generic unbranded car, realistic, single isolated object, no text, no logo, no badge",
+    "texture": true,
+    "export_uv": true,
+    "face_limit": 10000,
+    "model_version": "v3.1-20260211",
+    "texture_quality": "detailed",
+    "geometry_quality": "standard",
+    "texture_alignment": "geometry"
+  },
+  "output_fields": [
+    "model_url",
+    "rendered_image_url",
+    "generated_image_url"
+  ],
+  "credits_consumed": 30,
+  "created_at": "2026-11-10T23:11:33.089436Z",
+  "completed_at": "2026-11-10T23:13:31.847116Z",
+  "files": [
+    "model.glb",
+    "rendered_image.webp",
+    "generated_image.jpeg",
+    "preview.png"
+  ]
+}

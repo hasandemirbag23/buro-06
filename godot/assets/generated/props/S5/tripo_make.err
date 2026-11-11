@@ -1,0 +1,26 @@
+── Plan ──────────────────────────
+input: 1990s Turkish four-door family sedan car, boxy shape, faded white paint, chrome bumpers, slightly dusty, generic unbranded car, realistic, single isolated object, no text, no logo, no badge
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=10000 texture_quality="detailed" pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 30 credits (official list price)
+  · texture_quality detailed: higher price tier
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 6a93f170-7334-46cd-ba12-a22acb89228a (@s5)
+text_to_model · queued
+text_to_model · running 4% · 6a93f170
+text_to_model · running 8% · 6a93f170
+text_to_model · running 11% · 6a93f170
+text_to_model · running 18% · 6a93f170
+text_to_model · running 27% · 6a93f170
+text_to_model · running 40% · 6a93f170
+text_to_model · running 57% · 6a93f170
+text_to_model · running 75% · 6a93f170
+text_to_model · success 100% · 6a93f170
+✓ text_to_model · 6a93f170-7334-46cd-ba12-a22acb89228a · 30 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/S5/tripo-out/s5-6a93f170

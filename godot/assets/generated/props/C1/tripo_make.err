@@ -1,0 +1,23 @@
+── Plan ──────────────────────────
+input: Human body shape lying under a blue plastic tarpaulin sheet (tarp), outline of a person covered by a worn blue tarp with creases and rope eyelets, crime scene, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=6000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 85f784ed-91dd-4c9c-969a-db2966e76c34 (@c1)
+text_to_model · queued
+text_to_model · running 7% · 85f784ed
+text_to_model · running 12% · 85f784ed
+text_to_model · running 20% · 85f784ed
+text_to_model · running 32% · 85f784ed
+text_to_model · running 48% · 85f784ed
+text_to_model · running 73% · 85f784ed
+text_to_model · success 100% · 85f784ed
+✓ text_to_model · 85f784ed-91dd-4c9c-969a-db2966e76c34 · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/C1/tripo-out/c1-85f784ed

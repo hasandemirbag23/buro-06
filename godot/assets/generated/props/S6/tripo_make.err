@@ -1,0 +1,25 @@
+── Plan ──────────────────────────
+input: Turkish police patrol car, 2000s four-door sedan painted white with dark navy blue doors and stripes, roof light bar with blue and red lights, generic unbranded car, realistic, single isolated object, no text, no logo, no badge
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=10000 texture_quality="detailed" pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 30 credits (official list price)
+  · texture_quality detailed: higher price tier
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 28feccb3-bd64-437b-aa2f-fd11b3d0ac8d (@s6)
+text_to_model · queued
+text_to_model · running 4% · 28feccb3
+text_to_model · running 7% · 28feccb3
+text_to_model · running 11% · 28feccb3
+text_to_model · running 17% · 28feccb3
+text_to_model · running 26% · 28feccb3
+text_to_model · running 39% · 28feccb3
+text_to_model · running 55% · 28feccb3
+text_to_model · success 100% · 28feccb3
+✓ text_to_model · 28feccb3-bd64-437b-aa2f-fd11b3d0ac8d · 30 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/S6/tripo-out/s6-28feccb3

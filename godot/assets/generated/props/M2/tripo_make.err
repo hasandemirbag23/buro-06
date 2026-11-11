@@ -1,0 +1,24 @@
+── Plan ──────────────────────────
+input: Aluminum window with white frame and a plastic roller shutter box (panjur) on top, closed beige plastic shutter slats half lowered, Turkish apartment building, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=2500 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 98bf59e1-2cf2-46f3-87b9-b1740df3e144 (@m2)
+text_to_model · queued
+text_to_model · running 8% · 98bf59e1
+text_to_model · running 12% · 98bf59e1
+text_to_model · running 19% · 98bf59e1
+text_to_model · running 29% · 98bf59e1
+text_to_model · running 44% · 98bf59e1
+text_to_model · running 65% · 98bf59e1
+text_to_model · running 93% · 98bf59e1
+text_to_model · success 100% · 98bf59e1
+✓ text_to_model · 98bf59e1-2cf2-46f3-87b9-b1740df3e144 · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/M2/tripo-out/m2-98bf59e1

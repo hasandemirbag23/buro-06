@@ -1,6 +1,7 @@
 extends Node3D
 
 const MeshFactory := preload("res://scenes/mesh_factory.gd")
+const Props := preload("res://scenes/props_lib.gd")
 const RIG := preload("res://scenes/character_rig.tscn")
 const Brain := preload("res://scenes/npc_brain.gd")
 
@@ -11,10 +12,7 @@ const CORK := Color("7a4a2c")
 const MANILA := Color("c4a36a")
 const FEET := 0.17
 
-const DESK := preload("res://assets/furniture/desk.glb")
 const CHAIR := preload("res://assets/furniture/chairDesk.glb")
-const SCREEN := preload("res://assets/furniture/computerScreen.glb")
-const KEYS := preload("res://assets/furniture/computerKeyboard.glb")
 const LAMP := preload("res://assets/furniture/lampSquareTable.glb")
 const RADIO_MODEL := preload("res://assets/furniture/radio.glb")
 const RACK := preload("res://assets/furniture/coatRackStanding.glb")
@@ -28,7 +26,6 @@ const CURTAIN := preload("res://assets/interior/Curtains_Double.glb")
 const PLANT := preload("res://assets/interior/Houseplant_2.glb")
 const CEIL := preload("res://assets/interior/Light_Ceiling1.glb")
 const CARPET := preload("res://assets/interior/Carpet_1.glb")
-const CABINET := preload("res://assets/interior/Drawer_1.glb")
 
 var camera: Camera3D
 var aim_target := Vector3.ZERO
@@ -351,7 +348,7 @@ func _cord(a: Vector3, b: Vector3) -> void:
 func _archives() -> void:
 	for i in 3:
 		_drop(SHELF, Vector3(-6.72, FEET, -2.3 + i * 1.7), 90.0, 0.52, Vector3.ZERO, true)
-	_drop(CABINET, Vector3(-6.45, FEET, 3.35), 90.0, 0.62, Vector3.ZERO, true)
+	_put("B2", Vector3(-6.62, FEET, 3.35), 90.0, Vector3.ZERO, true)
 
 
 func _desks() -> void:
@@ -360,12 +357,13 @@ func _desks() -> void:
 	folder.rotation_degrees.y = -7
 	_drop(BOOKS, Vector3(2.15, 0.96, -0.7), 18.0, 1.8, Vector3(0.07, 0.0, -0.04))
 	_chair_at(Vector3(1.7, FEET, -1.55), 0.0)
+	_put("B6", Vector3(2.3, 0.96, -1.02), 200.0, Vector3(0, 0.22, 0))
+	_put("B3", Vector3(-1.95, 0.96, -0.4), 180.0, Vector3(0.62, 0, 0))
 	_station(Vector3(-1.5, FEET, -0.55), 0.0, false)
 	_drop(BOOKS, Vector3(-1.15, 0.96, -0.45), -12.0, 1.6, Vector3(0.07, 0.0, -0.04))
 	_chair_at(Vector3(-1.5, FEET, -1.35), 0.0)
 	_station(Vector3(-3.8, FEET, 1.35), 0.0, false)
-	_drop(SCREEN, Vector3(-3.85, 0.96, 1.2), 180.0, 1.7, Vector3(0.19, 0.0, -0.05))
-	_drop(KEYS, Vector3(-3.85, 0.96, 1.55), 180.0, 1.8, Vector3(0.14, 0.0, -0.06))
+	_put("B3", Vector3(-3.85, 0.96, 1.3), 180.0)
 	_ghost(MeshFactory.zone(self, Vector3(0.55, 0.45, 0.35), Vector3(-3.85, 1.2, 1.2), Color("14301c"), "records"))
 	_chair_at(Vector3(-3.8, FEET, 2.15), 180.0)
 	_station(Vector3(4.6, FEET, 1.8), 0.0, true)
@@ -422,7 +420,7 @@ func _lay_copies() -> void:
 
 
 func _station(center: Vector3, yaw: float, brief: bool) -> void:
-	_drop(DESK, center, yaw, 2.05, Vector3(0.355, 0.0, -0.185), true)
+	_put("B1", center, yaw, Vector3(1.46, 0.79, 0.76), true)
 	if brief:
 		var zone := MeshFactory.zone(self, Vector3(1.4, 0.12, 0.7), center + Vector3(0, 0.82, 0), MANILA, "brief", 0.7)
 		_ghost(zone)
@@ -437,6 +435,18 @@ func _chair_at(at: Vector3, yaw: float) -> void:
 func _drop(scene: PackedScene, feet: Vector3, yaw: float, scale: float, local_feet: Vector3 = Vector3.ZERO, solid := false) -> Node3D:
 	var offset := Basis(Vector3.UP, deg_to_rad(yaw)) * (local_feet * scale)
 	var node := MeshFactory.place(self, scene, feet - offset, yaw, scale)
+	_cast(node)
+	if solid:
+		_footprint(node)
+	return node
+
+
+## Tripo nesnesi (props_lib) yerleştirir; tabanı feet'e oturur.
+func _put(id: String, feet: Vector3, yaw: float, size := Vector3.ZERO, solid := false) -> Node3D:
+	var node := Props.make(id, size)
+	node.position = feet
+	node.rotation_degrees.y = yaw
+	add_child(node)
 	_cast(node)
 	if solid:
 		_footprint(node)

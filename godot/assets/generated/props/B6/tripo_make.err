@@ -1,0 +1,23 @@
+── Plan ──────────────────────────
+input: Turkish tea set: thin-waisted tulip-shaped glass tea cup with a small saucer and a teaspoon, next to a double stacked stainless steel and enamel tea kettle (caydanlik), realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=3000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 60364d05-5097-43b8-aabc-d38449c6b6a2 (@b6)
+text_to_model · queued
+text_to_model · running 7% · 60364d05
+text_to_model · running 15% · 60364d05
+text_to_model · running 22% · 60364d05
+text_to_model · running 33% · 60364d05
+text_to_model · running 48% · 60364d05
+text_to_model · running 71% · 60364d05
+text_to_model · success 100% · 60364d05
+✓ text_to_model · 60364d05-5097-43b8-aabc-d38449c6b6a2 · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/B6/tripo-out/b6-60364d05

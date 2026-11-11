@@ -1,0 +1,25 @@
+── Plan ──────────────────────────
+input: Old wooden veneer office desk, dark brown laminate top with worn edges, three drawers on the right side and a modesty panel, 1990s Turkish government office furniture, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=8000 texture_quality="detailed" pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 30 credits (official list price)
+  · texture_quality detailed: higher price tier
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 7fad3128-9255-42ce-bd35-3b0ea961c6a0 (@b1)
+text_to_model · queued
+text_to_model · running 7% · 7fad3128
+text_to_model · running 12% · 7fad3128
+text_to_model · running 18% · 7fad3128
+text_to_model · running 28% · 7fad3128
+text_to_model · running 43% · 7fad3128
+text_to_model · running 64% · 7fad3128
+text_to_model · running 92% · 7fad3128
+text_to_model · success 100% · 7fad3128
+✓ text_to_model · 7fad3128-9255-42ce-bd35-3b0ea961c6a0 · 30 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/B1/tripo-out/b1-7fad3128

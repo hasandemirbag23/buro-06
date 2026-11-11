@@ -1,0 +1,24 @@
+── Plan ──────────────────────────
+input: Turkish apartment building entrance: iron and glass double door with a concrete canopy overhang and two steps, worn concrete frame, realistic, single isolated object, no text, no logo
+model: v3.1-20260211 — explicit --model
+steps:
+  1. text-to-model  POST /v3/generation/text-to-model — generate a 3D model from text
+     face_limit=4000 pbr=false model="v3.1-20260211"
+deliverables: GLB
+cost impact:
+  · estimated generation cost: 20 credits (official list price)
+──────────────────────────────────
+model: v3.1-20260211 (explicit --model)
+task created 8e963e88-b7e5-4b37-9c61-67195152e9b9 (@m4)
+text_to_model · queued
+text_to_model · running 8% · 8e963e88
+text_to_model · running 14% · 8e963e88
+text_to_model · running 24% · 8e963e88
+text_to_model · running 37% · 8e963e88
+text_to_model · running 60% · 8e963e88
+text_to_model · running 90% · 8e963e88
+text_to_model · running 99% · 8e963e88
+text_to_model · success 100% · 8e963e88
+✓ text_to_model · 8e963e88-b7e5-4b37-9c61-67195152e9b9 · 20 credits
+downloading artifacts…
+✓ artifacts saved to /Users/hasan/Desktop/Büro-06/godot/assets/generated/props/M4/tripo-out/m4-8e963e88

@@ -1,5 +1,19 @@
 # Tripo Kredi Takibi
 
+## API harcaması (güncel: 11.11.2026)
+
+**670 / 950** (bakiye 1000 → 330). Tek kaynak: `tools/tripo/ledger.csv` (her iş `tools/tripo/uret.sh` ile, sınırı betik uygular).
+
+| Kalem | Kredi |
+|---|---:|
+| 4 ana karakter (Hayalet, Savcı, Akbaba, Cevdet) × 65 (görselden 3B 40 + rig 25) | 260 |
+| 18 nesne (B1 B2 B3 B6 Q1 Q2 N1 N3 C1 M1 M2 M3 M4 S1 S3 S4 S5 S6) | 410 |
+| **Toplam** | **670** |
+| Kalan sınır (yedek ~80 ayrılırsa üretilebilir) | 280 (≈200) |
+
+Öncelik 1–2 nesnelerin hepsi üretildi. Öncelik 3 (T1 T2 F1 F2 P1 E1 G1 ≈ 180) kalan sınıra sığar; henüz üretilmedi. S5/S6 dokusundaki logo/yazı yeniden üretim yerine 0 krediyle silindi (`PROP_SCALES.md`).
+
+
 **Bütçe sınırı: 3000 stüdyo kredisi** (kullanıcı, 10.11.2026: "950 API içindi, 3000'e kadar geçebilirsin"). Stüdyo başlangıç bakiyesi 3645.
 
 **Stüdyo hattı (ölçülen fiyatlar):** üretim 55 · Retopo (≤10 000 quad) 40 · Rig (insansı, Mixamo iskeleti) 20 · görsel üretimi 0 (ücretsiz kota, kuyruk yavaş) · her işlemde **3 ücretsiz yeniden deneme**.
