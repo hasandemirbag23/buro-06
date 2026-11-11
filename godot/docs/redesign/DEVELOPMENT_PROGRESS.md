@@ -53,11 +53,10 @@ Son güncelleme: 11 Kasım 2026
 - Testler: `characters_test` TAMAM, `episodes_test` OK, `scene_test` OK.
 - Render araçları: `tools/scene_shot.tscn -- <office|interrogation|episode_0N>`, `tools/prop_sheet.tscn`.
 
-**Bilinen sorun:** Tripo API rig'li karakterlerde (Hayalet, Savcı, Akbaba) animasyon oynarken baş öne/yana eğik. T-pozunda dik; Behzat (Mixamo) düzgün. `bonemap_tripo.tres` ve retarget ayarları incelenmeli. `fix_silhouette` filtresine Neck/Head eklemek etki etmedi.
+**Çözüldü — Tripo karakterlerinde baş yana/yukarı dönüktü:** Tripo API rig'li GLB'ler +X'e bakıyor (glTF +Z bekler). `fix_silhouette` gövdeyi kollara göre +Z'ye çeviriyor, baş eski yönde kalıyordu. Çözüm: GLB kökü `Armature`'a −90° Y dönüşü (`tools/tripo/face_z.py`); Hayalet, Savcı, Akbaba, Cevdet düzeltildi, `.import` ayarları değişmedi. Yeni Tripo API karakterlerinde içe aktarmadan önce aynı betik çalıştırılmalı.
 
 **Sıradaki işler:**
-1. Tripo rig baş eğikliği.
-2. N1/N3/S4 yerleştirme (delil torbası, telefon, durak).
-3. Öncelik 3 nesneler (≈180 kr).
-4. Kaldırım/asfalt PBR, Türkçe sokak tabelaları.
-5. Eksik 4 şüpheli kafası.
+1. N1/N3/S4 yerleştirme (delil torbası, telefon, durak).
+2. Öncelik 3 nesneler (≈180 kr).
+3. Kaldırım/asfalt PBR, Türkçe sokak tabelaları.
+4. Eksik 4 şüpheli kafası.

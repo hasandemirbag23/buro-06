@@ -52,6 +52,6 @@ Token ucuz, tıklama yok. Profil `kredili` aktif (`tripo whoami`).
 1. Referans görsel stüdyoda ücretsiz: `/workspace/generate-image`, Nano Banana 2, Görsel Sayısı 1, prompt doğrudan T-pozu ister:
    "Photorealistic full-body photo of <karakter>, standing in a clean T-pose: both arms straight out horizontally at shoulder height, palms down, legs straight, feet shoulder-width apart, facing the camera, full figure from head to shoes, centered, plain white seamless studio background, soft even lighting. Real human proportions. <yüz, saç, kıyafet>. Single person only, no text." (~2–4 dk). Kartın indirme simgesiyle `~/Downloads`'a indir (ya da sayfada `fetch` edip kontrol et).
 2. `godot/tools/tripo/uret.sh <id> characters 70 <görsel_yolu> --model tripo-v3.1 -p texture_quality=detailed -p face_limit=20000 --then rig` → GLB + defter (`tools/tripo/ledger.csv`). Betik 950'yi aşacak işi göndermez.
-3. Godot adımları § 5 ile aynı (bonemap_mixamo, fix_silhouette, root_scale = boy).
+3. **API rig'i (`--then rig`) Mixamo değil, Tripo iskeleti verir ve model +X'e bakar.** İçe aktarmadan önce: `python3 tools/tripo/face_z.py assets/generated/characters/<id>/<id>.glb` (kök `Armature`'a −90° Y; yapılmazsa `fix_silhouette` gövdeyi çevirir, baş yana/yukarı dönük kalır). Sonra § 5, ama bone map `res://assets/anim/bonemap_tripo.tres` (yol anahtarı `"PATH:Armature/Skeleton3D"`), `fix_silhouette` açık, `root_scale` = boy.
 
 **Nesne (≈20–30):** `uret.sh <id> props 30 "<İngilizce tarif>" --model tripo-v3.1 -p face_limit=<bütçe>` (detaylı doku için `-p texture_quality=detailed`).
